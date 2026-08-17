@@ -3,6 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://bc87n5tigm86k" path="res://scenes/brian.tscn" id="1_r2qjy"]
 [ext_resource type="Texture2D" uid="uid://b2w4g38cex2ia" path="res://scenes/Terrain (32x32).png" id="2_x6gh5"]
 [ext_resource type="PackedScene" uid="uid://difuyeamrtv0i" path="res://scenes/object.tscn" id="3_1hw6j"]
+[ext_resource type="Texture2D" uid="uid://dm3v4ag4m8ktf" path="res://assets/Bez názvu.png" id="4_1hw6j"]
+[ext_resource type="Script" uid="uid://b0kamm067tcjr" path="res://scripts/spider_object.gd" id="5_3c8cm"]
+[ext_resource type="PackedScene" uid="uid://de7w1pl4j0ge5" path="res://scenes/text_window2.tscn" id="5_vt81l"]
+[ext_resource type="Script" uid="uid://d8bqrygx2npl" path="res://scripts/tutorial.gd" id="6_e0b21"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lfn2w"]
 texture = ExtResource("2_x6gh5")
@@ -154,9 +158,23 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lfn2w")
 
-[node name="The Haze" type="Node2D" unique_id=908602446]
+[sub_resource type="SpriteFrames" id="SpriteFrames_rxev4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_1hw6j")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
-[node name="CharacterBody2D" parent="." unique_id=1921759424 instance=ExtResource("1_r2qjy")]
+[node name="Tutorial" type="Node2D" unique_id=908602446]
+
+[node name="Tutorial_manager" type="Node" parent="." unique_id=978680098]
+script = ExtResource("6_e0b21")
+
+[node name="Player" parent="." unique_id=1921759424 instance=ExtResource("1_r2qjy")]
 z_index = 4
 position = Vector2(-27, 0.9999962)
 
@@ -172,5 +190,32 @@ scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAAFAAIAAAABAAIAAAAFAAEAAAABAAIAAAAFAAAAAAABAAIAAAAFAP//AAABAAIAAAAFAP7/AAABAAIAAAAFAP3/AAABAAIAAAAFAPz/AAABAAIAAAAEAPv/AAACAAMAAAADAPv/AAACAAMAAAACAPv/AAACAAMAAAABAPv/AAACAAMAAAAAAPv/AAACAAMAAAD///v/AAACAAMAAAD+//v/AAACAAMAAAD9//v/AAACAAMAAAD8//v/AAACAAMAAAD7//v/AAACAAMAAAD6//v/AAACAAMAAAD5//v/AAACAAMAAAD4//z/AAADAAIAAAD4//3/AAADAAIAAAD4//7/AAADAAIAAAD4////AAADAAIAAAD4/wEAAAADAAIAAAD4/wIAAAADAAIAAAD4/wAAAAADAAIAAAD5/wMAAAACAAEAAAD6/wMAAAACAAEAAAD7/wMAAAACAAEAAAD8/wMAAAACAAEAAAD9/wMAAAACAAEAAAD+/wMAAAACAAEAAAD//wMAAAACAAEAAAAAAAMAAAACAAEAAAABAAMAAAACAAEAAAACAAMAAAACAAEAAAADAAMAAAACAAEAAAAEAAMAAAACAAEAAAD4/wMAAAAHAAIAAAAFAAMAAAAIAAIAAAAFAPv/AAAIAAEAAAD4//v/AAAHAAEAAAD5//z/AAABAAcAAAD6//z/AAACAAcAAAD7//z/AAACAAcAAAD8//z/AAACAAcAAAD9//z/AAACAAcAAAD+//z/AAACAAcAAAD///z/AAACAAcAAAAAAPz/AAACAAcAAAABAPz/AAACAAcAAAACAPz/AAACAAcAAAADAPz/AAACAAcAAAAEAPz/AAADAAcAAAAEAP3/AAADAAgAAAAEAP7/AAADAAgAAAAEAP//AAADAAgAAAAEAAAAAAADAAgAAAAEAAEAAAADAAgAAAAEAAIAAAADAAkAAAADAAIAAAACAAkAAAACAAIAAAACAAkAAAABAAIAAAACAAkAAAAAAAIAAAACAAkAAAD//wIAAAACAAkAAAD+/wIAAAACAAkAAAD9/wIAAAACAAkAAAD8/wIAAAACAAkAAAD8/wEAAAACAAgAAAD7/wEAAAACAAgAAAD7/wIAAAACAAkAAAD6/wEAAAACAAgAAAD6/wIAAAACAAkAAAD5/wIAAAABAAkAAAD5//3/AAABAAgAAAD5//7/AAABAAgAAAD5////AAABAAgAAAD5/wAAAAABAAgAAAD5/wEAAAABAAgAAAD6//3/AAACAAgAAAD7//3/AAACAAgAAAD7//7/AAACAAgAAAD8//7/AAACAAgAAAD7////AAACAAgAAAD7/wAAAAACAAgAAAD6/wAAAAACAAgAAAD8/wAAAAACAAgAAAD8////AAACAAgAAAD6////AAACAAgAAAD6//7/AAACAAgAAAD8//3/AAACAAgAAAD9//3/AAACAAgAAAD9//7/AAACAAgAAAD9////AAACAAgAAAD9/wAAAAACAAgAAAD9/wEAAAACAAgAAAD+/wAAAAACAAgAAAD//wAAAAACAAgAAAAAAAAAAAACAAgAAAAAAAEAAAACAAgAAAABAAEAAAACAAgAAAACAAEAAAACAAgAAAADAAEAAAACAAgAAAADAAAAAAACAAgAAAADAP//AAACAAgAAAADAP7/AAACAAgAAAADAP3/AAACAAgAAAACAP3/AAACAAgAAAABAP3/AAACAAgAAAAAAP3/AAACAAgAAAD///3/AAACAAgAAAD///7/AAACAAgAAAD+//7/AAACAAgAAAD+//3/AAACAAgAAAD+////AAACAAgAAAD//wEAAAACAAgAAAD+/wEAAAACAAgAAAD/////AAACAAgAAAAAAP7/AAACAAgAAAABAP7/AAACAAgAAAACAP7/AAACAAgAAAACAP//AAACAAgAAAACAAAAAAACAAgAAAABAAAAAAACAAgAAAABAP//AAACAAgAAAAAAP//AAACAAgAAAA=")
 tile_set = SubResource("TileSet_rxev4")
 
-[node name="object" parent="." unique_id=1244079872 instance=ExtResource("3_1hw6j")]
-position = Vector2(78, -30)
+[node name="spider" parent="." unique_id=1244079872 instance=ExtResource("3_1hw6j")]
+position = Vector2(404.00003, -50)
+rotation = 1.229685
+scale = Vector2(2, 2)
+script = ExtResource("5_3c8cm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="spider" unique_id=581673433]
+position = Vector2(2.3253431, 2.4171937)
+scale = Vector2(0.025, 0.025)
+sprite_frames = SubResource("SpriteFrames_rxev4")
+autoplay = "default"
+
+[node name="Label" type="Label" parent="." unique_id=1658334757]
+offset_left = -661.0
+offset_top = -650.0
+offset_right = 1823.0
+offset_bottom = -70.0
+scale = Vector2(0.9189117, 1.12)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 36
+text = "    Press right arrow or D to go right
+    Press left arrow or A to go left
+    Press Space, upwards arrow or W
+    Press left mouse button, down arrow or S to interract
+    Press Esc or Q to end interraction
+"
+
+[node name="Text_window" parent="." unique_id=1098004527 instance=ExtResource("5_vt81l")]
+unique_name_in_owner = true

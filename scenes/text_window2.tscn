@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://de7w1pl4j0ge5"]
+
+[ext_resource type="Script" uid="uid://pqbir635omyk" path="res://scripts/text_window_2.gd" id="1_feu8r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rxev4"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+
+[node name="Text_window" type="CanvasLayer" unique_id=1098004527]
+script = ExtResource("1_feu8r")
+
+[node name="TextboxContainer" type="MarginContainer" parent="." unique_id=1388612767]
+custom_minimum_size = Vector2(0, 160)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="PanelContainer" type="PanelContainer" parent="TextboxContainer" unique_id=1677970075]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rxev4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextboxContainer/PanelContainer" unique_id=1510992241]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 29
+bbcode_enabled = true
+autowrap_mode = 2

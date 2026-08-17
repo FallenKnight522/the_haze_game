@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://c3ls2odesw01r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i7nl8"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 2
+border_width_right = 1
+border_width_bottom = 2
+
+[node name="TextWindow" type="CanvasLayer" unique_id=1814649572]
+
+[node name="w" type="MarginContainer" parent="." unique_id=863551946]
+offset_left = 3.0
+offset_top = 437.0
+offset_right = 43.0
+offset_bottom = 477.0
+scale = Vector2(28.820518, 5.11805)
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 5
+
+[node name="Panel" type="Panel" parent="w" unique_id=945256278]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_i7nl8")
+
+[node name="MarginContainer" type="MarginContainer" parent="w" unique_id=1345801025]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="w/MarginContainer" unique_id=577680037]
+layout_mode = 2
+
+[node name="Start" type="Label" parent="w/MarginContainer/HBoxContainer" unique_id=1952659191]
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="Text" type="Label" parent="w/MarginContainer/HBoxContainer" unique_id=1271376719]
+layout_mode = 2
+text = "Chci brečet"

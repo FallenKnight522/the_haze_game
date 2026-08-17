@@ -1,12 +1,24 @@
 [gd_scene format=3 uid="uid://difuyeamrtv0i"]
 
-[ext_resource type="Script" uid="uid://dwwyl0n753mjl" path="res://scripts/object_colision.cs" id="1_pkda2"]
+[ext_resource type="Script" uid="uid://nvx1q3nifss5" path="res://scripts/object_collision.gd" id="1_pkda2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rxev4"]
 
-[node name="object" type="Area2D" unique_id=1244079872]
+[node name="the_haze_object" type="Area2D" unique_id=1244079872]
 collision_mask = 2
 script = ExtResource("1_pkda2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1576747888]
 shape = SubResource("CircleShape2D_rxev4")
+
+[node name="Label" type="Label" parent="." unique_id=1407471527]
+offset_left = -2.0
+offset_top = -30.0
+offset_right = 38.0
+offset_bottom = -7.0
+theme_override_colors/font_color = Color(1, 0.19215687, 0, 1)
+text = "!"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

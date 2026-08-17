@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dgucqu3eyc0qx"]
+
+[ext_resource type="Script" uid="uid://bhygcm2mcbk3n" path="res://scenes/button_manager.gd" id="1_l6cm7"]
+
+[node name="Main menu" type="Node2D" unique_id=451847601]
+
+[node name="Button manager" type="Control" parent="." unique_id=1811076949]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_l6cm7")
+
+[node name="Tutorial" type="Button" parent="Button manager" unique_id=1988026956]
+layout_mode = 0
+offset_left = 334.00003
+offset_top = 11.000001
+offset_right = 342.00003
+offset_bottom = 19.0
+scale = Vector2(52.177296, 9.216211)
+
+[node name="Level 1" type="Button" parent="Button manager" unique_id=1534228057]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 117.0
+offset_right = 342.0
+offset_bottom = 125.0
+scale = Vector2(52.177296, 9.216211)
+
+[node name="Level 2" type="Button" parent="Button manager" unique_id=835086555]
+layout_mode = 0
+offset_left = 334.00003
+offset_top = 232.0
+offset_right = 342.00003
+offset_bottom = 240.0
+scale = Vector2(52.177296, 9.216211)
+
+[node name="Level 3" type="Button" parent="Button manager" unique_id=1806682977]
+layout_mode = 0
+offset_left = 334.00003
+offset_top = 339.99997
+offset_right = 342.00003
+offset_bottom = 347.99997
+scale = Vector2(52.177296, 9.216211)
+
+[node name="Level 4" type="Button" parent="Button manager" unique_id=72052634]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 449.0
+offset_right = 342.0
+offset_bottom = 457.0
+scale = Vector2(52.177296, 9.216211)
+
+[node name="Exit" type="Button" parent="Button manager" unique_id=1889162801]
+layout_mode = 0
+offset_left = 334.00003
+offset_top = 560.99994
+offset_right = 342.00003
+offset_bottom = 568.99994
+scale = Vector2(52.177296, 9.216211)
+
+[connection signal="pressed" from="Button manager/Tutorial" to="Button manager" method="_on_tutorial_pressed"]
+[connection signal="pressed" from="Button manager/Level 1" to="Button manager" method="_on_level_1_pressed"]
+[connection signal="pressed" from="Button manager/Level 2" to="Button manager" method="_on_level_2_pressed"]
+[connection signal="pressed" from="Button manager/Level 3" to="Button manager" method="_on_level_3_pressed"]
+[connection signal="pressed" from="Button manager/Level 4" to="Button manager" method="_on_level_4_pressed"]
+[connection signal="pressed" from="Button manager/Exit" to="Button manager" method="_on_exit_pressed"]
