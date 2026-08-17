@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://dgucqu3eyc0qx"]
+
+[ext_resource type="Script" uid="uid://bhygcm2mcbk3n" path="res://scripts/button_manager.gd" id="1_l6cm7"]
+
+[node name="Main menu" type="Node2D" unique_id=451847601]
+
+[node name="Button manager" type="Control" parent="." unique_id=1811076949]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=174802229]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.8000003, 1)
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 300
+script = ExtResource("1_l6cm7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1732169727]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Tutorial" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1988026956]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Level 1" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1534228057]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Level 2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=835086555]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Level 3" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1806682977]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Level 4" type="Button" parent="MarginContainer/VBoxContainer" unique_id=72052634]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1889162801]
+layout_mode = 2
+size_flags_vertical = 3
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Tutorial" to="Button manager" method="_on_tutorial_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Level 1" to="Button manager" method="_on_level_1_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Level 2" to="Button manager" method="_on_level_2_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Level 3" to="Button manager" method="_on_level_3_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Level 4" to="Button manager" method="_on_level_4_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="Button manager" method="_on_exit_pressed"]
