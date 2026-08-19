@@ -35,7 +35,7 @@ func _on_tutorial_pressed() -> void:
 
 
 func _on_level_1_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/living_room.tscn")
+	get_tree().change_scene_to_file("res://scenes/level1.tscn")
 
 
 func _on_level_2_pressed() -> void:

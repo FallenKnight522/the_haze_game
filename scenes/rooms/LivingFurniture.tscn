@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dyw20wpe3pbeh"]
+
+[ext_resource type="Script" uid="uid://cioqi4rxsq7ks" path="res://scripts/level1/living_furniture.gd" id="1_hmx7e"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=925090035]
+script = ExtResource("1_hmx7e")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=837664226]

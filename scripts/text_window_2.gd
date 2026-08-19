@@ -45,11 +45,13 @@ func _process(_delta: float) -> void:
 				change_state(state.READY)
 		state.CHOOSING2:
 			if(Input.is_action_just_pressed("escape")):
+				change_state(state.READY)
 				window_finished.emit(text_queue.pop_front())
 				choice_queue.pop_front()
 				choice_queue.pop_front()
 				if(choice_first):
 					var act = action_queue.pop_front()
+					action_queue.pop_front()
 					if act.is_valid():
 						act.call()
 				else:
@@ -57,7 +59,6 @@ func _process(_delta: float) -> void:
 					var act = action_queue.pop_front()
 					if act.is_valid():
 						act.call()
-				change_state(state.READY)
 			elif(Input.is_action_just_pressed("move left")):
 				choice_first = true	
 				rich_text_label.text = text_queue[0]+ "\n* "+ choice_queue[0]+ "			  " + choice_queue[1]
@@ -103,6 +104,8 @@ func display_text(text):
 	tw.tween_property(rich_text_label, "visible_ratio", 1.0, doba)
 	tw.finished.connect(_on_text_finished)
 func display_choice2():
+	if(choice_queue.is_empty() || text_queue.is_empty()):
+		printerr("Chybí argumenty")
 	rich_text_label.text = text_queue[0]+ "\n* "+ choice_queue[0]+ "			  " + choice_queue[1]
 	change_state(state.CHOOSING2)
 	choice_first = true

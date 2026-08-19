@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cb4g28m3jt14j"]
 
 [ext_resource type="Script" uid="uid://s7u0v6qw0x4v" path="res://scripts/Hint.gd" id="1_lsscw"]
-[ext_resource type="Texture2D" uid="uid://cp3rmcwjjgk41" path="res://assets/hint.png" id="2_w3r4f"]
-[ext_resource type="Texture2D" uid="uid://cjsdhackkjeed" path="res://assets/hint2.png" id="3_xbfnf"]
+[ext_resource type="Texture2D" uid="uid://xxdcvhyvl1sx" path="res://assets/hint.png" id="2_w3r4f"]
+[ext_resource type="Texture2D" uid="uid://c0vhh4yhfv0eg" path="res://assets/hint2.png" id="3_xbfnf"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1367496244]
 script = ExtResource("1_lsscw")

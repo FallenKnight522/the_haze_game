@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctbpfd083cn5i"
-path="res://.godot/imported/ProjectUtumno_supplemental.png-70b5de0d5f75f8c44736a59599bf5b01.ctex"
+uid="uid://dver8apuqrm8p"
+path="res://.godot/imported/Basic_Door_Opening_Pixel.png-e73248e34848ce993d6fdd4e9e164609.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/ProjectUtumno_supplemental.png"
-dest_files=["res://.godot/imported/ProjectUtumno_supplemental.png-70b5de0d5f75f8c44736a59599bf5b01.ctex"]
+source_file="res://assets/level1/Basic_Door_Opening_Pixel.png"
+dest_files=["res://.godot/imported/Basic_Door_Opening_Pixel.png-e73248e34848ce993d6fdd4e9e164609.ctex"]
 
 [params]
 

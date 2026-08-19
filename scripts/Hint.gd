@@ -5,6 +5,7 @@ var selected1 = true
 @onready var texture_rect: TextureRect = $MarginContainer/TextureRect
 @onready var button: Button = $MarginContainer/Button
 var showing = false;
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	selected1 = true

@@ -24,6 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 theme_override_constants/margin_left = 24
 theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
@@ -31,10 +32,12 @@ theme_override_constants/margin_bottom = 24
 
 [node name="PanelContainer" type="PanelContainer" parent="TextboxContainer" unique_id=1677970075]
 layout_mode = 2
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rxev4")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TextboxContainer/PanelContainer" unique_id=1510992241]
 layout_mode = 2
+mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 29
 bbcode_enabled = true
 autowrap_mode = 2

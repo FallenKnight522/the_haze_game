@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://thd5mvgsrvrt"
-path="res://.godot/imported/ItLies5.png-42da8406ba735f82e2af6bcd111192b4.ctex"
+uid="uid://jymd4skm4ekt"
+path="res://.godot/imported/Principal Office First Spritesheet 1.png-2a1465a22ef414b369adfa8f416cd2ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Strachomira/ItLies5.png"
-dest_files=["res://.godot/imported/ItLies5.png-42da8406ba735f82e2af6bcd111192b4.ctex"]
+source_file="res://assets/level1/Principal Office First Spritesheet 1.png"
+dest_files=["res://.godot/imported/Principal Office First Spritesheet 1.png-2a1465a22ef414b369adfa8f416cd2ac.ctex"]
 
 [params]
 

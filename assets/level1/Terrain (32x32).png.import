@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctbpfd083cn5i"
-path="res://.godot/imported/ProjectUtumno_supplemental.png-70b5de0d5f75f8c44736a59599bf5b01.ctex"
+uid="uid://bvgjm7kcfmfeb"
+path="res://.godot/imported/Terrain (32x32).png-2df1ec823cb0f5a11b30a0e3d433735f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/ProjectUtumno_supplemental.png"
-dest_files=["res://.godot/imported/ProjectUtumno_supplemental.png-70b5de0d5f75f8c44736a59599bf5b01.ctex"]
+source_file="res://assets/level1/Terrain (32x32).png"
+dest_files=["res://.godot/imported/Terrain (32x32).png-2df1ec823cb0f5a11b30a0e3d433735f.ctex"]
 
 [params]
 

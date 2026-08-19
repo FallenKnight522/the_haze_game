@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://bpmp38x7ap7h2"]
 
 [ext_resource type="PackedScene" uid="uid://bc87n5tigm86k" path="res://scenes/brian.tscn" id="1_r2qjy"]
-[ext_resource type="Texture2D" uid="uid://b2w4g38cex2ia" path="res://assets/Terrain (32x32).png" id="2_x6gh5"]
+[ext_resource type="Texture2D" uid="uid://bvgjm7kcfmfeb" path="res://assets/level1/Terrain (32x32).png" id="2_x6gh5"]
 [ext_resource type="PackedScene" uid="uid://difuyeamrtv0i" path="res://scenes/object.tscn" id="3_1hw6j"]
-[ext_resource type="Texture2D" uid="uid://5y4i2xf4i1pw" path="res://assets/Bez názvu.png" id="4_1hw6j"]
+[ext_resource type="Texture2D" uid="uid://ck7vsvvfvs2l8" path="res://assets/Bez názvu.png" id="4_1hw6j"]
 [ext_resource type="Script" uid="uid://b0kamm067tcjr" path="res://scripts/tutorial/spider_object.gd" id="5_3c8cm"]
 [ext_resource type="PackedScene" uid="uid://de7w1pl4j0ge5" path="res://scenes/text_window2.tscn" id="5_vt81l"]
 [ext_resource type="Script" uid="uid://d8bqrygx2npl" path="res://scripts/tutorial/tutorial.gd" id="6_e0b21"]

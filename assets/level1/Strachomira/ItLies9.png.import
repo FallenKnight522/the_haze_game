@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2w4g38cex2ia"
-path="res://.godot/imported/Terrain (32x32).png-0c0c45dce30e6ff67c2d7e6ccf452d06.ctex"
+uid="uid://ohvtjt8k6dmp"
+path="res://.godot/imported/ItLies9.png-dee764592ff871dfcf925716cb26e7d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Terrain (32x32).png"
-dest_files=["res://.godot/imported/Terrain (32x32).png-0c0c45dce30e6ff67c2d7e6ccf452d06.ctex"]
+source_file="res://assets/level1/Strachomira/ItLies9.png"
+dest_files=["res://.godot/imported/ItLies9.png-dee764592ff871dfcf925716cb26e7d9.ctex"]
 
 [params]
 

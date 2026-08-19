@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctbpfd083cn5i"
-path="res://.godot/imported/ProjectUtumno_supplemental.png-70b5de0d5f75f8c44736a59599bf5b01.ctex"
+uid="uid://cxerjd2yxrug1"
+path="res://.godot/imported/ItLies1.png-38fa6f9faca6e0e12eb4b3ada8898cd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/ProjectUtumno_supplemental.png"
-dest_files=["res://.godot/imported/ProjectUtumno_supplemental.png-70b5de0d5f75f8c44736a59599bf5b01.ctex"]
+source_file="res://assets/level1/Strachomira/ItLies1.png"
+dest_files=["res://.godot/imported/ItLies1.png-38fa6f9faca6e0e12eb4b3ada8898cd1.ctex"]
 
 [params]
 

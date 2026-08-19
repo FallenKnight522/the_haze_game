@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://b03bl0ucrv3y2"]
+
+[ext_resource type="Script" uid="uid://1gim5knshdh4" path="res://scripts/level1/Leve1Manager.gd" id="1_f31uk"]
+[ext_resource type="PackedScene" uid="uid://de7w1pl4j0ge5" path="res://scenes/text_window2.tscn" id="2_gnai3"]
+[ext_resource type="PackedScene" uid="uid://cb4g28m3jt14j" path="res://scenes/hint.tscn" id="3_i8kv5"]
+[ext_resource type="Script" uid="uid://c0n258wt3r5r7" path="res://scripts/level1/hint_level1.gd" id="4_dxn3v"]
+[ext_resource type="PackedScene" uid="uid://gayeverlt07m" path="res://scenes/strachomira.tscn" id="5_14jow"]
+[ext_resource type="Texture2D" uid="uid://bwcepkeh785f4" path="res://assets/hint.png" id="5_i8kv5"]
+[ext_resource type="Texture2D" uid="uid://clb8u3j6h8jjg" path="res://assets/level1/hint2 - spiral.png" id="6_dxn3v"]
+[ext_resource type="PackedScene" uid="uid://bc87n5tigm86k" path="res://scenes/brian.tscn" id="6_mvsps"]
+[ext_resource type="PackedScene" uid="uid://difuyeamrtv0i" path="res://scenes/object.tscn" id="7_jvkml"]
+[ext_resource type="Script" uid="uid://dsfj1mmb2vyqf" path="res://scripts/test_fright.gd" id="8_3w4mx"]
+[ext_resource type="Texture2D" uid="uid://ck7vsvvfvs2l8" path="res://assets/Bez názvu.png" id="9_u068y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rxev4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_u068y")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Level1" type="Node2D" unique_id=908602446]
+script = ExtResource("1_f31uk")
+
+[node name="Graphics" type="Node2D" parent="." unique_id=1085610398]
+
+[node name="hint" parent="Graphics" unique_id=1367496244 instance=ExtResource("3_i8kv5")]
+unique_name_in_owner = true
+script = ExtResource("4_dxn3v")
+selected = Array[Texture2D]([ExtResource("5_i8kv5"), ExtResource("6_dxn3v")])
+
+[node name="Text_window" parent="Graphics" unique_id=1098004527 instance=ExtResource("2_gnai3")]
+unique_name_in_owner = true
+
+[node name="Fear" parent="Graphics" unique_id=533401923 instance=ExtResource("5_14jow")]
+unique_name_in_owner = true
+
+[node name="test" parent="." unique_id=1244079872 instance=ExtResource("7_jvkml")]
+position = Vector2(81, -32)
+script = ExtResource("8_3w4mx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="test" unique_id=1481384601]
+position = Vector2(400.925, -43.85)
+rotation = 1.229685
+scale = Vector2(0.0012500001, 0.0012500001)
+sprite_frames = SubResource("SpriteFrames_rxev4")
+autoplay = "default"
+
+[node name="General" type="Node2D" parent="." unique_id=924651252]
+
+[node name="Player" parent="General" unique_id=1921759424 instance=ExtResource("6_mvsps")]
+unique_name_in_owner = true
+z_index = 4
+position = Vector2(-571, -1.0000005)
+
+[node name="Camera2D" type="Camera2D" parent="General" unique_id=1567350085]
+unique_name_in_owner = true
+position = Vector2(-102, -338)
+zoom = Vector2(0.9, 0.9)
+
+[node name="RoomContainer" type="Node2D" parent="." unique_id=645902341]
