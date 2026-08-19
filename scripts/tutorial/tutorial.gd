@@ -1,11 +1,12 @@
 extends Node
 @onready var text_window: CanvasLayer = %Text_window
 @onready var character_body: CharacterBody2D = $"../Player"
-var exiting=false
+@onready var hint: CanvasLayer = $"../Hint"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	text_window.text_finished.connect(character_body.start_movement)
 	text_window.text_started.connect(character_body.stop_movement)
+	text_window.window_finished.connect(hint.windowLeft)
 	text_window.queue_text('Welcome to "The Haze"
 (press Enter to continue)')
 	text_window.queue_text('Tutorial: Press Enter to end interraction')
@@ -26,11 +27,12 @@ The game will ask you to comfirm')
 	text_window.queue_text("Now that you finished tutorial, why don't you go and say hi, to my assistent Spider.llm
 	He really wanted to greet the new players")
 func _process(_delta: float) -> void:
-	if(Input.is_action_just_pressed("leave")&& !exiting): #Bit legacy code to put leaving into textbox, but since it will be there always, and it can be changed, I will keep it
-		exiting = true
+	if(Input.is_action_just_pressed("leave")): #Bit legacy code to put leaving into textbox, but since it will be there always, and it can be changed, I will keep it
+		
 		text_window.force_choice2("Do you want to return to the menu?", "Yes", "No", leave, stay)
+		text_window.force_enabled = false
 func leave():
-	exiting = false
+	text_window.force_enabled = true
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 func stay():
-	exiting = false
+	text_window.force_enabled = true

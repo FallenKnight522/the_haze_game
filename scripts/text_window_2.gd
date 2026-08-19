@@ -6,6 +6,8 @@ var tw: Tween
 const speed = 0.05
 signal text_finished
 signal text_started
+signal window_finished(text: String)##either context or the text displayed, so we know what window finished
+#if forced text is disabled, will be sent when new forced request is rejected
 enum state{
 	READY,
 	READING,
@@ -17,6 +19,7 @@ var text_queue = []
 var choice_queue = []
 var action_queue = []
 var choice_first = true
+var force_enabled = true
 
 
 # Called when the node enters the scene tree for the first time.
@@ -38,10 +41,11 @@ func _process(_delta: float) -> void:
 				change_state(state.FINISHED)
 		state.FINISHED:
 			if(Input.is_action_just_pressed("escape")):
+				window_finished.emit(rich_text_label.text)
 				change_state(state.READY)
 		state.CHOOSING2:
 			if(Input.is_action_just_pressed("escape")):
-				text_queue.pop_front()
+				window_finished.emit(text_queue.pop_front())
 				choice_queue.pop_front()
 				choice_queue.pop_front()
 				if(choice_first):
@@ -109,7 +113,27 @@ func _on_text_finished():
 func change_state(_state):
 	current_state = _state
 
+func force_text(text: String):
+	if(!force_enabled):
+		window_finished.emit(text)		
+		return
+	match current_state:
+		state.READING:
+			rich_text_label.visible_ratio = 1.0
+			tw.kill()
+			text_queue.push_front(rich_text_label.text)
+		state.FINISHED:
+			text_queue.push_front(rich_text_label.text)
+		state.CHOOSING2:
+			text_queue.push_front("/Choice 2/")
+	#Order is switched since I push to front now
+	text_queue.push_front(text) 
+	change_state(state.READY)
+
 func force_choice2(context: String, choice1:String, choice2: String, action1: Callable= Callable(), action2: Callable = Callable()):
+	if(!force_enabled):
+		window_finished.emit(context)
+		return
 	match current_state:
 		state.READING:
 			rich_text_label.visible_ratio = 1.0
@@ -127,3 +151,5 @@ func force_choice2(context: String, choice1:String, choice2: String, action1: Ca
 	action_queue.push_front(action2)
 	action_queue.push_front(action1)
 	change_state(state.READY)
+	
+	

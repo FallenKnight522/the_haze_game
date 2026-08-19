@@ -24,9 +24,9 @@ func _ready() -> void:
 
 func button_time(button, timeTo, text1, text2):
 	if(time>=timeTo):
-		button.text = text1
-	else:
 		button.text = text2
+	else:
+		button.text = text1
 		button.disabled = true
 
 
@@ -35,7 +35,7 @@ func _on_tutorial_pressed() -> void:
 
 
 func _on_level_1_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/living_room.tscn")
 
 
 func _on_level_2_pressed() -> void:

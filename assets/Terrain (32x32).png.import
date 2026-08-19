@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5y4i2xf4i1pw"
-path="res://.godot/imported/Bez názvu.png-7762f99b6f197b0cfe97f26022790927.ctex"
+uid="uid://b2w4g38cex2ia"
+path="res://.godot/imported/Terrain (32x32).png-0c0c45dce30e6ff67c2d7e6ccf452d06.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bez názvu.png"
-dest_files=["res://.godot/imported/Bez názvu.png-7762f99b6f197b0cfe97f26022790927.ctex"]
+source_file="res://assets/Terrain (32x32).png"
+dest_files=["res://.godot/imported/Terrain (32x32).png-0c0c45dce30e6ff67c2d7e6ccf452d06.ctex"]
 
 [params]
 

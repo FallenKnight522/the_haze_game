@@ -30,4 +30,4 @@ func _unhandled_input(event: InputEvent):
 		interact()
 		
 func interact():
-	pass
+	push_warning("Interract not overriten")

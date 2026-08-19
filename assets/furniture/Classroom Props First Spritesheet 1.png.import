@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5y4i2xf4i1pw"
-path="res://.godot/imported/Bez názvu.png-7762f99b6f197b0cfe97f26022790927.ctex"
+uid="uid://ix6ck7iuqsvl"
+path="res://.godot/imported/Classroom Props First Spritesheet 1.png-ccd660e868a9fd7cb63bc06083d4e6db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bez názvu.png"
-dest_files=["res://.godot/imported/Bez názvu.png-7762f99b6f197b0cfe97f26022790927.ctex"]
+source_file="res://assets/furniture/Classroom Props First Spritesheet 1.png"
+dest_files=["res://.godot/imported/Classroom Props First Spritesheet 1.png-ccd660e868a9fd7cb63bc06083d4e6db.ctex"]
 
 [params]
 

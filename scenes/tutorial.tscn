@@ -1,12 +1,14 @@
 [gd_scene format=4 uid="uid://bpmp38x7ap7h2"]
 
 [ext_resource type="PackedScene" uid="uid://bc87n5tigm86k" path="res://scenes/brian.tscn" id="1_r2qjy"]
-[ext_resource type="Texture2D" uid="uid://b2w4g38cex2ia" path="res://scenes/Terrain (32x32).png" id="2_x6gh5"]
+[ext_resource type="Texture2D" uid="uid://b2w4g38cex2ia" path="res://assets/Terrain (32x32).png" id="2_x6gh5"]
 [ext_resource type="PackedScene" uid="uid://difuyeamrtv0i" path="res://scenes/object.tscn" id="3_1hw6j"]
-[ext_resource type="Texture2D" uid="uid://dm3v4ag4m8ktf" path="res://assets/Bez názvu.png" id="4_1hw6j"]
-[ext_resource type="Script" uid="uid://b0kamm067tcjr" path="res://scripts/spider_object.gd" id="5_3c8cm"]
+[ext_resource type="Texture2D" uid="uid://5y4i2xf4i1pw" path="res://assets/Bez názvu.png" id="4_1hw6j"]
+[ext_resource type="Script" uid="uid://b0kamm067tcjr" path="res://scripts/tutorial/spider_object.gd" id="5_3c8cm"]
 [ext_resource type="PackedScene" uid="uid://de7w1pl4j0ge5" path="res://scenes/text_window2.tscn" id="5_vt81l"]
-[ext_resource type="Script" uid="uid://d8bqrygx2npl" path="res://scripts/tutorial.gd" id="6_e0b21"]
+[ext_resource type="Script" uid="uid://d8bqrygx2npl" path="res://scripts/tutorial/tutorial.gd" id="6_e0b21"]
+[ext_resource type="PackedScene" uid="uid://cb4g28m3jt14j" path="res://scenes/hint.tscn" id="8_nlqja"]
+[ext_resource type="Script" uid="uid://dd6fvhbvsku23" path="res://scripts/tutorial/hint_tutorial.gd" id="9_0epgs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lfn2w"]
 texture = ExtResource("2_x6gh5")
@@ -219,3 +221,6 @@ text = "    Press right arrow or D to go right
 
 [node name="Text_window" parent="." unique_id=1098004527 instance=ExtResource("5_vt81l")]
 unique_name_in_owner = true
+
+[node name="Hint" parent="." unique_id=1367496244 instance=ExtResource("8_nlqja")]
+script = ExtResource("9_0epgs")

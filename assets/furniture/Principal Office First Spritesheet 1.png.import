@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5y4i2xf4i1pw"
-path="res://.godot/imported/Bez názvu.png-7762f99b6f197b0cfe97f26022790927.ctex"
+uid="uid://diqofy1afwx62"
+path="res://.godot/imported/Principal Office First Spritesheet 1.png-563db02fd0db0c02cf320e00504d8df6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bez názvu.png"
-dest_files=["res://.godot/imported/Bez názvu.png-7762f99b6f197b0cfe97f26022790927.ctex"]
+source_file="res://assets/furniture/Principal Office First Spritesheet 1.png"
+dest_files=["res://.godot/imported/Principal Office First Spritesheet 1.png-563db02fd0db0c02cf320e00504d8df6.ctex"]
 
 [params]
 

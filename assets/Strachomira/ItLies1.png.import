@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5y4i2xf4i1pw"
-path="res://.godot/imported/Bez názvu.png-7762f99b6f197b0cfe97f26022790927.ctex"
+uid="uid://cxerjd2yxrug1"
+path="res://.godot/imported/ItLies1.png-ab61018608e03fb51d8f722a418a39e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bez názvu.png"
-dest_files=["res://.godot/imported/Bez názvu.png-7762f99b6f197b0cfe97f26022790927.ctex"]
+source_file="res://assets/Strachomira/ItLies1.png"
+dest_files=["res://.godot/imported/ItLies1.png-ab61018608e03fb51d8f722a418a39e7.ctex"]
 
 [params]
 

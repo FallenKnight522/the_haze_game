@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cb4g28m3jt14j"]
+
+[ext_resource type="Script" uid="uid://s7u0v6qw0x4v" path="res://scripts/Hint.gd" id="1_lsscw"]
+[ext_resource type="Texture2D" uid="uid://cp3rmcwjjgk41" path="res://assets/hint.png" id="2_w3r4f"]
+[ext_resource type="Texture2D" uid="uid://cjsdhackkjeed" path="res://assets/hint2.png" id="3_xbfnf"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1367496244]
+script = ExtResource("1_lsscw")
+selected = Array[Texture2D]([ExtResource("2_w3r4f"), ExtResource("3_xbfnf")])
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1652436]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer" unique_id=1427335300]
+z_index = 1
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer" unique_id=1238408727]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+
+[connection signal="pressed" from="MarginContainer/Button" to="." method="_on_button_pressed"]

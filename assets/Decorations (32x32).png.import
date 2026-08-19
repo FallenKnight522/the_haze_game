@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5y4i2xf4i1pw"
-path="res://.godot/imported/Bez názvu.png-7762f99b6f197b0cfe97f26022790927.ctex"
+uid="uid://djkg3ntvkxxvr"
+path="res://.godot/imported/Decorations (32x32).png-73f71c219483dfadb488fce9f83e100d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bez názvu.png"
-dest_files=["res://.godot/imported/Bez názvu.png-7762f99b6f197b0cfe97f26022790927.ctex"]
+source_file="res://assets/Decorations (32x32).png"
+dest_files=["res://.godot/imported/Decorations (32x32).png-73f71c219483dfadb488fce9f83e100d.ctex"]
 
 [params]
 

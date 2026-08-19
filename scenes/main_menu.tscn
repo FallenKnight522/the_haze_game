@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://dgucqu3eyc0qx"]
 
-[ext_resource type="Script" uid="uid://bhygcm2mcbk3n" path="res://scripts/button_manager.gd" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://bhygcm2mcbk3n" path="res://scripts/menu/button_manager.gd" id="1_l6cm7"]
 
 [node name="Main menu" type="Control" unique_id=357728123]
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = -504.0
@@ -52,6 +53,10 @@ size_flags_vertical = 3
 
 [node name="Exit" type="Button" parent="ButtonManager/VBoxContainer" unique_id=1889162801]
 layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Exit" type="Button" parent="ButtonManager/VBoxContainer/Exit" unique_id=696240303]
+layout_mode = 0
 size_flags_vertical = 3
 
 [connection signal="pressed" from="ButtonManager/VBoxContainer/Tutorial" to="ButtonManager" method="_on_tutorial_pressed"]

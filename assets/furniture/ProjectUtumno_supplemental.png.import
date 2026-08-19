@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5y4i2xf4i1pw"
-path="res://.godot/imported/Bez názvu.png-7762f99b6f197b0cfe97f26022790927.ctex"
+uid="uid://sv4hqtjpk50e"
+path="res://.godot/imported/ProjectUtumno_supplemental.png-70b5de0d5f75f8c44736a59599bf5b01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bez názvu.png"
-dest_files=["res://.godot/imported/Bez názvu.png-7762f99b6f197b0cfe97f26022790927.ctex"]
+source_file="res://assets/furniture/ProjectUtumno_supplemental.png"
+dest_files=["res://.godot/imported/ProjectUtumno_supplemental.png-70b5de0d5f75f8c44736a59599bf5b01.ctex"]
 
 [params]
 
