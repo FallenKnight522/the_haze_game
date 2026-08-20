@@ -41,6 +41,7 @@ layer = 10
 unique_name_in_owner = true
 
 [node name="test" parent="." unique_id=1244079872 instance=ExtResource("7_jvkml")]
+visible = false
 position = Vector2(81, -32)
 script = ExtResource("8_3w4mx")
 
