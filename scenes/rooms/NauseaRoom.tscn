@@ -1,0 +1,909 @@
+[gd_scene format=4 uid="uid://0y5ppl0obwi8"]
+
+[ext_resource type="Texture2D" uid="uid://bvgjm7kcfmfeb" path="res://assets/level1/Terrain (32x32).png" id="1_5drrp"]
+[ext_resource type="Script" uid="uid://d2udwpc5lgwdw" path="res://scripts/level1/nausea_room.gd" id="1_b2an6"]
+[ext_resource type="Texture2D" uid="uid://bwl7fnu2ajt8" path="res://assets/furniture/earthwallleft.png" id="2_yrt46"]
+[ext_resource type="PackedScene" uid="uid://difuyeamrtv0i" path="res://scenes/object.tscn" id="3_b2an6"]
+[ext_resource type="Texture2D" uid="uid://boc166mltscda" path="res://assets/furniture/earthwallright.png" id="3_yrt46"]
+[ext_resource type="Texture2D" uid="uid://dhjscxhqa87gb" path="res://assets/atlas.png" id="4_b2an6"]
+[ext_resource type="Script" uid="uid://coi5dx2qt0aj" path="res://scripts/level1/closed_door.gd" id="4_ce7t5"]
+[ext_resource type="Texture2D" uid="uid://cs2jir55slc3u" path="res://assets/level1/Basic_Door_Pixel.png" id="5_b7mgt"]
+[ext_resource type="Script" uid="uid://dabbn7cru446a" path="res://scripts/level1/opend_door.gd" id="6_ye48w"]
+[ext_resource type="Texture2D" uid="uid://dver8apuqrm8p" path="res://assets/level1/Basic_Door_Opening_Pixel.png" id="7_uwmrm"]
+[ext_resource type="Script" uid="uid://cgqmtghi3bn7r" path="res://scripts/level1/aliceid.gd" id="11_yrt46"]
+[ext_resource type="Texture2D" uid="uid://nrq2twgoqu65" path="res://assets/level1/AliceId.png" id="12_b2an6"]
+[ext_resource type="Script" uid="uid://vx21sqhicmlm" path="res://scripts/level1/nausea_field.gd" id="13_b2an6"]
+[ext_resource type="Shader" uid="uid://dn5fmbhn565r5" path="res://shaders/NauseaRoom.gdshader" id="13_ce7t5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iv26p"]
+texture = ExtResource("1_5drrp")
+texture_region_size = Vector2i(32, 32)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+10:1/0 = 0
+10:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+11:1/0 = 0
+11:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+13:1/0 = 0
+13:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+14:1/0 = 0
+14:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+16:1/0 = 0
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:2/0 = 0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+8:2/0 = 0
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+10:2/0 = 0
+10:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+11:2/0 = 0
+11:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+13:2/0 = 0
+13:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+14:2/0 = 0
+14:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+16:2/0 = 0
+17:2/0 = 0
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+8:4/0 = 0
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+10:4/0 = 0
+10:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+11:4/0 = 0
+11:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+13:4/0 = 0
+13:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+14:4/0 = 0
+14:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+16:4/0 = 0
+17:4/0 = 0
+1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.009878, -16, 16, -16, 16, 16, -6.4841385, 16)
+2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 7.0098763, -16, 7.8861084, 16, -16, 16)
+5:5/0 = 0
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:5/0 = 0
+7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+8:5/0 = 0
+8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+10:5/0 = 0
+10:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+11:5/0 = 0
+11:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+13:5/0 = 0
+13:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+14:5/0 = 0
+14:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+16:5/0 = 0
+17:5/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+5:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+16:7/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+5:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+5:9/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+16:10/0 = 0
+17:10/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+5:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+16:11/0 = 0
+17:11/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w5t0w"]
+texture = ExtResource("2_yrt46")
+1:0/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_ft643"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_iv26p")
+sources/9 = SubResource("TileSetAtlasSource_w5t0w")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ce7t5"]
+texture = ExtResource("2_yrt46")
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 2.9676685, 8, 2.769823, 8, -1.7806015, -8, -1.978447)
+0:1/0/physics_layer_0/polygon_0/one_way = true
+1:1/0 = 0
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 2.9676685, 8, 2.769823, 8, -1.7806015, -8, -1.978447)
+1:0/0/physics_layer_0/polygon_0/one_way = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b7mgt"]
+texture = ExtResource("3_yrt46")
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.726717, 8, -6.9245615, 8, -1.7806015, -8, -1.978447)
+1:1/0/physics_layer_0/polygon_0/one_way = true
+0:1/0 = 0
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.2967682, 8, -0.395689, 8, 8, -8, 8)
+0:0/0/physics_layer_0/polygon_0/one_way = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ye48w"]
+texture = ExtResource("4_b2an6")
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0/physics_layer_0/polygon_0/one_way = true
+2:1/0 = 0
+3:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0/physics_layer_0/polygon_0/one_way = true
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0/physics_layer_0/polygon_0/one_way = true
+3:3/0 = 0
+4:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+19:3/0 = 0
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:4/0/physics_layer_0/polygon_0/one_way = true
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
+21:6/0 = 0
+22:6/0 = 0
+23:6/0 = 0
+24:6/0 = 0
+25:6/0 = 0
+26:6/0 = 0
+27:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+20:7/0 = 0
+21:7/0 = 0
+22:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+21:8/0 = 0
+22:8/0 = 0
+23:8/0 = 0
+24:8/0 = 0
+25:8/0 = 0
+26:8/0 = 0
+27:8/0 = 0
+28:8/0 = 0
+29:8/0 = 0
+30:8/0 = 0
+31:8/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+11:13/0 = 0
+12:13/0 = 0
+13:13/0 = 0
+14:13/0 = 0
+15:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+12:14/0 = 0
+13:14/0 = 0
+14:14/0 = 0
+15:14/0 = 0
+16:14/0 = 0
+17:14/0 = 0
+18:14/0 = 0
+19:14/0 = 0
+20:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+6:15/0 = 0
+7:15/0 = 0
+8:15/0 = 0
+9:15/0 = 0
+10:15/0 = 0
+11:15/0 = 0
+12:15/0 = 0
+13:15/0 = 0
+14:15/0 = 0
+15:15/0 = 0
+16:15/0 = 0
+17:15/0 = 0
+18:15/0 = 0
+19:15/0 = 0
+20:15/0 = 0
+0:16/0 = 0
+1:16/0 = 0
+2:16/0 = 0
+3:16/0 = 0
+4:16/0 = 0
+5:16/0 = 0
+6:16/0 = 0
+7:16/0 = 0
+8:16/0 = 0
+9:16/0 = 0
+10:16/0 = 0
+11:16/0 = 0
+12:16/0 = 0
+13:16/0 = 0
+14:16/0 = 0
+15:16/0 = 0
+16:16/0 = 0
+0:17/0 = 0
+1:17/0 = 0
+2:17/0 = 0
+3:17/0 = 0
+18:17/0 = 0
+19:17/0 = 0
+0:18/0 = 0
+17:18/0 = 0
+18:18/0 = 0
+19:18/0 = 0
+0:19/0 = 0
+1:19/0 = 0
+16:19/0 = 0
+17:19/0 = 0
+18:19/0 = 0
+19:19/0 = 0
+0:20/0 = 0
+1:20/0 = 0
+2:20/0 = 0
+3:20/0 = 0
+13:20/0 = 0
+14:20/0 = 0
+15:20/0 = 0
+16:20/0 = 0
+17:20/0 = 0
+18:20/0 = 0
+19:20/0 = 0
+0:21/0 = 0
+1:21/0 = 0
+2:21/0 = 0
+3:21/0 = 0
+4:21/0 = 0
+5:21/0 = 0
+6:21/0 = 0
+11:21/0 = 0
+12:21/0 = 0
+13:21/0 = 0
+14:21/0 = 0
+15:21/0 = 0
+16:21/0 = 0
+17:21/0 = 0
+18:21/0 = 0
+19:21/0 = 0
+0:22/0 = 0
+1:22/0 = 0
+2:22/0 = 0
+3:22/0 = 0
+4:22/0 = 0
+5:22/0 = 0
+6:22/0 = 0
+7:22/0 = 0
+8:22/0 = 0
+9:22/0 = 0
+10:22/0 = 0
+11:22/0 = 0
+12:22/0 = 0
+13:22/0 = 0
+14:22/0 = 0
+15:22/0 = 0
+16:22/0 = 0
+17:22/0 = 0
+18:22/0 = 0
+19:22/0 = 0
+0:23/0 = 0
+1:23/0 = 0
+2:23/0 = 0
+3:23/0 = 0
+4:23/0 = 0
+5:23/0 = 0
+6:23/0 = 0
+7:23/0 = 0
+8:23/0 = 0
+9:23/0 = 0
+10:23/0 = 0
+11:23/0 = 0
+12:23/0 = 0
+13:23/0 = 0
+14:23/0 = 0
+15:23/0 = 0
+16:23/0 = 0
+17:23/0 = 0
+18:23/0 = 0
+19:23/0 = 0
+0:24/0 = 0
+1:24/0 = 0
+2:24/0 = 0
+3:24/0 = 0
+10:24/0 = 0
+11:24/0 = 0
+12:24/0 = 0
+13:24/0 = 0
+3:25/0 = 0
+4:25/0 = 0
+5:25/0 = 0
+8:25/0 = 0
+9:25/0 = 0
+10:25/0 = 0
+0:26/0 = 0
+0:27/0 = 0
+1:27/0 = 0
+2:27/0 = 0
+3:27/0 = 0
+4:27/0 = 0
+8:27/0 = 0
+9:27/0 = 0
+10:27/0 = 0
+11:27/0 = 0
+12:27/0 = 0
+13:27/0 = 0
+14:27/0 = 0
+15:27/0 = 0
+0:28/0 = 0
+1:28/0 = 0
+2:28/0 = 0
+3:28/0 = 0
+4:28/0 = 0
+5:28/0 = 0
+6:28/0 = 0
+7:28/0 = 0
+8:28/0 = 0
+9:28/0 = 0
+10:28/0 = 0
+11:28/0 = 0
+12:28/0 = 0
+13:28/0 = 0
+14:28/0 = 0
+15:28/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_uwmrm"]
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 2
+sources/0 = SubResource("TileSetAtlasSource_ce7t5")
+sources/1 = SubResource("TileSetAtlasSource_b7mgt")
+sources/2 = SubResource("TileSetAtlasSource_ye48w")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_towsh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_uwmrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_b7mgt")
+}],
+"loop": 0,
+"name": &"close",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_b7mgt")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_b7mgt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uwmrm")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2an6"]
+size = Vector2(85.57141, 185.75002)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rxev4"]
+shader = ExtResource("13_ce7t5")
+shader_parameter/is_inverted = false
+shader_parameter/dizziness_intensity = 0.0
+shader_parameter/time_speed = 2.0
+
+[node name="NauseaRoom" type="Node2D" unique_id=39712664]
+script = ExtResource("1_b2an6")
+
+[node name="Room" type="TileMapLayer" parent="." unique_id=1045608557]
+z_index = -1
+use_parent_material = true
+position = Vector2(2, -279)
+scale = Vector2(3, 3)
+tile_map_data = PackedByteArray("AAAFAAIAAAABAAIAAAAFAAEAAAABAAIAAAAFAAAAAAABAAIAAAAFAP//AAABAAIAAAAFAP7/AAABAAIAAAAFAP3/AAAKAAEAAAAFAPz/AAABAAIAAAAEAPv/AAACAAMAAAADAPv/AAACAAMAAAACAPv/AAACAAMAAAABAPv/AAACAAMAAAAAAPv/AAACAAMAAAD///v/AAACAAMAAAD+//v/AAACAAMAAAD9//v/AAACAAMAAAD8//v/AAACAAMAAAD7//v/AAACAAMAAAD6//v/AAACAAMAAAD5//v/AAACAAMAAAD4//z/AAADAAIAAAD4//3/AAADAAIAAAD4//7/AAADAAIAAAD4////AAADAAIAAAD4/wEAAAADAAIAAAD4/wIAAAADAAIAAAD4/wAAAAALAAIAAAD5/wMAAAACAAEAAAD6/wMAAAACAAEAAAD7/wMAAAACAAEAAAD8/wMAAAACAAEAAAD9/wMAAAACAAEAAAD+/wMAAAACAAEAAAD//wMAAAACAAEAAAAAAAMAAAACAAEAAAABAAMAAAACAAEAAAACAAMAAAACAAEAAAADAAMAAAACAAEAAAAEAAMAAAACAAEAAAD4/wMAAAAHAAIAAAAFAAMAAAAIAAIAAAAFAPv/AAAIAAEAAAD4//v/AAAHAAEAAAD7/wIAAAACAAkAAAD7/wEAAAACAAcAAAD7/wAAAAACAAUAAAD7////AAACAAkAAAD7//7/AAACAAcAAAD+//z/AAACAAsAAAD+//3/AAACAAUAAAD9////AAACAAkAAAD+////AAACAAkAAAD/////AAACAAkAAAAAAP//AAACAAkAAAABAP//AAACAAkAAAD9/wIAAAACAAkAAAD9/wEAAAACAAcAAAD//wAAAAACAAUAAAABAAIAAAACAAkAAAABAAEAAAACAAcAAAD//wEAAAACAAcAAAAAAP3/AAACAAUAAAACAP3/AAACAAUAAAAEAP3/AAACAAUAAAADAP//AAACAAkAAAADAAEAAAACAAcAAAD7//3/AAACAAUAAAD8/wIAAAACAAkAAAD8/wEAAAACAAcAAAD8////AAACAAkAAAD+/wEAAAACAAcAAAAAAAEAAAACAAcAAAACAAEAAAACAAcAAAAEAAEAAAALAAsAAAAEAP//AAALAAoAAAACAP//AAACAAkAAAADAP3/AAACAAUAAAABAP3/AAACAAUAAAD///3/AAACAAUAAAD///z/AAACAAsAAAABAPz/AAACAAsAAAADAPz/AAACAAsAAAAAAPz/AAACAAsAAAACAPz/AAACAAsAAAAEAPz/AAADAAsAAAAEAP7/AAADAAcAAAAEAAIAAAADAAkAAAACAAIAAAACAAkAAAD+/wIAAAACAAkAAAAAAAIAAAACAAkAAAD//wIAAAACAAkAAAADAAIAAAACAAkAAAAEAAAAAAAFAAgAAAADAAAAAAADAAUAAAABAAAAAAACAAUAAAAAAAAAAAACAAUAAAACAAAAAAACAAUAAAACAP7/AAACAAcAAAADAP7/AAACAAcAAAABAP7/AAACAAcAAAAAAP7/AAACAAcAAAD///7/AAACAAcAAAD+//7/AAACAAcAAAD9/wAAAAACAAUAAAD+/wAAAAACAAUAAAD8/wAAAAACAAUAAAD9//7/AAACAAcAAAD9//3/AAACAAUAAAD9//z/AAACAAsAAAD8//7/AAACAAcAAAD8//3/AAACAAUAAAD8//z/AAACAAsAAAD7//z/AAACAAsAAAD5//z/AAAQAAoAAAD6//z/AAACAAsAAAD5//3/AAAFAAgAAAD5//7/AAAKAAsAAAD5////AAABAAkAAAD5/wAAAAACAAUAAAD5/wEAAAABAAcAAAD5/wIAAAABAAkAAAD6/wIAAAACAAkAAAD6//3/AAABAAUAAAD6//7/AAACAAcAAAD6////AAACAAkAAAD6/wAAAAACAAUAAAD6/wEAAAACAAcAAAA=")
+tile_set = SubResource("TileSet_ft643")
+
+[node name="Stairs" type="TileMapLayer" parent="." unique_id=161127303]
+z_index = -1
+use_parent_material = true
+position = Vector2(2, -279)
+scale = Vector2(3, 3)
+tile_map_data = PackedByteArray("AAAJAAUAAgABAAQAAADy////AgABAAQAAAAJAAAAAgABAAEAAAAJAAEAAgABAAMAAAAJAAIAAgABAAMAAAAJAAMAAgABAAMAAAAJAAQAAgABAAMAAADy//7/AgABAAMAAADy//3/AgABAAMAAADy//z/AgABAAMAAADy//v/AgABAAMAAADy//r/AgABAAMAAADy//j/AgABAAEAAADy//n/AgABAAMAAAA=")
+tile_set = SubResource("TileSet_uwmrm")
+
+[node name="closed_door" parent="." unique_id=1801711727 instance=ExtResource("3_b2an6")]
+position = Vector2(-619, -42.999996)
+scale = Vector2(5, 5)
+script = ExtResource("4_ce7t5")
+
+[node name="Sprite2D" type="Sprite2D" parent="closed_door" unique_id=1083048822]
+position = Vector2(0, -0.39999962)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_b7mgt")
+
+[node name="opened_door" parent="." unique_id=1949746210 instance=ExtResource("3_b2an6")]
+position = Vector2(-524.9999, -329)
+scale = Vector2(5, 5)
+script = ExtResource("6_ye48w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="opened_door" unique_id=1615510990]
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_towsh")
+autoplay = "default"
+
+[node name="the_haze_object" parent="." unique_id=1244079872 instance=ExtResource("3_b2an6")]
+position = Vector2(474, -573)
+collision_layer = 3
+script = ExtResource("11_yrt46")
+
+[node name="Sprite2D" type="Sprite2D" parent="the_haze_object" unique_id=182567251]
+position = Vector2(0, -1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_b2an6")
+
+[node name="Nausea" type="Node" parent="." unique_id=91902423]
+
+[node name="nauseaField" type="Area2D" parent="Nausea" unique_id=1304066614]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-570.00006, -134)
+scale = Vector2(0.84000486, 1)
+collision_mask = 3
+script = ExtResource("13_b2an6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nausea/nauseaField" unique_id=1850850177]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(130.95172, 45.874985)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_b2an6")
+
+[node name="nauseaField2" type="Area2D" parent="Nausea" unique_id=1545572425]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(337.99988, -130)
+scale = Vector2(0.84000486, 1)
+collision_mask = 3
+script = ExtResource("13_b2an6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nausea/nauseaField2" unique_id=1621473838]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(130.95172, 45.874977)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_b2an6")
+
+[node name="nauseaField3" type="Area2D" parent="Nausea" unique_id=1987920381]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-570.00006, -134)
+scale = Vector2(0.84000486, 1)
+collision_mask = 3
+script = ExtResource("13_b2an6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nausea/nauseaField3" unique_id=786599237]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(685.71045, 43)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_b2an6")
+
+[node name="nauseaField4" type="Area2D" parent="Nausea" unique_id=1823181576]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-260.0001, -423.99997)
+scale = Vector2(0.84000486, 1)
+collision_mask = 3
+script = ExtResource("13_b2an6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nausea/nauseaField4" unique_id=312361504]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(845.2333, 51.99997)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_b2an6")
+
+[node name="nauseaField5" type="Area2D" parent="Nausea" unique_id=880796488]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-742.00006, -422.99997)
+scale = Vector2(0.84000486, 1)
+collision_mask = 3
+script = ExtResource("13_b2an6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nausea/nauseaField5" unique_id=1958211670]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(685.71045, 43)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_b2an6")
+
+[node name="nauseaField6" type="Area2D" parent="Nausea" unique_id=1652096121]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-484.00003, -421)
+scale = Vector2(0.84000486, 1)
+collision_mask = 3
+script = ExtResource("13_b2an6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nausea/nauseaField6" unique_id=323719780]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(685.71045, 43)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_b2an6")
+
+[node name="nauseaField7" type="Area2D" parent="Nausea" unique_id=1098791017]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-927.00006, -667)
+scale = Vector2(0.84000486, 1)
+collision_mask = 3
+script = ExtResource("13_b2an6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nausea/nauseaField7" unique_id=1038047323]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(685.71045, 43)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_b2an6")
+
+[node name="nauseaField8" type="Area2D" parent="Nausea" unique_id=58841959]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1090.0001, -669)
+scale = Vector2(0.84000486, 1)
+collision_mask = 3
+script = ExtResource("13_b2an6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nausea/nauseaField8" unique_id=1900217709]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(685.71045, 43)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_b2an6")
+
+[node name="nauseaField10" type="Area2D" parent="Nausea" unique_id=765912285]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-732, -666)
+scale = Vector2(0.84000486, 1)
+collision_mask = 3
+script = ExtResource("13_b2an6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nausea/nauseaField10" unique_id=1342756561]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(685.71045, 43)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_b2an6")
+
+[node name="nauseaField11" type="Area2D" parent="Nausea" unique_id=777204822]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-533.00006, -678)
+scale = Vector2(0.84000486, 1)
+collision_mask = 3
+script = ExtResource("13_b2an6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nausea/nauseaField11" unique_id=930070563]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(685.71045, 43)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_b2an6")
+
+[node name="nauseaField12" type="Area2D" parent="Nausea" unique_id=1636224284]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-364.00006, -666)
+scale = Vector2(0.84000486, 1)
+collision_mask = 3
+script = ExtResource("13_b2an6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nausea/nauseaField12" unique_id=2056283254]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(685.71045, 43)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_b2an6")
+
+[node name="nauseaField13" type="Area2D" parent="Nausea" unique_id=741812727]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-179, -666)
+scale = Vector2(0.84000486, 1)
+collision_mask = 3
+script = ExtResource("13_b2an6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nausea/nauseaField13" unique_id=1187982332]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(685.71045, 43)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_b2an6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=586249562]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1088821158]
+material = SubResource("ShaderMaterial_rxev4")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(33.64, 21.720005)
+color = Color(1, 1, 1, 0.24313726)
+
+[connection signal="body_entered" from="Nausea/nauseaField" to="Nausea/nauseaField" method="_on_body_entered"]
+[connection signal="body_entered" from="Nausea/nauseaField2" to="Nausea/nauseaField2" method="_on_body_entered"]
+[connection signal="body_entered" from="Nausea/nauseaField3" to="Nausea/nauseaField3" method="_on_body_entered"]
+[connection signal="body_entered" from="Nausea/nauseaField4" to="Nausea/nauseaField4" method="_on_body_entered"]
+[connection signal="body_entered" from="Nausea/nauseaField5" to="Nausea/nauseaField5" method="_on_body_entered"]
+[connection signal="body_entered" from="Nausea/nauseaField6" to="Nausea/nauseaField6" method="_on_body_entered"]
+[connection signal="body_entered" from="Nausea/nauseaField7" to="Nausea/nauseaField7" method="_on_body_entered"]
+[connection signal="body_entered" from="Nausea/nauseaField8" to="Nausea/nauseaField8" method="_on_body_entered"]
+[connection signal="body_entered" from="Nausea/nauseaField10" to="Nausea/nauseaField10" method="_on_body_entered"]
+[connection signal="body_entered" from="Nausea/nauseaField11" to="Nausea/nauseaField11" method="_on_body_entered"]
+[connection signal="body_entered" from="Nausea/nauseaField12" to="Nausea/nauseaField12" method="_on_body_entered"]
+[connection signal="body_entered" from="Nausea/nauseaField13" to="Nausea/nauseaField13" method="_on_body_entered"]

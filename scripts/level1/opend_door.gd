@@ -6,6 +6,7 @@ func interact():
 	animated_sprite_2d.play("open")
 	SignalManager.show_choice2.emit("This door is unlocked. Enter?","Yes", "No",leave_room, stay)
 func leave_room():
+	printerr("Reset players Gravity, Sence of direction..")
 	animated_sprite_2d.play("default")
 	pass
 func stay():

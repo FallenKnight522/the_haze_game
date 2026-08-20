@@ -20,7 +20,7 @@ func _ready() -> void:
 	SignalManager.show_choice2.connect(text_window.queue_choice2)
 	SignalManager.change_room.connect(enter_room)
 	text_window.force_enabled = true
-	enter_room("test", "res://scenes/rooms/GravityRoom.tscn")
+	enter_room("test", "res://scenes/rooms/NauseaRoom.tscn")
 	##enter_room("obytny_pokoj", "res://scenes/rooms/Living_room.tscn")
 	##starting_dialog()
 func _process(_delta: float) -> void:

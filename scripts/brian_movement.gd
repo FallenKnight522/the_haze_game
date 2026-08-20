@@ -5,6 +5,8 @@ const SPEED = 500.0
 const JUMP_VELOCITY = -500.0
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 var move_modifier = 1
+var direct = 1
+var id_last_modifier = 0
 var gravity_modifie = Vector2.DOWN
 
 func _ready() -> void:
@@ -23,7 +25,7 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("move left", "move right")
-	direction*=move_modifier
+	direction*=move_modifier*direct
 	
 	if direction > 0:
 		animated_sprite.flip_h = false;
@@ -57,4 +59,12 @@ func change_gravity(grav: Vector2):
 	gravity_modifie = grav
 	up_direction = -gravity_modifie
 	rotation = gravity_modifie.angle() - (PI / 2.0)
-	
+func reset():
+	move_modifier = 1
+	gravity_modifie = Vector2.DOWN
+func invert_move(id: int):
+	if(id!=id_last_modifier):
+		id_last_modifier = id
+		direct *= -1
+		return true
+	return false
