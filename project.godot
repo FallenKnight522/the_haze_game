@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="The Haze"
-run/main_scene="uid://dgucqu3eyc0qx"
+run/main_scene="uid://b03bl0ucrv3y2"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 

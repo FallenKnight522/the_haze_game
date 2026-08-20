@@ -5,18 +5,20 @@ const SPEED = 500.0
 const JUMP_VELOCITY = -500.0
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 var move_modifier = 1
+var gravity_modifie = Vector2.DOWN
 
 func _ready() -> void:
 	add_to_group("player")
 func _physics_process(delta: float) -> void:
+	var local_velocity = velocity.rotated(-rotation) ## local velocity so it funcitons regardless of gravity
 	# Add the gravity.
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		local_velocity += get_gravity() * delta
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		animated_sprite.play("jump_start")
-		velocity.y = JUMP_VELOCITY* move_modifier
+		local_velocity.y = JUMP_VELOCITY* move_modifier
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -38,14 +40,21 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.play("fall")
 	
 	if direction:
-		velocity.x = direction * SPEED
+		local_velocity.x = direction * SPEED
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+		local_velocity.x = move_toward(velocity.x, 0, SPEED)
+	velocity = local_velocity.rotated(rotation)
 	move_and_slide()
 
 func stop_movement():
-	velocity.x = 0
+	var local_velocity = velocity.rotated(-rotation) ## local velocity so it funcitons regardless of gravity
+	local_velocity.x = 0
+	velocity = local_velocity.rotated(rotation)
 	move_modifier = 0
 func start_movement():
 	move_modifier = 1
+func change_gravity(grav: Vector2):
+	gravity_modifie = grav
+	up_direction = -gravity_modifie
+	rotation = gravity_modifie.angle() - (PI / 2.0)
+	

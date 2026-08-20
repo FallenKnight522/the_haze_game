@@ -1,0 +1,522 @@
+[gd_scene format=4 uid="uid://y3im235016wl"]
+
+[ext_resource type="Texture2D" uid="uid://bvgjm7kcfmfeb" path="res://assets/level1/Terrain (32x32).png" id="2_owim4"]
+[ext_resource type="Texture2D" uid="uid://bwl7fnu2ajt8" path="res://assets/furniture/earthwallleft.png" id="3_tiwd6"]
+[ext_resource type="PackedScene" uid="uid://difuyeamrtv0i" path="res://scenes/object.tscn" id="6_67gwk"]
+[ext_resource type="Script" uid="uid://coi5dx2qt0aj" path="res://scripts/level1/closed_door.gd" id="7_ifmp5"]
+[ext_resource type="Texture2D" uid="uid://cs2jir55slc3u" path="res://assets/level1/Basic_Door_Pixel.png" id="8_det54"]
+[ext_resource type="Texture2D" uid="uid://dccwbxn8keaph" path="res://assets/level1/MargaretsPhone.png" id="9_aisrr"]
+[ext_resource type="Script" uid="uid://dabbn7cru446a" path="res://scripts/level1/opend_door.gd" id="9_ajdyu"]
+[ext_resource type="Script" uid="uid://cwmf11qgehc3f" path="res://scripts/level1/gravity_field.gd" id="9_ir805"]
+[ext_resource type="Script" uid="uid://mm0peyr8upae" path="res://scripts/level1/mobile_phone.gd" id="9_owim4"]
+[ext_resource type="Script" uid="uid://bwvw4b54t0nnh" path="res://scripts/level1/mobile_phone_movement.gd" id="9_tiwd6"]
+[ext_resource type="Texture2D" uid="uid://dver8apuqrm8p" path="res://assets/level1/Basic_Door_Opening_Pixel.png" id="10_70enu"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iv26p"]
+texture = ExtResource("2_owim4")
+texture_region_size = Vector2i(32, 32)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+10:1/0 = 0
+10:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+11:1/0 = 0
+11:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+13:1/0 = 0
+13:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+14:1/0 = 0
+14:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+16:1/0 = 0
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:2/0 = 0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+8:2/0 = 0
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+10:2/0 = 0
+10:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+11:2/0 = 0
+11:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+13:2/0 = 0
+13:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+14:2/0 = 0
+14:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+16:2/0 = 0
+17:2/0 = 0
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+8:4/0 = 0
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+10:4/0 = 0
+10:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+11:4/0 = 0
+11:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+13:4/0 = 0
+13:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+14:4/0 = 0
+14:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+16:4/0 = 0
+17:4/0 = 0
+1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.009878, -16, 16, -16, 16, 16, -6.4841385, 16)
+2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 7.0098763, -16, 7.8861084, 16, -16, 16)
+5:5/0 = 0
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:5/0 = 0
+7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+8:5/0 = 0
+8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+10:5/0 = 0
+10:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+11:5/0 = 0
+11:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+13:5/0 = 0
+13:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+14:5/0 = 0
+14:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+16:5/0 = 0
+17:5/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+5:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+16:7/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+5:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+5:9/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+16:10/0 = 0
+17:10/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+5:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+16:11/0 = 0
+17:11/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w5t0w"]
+texture = ExtResource("3_tiwd6")
+1:0/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_ft643"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_iv26p")
+sources/9 = SubResource("TileSetAtlasSource_w5t0w")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_towsh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_70enu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_det54")
+}],
+"loop": 0,
+"name": &"close",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_det54")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_det54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_70enu")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aisrr"]
+size = Vector2(166, 67)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owim4"]
+size = Vector2(8, 13)
+
+[node name="LivingRoom" type="Node2D" unique_id=39712664]
+
+[node name="Room" type="TileMapLayer" parent="." unique_id=1045608557]
+z_index = -1
+use_parent_material = true
+position = Vector2(2, -279)
+scale = Vector2(3, 3)
+tile_map_data = PackedByteArray("AAAFAAIAAAABAAIAAAAFAAEAAAABAAIAAAAFAAAAAAABAAIAAAAFAP//AAABAAIAAAAFAP7/AAABAAIAAAAFAP3/AAAKAAEAAAAFAPz/AAABAAIAAAAEAPv/AAACAAMAAAADAPv/AAACAAMAAAACAPv/AAACAAMAAAABAPv/AAACAAMAAAAAAPv/AAACAAMAAAD///v/AAACAAMAAAD+//v/AAAKAAIAAAD9//v/AAACAAMAAAD8//v/AAACAAMAAAD7//v/AAACAAMAAAD6//v/AAACAAMAAAD5//v/AAACAAMAAAD4//z/AAADAAIAAAD4//3/AAADAAIAAAD4//7/AAADAAIAAAD4////AAADAAIAAAD4/wEAAAADAAIAAAD4/wIAAAADAAIAAAD4/wAAAAADAAIAAAD5/wMAAAACAAEAAAD6/wMAAAACAAEAAAD7/wMAAAALAAEAAAD8/wMAAAACAAEAAAD9/wMAAAALAAEAAAD+/wMAAAACAAEAAAD//wMAAAACAAEAAAAAAAMAAAACAAEAAAABAAMAAAALAAEAAAACAAMAAAACAAEAAAADAAMAAAACAAEAAAAEAAMAAAACAAEAAAD4/wMAAAAHAAIAAAAFAAMAAAAIAAIAAAAFAPv/AAAIAAEAAAD4//v/AAAHAAEAAAD7/wIAAAAFAAIAAAD7/wEAAAAFAAIAAAD7/wAAAAAFAAIAAAD7////AAAFAAIAAAD7//7/AAAFAAIAAAD+//z/AAAFAAIAAAD+//3/AAAFAAMAAAD9////AAABAAUAAAD+////AAACAAUAAAD/////AAANAAQAAAAAAP//AAACAAUAAAABAP//AAADAAUAAAD9/wIAAAAFAAIAAAD9/wEAAAAFAAEAAAD//wAAAAAFAAIAAAABAAIAAAAFAAIAAAABAAEAAAAFAAEAAAD//wEAAAAFAAMAAAAAAP3/AAAFAAUAAAACAP3/AAAFAAUAAAAEAP3/AAABAAUAAAADAP//AAAFAAUAAAADAAEAAAAFAAUAAAD7//3/AAAFAAEAAAD8/wIAAAAFAAkAAAD8/wEAAAAFAAgAAAD8////AAAFAAgAAAD+/wEAAAAFAAgAAAAAAAEAAAAFAAgAAAACAAEAAAAFAAgAAAAEAAEAAAAFAAgAAAAEAP//AAAFAAgAAAACAP//AAAFAAgAAAADAP3/AAAFAAgAAAABAP3/AAAFAAgAAAD///3/AAAFAAgAAAD///z/AAAQAAoAAAABAPz/AAANAAoAAAADAPz/AAANAAoAAAAAAPz/AAACAAsAAAACAPz/AAACAAsAAAAEAPz/AAADAAsAAAAEAP7/AAARAAoAAAAEAAIAAAADAAkAAAACAAIAAAAQAAsAAAD+/wIAAAAQAAsAAAAAAAIAAAARAAsAAAD//wIAAAACAAsAAAADAAIAAAACAAsAAAAEAAAAAAAOAAoAAAADAAAAAAACAAsAAAABAAAAAAACAAsAAAAAAAAAAAAQAAoAAAACAAAAAAAQAAcAAAACAP7/AAANAAoAAAADAP7/AAAOAAsAAAABAP7/AAAOAAsAAAAAAP7/AAACAAsAAAD///7/AAAOAAsAAAD+//7/AAACAAsAAAD9/wAAAAACAAsAAAD+/wAAAAARAAoAAAD8/wAAAAANAAsAAAD9//7/AAAHAAsAAAD9//3/AAADAAgAAAD9//z/AAADAAcAAAD8//7/AAAKAAoAAAD8//3/AAABAAgAAAD8//z/AAAIAAoAAAD7//z/AAACAAsAAAD5//z/AAABAAcAAAD6//z/AAAHAAoAAAD5//3/AAABAAgAAAD5//7/AAABAAgAAAD5////AAABAAgAAAD5/wAAAAABAAgAAAD5/wEAAAABAAgAAAD5/wIAAAABAAkAAAD6/wIAAAADAAkAAAD6//3/AAADAAgAAAD6//7/AAADAAgAAAD6////AAADAAgAAAD6/wAAAAADAAgAAAD6/wEAAAADAAgAAAA=")
+tile_set = SubResource("TileSet_ft643")
+
+[node name="closed_door" parent="." unique_id=1801711727 instance=ExtResource("6_67gwk")]
+position = Vector2(-643, 12)
+script = ExtResource("7_ifmp5")
+
+[node name="Sprite2D" type="Sprite2D" parent="closed_door" unique_id=1083048822]
+position = Vector2(6, -55)
+scale = Vector2(4, 4)
+texture = ExtResource("8_det54")
+
+[node name="opened_door" parent="." unique_id=1949746210 instance=ExtResource("6_67gwk")]
+position = Vector2(436.00003, -226)
+scale = Vector2(5, 5)
+script = ExtResource("9_ajdyu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="opened_door" unique_id=1615510990]
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_towsh")
+autoplay = "default"
+
+[node name="Zony gravitace" type="Node" parent="." unique_id=1353511744]
+
+[node name="GravityField1" type="Area2D" parent="Zony gravitace" unique_id=103837177]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-570.00006, -134)
+scale = Vector2(0.84000486, 1)
+collision_mask = 3
+script = ExtResource("9_ir805")
+gravity_dir = Vector2(0, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zony gravitace/GravityField1" unique_id=357964860]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_aisrr")
+
+[node name="GravityField2" type="Area2D" parent="Zony gravitace" unique_id=1428555380]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-638, -625)
+scale = Vector2(0.40000725, 1)
+collision_mask = 3
+script = ExtResource("9_ir805")
+gravity_dir = Vector2(1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zony gravitace/GravityField2" unique_id=1881357781]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_aisrr")
+
+[node name="GravityField3" type="Area2D" parent="Zony gravitace" unique_id=890039182]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-343, -520)
+scale = Vector2(0.40000725, 1)
+collision_mask = 3
+script = ExtResource("9_ir805")
+gravity_dir = Vector2(0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zony gravitace/GravityField3" unique_id=1370872855]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_aisrr")
+
+[node name="GravityField4" type="Area2D" parent="Zony gravitace" unique_id=772037996]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-334, -34)
+scale = Vector2(0.40000725, 1)
+collision_mask = 3
+script = ExtResource("9_ir805")
+gravity_dir = Vector2(0, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zony gravitace/GravityField4" unique_id=1123697887]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_aisrr")
+
+[node name="GravityField5" type="Area2D" parent="Zony gravitace" unique_id=61499868]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-247.00002, -428)
+scale = Vector2(0.40000725, 1)
+collision_mask = 3
+script = ExtResource("9_ir805")
+gravity_dir = Vector2(1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zony gravitace/GravityField5" unique_id=1258246487]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_aisrr")
+
+[node name="GravityField6" type="Area2D" parent="Zony gravitace" unique_id=1110748569]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-142, -233)
+scale = Vector2(0.40000725, 1)
+collision_mask = 3
+script = ExtResource("9_ir805")
+gravity_dir = Vector2(0, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zony gravitace/GravityField6" unique_id=1328432321]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_aisrr")
+
+[node name="GravityField7" type="Area2D" parent="Zony gravitace" unique_id=2038284638]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-143, -102)
+scale = Vector2(0.40000725, 1)
+collision_mask = 3
+script = ExtResource("9_ir805")
+gravity_dir = Vector2(0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zony gravitace/GravityField7" unique_id=1392258441]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_aisrr")
+
+[node name="GravityField8" type="Area2D" parent="Zony gravitace" unique_id=201729896]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(53, -35)
+scale = Vector2(0.40000725, 1)
+collision_mask = 3
+script = ExtResource("9_ir805")
+gravity_dir = Vector2(1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zony gravitace/GravityField8" unique_id=1508567003]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_aisrr")
+
+[node name="GravityField9" type="Area2D" parent="Zony gravitace" unique_id=619336463]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(431, -425)
+scale = Vector2(0.40000725, 1)
+collision_mask = 3
+script = ExtResource("9_ir805")
+gravity_dir = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zony gravitace/GravityField9" unique_id=1797870951]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_aisrr")
+
+[node name="GravityField10" type="Area2D" parent="Zony gravitace" unique_id=1577804228]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(444, -30)
+scale = Vector2(0.40000725, 1)
+collision_mask = 3
+script = ExtResource("9_ir805")
+gravity_dir = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zony gravitace/GravityField10" unique_id=286015838]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_aisrr")
+
+[node name="GravityField11" type="Area2D" parent="Zony gravitace" unique_id=1740492287]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(236, -28)
+scale = Vector2(0.40000725, 1)
+collision_mask = 3
+script = ExtResource("9_ir805")
+gravity_dir = Vector2(0, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zony gravitace/GravityField11" unique_id=962449907]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_aisrr")
+
+[node name="GravityField12" type="Area2D" parent="Zony gravitace" unique_id=502280963]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(242.99998, -233)
+scale = Vector2(0.40000725, 1)
+collision_mask = 3
+script = ExtResource("9_ir805")
+gravity_dir = Vector2(0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zony gravitace/GravityField12" unique_id=1845932787]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_aisrr")
+
+[node name="GravityField13" type="Area2D" parent="Zony gravitace" unique_id=959868890]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(147, -517)
+scale = Vector2(0.40000725, 1)
+collision_mask = 3
+script = ExtResource("9_ir805")
+gravity_dir = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zony gravitace/GravityField13" unique_id=1508003079]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_aisrr")
+
+[node name="GravityField14" type="Area2D" parent="Zony gravitace" unique_id=1537485153]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(427, -613)
+scale = Vector2(0.40000725, 1)
+collision_mask = 3
+script = ExtResource("9_ir805")
+gravity_dir = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zony gravitace/GravityField14" unique_id=1330348175]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_aisrr")
+
+[node name="GravityField15" type="Area2D" parent="Zony gravitace" unique_id=844965900]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-39, -612)
+scale = Vector2(0.40000725, 1)
+collision_mask = 3
+script = ExtResource("9_ir805")
+gravity_dir = Vector2(1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zony gravitace/GravityField15" unique_id=648282271]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_aisrr")
+
+[node name="GravityField16" type="Area2D" parent="Zony gravitace" unique_id=536640885]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-49, -515)
+scale = Vector2(0.40000725, 1)
+collision_mask = 3
+script = ExtResource("9_ir805")
+gravity_dir = Vector2(0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zony gravitace/GravityField16" unique_id=1163449031]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_aisrr")
+
+[node name="GravityField17" type="Area2D" parent="Zony gravitace" unique_id=359622432]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(333, -519)
+scale = Vector2(0.40000725, 1)
+collision_mask = 3
+script = ExtResource("9_ir805")
+gravity_dir = Vector2(0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zony gravitace/GravityField17" unique_id=832656660]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_aisrr")
+
+[node name="RigidBody2D" type="CharacterBody2D" parent="." unique_id=476077877]
+position = Vector2(398, -617)
+script = ExtResource("9_tiwd6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D" unique_id=984195444]
+shape = SubResource("RectangleShape2D_owim4")
+
+[node name="the_haze_object" parent="RigidBody2D" unique_id=1244079872 instance=ExtResource("6_67gwk")]
+collision_layer = 3
+script = ExtResource("9_owim4")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D/the_haze_object" unique_id=182567251]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_aisrr")
+
+[connection signal="body_entered" from="Zony gravitace/GravityField1" to="Zony gravitace/GravityField1" method="_on_body_entered"]
+[connection signal="body_entered" from="Zony gravitace/GravityField2" to="Zony gravitace/GravityField2" method="_on_body_entered"]
+[connection signal="body_entered" from="Zony gravitace/GravityField3" to="Zony gravitace/GravityField3" method="_on_body_entered"]
+[connection signal="body_entered" from="Zony gravitace/GravityField4" to="Zony gravitace/GravityField4" method="_on_body_entered"]
+[connection signal="body_entered" from="Zony gravitace/GravityField5" to="Zony gravitace/GravityField5" method="_on_body_entered"]
+[connection signal="body_entered" from="Zony gravitace/GravityField6" to="Zony gravitace/GravityField6" method="_on_body_entered"]
+[connection signal="body_entered" from="Zony gravitace/GravityField7" to="Zony gravitace/GravityField7" method="_on_body_entered"]
+[connection signal="body_entered" from="Zony gravitace/GravityField8" to="Zony gravitace/GravityField8" method="_on_body_entered"]
+[connection signal="body_entered" from="Zony gravitace/GravityField9" to="Zony gravitace/GravityField9" method="_on_body_entered"]
+[connection signal="body_entered" from="Zony gravitace/GravityField10" to="Zony gravitace/GravityField10" method="_on_body_entered"]
+[connection signal="body_entered" from="Zony gravitace/GravityField11" to="Zony gravitace/GravityField11" method="_on_body_entered"]
+[connection signal="body_entered" from="Zony gravitace/GravityField12" to="Zony gravitace/GravityField12" method="_on_body_entered"]
+[connection signal="body_entered" from="Zony gravitace/GravityField13" to="Zony gravitace/GravityField13" method="_on_body_entered"]
+[connection signal="body_entered" from="Zony gravitace/GravityField14" to="Zony gravitace/GravityField14" method="_on_body_entered"]
+[connection signal="body_entered" from="Zony gravitace/GravityField15" to="Zony gravitace/GravityField15" method="_on_body_entered"]
+[connection signal="body_entered" from="Zony gravitace/GravityField16" to="Zony gravitace/GravityField16" method="_on_body_entered"]
+[connection signal="body_entered" from="Zony gravitace/GravityField17" to="Zony gravitace/GravityField17" method="_on_body_entered"]

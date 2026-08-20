@@ -20,8 +20,9 @@ func _ready() -> void:
 	SignalManager.show_choice2.connect(text_window.queue_choice2)
 	SignalManager.change_room.connect(enter_room)
 	text_window.force_enabled = true
-	enter_room("obytny_pokoj", "res://scenes/rooms/Living_room.tscn")
-	starting_dialog()
+	enter_room("test", "res://scenes/rooms/GravityRoom.tscn")
+	##enter_room("obytny_pokoj", "res://scenes/rooms/Living_room.tscn")
+	##starting_dialog()
 func _process(_delta: float) -> void:
 	if(Input.is_action_just_pressed("leave")): #Bit legacy code to put leaving into textbox, but since it will be there always, and it can be changed, I will keep it
 		
