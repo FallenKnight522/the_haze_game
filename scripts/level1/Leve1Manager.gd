@@ -19,8 +19,9 @@ func _ready() -> void:
 	SignalManager.show_text.connect(text_window.queue_text)
 	SignalManager.show_choice2.connect(text_window.queue_choice2)
 	SignalManager.change_room.connect(enter_room)
+	SignalManager.show_dialog.connect(text_window.queue_dialog)
 	text_window.force_enabled = true
-	enter_room("test", "res://scenes/rooms/MazeRoom.tscn")
+	enter_room("test", "res://scenes/rooms/J_room.tscn")
 	##enter_room("obytny_pokoj", "res://scenes/rooms/Living_room.tscn")
 	##starting_dialog()
 func _process(_delta: float) -> void:

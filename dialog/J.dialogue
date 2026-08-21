@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3 uid="uid://c78hoq7r0mqbf"]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_7us4y"]
+
+[resource]
+script = ExtResource("1_7us4y")
+using_states = PackedStringArray()
+character_names = PackedStringArray()
+metadata/_custom_type_script = "uid://dbs4435dsf3ry"
+
+
+~ start
+
+Brian: Dobrý den.
+Jan: Dobrý den, mladý muži. Co potřebujete? Hosty tady většinou nemíváme...
+(můžu mu věřit.. co když je to jeho dům...)
+- (Říct pravdu)
+	Brian: Můžete mi pomoc
+	Jan: Jistě, rád.
+	Brian: Hledám přátele. Margaret, Alici, Dana... šli jsme společně prozkoumat tento dům
+	Brian: Mysleli jsme že je opuštěný.. teď vidím že jsem se mýlili....
+	Jan: Ano, tento dům je opuštěný. Já zde jsem jen dočasně. Chybí mu nábytek.
+	Jan: Někoho jsem potkal v Zrcadlové místnosti
+	Jan: A pokud jste tu dlouho tak Chodba je taky dost pravděpodobná...
+	Jan: Ale tam bych být tebou nechodil... moc nejde opustit...
+- (Lhát)
+	Brian: Asi jsem sem omylem zabloudil, poradíte mi kudy ven?
+	Jonáš: Zkus nejbližší dveře. Když budeš mít štěstí, povedou kam potřebuješ.
+	Brian: A když ne.
+	Jonáš: Povedou kam bude Dům chtít
+	do SignalManager.fear.emit(5)
+
+=> END
+
+~ start2
+
+Brian: Mohu se vás zeptat, kdo vlastně jste a co víte o tomto domě?
+Ivan: Jístě, I když nevím zda ti to k něčemu bude. Jsem Ivan, potulný truhlář
+Ivan: Chodím, vyrábím, rozdávám nábytek.
+Ivan: Řekl bych že patřím k těm lepším.
+Ivan: Do tohoto domu jsem došel teprve nedávno.
+Ivan: Hledal jsem někde kde bych si mohl na chvíli odpočinout
+Ivan: A přišlo mi že mu chybí stůl
+Ivan: Nejsem zvyklý dělat nábytek na míru
+Ivan: Ale co bych pro kolegu neudělal.
+- Ten dům je váš kolega?
+	John: V jistém slova smyslu
+	Brian: Jak? Jak jste na to přišel?
+	John: Prostě to poznám
+	Brian: To nechápu.. to vůbec nedává smysl
+	John: Pokud se budeš snažit najít v tomto domě "smysl"
+	John: Pak se obávám, že se ti tu nebude líbit
+	do SignalManager.fear.emit(5)
+- A kam máte namířeno pak?
+	Jonathan: Do Prahy. Je to krásné město. Staré, plné úzkých uliček
+	Brian: A co tam? Máte tam známé?
+	Jonathan: Nikoliv. Mám tam práci
+	Brian: Jakou?
+	Jonathan: Nábytek samozřejmě.
+	Jonathan: Kdyby jsi chtěl, a pokud se odsud dostaneš, projdi se po městě
+	Jonathan: A až uvidíš stůl nebo židli, která vypadá pohozená na rohu, a není jak se zdá
+	Jonathan: Klidně si jí vem. Ber to jako dárek od svého starého známeho, Jonathana
+	Brian: Kdo je Jonathan
+	Jonathan: Já přece. Vždyť jsem se před chvílí představoval..
+	Brian: Ale...
+	Brian: (Nebyl před chvílí... radši bych měl jít, přestává se mi to tu líbit)
+	do SignalManager.fear.emit(5)
+
+=> END

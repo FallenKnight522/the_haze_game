@@ -1,4 +1,4 @@
-extends "res://scripts/object_collision.gd"
+extends the_haze_object
 var behind_player = true
 
 func interact():

@@ -1,4 +1,5 @@
-extends "res://scripts/object_collision.gd"
+extends the_haze_object
+class_name opened_door
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
