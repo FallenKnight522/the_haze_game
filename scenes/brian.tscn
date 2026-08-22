@@ -130,6 +130,7 @@ animations = [{
 radius = 119.57006
 
 [node name="Brian" type="CharacterBody2D" unique_id=1921759424]
+visibility_layer = 2
 scale = Vector2(0.1, 0.1)
 collision_layer = 2
 script = ExtResource("1_x7etv")
@@ -137,9 +138,8 @@ script = ExtResource("1_x7etv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2044874519]
 position = Vector2(-3, -763)
 sprite_frames = SubResource("SpriteFrames_rxev4")
-animation = &"jump_end"
+animation = &"fall"
 autoplay = "idle"
-frame_progress = 0.114884265
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1270776727]
 visibility_layer = 2

@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://c6i4kyrrgeain"]
+
+[ext_resource type="PackedScene" uid="uid://difuyeamrtv0i" path="res://scenes/object.tscn" id="1_nimp2"]
+[ext_resource type="Script" uid="uid://clnbdmqicw5ko" path="res://scripts/level1/false_door.gd" id="2_5yrsw"]
+[ext_resource type="Texture2D" uid="uid://dver8apuqrm8p" path="res://assets/level1/Basic_Door_Opening_Pixel.png" id="3_cq16q"]
+[ext_resource type="Texture2D" uid="uid://cs2jir55slc3u" path="res://assets/level1/Basic_Door_Pixel.png" id="4_v3x0i"]
+[ext_resource type="Texture2D" uid="uid://6oulkp15xoxg" path="res://assets/level1/Basic_Door_Pixel_Shift.png" id="5_cq16q"]
+[ext_resource type="Texture2D" uid="uid://htkaxrc6yh8p" path="res://assets/level1/Empty.png" id="6_v3x0i"]
+[ext_resource type="Script" uid="uid://bkwh8qx07nla8" path="res://scripts/level1/shfiting_room_2.gd" id="7_v3x0i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a6fmr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_cq16q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_v3x0i")
+}],
+"loop": 0,
+"name": &"close",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_v3x0i")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_v3x0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cq16q")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_v3x0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cq16q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_v3x0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cq16q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_v3x0i")
+}],
+"loop": 0,
+"name": &"shift",
+"speed": 5.0
+}]
+
+[node name="ShiftingDoor" type="Node2D" unique_id=1739560570]
+script = ExtResource("2_5yrsw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2077359506]
+position = Vector2(0, -1.5258789e-05)
+scale = Vector2(3.75, 3.75)
+sprite_frames = SubResource("SpriteFrames_a6fmr")
+animation = &"shift"
+autoplay = "default"
+frame = 4
+frame_progress = 1.0
+
+[node name="the_haze_object" parent="." unique_id=1244079872 instance=ExtResource("1_nimp2")]
+position = Vector2(0, -1.5258789e-05)
+scale = Vector2(3.75, 3.75)
+script = ExtResource("7_v3x0i")

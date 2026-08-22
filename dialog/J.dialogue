@@ -11,59 +11,56 @@ metadata/_custom_type_script = "uid://dbs4435dsf3ry"
 
 ~ start
 
-Brian: Dobrý den.
-Jan: Dobrý den, mladý muži. Co potřebujete? Hosty tady většinou nemíváme...
-(můžu mu věřit.. co když je to jeho dům...)
-- (Říct pravdu)
-	Brian: Můžete mi pomoc
-	Jan: Jistě, rád.
-	Brian: Hledám přátele. Margaret, Alici, Dana... šli jsme společně prozkoumat tento dům
-	Brian: Mysleli jsme že je opuštěný.. teď vidím že jsem se mýlili....
-	Jan: Ano, tento dům je opuštěný. Já zde jsem jen dočasně. Chybí mu nábytek.
-	Jan: Někoho jsem potkal v Zrcadlové místnosti
-	Jan: A pokud jste tu dlouho tak Chodba je taky dost pravděpodobná...
-	Jan: Ale tam bych být tebou nechodil... moc nejde opustit...
-- (Lhát)
-	Brian: Asi jsem sem omylem zabloudil, poradíte mi kudy ven?
-	Jonáš: Zkus nejbližší dveře. Když budeš mít štěstí, povedou kam potřebuješ.
-	Brian: A když ne.
-	Jonáš: Povedou kam bude Dům chtít
+Brian: Ehm... Good day? Sir..
+Jan: Good day, young lad, how can I help you? We don't get many visitors in this house..
+(Should I be truthfull... what if thi is his house...)
+- (Tell the truth)
+	Brian: I am searching for my friends. Margaret, Alice, Dan... we wanted to explore this house.. 
+	Brian: We thought it was abandoned...
+	Jan: It is. I am just temporarily staying. It needs more furniture.
+	Jan: I think I heard someone is in the mirror room
+	Jan: And if you're here for long, the Hallway is most likely
+	Jan: Althought I would avoid it if I were you. It is not easy to leave
+- (Lie)
+	Brian: I accidently wondered in here. Can you tell me how to leave?
+	Jonáš: Try the nearest door. If you are lucky, it will leads where you need
+	Brian: And if I am not.
+	Jonáš: They will lead where the House pleases
 	do SignalManager.fear.emit(5)
 
 => END
 
 ~ start2
 
-Brian: Mohu se vás zeptat, kdo vlastně jste a co víte o tomto domě?
-Ivan: Jístě, I když nevím zda ti to k něčemu bude. Jsem Ivan, potulný truhlář
-Ivan: Chodím, vyrábím, rozdávám nábytek.
-Ivan: Řekl bych že patřím k těm lepším.
-Ivan: Do tohoto domu jsem došel teprve nedávno.
-Ivan: Hledal jsem někde kde bych si mohl na chvíli odpočinout
-Ivan: A přišlo mi že mu chybí stůl
-Ivan: Nejsem zvyklý dělat nábytek na míru
-Ivan: Ale co bych pro kolegu neudělal.
-- Ten dům je váš kolega?
-	John: V jistém slova smyslu
-	Brian: Jak? Jak jste na to přišel?
-	John: Prostě to poznám
-	Brian: To nechápu.. to vůbec nedává smysl
-	John: Pokud se budeš snažit najít v tomto domě "smysl"
-	John: Pak se obávám, že se ti tu nebude líbit
+Brian: Can I ask, who are you and why are you here?
+Ivan: Sure, even thought I am not sure how usefull it will be. I am Ivan, traveling carpender
+Ivan: I travel, make furniture, give it away
+Ivan: I would say I am one of the more skilled ones
+Ivan: I came to this house recently. I wanted to rest a bit
+Ivan: I saw it lack furniture
+Ivan: I am not used to make furniture per request
+Ivan: But what would't I do for a colleague
+- This house is your colleague
+	John: In a certain sence, yes
+	Brian: How? Why would you think that? 
+	John: I can tell
+	Brian: I do not understand.. it makes no sense
+	John: If you are looking for things that "make sense" in this house
+	John: I fear you will not like what you find
 	do SignalManager.fear.emit(5)
-- A kam máte namířeno pak?
-	Jonathan: Do Prahy. Je to krásné město. Staré, plné úzkých uliček
-	Brian: A co tam? Máte tam známé?
-	Jonathan: Nikoliv. Mám tam práci
-	Brian: Jakou?
-	Jonathan: Nábytek samozřejmě.
-	Jonathan: Kdyby jsi chtěl, a pokud se odsud dostaneš, projdi se po městě
-	Jonathan: A až uvidíš stůl nebo židli, která vypadá pohozená na rohu, a není jak se zdá
-	Jonathan: Klidně si jí vem. Ber to jako dárek od svého starého známeho, Jonathana
-	Brian: Kdo je Jonathan
-	Jonathan: Já přece. Vždyť jsem se před chvílí představoval..
-	Brian: Ale...
-	Brian: (Nebyl před chvílí... radši bych měl jít, přestává se mi to tu líbit)
+- And where are you going to after you leave this house?
+	Jonathan: To Prague. It is a beautifull city. Full of narrow streets
+	Brian:  And what there? You know someone there?
+	Jonathan: No. I have work to do?
+	Brian: Carpenting?
+	Jonathan: Yes, making furniture?
+	Jonathan: If you want, and if you leave from here, take a walk throught the city
+	Jonathan: And if you see a table or chair on the sidewalk, that seems like there is more to it
+	Jonathan: You may take it. Take it as gift from your old pal, Jonathan
+	Brian: Who is Jonathan?
+	Jonathan: Me of course. I just introduced myself..
+	Brian: But..
+	Brian: (Didn't he introduce himself... I should go... I have a bad feeling about this.)
 	do SignalManager.fear.emit(5)
 
 => END

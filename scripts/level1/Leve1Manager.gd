@@ -2,7 +2,7 @@ extends Node
 @onready var character_body: CharacterBody2D = %Player
 @onready var text_window: CanvasLayer = %Text_window
 @onready var hint: hint = %hint
-
+@onready var player: CharacterBody2D = %Player
 
 @onready var rooms_container = $RoomContainer
 
@@ -13,6 +13,7 @@ var aktualni_mistnost: Node2D = null
 
 
 func _ready() -> void:
+	get_viewport().canvas_cull_mask &= ~8
 	text_window.text_finished.connect(character_body.start_movement)
 	text_window.text_started.connect(character_body.stop_movement)
 	text_window.window_finished.connect(hint.windowLeft)
@@ -20,8 +21,9 @@ func _ready() -> void:
 	SignalManager.show_choice2.connect(text_window.queue_choice2)
 	SignalManager.change_room.connect(enter_room)
 	SignalManager.show_dialog.connect(text_window.queue_dialog)
+	SignalManager.move_player.connect(move_player)
 	text_window.force_enabled = true
-	enter_room("test", "res://scenes/rooms/J_room.tscn")
+	enter_room("test", "res://scenes/rooms/Mirror_room.tscn")
 	##enter_room("obytny_pokoj", "res://scenes/rooms/Living_room.tscn")
 	##starting_dialog()
 func _process(_delta: float) -> void:
@@ -65,5 +67,6 @@ func starting_dialog():
 	text_window.queue_text("I should find them as soon as I can... I have bad feeling about this place...")
 	text_window.queue_text("(Exploring this place together was a bad idea... Why did I suggest it... I should have known it would't end well)")
 	text_window.queue_text('(So much for "facing my fears"... )')
-
+func move_player(pos: Vector2):
+	player.global_position = pos
 	

@@ -63,5 +63,6 @@ position = Vector2(-571, -1.0000005)
 unique_name_in_owner = true
 position = Vector2(-102, -338)
 zoom = Vector2(0.9, 0.9)
+limit_enabled = false
 
 [node name="RoomContainer" type="Node2D" parent="." unique_id=645902341]

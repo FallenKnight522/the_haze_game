@@ -7,8 +7,6 @@ var can_interact = false
 func _ready() -> void:
 	hide_hint() # Replace with function body.
 
-
-
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		can_interact = true
@@ -31,3 +29,8 @@ func _unhandled_input(event: InputEvent):
 		
 func interact():
 	push_warning("Interract not overriten")
+	
+func can_interact_true():
+	can_interact = true
+func can_interact_false():
+	can_interact = false
