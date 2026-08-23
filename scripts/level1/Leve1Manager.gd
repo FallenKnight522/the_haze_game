@@ -23,7 +23,7 @@ func _ready() -> void:
 	SignalManager.show_dialog.connect(text_window.queue_dialog)
 	SignalManager.move_player.connect(move_player)
 	text_window.force_enabled = true
-	enter_room("test", "res://scenes/rooms/Mirror_room.tscn")
+	enter_room("test", "res://scenes/rooms/Spiral_Staircase.tscn")
 	##enter_room("obytny_pokoj", "res://scenes/rooms/Living_room.tscn")
 	##starting_dialog()
 func _process(_delta: float) -> void:

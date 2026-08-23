@@ -1,0 +1,107 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3 uid="uid://c78hoq7r0mqbf"]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_7us4y"]
+
+[resource]
+script = ExtResource("1_7us4y")
+using_states = PackedStringArray()
+character_names = PackedStringArray()
+metadata/_custom_type_script = "uid://dbs4435dsf3ry"
+
+
+~ start
+Brian: Margaret! Margaret!! We have to get out of here!
+Margaret: Round and round the staircase twists in the endless spiral
+Margaret: Walk them down or up as you wish, but you can't reach top nor bottom
+Margaret: Walk them round and round until they stay still, and you start to spiral
+Brian: MARGARET!!! Please! Snap out of it. We have to leave this place
+Margaret: Round and round until you realize that you are the stairs, walked in spiral
+Margaret: That there is no end nor begining but endles circle
+Margaret: Look above, see the same exact stairs lining the ceiling
+Margaret: or is it the floor? Can you tell whitch way is up and whitch down?
+Margaret: How would you know, you have been walking both directions and reach nothing but more stairs
+Brian: Came on, don't do this to me
+- (grab her by the hand to lead her out)
+	(As you try to grab her, your head starts spinning and you almost tumble down the stair)
+	do SignalManager.fear.emit(5)
+	- (Try it again)
+		(Your head throbs with pain and you feel as if distorted into spiral shape for a moment)
+		Brian: Why can't I reach you
+		Margaret: I am already twisted
+		Margaret: Pretty soon, you too will spin in sharp angles
+		do SignalManager.fear.emit(10)
+	- (try to use words)
+		Brian: Margaret please. You know me. We are friends. We came here to explore this house.
+		Brian: We need to leave. Come with me. Please, come before this place does something terrible to us
+		Margaret: It's too late for that. We are already marked and distorted
+		do SignalManager.fear.emit(5)
+- (keep your distance)
+=> END
+~ start2
+Brian: Margaret please, try to remember.
+Brian: You came here with me
+Brian: You can leave this place
+Brian: Just come with me. I promise we will get out safely...
+Margaret: Liar
+Margaret: You cannot even protect yourself
+Margaret: I am better of here, the stairs don't hurt
+Margaret: The stairs don't lie
+Margaret: The stairs don't pretend
+Margaret: They just twist and turn down, up, down, up down
+Brian:  Please. Stop. Stop the nonsence. Just come with me. We can still make it out! Please...
+Margaret: Stop. Just stop. You know none of us will leave
+Margaret: You know you lead us to our deaths
+Margaret: You can feel it deep down in your bones
+Margaret: You can lie to me. You can lie to this house
+Margaret: But you cannot lie to yourself.
+Margaret: Go, find the place to loose yourself. To distort youself. To become one with this house
+(I cannot give up)
+(I need to get out of here)
+(Then I can figure out how to get her out)
+(Trying to carry her and explore would not end well)
+Brian: Margaret. I will prove to you there is a way out. I will find it.
+Brian: And then, I will return to you. And you will come with me
+Margaret: Farwell, Brian. May you go mad gently, old "friend"
+do SignalManager.fear.emit(10)
+=> END
+~ cycle1
+Margaret: The ceiling twists and turns and bends
+Margaret: The stairs go round and round and round and round and round
+Margaret: You may go up, in the vain hope of escape, or down
+Margaret: Were you going up, or down? Can you tell
+Margaret: How deep bellow the earth must you be now? Or far above the clouds?
+Margaret: Time and space have no meaning here
+Margaret: How long have you been going for? Days, weeks...
+do SignalManager.fear.emit(5)
+=> END
+~ cycle2
+Margaret: Once there was a staircase
+Margaret: It lead up, up into the sky
+Margaret: And down, into the earth
+Margaret: There was noone to walk the staircase
+Margaret: And so, it dreamed of being walked
+Margaret: One day, it saw a human, just out of reach
+Margaret: And so, it bend. It bend and streached to reach them
+Margaret: To be walked
+Margaret: And it did reach the human
+Margaret: And the human walke down and up and down and up and down
+Margaret: And there was nothing for him to find
+Margaret: And the stairs bend and twisted
+Margaret: And the human walked and walked, down, up, down, up, down
+do SignalManager.fear.emit(5)
+=> END
+~ cycle3
+Margaret: Once, there was a human
+Margaret: A scared human
+Margaret: A human that had friends
+Margaret: They called her Margaret, and she lied to them that it was her name
+Margaret: Or was it her name? And she lied the wasn't...
+Margaret: She lied to them that she was brave
+Margaret: She lied to them that she cared about them
+Margaret: She lied to them that they cared about her
+Margaret: Or did they lie to her about any of that
+Margaret: Or did she lie to herself about that
+Margaret: Or did they lie to themselves about that
+Margaret: Whose to say. So many lies, that truth is lost beneath them
+do SignalManager.fear.emit(10)
+=> END
