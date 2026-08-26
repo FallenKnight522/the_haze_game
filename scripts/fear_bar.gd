@@ -20,6 +20,7 @@ func on_fear(val):
 	fear += val
 	if(fear >= fearMax):
 			fear = fearMax
+			SignalManager.fear_limit.emit()
 	if(fear/fearLevels != dec):
 		showpicture()
 func showpicture():

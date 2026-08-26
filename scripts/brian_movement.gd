@@ -61,10 +61,15 @@ func change_gravity(grav: Vector2):
 	rotation = gravity_modifie.angle() - (PI / 2.0)
 func reset():
 	move_modifier = 1
-	gravity_modifie = Vector2.DOWN
+	change_gravity(Vector2.DOWN)
 func invert_move(id: int):
 	if(id!=id_last_modifier):
 		id_last_modifier = id
 		direct *= -1
 		return true
 	return false
+func reset_movement():
+	move_modifier = 1
+	direct = 1
+	id_last_modifier = 0
+	change_gravity(Vector2.DOWN)

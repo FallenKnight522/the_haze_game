@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3 uid="uid://c78hoq7r0mqbf"]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_7us4y"]
+
+[resource]
+script = ExtResource("1_7us4y")
+using_states = PackedStringArray()
+character_names = PackedStringArray()
+metadata/_custom_type_script = "uid://dbs4435dsf3ry"
+
+
+~ start
+Brian: What.. where am I?
+Brian: Did I escape?
+Brian: Wait, where are the others???
+Brian: Dan!! Alice!! Margaret!!
+Brian: No, no, no, no, no.... this cannot be happening
+Brian: I can't be the only one who made it out..
+=> END
+
+~ start2
+Brian: MARGARET!!! ALICE!!! DAN!!
+Brian: Please, anyone!!!
+Brian: No, no...
+Brian: Not like this... not when it's all my fault...
+Brian: We should never have came here...
+Brian: MARGARET!!! ALICE!!! DAN!!
+=> END
+
+~ start3
+Brian: I need to find them!
+Brian: I need to make sure they are safe
+Brian: Where is the house
+Brian: Where did it go!?
+Brian: It was right here, it could not have disappeared...
+Brian: Unless it did...
+Brian: Unless they are gone...
+=> END
+~ start4
+Brian: [Sobs]
+Brian: This, this cannot be how it ends
+Brian: I brought them here
+Brian: I suggested this place
+Brian: I was the one who wanted to face his fears
+Brian: Why do I get to leave
+Brian: Why do they get to die, just because they were my friends
+Brian: [Sobs]
+Brian: I have to find them.. have to find some way of reaching them
+Brian: TAKE ME INSTEAD YOU DEMONS!!! LET THEM GO!!
+Brian: ....
+Brian: It's useless
+Brian: That house does not yield to reason
+Brian: Only maddness
+Brian: I need to find more about that place
+Brian: What it is, how it works
+Brian: A way to rescue them
+Brian: I must go
+=> END

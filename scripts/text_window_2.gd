@@ -25,7 +25,13 @@ var force_enabled = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	current_state = state.READY
-
+func clear():
+	text_queue.clear()
+	choice_queue.clear()
+	action_queue.clear()
+	choice_first = true
+	force_enabled = true
+	current_state = state.READY
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	match current_state:
@@ -154,7 +160,7 @@ func force_choice2(context: String, choice1:String, choice2: String, action1: Ca
 	action_queue.push_front(action2)
 	action_queue.push_front(action1)
 	change_state(state.READY)
-	
+
 func queue_dialog(dialogue_resource: DialogueResource, line_id: String = "start"):
 	#Made with Spider.LLM
 	# 1. Vytáhneme datový objekt z Dialogue Manageru

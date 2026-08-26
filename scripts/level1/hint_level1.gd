@@ -23,7 +23,6 @@ func showHint():
 			hintNum = 6
 		
 	if hintNum < 5:
-		print("Make choice")
 		currText = "Need more hints?"
 		text_window.force_choice2(currText, "Yes", "No", moreHints)
 	else:

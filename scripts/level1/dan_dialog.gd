@@ -1,5 +1,5 @@
 extends the_haze_object
-var dialog: DialogueResource = load("res://dialog/Dan.dialogue")
+var dialog: DialogueResource = load("res://dialog/level1/Dan.dialogue")
 @onready var closed_door: the_haze_object = $"../../door/closed_door"
 var dialog_part = 0
 var doors = 0

@@ -746,7 +746,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_bxjx1")
 }],
 "loop": 0,
-"name": &"open",
+"name": &"look_inside",
 "speed": 1.0
 }]
 
@@ -931,7 +931,7 @@ shape = SubResource("RectangleShape2D_8igkp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="table" unique_id=2006588440]
 sprite_frames = SubResource("SpriteFrames_e0jle")
-animation = &"close"
+animation = &"look_inside"
 autoplay = "default"
 
 [node name="the_haze_object2" parent="table" unique_id=609169317 instance=ExtResource("7_0gbjo")]

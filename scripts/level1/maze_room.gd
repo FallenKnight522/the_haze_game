@@ -1,5 +1,5 @@
 extends Node2D
-@onready var opened_door: the_haze_object = $opened_door
+@onready var opened_door_: the_haze_object = $opened_door
 @onready var closed_door: the_haze_object = $closed_door
 @onready var tile_map_layer: TileMapLayer = $Labirinth/TileMapLayer
 @onready var tile_map_layer_2: TileMapLayer = $Labirinth/TileMapLayer2
@@ -23,7 +23,6 @@ func _process(delta: float) -> void:
 	if(timer > timerMax):
 		timer = 0.0
 		change+=1
-		print(change)
 		set_map()
 func set_map():
 	animation_player.play("glitch_transition")
@@ -42,12 +41,12 @@ func set_map():
 		maps[2].collision_enabled = true
 		maps[2].show()
 	if rnd  < 0.5:
-		opened_door.position = Vector2(-566,-45)
+		opened_door_.position = Vector2(-566,-45)
 		closed_door.position = Vector2(430,-617)
 		closed_door.behind_player = false
 	else:
 		closed_door.position = Vector2(-566,-45)
-		opened_door.position = Vector2(430,-617)
+		opened_door_.position = Vector2(430,-617)
 	match change:
 		1:
 			SignalManager.show_text.emit("Wait... I thought.. Was that platform not...")

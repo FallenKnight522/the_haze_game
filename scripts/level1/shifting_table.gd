@@ -19,6 +19,6 @@ func _process(delta: float) -> void:
 		sprite_2d.texture = States[randi_range(1,States.size() - 1)]
 		SignalManager.fear.emit(1)
 func interact():
-	SignalManager.show_text.emit("Obyčejný stůl... vypadá ještě nedodělaný")
-	SignalManager.show_text.emit("Počkat... nebyl před chvílí...")
+	SignalManager.show_text.emit("A normal table.. it looks like it is not fineshed yet")
+	SignalManager.show_text.emit("Wait a minute... wasn't it just a moment ago...")
 	SignalManager.fear.emit(1)

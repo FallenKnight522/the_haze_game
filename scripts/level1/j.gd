@@ -2,10 +2,11 @@ extends the_haze_object
 var time = 0
 var maxtime = 10
 @onready var animate: AnimatedSprite2D = $AnimatedSprite2D
-var dialog: DialogueResource = load("res://dialog/J.dialogue")
+var dialog: DialogueResource = load("res://dialog/level1/J.dialogue")
 var interaction = 0
 func _ready() -> void:
 	hide_hint() # Replace with function body.
+	interaction = 0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	time+=delta
@@ -66,13 +67,14 @@ func interact():
 				SignalManager.show_dialog.emit(dialog)
 			else:
 				push_error("Dialogue resource se nepodařilo načíst!")
-			interaction+=1
+
 		1:
 			if dialog != null:
 				SignalManager.show_dialog.emit(dialog, "start2")
 			else:
 				push_error("Dialogue resource se nepodařilo načíst!")
-			interaction+=1
 		2:
-			SignalManager.show_text.emit("(Něco je s tím člověkem špatně. Nevím co přesně, ale přísahal bych že on i ten stůl před chvílí vypadal jinak)")
-			SignalManager.show_text.emit("(Měl bych jít, musím najít ostatní)")
+			SignalManager.show_text.emit("(Somethings not right about this guy. I am certain both he and the table looked diferently)")
+			SignalManager.show_text.emit("(I should go, I need to find the others)")
+			interaction = 1
+	interaction+=1

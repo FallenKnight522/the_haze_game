@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://be74yr11jv48a"
+path="res://.godot/imported/Dan.dialogue-8893f2dc06f69ee7d91f46e7475690f7.tres"
+
+[deps]
+
+source_file="res://dialog/level1/Dan.dialogue"
+dest_files=["res://.godot/imported/Dan.dialogue-8893f2dc06f69ee7d91f46e7475690f7.tres"]
+
+[params]
+
+defaults=true

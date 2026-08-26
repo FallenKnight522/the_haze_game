@@ -1,7 +1,7 @@
 extends Node
 @onready var character_body: CharacterBody2D = %Player
 @onready var text_window: CanvasLayer = %Text_window
-@onready var hint: hint = %hint
+@onready var hint_: hint = %hint
 @onready var player: CharacterBody2D = %Player
 
 @onready var rooms_container = $RoomContainer
@@ -16,16 +16,16 @@ func _ready() -> void:
 	get_viewport().canvas_cull_mask &= ~8
 	text_window.text_finished.connect(character_body.start_movement)
 	text_window.text_started.connect(character_body.stop_movement)
-	text_window.window_finished.connect(hint.windowLeft)
+	text_window.window_finished.connect(hint_.windowLeft)
 	SignalManager.show_text.connect(text_window.queue_text)
 	SignalManager.show_choice2.connect(text_window.queue_choice2)
 	SignalManager.change_room.connect(enter_room)
 	SignalManager.show_dialog.connect(text_window.queue_dialog)
 	SignalManager.move_player.connect(move_player)
+	SignalManager.fear_limit.connect(fade_out)
 	text_window.force_enabled = true
-	enter_room("test", "res://scenes/rooms/Hallway.tscn")
-	##enter_room("obytny_pokoj", "res://scenes/rooms/Living_room.tscn")
-	##starting_dialog()
+	enter_room("obytny_pokoj", "res://scenes/rooms/Living_room.tscn")
+	starting_dialog()
 func _process(_delta: float) -> void:
 	if(Input.is_action_just_pressed("leave")): #Bit legacy code to put leaving into textbox, but since it will be there always, and it can be changed, I will keep it
 		
@@ -41,6 +41,7 @@ func stay():
 #Made by Spider.LLM
 func enter_room(id_mistnosti: String, cesta_k_scene: String):
 	# 1. ZBAVÍME SE STARÉ MÍSTNOSTI (ale nemažeme ji!)
+	player.reset_movement()
 	if aktualni_mistnost != null:
 		rooms_container.remove_child(aktualni_mistnost)
 
@@ -56,7 +57,8 @@ func enter_room(id_mistnosti: String, cesta_k_scene: String):
 		ulozene_mistnosti[id_mistnosti] = aktualni_mistnost
 		
 		rooms_container.add_child(aktualni_mistnost)
-
+	player.reset_movement()
+	text_window.clear()
 	character_body.global_position = Vector2(-571, 0)
 	
 func starting_dialog():
@@ -69,4 +71,13 @@ func starting_dialog():
 	text_window.queue_text('(So much for "facing my fears"... )')
 func move_player(pos: Vector2):
 	player.global_position = pos
+
+func fade_out():
+	rooms_container.remove_child(aktualni_mistnost)
+	var nova_scena = load("res://scenes/rooms/grass.tscn")
+	aktualni_mistnost = nova_scena.instantiate()
+	rooms_container.add_child(aktualni_mistnost)
+	player.reset_movement()
+	text_window.clear()
+	character_body.global_position = Vector2(-571, 0)
 	

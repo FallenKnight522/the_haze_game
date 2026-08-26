@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://cb4g28m3jt14j"]
 
 [ext_resource type="Script" uid="uid://s7u0v6qw0x4v" path="res://scripts/Hint.gd" id="1_lsscw"]
-[ext_resource type="Texture2D" uid="uid://xxdcvhyvl1sx" path="res://assets/hint.png" id="2_w3r4f"]
-[ext_resource type="Texture2D" uid="uid://c0vhh4yhfv0eg" path="res://assets/hint2.png" id="3_xbfnf"]
+[ext_resource type="Texture2D" uid="uid://bwcepkeh785f4" path="res://assets/hint.png" id="2_w3r4f"]
+[ext_resource type="Texture2D" uid="uid://clb8u3j6h8jjg" path="res://assets/level1/hint2 - spiral.png" id="3_w3r4f"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1367496244]
 script = ExtResource("1_lsscw")
-selected = Array[Texture2D]([ExtResource("2_w3r4f"), ExtResource("3_xbfnf")])
+selected = Array[Texture2D]([ExtResource("2_w3r4f"), ExtResource("3_w3r4f")])
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1652436]
 anchors_preset = 1

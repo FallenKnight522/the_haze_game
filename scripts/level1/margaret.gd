@@ -1,5 +1,5 @@
 extends the_haze_object	
-var dialog: DialogueResource = load("res://dialog/Margaret.dialogue")
+var dialog: DialogueResource = load("res://dialog/level1/Margaret.dialogue")
 var dialog_part = 0
 
 # Called when the node enters the scene tree for the first time.

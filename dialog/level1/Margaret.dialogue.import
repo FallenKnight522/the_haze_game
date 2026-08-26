@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://c1rwr0xjoiqwu"
+path="res://.godot/imported/Margaret.dialogue-dc82a02d843fa66955abfcc81c3d7412.tres"
+
+[deps]
+
+source_file="res://dialog/level1/Margaret.dialogue"
+dest_files=["res://.godot/imported/Margaret.dialogue-dc82a02d843fa66955abfcc81c3d7412.tres"]
+
+[params]
+
+defaults=true

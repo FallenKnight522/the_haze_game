@@ -12,7 +12,3 @@ func _ready() -> void:
 		closed_door.position = Vector2(-525,-329)
 		opened_door.position = Vector2(-619,-43)
 		closed_door.behind_player = false
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

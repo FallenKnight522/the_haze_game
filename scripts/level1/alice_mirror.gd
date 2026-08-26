@@ -1,6 +1,6 @@
 extends the_haze_object
 var interacted = false
-var dialog: DialogueResource = load("res://dialog/Alice.dialogue")
+var dialog: DialogueResource = load("res://dialog/level1/Alice.dialogue")
 
 # Called when the node enters the scene tree for the first time.
 func interact():
