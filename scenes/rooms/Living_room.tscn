@@ -15,9 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://jymd4skm4ekt" path="res://assets/level1/Principal Office First Spritesheet 1.png" id="11_drfdh"]
 [ext_resource type="Script" uid="uid://b7srar7rp3h2g" path="res://scripts/level1/table.gd" id="13_8igkp"]
 [ext_resource type="Script" uid="uid://coi5dx2qt0aj" path="res://scripts/level1/closed_door.gd" id="14_x7cs4"]
-[ext_resource type="Texture2D" uid="uid://cs2jir55slc3u" path="res://assets/level1/Basic_Door_Pixel.png" id="15_t0l3j"]
+[ext_resource type="Texture2D" uid="uid://cs2jir55slc3u" path="res://assets/level1/door/Basic_Door_Pixel.png" id="15_t0l3j"]
 [ext_resource type="Script" uid="uid://dabbn7cru446a" path="res://scripts/level1/opend_door.gd" id="16_73e10"]
-[ext_resource type="Texture2D" uid="uid://dver8apuqrm8p" path="res://assets/level1/Basic_Door_Opening_Pixel.png" id="17_qkedr"]
+[ext_resource type="Texture2D" uid="uid://dver8apuqrm8p" path="res://assets/level1/door/Basic_Door_Opening_Pixel.png" id="17_qkedr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iv26p"]
 texture = ExtResource("1_yqihx")

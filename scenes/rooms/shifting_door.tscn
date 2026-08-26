@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://difuyeamrtv0i" path="res://scenes/object.tscn" id="1_nimp2"]
 [ext_resource type="Script" uid="uid://clnbdmqicw5ko" path="res://scripts/level1/false_door.gd" id="2_5yrsw"]
-[ext_resource type="Texture2D" uid="uid://dver8apuqrm8p" path="res://assets/level1/Basic_Door_Opening_Pixel.png" id="3_cq16q"]
-[ext_resource type="Texture2D" uid="uid://cs2jir55slc3u" path="res://assets/level1/Basic_Door_Pixel.png" id="4_v3x0i"]
-[ext_resource type="Texture2D" uid="uid://6oulkp15xoxg" path="res://assets/level1/Basic_Door_Pixel_Shift.png" id="5_cq16q"]
+[ext_resource type="Texture2D" uid="uid://dver8apuqrm8p" path="res://assets/level1/door/Basic_Door_Opening_Pixel.png" id="3_cq16q"]
+[ext_resource type="Texture2D" uid="uid://cs2jir55slc3u" path="res://assets/level1/door/Basic_Door_Pixel.png" id="4_v3x0i"]
+[ext_resource type="Texture2D" uid="uid://6oulkp15xoxg" path="res://assets/level1/door/Basic_Door_Pixel_Shift.png" id="5_cq16q"]
 [ext_resource type="Texture2D" uid="uid://htkaxrc6yh8p" path="res://assets/level1/Empty.png" id="6_v3x0i"]
 [ext_resource type="Script" uid="uid://bkwh8qx07nla8" path="res://scripts/level1/shfiting_room_2.gd" id="7_v3x0i"]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6oulkp15xoxg"
-path="res://.godot/imported/Basic_Door_Pixel_Shift.png-723dde396e20416531ce16764d6e6b8f.ctex"
+uid="uid://dnm1yntnc2085"
+path="res://.godot/imported/walk_5.png-567744fea5bbc017558de57301201d0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/level1/Basic_Door_Pixel_Shift.png"
-dest_files=["res://.godot/imported/Basic_Door_Pixel_Shift.png-723dde396e20416531ce16764d6e6b8f.ctex"]
+source_file="res://assets/Dan/walk_5.png"
+dest_files=["res://.godot/imported/walk_5.png-567744fea5bbc017558de57301201d0f.ctex"]
 
 [params]
 

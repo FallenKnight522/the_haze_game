@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs2jir55slc3u"
-path="res://.godot/imported/Basic_Door_Pixel.png-9a73e525bc7f1b1c1db495f3a077451d.ctex"
+uid="uid://bsu62fnv70lrv"
+path="res://.godot/imported/fall_3.png-ca8fd660887c2223e72d8cf454b4af17.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/level1/Basic_Door_Pixel.png"
-dest_files=["res://.godot/imported/Basic_Door_Pixel.png-9a73e525bc7f1b1c1db495f3a077451d.ctex"]
+source_file="res://assets/Dan/fall_3.png"
+dest_files=["res://.godot/imported/fall_3.png-ca8fd660887c2223e72d8cf454b4af17.ctex"]
 
 [params]
 

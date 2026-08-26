@@ -9,11 +9,10 @@ var rotated = true ##so firt put it in nonrotated position
 var rotations = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#door_section()
+	door_section()
 	SignalManager.show_text.emit("Wow, that is a huge staircase")
 	SignalManager.show_text.emit("I can't see the botom or top")
 	SignalManager.show_text.emit("Better tread carefully, it looks slippery")
-	Margaret_section()
 func Margaret_section():
 	rotation()
 	opened_door.hide()

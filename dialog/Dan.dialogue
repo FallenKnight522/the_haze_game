@@ -1,0 +1,124 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3 uid="uid://c78hoq7r0mqbf"]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_7us4y"]
+
+[resource]
+script = ExtResource("1_7us4y")
+using_states = PackedStringArray()
+character_names = PackedStringArray()
+metadata/_custom_type_script = "uid://dbs4435dsf3ry"
+
+
+~ start
+Brian: Dan? Dan!!
+Dan: Brian? Thank god. What's going on. Where did you all disappear
+Brian: Don't know, last thing I remember is us four entering the house, and than all being alone and all this madness
+Dan: We need to find a way out, and fast. I feel like my mind is going crazy just from being here
+Brian: Agreed. Whitch way?
+Dan: No idea. I have been walking this hallway for ages. Seems endles. The doors are all lock.
+Dan: And they seem to shif colours too
+Brian: Any strategy on getting out
+Dan: Well, you managed to enter, so some doors must be unlocked. Just have to find out whitch
+do SignalManager.fear.emit(1)
+=> END
+
+~ start1
+Brian: Seems that just randomly trying doors will not get us anywhere
+Dan: Maybe, but what else can we do
+Brian: Let's think about it. What colour was the door you entered throught
+Dan: Red! No, wait.. yellow? brown? green? Can't recall... 
+Dan: Must be this place getting to me
+Brian: I entered through brown
+Brian: and from what I've seen, the doors in the house are also brown
+Brian: lets try the brown doors and see if those work
+do SignalManager.fear.emit(2)
+
+=> END
+
+~ start2
+Dan: No luck either
+Brian: Yea
+Dan: Maybe, we are looking at it wrong
+Dan: the doors change, if you walk back and forth, their colour is not what it was
+Dan: Maybe, the real door does not change colour
+Dan: Maybe we should keep an eye out, ad see whitch stays the same
+do SignalManager.fear.emit(2)
+
+=> END
+
+~ start3
+Brian: Well, still no way out
+Dan: I am starting to think, we won't make it
+Brian: No, no don't say that
+Brian: Think. Brown doors lead out. But doors here change colour...
+Dan: What if, we combine our theories?
+Brian: You mean, a brown door that stays brown?
+Dan: Yea, I mean, those are quite rare, it's worth a shot
+Brian: True. And since some doors in this place are locked after entery, maybe we should try a few more
+Brian: If we give up after one, we might just find the locked one and miss the opened one
+do SignalManager.fear.emit(3)
+
+=> END
+
+~ start4
+Dan: I think we should stop trying
+Brian: Yea, I know. I just don't want to give up yet
+Dan: Maybe there is something we are not seeing
+Dan: But I think it is more likely we are trapped
+Brian: I am sorry...
+Dan: For what?
+Brian: I was the one who suggested exploring this house
+Brian: And now all of you are in this maddness
+Brian: Thanks to me
+Dan: Don't be
+Brian: Why not?
+Dan: You had no idea what would happen
+Dan: And you are just as trapped as we are
+Dan: From where I am standing, we either both escape
+Dan: And that you have nothing to appologise to me for
+Dan: Or we both loose ourselves here
+Dan: And than I'd say we are equal
+Dan: You chose to explore this house
+Dan: We chose to explore it with you
+Dan: We both pay the price
+Dan: Not like it's any fair
+Dan: But thats life
+Brian: But if we get out, Margaret and Alice still migh not..
+Dan: You missunderstand me
+Dan: You do not escape blame by getting killed with us
+Dan: You do not deserve it either way
+Dan: You are a good person Brian
+Dan: You are not responcible for the horrors of this place. I am sure of that
+Brian: (maybe he is right)
+Brian: (I do share their fate)
+Brian: (I couldn't have know what this place was)
+Brian: (And it seems to torment me just like them)
+Brian: Thank you.
+Brian: You are right, we make it out together, or die together
+Brian: But I won't leave you
+Brian: Now, what do we do about the door situations
+Dan: I think we exhausted all the door options
+Dan: Only think left is to walk the hall
+Dan: Perhaps it is not infinite, just really long
+Dan: Or perhaps we will find something to aid us
+Brian: Ok, we walk
+Brian: Just stay close, don't get lost, ok?
+Dan: Right behind you.
+do SignalManager.fear.emit(-5)
+
+=> END
+
+~ cycle
+Dan: Need a break?
+- yes
+	Dan: Ok, we can rest for a while
+	Dan: Not like there is any immediate danger
+	Dan: And we have been walking for quite some time
+	Brian: (How long have we been waking for)
+	Brian: (minutes?, hours?, day?)
+	Brian: (best not dwell on that)
+- no
+	Dan: Than lets keep walking
+do SignalManager.fear.emit(6)
+
+=> END

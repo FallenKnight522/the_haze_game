@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dver8apuqrm8p"
-path="res://.godot/imported/Basic_Door_Opening_Pixel.png-e73248e34848ce993d6fdd4e9e164609.ctex"
+uid="uid://6xo0k4oh0ibt"
+path="res://.godot/imported/death_2.png-396b4ca93ed4947eb4d970e46774580b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/level1/Basic_Door_Opening_Pixel.png"
-dest_files=["res://.godot/imported/Basic_Door_Opening_Pixel.png-e73248e34848ce993d6fdd4e9e164609.ctex"]
+source_file="res://assets/Dan/death_2.png"
+dest_files=["res://.godot/imported/death_2.png-396b4ca93ed4947eb4d970e46774580b.ctex"]
 
 [params]
 

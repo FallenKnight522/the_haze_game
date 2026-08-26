@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://bwl7fnu2ajt8" path="res://assets/furniture/earthwallleft.png" id="3_tiwd6"]
 [ext_resource type="PackedScene" uid="uid://difuyeamrtv0i" path="res://scenes/object.tscn" id="6_67gwk"]
 [ext_resource type="Script" uid="uid://coi5dx2qt0aj" path="res://scripts/level1/closed_door.gd" id="7_ifmp5"]
-[ext_resource type="Texture2D" uid="uid://cs2jir55slc3u" path="res://assets/level1/Basic_Door_Pixel.png" id="8_det54"]
+[ext_resource type="Texture2D" uid="uid://cs2jir55slc3u" path="res://assets/level1/door/Basic_Door_Pixel.png" id="8_det54"]
 [ext_resource type="Texture2D" uid="uid://dccwbxn8keaph" path="res://assets/level1/MargaretsPhone.png" id="9_aisrr"]
 [ext_resource type="Script" uid="uid://dabbn7cru446a" path="res://scripts/level1/opend_door.gd" id="9_ajdyu"]
 [ext_resource type="Script" uid="uid://cwmf11qgehc3f" path="res://scripts/level1/gravity_field.gd" id="9_ir805"]
 [ext_resource type="Script" uid="uid://mm0peyr8upae" path="res://scripts/level1/mobile_phone.gd" id="9_owim4"]
 [ext_resource type="Script" uid="uid://bwvw4b54t0nnh" path="res://scripts/level1/mobile_phone_movement.gd" id="9_tiwd6"]
-[ext_resource type="Texture2D" uid="uid://dver8apuqrm8p" path="res://assets/level1/Basic_Door_Opening_Pixel.png" id="10_70enu"]
+[ext_resource type="Texture2D" uid="uid://dver8apuqrm8p" path="res://assets/level1/door/Basic_Door_Opening_Pixel.png" id="10_70enu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iv26p"]
 texture = ExtResource("2_owim4")
