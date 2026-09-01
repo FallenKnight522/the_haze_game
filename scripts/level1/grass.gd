@@ -26,6 +26,7 @@ func _process(delta: float) -> void:
 			label.show()
 			index += 1
 			SignalManager.download_file.emit("web.zip")
+			SignalManager.full_text.emit(1)
 		else:
 			if(!changing):
 				get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

@@ -1,35 +1,40 @@
 extends Control
 var time = Time.get_date_string_from_system()
-var time1 = "2026-08-16"
-var time2 = "2026-08-18"
-var time3 = "2026-08-18"
-var time4 = "2026-12-18"
+var time_when = [ "2026-08-16",  "2026-10-01", "2026-11-01", "2026-12-01"]
+var text_full_on = [ false , false , false , false ]
+var text_full = [ "Paranoia",  "Acknowlegment", "Isolation", "Nudging"]
+var text_title = [  "I. House that was not there",  "II. to Know", "III. Through the Fog", "IV. ???"]
+var time_letter = [  "P",  "A", "I", "N"]
 
 @onready var tutorial: Button = $VBoxContainer/Tutorial
-@onready var level_1: Button = $"VBoxContainer/Level 1"
-@onready var level_2: Button = $"VBoxContainer/Level 2"
-@onready var level_3: Button = $"VBoxContainer/Level 3"
-@onready var level_4: Button = $"VBoxContainer/Level 4"
+@onready var levels: Array[Button] = [$"VBoxContainer/Level 1", $"VBoxContainer/Level 2", $"VBoxContainer/Level 3", $"VBoxContainer/Level 4"]
 @onready var exit: Button = $VBoxContainer/Exit
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	tutorial.text = "Tutorial"
-	button_time(level_1, time1, "Paranoia", "I. House that was not there")	
-	button_time(level_2, time2, "Acknowlegment", "II. to Know")	
-	button_time(level_3, time3, "Isolation", "III. Through the Fog")	
-	button_time(level_4, time4, "Nudging", "IV. ???")	
+	for i in range(4):
+		button_time(levels[i], time_when[i], text_full_on[i], text_full[i], text_title[i],time_letter[i])
 	exit.text = "Exit"
+	SignalManager.full_text.connect(full_text)
 
-func button_time(button, timeTo, text1, text2):
-	if(time>=timeTo):
+func button_time(button, timeTo,fulltext, text1, text2, text3):
+	if(time>=timeTo && fulltext):
+		button.text = text1
+	elif(time>=timeTo):
 		button.text = text2
 	else:
-		button.text = text1
+		button.text = text3
 		button.disabled = true
 
-
+func full_text(button): ##called when level is finished with number of level(where in array the nex level is)
+	if(button <=  0 ||  button >= 4):
+		push_error("Incorrect full text call")
+		return
+	text_full_on[button] = true
+	button_time(levels[button], time_when[button], text_full_on[button], text_full[button], text_title[button],time_letter[button])
+			
 func _on_tutorial_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/tutorial.tscn") # Replace with function body.
 
