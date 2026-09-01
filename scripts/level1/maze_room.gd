@@ -27,6 +27,8 @@ func _process(delta: float) -> void:
 func set_map():
 	animation_player.play("glitch_transition")
 	await get_tree().create_timer(0.5).timeout
+	if not is_inside_tree():
+		return
 	for i in range(3):
 		maps[i].collision_enabled = false
 		maps[i].hide()
@@ -51,13 +53,13 @@ func set_map():
 		1:
 			SignalManager.show_text.emit("Wait... I thought.. Was that platform not...")
 		5:
-			SignalManager.show_text.emit("Is the room moving. Is there some mechanism I am not seeing.")
+			SignalManager.show_text.emit("Is the room moving? Is there some mechanism I am not seeing?")
 			SignalManager.fear.emit(5)
 		10:
-			SignalManager.show_text.emit("Yes, yes there must be pattern. Just watch closely, time it right, and you can predict it")
+			SignalManager.show_text.emit("Yes, yes, there must be a pattern. Just watch closely, time it right, and you can predict it.")
 			SignalManager.fear.emit(5)
 		15:		
-			SignalManager.show_text.emit("It... it cannot be random.. no.. mechanism must have logic... room cannot change on its own...")
+			SignalManager.show_text.emit("It... it cannot be random... no... the mechanism must have logic... the room cannot change on its own...")
 			SignalManager.fear.emit(10)
 		_:
 			SignalManager.fear.emit(1)

@@ -14,6 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://nrq2twgoqu65" path="res://assets/level1/AliceId.png" id="12_b2an6"]
 [ext_resource type="Script" uid="uid://vx21sqhicmlm" path="res://scripts/level1/nausea_field.gd" id="13_b2an6"]
 [ext_resource type="Shader" uid="uid://dn5fmbhn565r5" path="res://shaders/NauseaRoom.gdshader" id="13_ce7t5"]
+[ext_resource type="Script" uid="uid://d4b3obmhdp15g" path="res://scripts/level1/zrcatko.gd" id="15_uwmrm"]
+[ext_resource type="Script" uid="uid://bjnua02d5val2" path="res://scripts/level1/fake_hand_mirror.gd" id="16_0wt8n"]
+[ext_resource type="Texture2D" uid="uid://cv86x56jbndym" path="res://assets/level1/handmirror.png" id="17_0wt8n"]
+[ext_resource type="Script" uid="uid://cc72fwk8jdkng" path="res://scripts/level1/hand_mirror_real.gd" id="18_4dcfy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iv26p"]
 texture = ExtResource("1_5drrp")
@@ -656,7 +660,7 @@ shader_parameter/time_speed = 2.0
 script = ExtResource("1_b2an6")
 
 [node name="Room" type="TileMapLayer" parent="." unique_id=1045608557]
-z_index = -1
+z_index = -5
 use_parent_material = true
 position = Vector2(2, -279)
 scale = Vector2(3, 3)
@@ -664,7 +668,7 @@ tile_map_data = PackedByteArray("AAAFAAIAAAABAAIAAAAFAAEAAAABAAIAAAAFAAAAAAABAAI
 tile_set = SubResource("TileSet_ft643")
 
 [node name="Stairs" type="TileMapLayer" parent="." unique_id=161127303]
-z_index = -1
+z_index = -3
 use_parent_material = true
 position = Vector2(2, -279)
 scale = Vector2(3, 3)
@@ -894,6 +898,45 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(33.64, 21.720005)
 color = Color(1, 1, 1, 0.24313726)
+
+[node name="Zrcadlo3" type="TextureRect" parent="." unique_id=1008715439]
+visibility_layer = 4
+z_index = -2
+offset_left = -646.0
+offset_top = -457.0
+offset_right = -630.0
+offset_bottom = -441.0
+scale = Vector2(1.08, 1)
+flip_h = true
+script = ExtResource("15_uwmrm")
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="Zrcadlo3" unique_id=162660465]
+transparent_bg = true
+canvas_cull_mask = 4293918723
+size = Vector2i(16, 16)
+
+[node name="Camera2D" type="Camera2D" parent="Zrcadlo3/SubViewport" unique_id=1186775772]
+position = Vector2(-457, -520)
+
+[node name="fake" parent="Zrcadlo3" unique_id=535878176 instance=ExtResource("3_b2an6")]
+position = Vector2(5.5555696, 8)
+scale = Vector2(1.5350406, 1.4103284)
+script = ExtResource("16_0wt8n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Zrcadlo3" unique_id=1754453246]
+z_index = 1
+position = Vector2(4.6296244, 5)
+scale = Vector2(0.5473144, 0.69999003)
+texture = ExtResource("17_0wt8n")
+
+[node name="Marker2D" type="Marker2D" parent="Zrcadlo3" unique_id=1393074913]
+position = Vector2(1027.778, 4)
+
+[node name="real" parent="Zrcadlo3/Marker2D" unique_id=1148031722 instance=ExtResource("3_b2an6")]
+position = Vector2(-0.00022888184, 0)
+scale = Vector2(1.5350406, 1.4103284)
+script = ExtResource("18_4dcfy")
 
 [connection signal="body_entered" from="Nausea/nauseaField" to="Nausea/nauseaField" method="_on_body_entered"]
 [connection signal="body_entered" from="Nausea/nauseaField2" to="Nausea/nauseaField2" method="_on_body_entered"]

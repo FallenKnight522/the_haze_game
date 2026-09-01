@@ -14,7 +14,8 @@
 [ext_resource type="Script" uid="uid://buli0tjr7i4bc" path="res://scripts/level1/zrcadlo_alice.gd" id="11_7lel5"]
 [ext_resource type="Texture2D" uid="uid://6iupu2axq4ew" path="res://assets/Alice/idle_1.png" id="11_12huu"]
 [ext_resource type="Script" uid="uid://bhlyv36a1d251" path="res://scripts/level1/alice.gd" id="11_ig205"]
-[ext_resource type="Texture2D" uid="uid://b2gcaspdckge4" path="res://assets/level1/J/mirror.png" id="12_663ba"]
+[ext_resource type="Shader" uid="uid://brmaesini0717" path="res://shaders/Mirror_room.gdshader" id="11_v2kfp"]
+[ext_resource type="Texture2D" uid="uid://b2gcaspdckge4" path="res://assets/level1/mirror.png" id="12_663ba"]
 [ext_resource type="Texture2D" uid="uid://de74yid67cu4n" path="res://assets/Alice/fall_2.png" id="12_ig205"]
 [ext_resource type="Texture2D" uid="uid://dfougasee8uyd" path="res://assets/Alice/idle_2.png" id="12_ppgpt"]
 [ext_resource type="Texture2D" uid="uid://cwgugjwbu6nrx" path="res://assets/Alice/fall_3.png" id="13_7lel5"]
@@ -24,6 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://dikccipwlsxca" path="res://assets/Alice/fall_4.png" id="14_663ba"]
 [ext_resource type="Texture2D" uid="uid://cf0pdr73iepmx" path="res://assets/Alice/idle_4.png" id="14_uvtb2"]
 [ext_resource type="Texture2D" uid="uid://ygh1h7op8ve6" path="res://assets/Alice/idle_5.png" id="15_n74ap"]
+[ext_resource type="Script" uid="uid://l52p17ta7ooy" path="res://scripts/level1/mirror2.gd" id="16_l4e0a"]
+[ext_resource type="Script" uid="uid://bmgp75wjvikbm" path="res://scripts/level1/zrcadlo_briana.gd" id="16_xs0n6"]
 [ext_resource type="Texture2D" uid="uid://c7p00yosxv3t3" path="res://assets/Alice/walk_0.png" id="21_kja11"]
 [ext_resource type="Texture2D" uid="uid://cqpmcffu8jdl4" path="res://assets/Alice/walk_1.png" id="22_k43mn"]
 [ext_resource type="Texture2D" uid="uid://dyyl0gicpevqy" path="res://assets/Alice/walk_2.png" id="23_v2kfp"]
@@ -663,20 +666,15 @@ sources/0 = SubResource("TileSetAtlasSource_bxjx1")
 sources/1 = SubResource("TileSetAtlasSource_80m2d")
 sources/2 = SubResource("TileSetAtlasSource_oflfw")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_rxev4"]
-viewport_path = NodePath("ZrcadloAlice/SubViewport")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fceja"]
+shader = ExtResource("11_v2kfp")
+shader_parameter/fear_intensity = 0.0
+shader_parameter/twist_strength = 4.0
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_kja11"]
-viewport_path = NodePath("Zrcadlo2/SubViewport")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_663ba"]
-viewport_path = NodePath("Zrcadlo3/SubViewport")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_k43mn"]
-viewport_path = NodePath("Zrcadlo4/SubViewport")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_v2kfp"]
-viewport_path = NodePath("Zrcadlo5/SubViewport")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3j5dg"]
+shader = ExtResource("11_v2kfp")
+shader_parameter/fear_intensity = 0.0
+shader_parameter/twist_strength = 10.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rxev4"]
 animations = [{
@@ -794,13 +792,13 @@ tile_map_data = PackedByteArray("AAD6//7/AgABAAEAAAD6////AgABAAIAAAD6/wAAAgABAAM
 tile_set = SubResource("TileSet_l6xh3")
 
 [node name="ZrcadloAlice" type="TextureRect" parent="." unique_id=966333980]
-visibility_layer = 2
+visibility_layer = 16
 z_index = -2
+material = SubResource("ShaderMaterial_fceja")
 offset_left = -601.0
-offset_top = -527.0
+offset_top = -528.0
 offset_right = -473.0
-offset_bottom = -399.0
-texture = SubResource("ViewportTexture_rxev4")
+offset_bottom = -400.0
 flip_h = true
 script = ExtResource("11_7lel5")
 metadata/_edit_use_anchors_ = true
@@ -830,7 +828,6 @@ offset_left = 165.0
 offset_top = -531.0
 offset_right = 293.0
 offset_bottom = -403.0
-texture = SubResource("ViewportTexture_kja11")
 flip_h = true
 script = ExtResource("11_7lel5")
 metadata/_edit_use_anchors_ = true
@@ -860,7 +857,6 @@ offset_left = -156.0
 offset_top = -155.0
 offset_right = -28.0
 offset_bottom = -27.0
-texture = SubResource("ViewportTexture_663ba")
 flip_h = true
 script = ExtResource("11_7lel5")
 metadata/_edit_use_anchors_ = true
@@ -886,13 +882,13 @@ texture = ExtResource("12_663ba")
 [node name="Zrcadlo4" type="TextureRect" parent="." unique_id=1583400145]
 visibility_layer = 4
 z_index = -2
+material = SubResource("ShaderMaterial_3j5dg")
 offset_left = 251.0
 offset_top = -155.0
 offset_right = 379.0
 offset_bottom = -27.0
-texture = SubResource("ViewportTexture_k43mn")
 flip_h = true
-script = ExtResource("11_7lel5")
+script = ExtResource("16_xs0n6")
 metadata/_edit_use_anchors_ = true
 
 [node name="SubViewport" type="SubViewport" parent="Zrcadlo4" unique_id=1740747365]
@@ -906,7 +902,7 @@ position = Vector2(-457, -520)
 [node name="the_haze_object" parent="Zrcadlo4" unique_id=2035919350 instance=ExtResource("3_v2t7g")]
 position = Vector2(67.000015, 66)
 scale = Vector2(8.519377, 8.477695)
-script = ExtResource("13_kja11")
+script = ExtResource("16_l4e0a")
 
 [node name="Sprite2D" type="Sprite2D" parent="Zrcadlo4" unique_id=1876790481]
 position = Vector2(65, 42.000004)
@@ -920,7 +916,6 @@ offset_left = -442.0
 offset_top = -155.0
 offset_right = -314.0
 offset_bottom = -27.0
-texture = SubResource("ViewportTexture_v2kfp")
 flip_h = true
 script = ExtResource("11_7lel5")
 metadata/_edit_use_anchors_ = true
@@ -943,9 +938,8 @@ position = Vector2(65, 42.000004)
 scale = Vector2(3.15543, 5.1570883)
 texture = ExtResource("12_663ba")
 
-[node name="Alice" type="CharacterBody2D" parent="." unique_id=1843441792]
+[node name="Alice" type="Node2D" parent="." unique_id=824912336]
 position = Vector2(-496, -383)
-collision_layer = 8
 script = ExtResource("11_ig205")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Alice" unique_id=1636739998]

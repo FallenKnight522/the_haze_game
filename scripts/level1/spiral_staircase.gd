@@ -7,12 +7,13 @@ extends Node2D
 @onready var pos_2: Marker2D = $Pos2
 var rotated = true ##so firt put it in nonrotated position
 var rotations = 0
+var down_up_state = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	door_section()
-	SignalManager.show_text.emit("Wow, that is a huge staircase")
-	SignalManager.show_text.emit("I can't see the botom or top")
-	SignalManager.show_text.emit("Better tread carefully, it looks slippery")
+	SignalManager.show_text.emit("Wow, that is a huge staircase.")
+	SignalManager.show_text.emit("I can't see the bottom or top.")
+	SignalManager.show_text.emit("Better tread carefully, it looks slippery.")
 func Margaret_section():
 	rotation()
 	opened_door.hide()
@@ -59,4 +60,16 @@ func rotation():
 		room_2.collision_enabled = true	
 		margaret.global_position = pos_2.global_position
 		opened_door.global_position = pos_2.global_position
-	
+
+var sequence = [true, false, true, false, true]
+var state = 0
+func went( down):
+	if state >= sequence.size():
+		return
+	elif down == sequence[state]:
+		state+=1
+		if state == sequence.size():
+			SignalManager.download_file.emit("0x41_.txt")
+			state+=1
+	else:
+		state=0

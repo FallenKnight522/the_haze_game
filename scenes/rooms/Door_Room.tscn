@@ -603,7 +603,7 @@ sources/2 = SubResource("TileSetAtlasSource_oflfw")
 
 [node name="DoorRoom" type="Node2D" unique_id=39712664]
 script = ExtResource("1_oj50s")
-door_pos = Array[Vector2]([Vector2(-618, -44), Vector2(-359, -50), Vector2(-24, -51), Vector2(266, -53), Vector2(439, -236), Vector2(109, -236), Vector2(-178, -236), Vector2(-464, -234), Vector2(-636, -524), Vector2(-290, -527), Vector2(40, -529), Vector2(299, -527)])
+door_pos = Array[Vector2]([Vector2(-618, -44), Vector2(-350, -45), Vector2(-24, -51), Vector2(266, -53), Vector2(439, -236), Vector2(109, -236), Vector2(-178, -236), Vector2(-464, -234), Vector2(-636, -524), Vector2(-290, -527), Vector2(40, -529), Vector2(299, -527)])
 
 [node name="Room" type="TileMapLayer" parent="." unique_id=1045608557]
 z_index = -1
@@ -620,3 +620,6 @@ position = Vector2(2, -279)
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAD7/wUAAgABAAQAAAD7/wQAAgABAAMAAAD7/wMAAgABAAMAAAD7/wIAAgABAAEAAAD1/wUAAgABAAQAAAD1/wQAAgABAAMAAAD1/wMAAgABAAIAAAD1/wIAAgABAAEAAAABAAIAAgABAAEAAAABAAMAAgABAAIAAAABAAQAAgABAAMAAAABAAUAAgABAAQAAAAHAAIAAgABAAEAAAAHAAMAAgABAAIAAAAHAAQAAgABAAMAAAAHAAUAAgABAAQAAAD9//7/AgABAAMAAAD9////AgABAAIAAAD9/wAAAgABAAMAAAD9/wEAAgABAAQAAAADAP7/AgABAAMAAAADAP//AgABAAIAAAADAAAAAgABAAMAAAADAAEAAgABAAQAAAD3//7/AgABAAMAAAD3////AgABAAIAAAD3/wAAAgABAAMAAAD3/wEAAgABAAQAAAD3//z/AgABAAEAAAD3//3/AgABAAIAAAD9//z/AgABAAEAAAD9//3/AgABAAIAAAADAPz/AgABAAEAAAADAP3/AgABAAIAAAA=")
 tile_set = SubResource("TileSet_l6xh3")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1356599075]
+position = Vector2(-348, -44)

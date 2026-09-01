@@ -4,6 +4,7 @@ var maxtime = 10
 @onready var animate: AnimatedSprite2D = $AnimatedSprite2D
 var dialog: DialogueResource = load("res://dialog/level1/J.dialogue")
 var interaction = 0
+var file = false
 func _ready() -> void:
 	hide_hint() # Replace with function body.
 	interaction = 0
@@ -74,7 +75,10 @@ func interact():
 			else:
 				push_error("Dialogue resource se nepodařilo načíst!")
 		2:
-			SignalManager.show_text.emit("(Somethings not right about this guy. I am certain both he and the table looked diferently)")
-			SignalManager.show_text.emit("(I should go, I need to find the others)")
+			SignalManager.show_text.emit("(Something's not right about this guy. I am certain both he and the table looked differently.)")
+			SignalManager.show_text.emit("(I should go, I need to find the others.)")
+			if !file:
+				SignalManager.download_file.emit("rvo.zip")
+				file = true
 			interaction = 1
 	interaction+=1

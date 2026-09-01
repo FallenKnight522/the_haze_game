@@ -37,7 +37,7 @@ func _process(_delta: float) -> void:
 	match current_state:
 		state.READY:
 			if(!text_queue.is_empty()):
-				hadle_text()
+				handle_text()
 			else:
 				hide_textbox()
 		state.READING:
@@ -92,7 +92,7 @@ func queue_choice2(context: String, choice1:String, choice2: String, action1: Ca
 	action_queue.push_back(action2)
 	
 
-func hadle_text():
+func handle_text():
 	var text = text_queue.pop_front()
 	if(text == "/Choice 2/"):
 		display_choice2()

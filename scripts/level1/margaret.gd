@@ -17,6 +17,7 @@ func interact():
 			4:
 				SignalManager.show_dialog.emit(dialog, "cycle3")
 				dialog_part=1
+				SignalManager.download_file.emit("se.zip")
 		
 		dialog_part+=1
 	else:

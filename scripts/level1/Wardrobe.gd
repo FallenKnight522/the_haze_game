@@ -2,7 +2,7 @@ extends the_haze_object
 @onready var animated_sprite_2d: AnimatedSprite2D = $"../AnimatedSprite2D"
 
 var first = false
-
+var file = false
 func interact():
 	if !first:
 		SignalManager.show_text.emit("Quite a big wardrobe. Looks heavy.")
@@ -14,7 +14,10 @@ func interact():
 
 func Open():
 	animated_sprite_2d.play("look_inside")
-	SignalManager.show_text.emit("It seems empty")
+	if(!file):
+		SignalManager.download_file.emit("or.zip")
+	else:
+		SignalManager.show_text.emit("It seems empty")
 	animated_sprite_2d.play("close")
 
 			

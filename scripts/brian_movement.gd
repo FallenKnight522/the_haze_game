@@ -7,7 +7,7 @@ const JUMP_VELOCITY = -500.0
 var move_modifier = 1
 var direct = 1
 var id_last_modifier = 0
-var gravity_modifie = Vector2.DOWN
+var gravity_modifier = Vector2.DOWN
 
 func _ready() -> void:
 	add_to_group("player")
@@ -28,9 +28,9 @@ func _physics_process(delta: float) -> void:
 	direction*=move_modifier*direct
 	
 	if direction > 0:
-		animated_sprite.flip_h = false;
+		animated_sprite.flip_h = false
 	elif direction < 0:
-		animated_sprite.flip_h = true;
+		animated_sprite.flip_h = true
 	
 	#Animation
 	if is_on_floor():
@@ -56,9 +56,9 @@ func stop_movement():
 func start_movement():
 	move_modifier = 1
 func change_gravity(grav: Vector2):
-	gravity_modifie = grav
-	up_direction = -gravity_modifie
-	rotation = gravity_modifie.angle() - (PI / 2.0)
+	gravity_modifier = grav
+	up_direction = -gravity_modifier.normalized()
+	rotation = gravity_modifier.angle() - (PI / 2.0)
 func reset():
 	move_modifier = 1
 	change_gravity(Vector2.DOWN)

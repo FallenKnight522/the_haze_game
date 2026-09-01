@@ -9,50 +9,71 @@ character_names = PackedStringArray()
 metadata/_custom_type_script = "uid://dbs4435dsf3ry"
 
 
+Analysis Strategy
+The provided text is short, consisting of a series of dialogue nodes representing an internal and external monologue. The density of Tier 1 objective errors is moderate, mostly involving punctuation (missing periods, inconsistent ellipses, excessive exclamation marks), capitalization, and a few grammatical/spelling errors (e.g., "have came", "maddness", "palce"). The entire text will be processed and corrected in a single part.
+
+1. Corrected Text
 ~ start
-Brian: What.. where am I?
+Brian: What... Where am I?
 Brian: Did I escape?
-Brian: Wait, where are the others???
-Brian: Dan!! Alice!! Margaret!!
-Brian: No, no, no, no, no.... this cannot be happening
-Brian: I can't be the only one who made it out..
+Brian: Wait, where are the others?
+Brian: Dan! Alice! Margaret!
+Brian: No, no, no, no, no... This cannot be happening.
+Brian: I can't be the only one who made it out...
 => END
 
 ~ start2
-Brian: MARGARET!!! ALICE!!! DAN!!
-Brian: Please, anyone!!!
+Brian: MARGARET! ALICE! DAN!
+Brian: Please, anyone!
 Brian: No, no...
-Brian: Not like this... not when it's all my fault...
-Brian: We should never have came here...
-Brian: MARGARET!!! ALICE!!! DAN!!
+Brian: Not like this... Not when it's all my fault...
+Brian: We should never have come here...
+Brian: MARGARET! ALICE! DAN!
 => END
 
 ~ start3
 Brian: I need to find them!
-Brian: I need to make sure they are safe
-Brian: Where is the house
-Brian: Where did it go!?
-Brian: It was right here, it could not have disappeared...
+Brian: I need to make sure they are safe.
+Brian: Where is the house?
+Brian: Where did it go?
+Brian: It was right here; it could not have disappeared...
 Brian: Unless it did...
 Brian: Unless they are gone...
 => END
+
 ~ start4
 Brian: [Sobs]
-Brian: This, this cannot be how it ends
-Brian: I brought them here
-Brian: I suggested this place
-Brian: I was the one who wanted to face his fears
-Brian: Why do I get to leave
-Brian: Why do they get to die, just because they were my friends
+Brian: This, this cannot be how it ends.
+Brian: I brought them here.
+Brian: I suggested this place.
+Brian: I was the one who wanted to face his fears.
+Brian: Why do I get to leave?
+Brian: Why do they get to die, just because they were my friends?
 Brian: [Sobs]
-Brian: I have to find them.. have to find some way of reaching them
-Brian: TAKE ME INSTEAD YOU DEMONS!!! LET THEM GO!!
-Brian: ....
-Brian: It's useless
-Brian: That house does not yield to reason
-Brian: Only maddness
-Brian: I need to find more about that place
-Brian: What it is, how it works
-Brian: A way to rescue them
-Brian: I must go
+Brian: I have to find them... I have to find some way of reaching them.
+Brian: TAKE ME INSTEAD, YOU DEMONS! LET THEM GO!
+Brian: ...
+Brian: It's useless.
+Brian: That house does not yield to reason.
+Brian: Only madness.
+Brian: I need to find out more about that place.
+Brian: What it is, how it works.
+Brian: A way to rescue them.
+Brian: There must be one.
+Brian: Since I made it out, there must be a way to beat that place.
+Brian: I just need to know more about it.
+Brian: (Unless I did not escape.)
+Brian: (Unless this is just to torment me more.)
+Brian: (I should be cautious. This may be just another trick of that damned place.)
+Brian: (Even though it doesn't feel like it.)
+Brian: (Don't trust your eyes; don't trust anything.)
+Brian: I must go.
+Brian: (I must keep moving.)
+Brian: (I must keep going.)
+Brian: (Don't let the grief consume you.)
+Brian: (Not when there is a chance to save them.)
+Brian: (Margaret... Alice... Dan... I will find a way...)
+Brian: (I'm sorry, please forgive me...)
+Brian: (Even though you can't...)
+Brian: (And you wouldn't.)
 => END

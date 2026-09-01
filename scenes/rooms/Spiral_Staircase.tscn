@@ -913,6 +913,7 @@ tile_set = SubResource("TileSet_tsite")
 collision_mask = 2
 script = ExtResource("10_tsite")
 where = Vector2(-140, -671)
+down = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Down" unique_id=515460753]
 position = Vector2(-187.5, 84)

@@ -14,12 +14,12 @@ func _on_body_entered(body: Node2D) -> void:
 			SignalManager.fear.emit(fall/fall_to_fear_mod)
 		match fall:
 			1:
-				SignalManager.show_text.emit("WHOAH.. what did just happen")
+				SignalManager.show_text.emit("WHOAH.. what did just happend")
 			5:
-				SignalManager.show_text.emit("I think I am going to throw up... how is this possible")
-				SignalManager.show_text.emit("Is the house spinning? Or the room? Or does gravity just not work here?")				
+				SignalManager.show_text.emit("I think I am going to throw up... how is this possible?")
+				SignalManager.show_text.emit("Is the house spinning? Or the room? Or does gravity just not work here?")
 			20:
-				SignalManager.show_text.emit("Whitch way is up again? I need to leave")
+				SignalManager.show_text.emit("Which way is up again? I need to leave")
 			40:
-				SignalManager.show_text.emit("Need.. to ... get .. out... I... can't take this .. much .. longer")
+				SignalManager.show_text.emit("Need.. to ... get .. out... I... can't take this ... much ... longer")
 			

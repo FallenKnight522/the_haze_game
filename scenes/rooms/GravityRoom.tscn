@@ -11,6 +11,8 @@
 [ext_resource type="Script" uid="uid://mm0peyr8upae" path="res://scripts/level1/mobile_phone.gd" id="9_owim4"]
 [ext_resource type="Script" uid="uid://bwvw4b54t0nnh" path="res://scripts/level1/mobile_phone_movement.gd" id="9_tiwd6"]
 [ext_resource type="Texture2D" uid="uid://dver8apuqrm8p" path="res://assets/level1/door/Basic_Door_Opening_Pixel.png" id="10_70enu"]
+[ext_resource type="Script" uid="uid://cpdnejvgu1s0g" path="res://scripts/level1/hrnicek.gd" id="12_tiwd6"]
+[ext_resource type="Texture2D" uid="uid://by60tak45xbrp" path="res://assets/level1/hrnicek.png" id="13_ld2lm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iv26p"]
 texture = ExtResource("2_owim4")
@@ -502,6 +504,17 @@ script = ExtResource("9_owim4")
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D/the_haze_object" unique_id=182567251]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_aisrr")
+
+[node name="hrníček" parent="." unique_id=1526375827 instance=ExtResource("6_67gwk")]
+position = Vector2(458, -14)
+scale = Vector2(2, 2)
+script = ExtResource("12_tiwd6")
+
+[node name="Sprite2D" type="Sprite2D" parent="hrníček" unique_id=141197119]
+position = Vector2(0, 4.7683716e-07)
+rotation = 3.0892327
+scale = Vector2(0.54, 0.54)
+texture = ExtResource("13_ld2lm")
 
 [connection signal="body_entered" from="Zony gravitace/GravityField1" to="Zony gravitace/GravityField1" method="_on_body_entered"]
 [connection signal="body_entered" from="Zony gravitace/GravityField2" to="Zony gravitace/GravityField2" method="_on_body_entered"]

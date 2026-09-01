@@ -1,14 +1,25 @@
 [gd_scene format=3 uid="uid://b03bl0ucrv3y2"]
 
 [ext_resource type="Script" uid="uid://1gim5knshdh4" path="res://scripts/level1/Leve1Manager.gd" id="1_f31uk"]
+[ext_resource type="Script" uid="uid://dwmapnk5lyavm" path="res://scripts/file_manager.gd" id="2_bbk5w"]
 [ext_resource type="PackedScene" uid="uid://de7w1pl4j0ge5" path="res://scenes/text_window2.tscn" id="2_gnai3"]
 [ext_resource type="PackedScene" uid="uid://cb4g28m3jt14j" path="res://scenes/hint.tscn" id="3_i8kv5"]
 [ext_resource type="Script" uid="uid://c0n258wt3r5r7" path="res://scripts/level1/hint_level1.gd" id="4_dxn3v"]
 [ext_resource type="PackedScene" uid="uid://gayeverlt07m" path="res://scenes/strachomira.tscn" id="5_14jow"]
 [ext_resource type="PackedScene" uid="uid://bc87n5tigm86k" path="res://scenes/brian.tscn" id="6_mvsps"]
+[ext_resource type="Shader" uid="uid://c0bfsatwb0rfq" path="res://shaders/level1.gdshader" id="7_ejswk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rxev4"]
+shader = ExtResource("7_ejswk")
+shader_parameter/fear_intensity = 0.50000002375
+shader_parameter/shift_speed = 0.05
 
 [node name="Level1" type="Node2D" unique_id=908602446]
 script = ExtResource("1_f31uk")
+
+[node name="FileManager" type="Node2D" parent="." unique_id=286746031]
+unique_name_in_owner = true
+script = ExtResource("2_bbk5w")
 
 [node name="Graphics" type="Node2D" parent="." unique_id=1085610398]
 
@@ -38,3 +49,26 @@ zoom = Vector2(0.9, 0.9)
 limit_enabled = false
 
 [node name="RoomContainer" type="Node2D" parent="." unique_id=645902341]
+
+[node name="Colours" type="CanvasLayer" parent="." unique_id=17747397]
+layer = 5
+
+[node name="ColorRect" type="ColorRect" parent="Colours" unique_id=463693519]
+material = SubResource("ShaderMaterial_rxev4")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Colours2" type="CanvasLayer" parent="." unique_id=979060538]
+layer = 10
+
+[node name="ColorRect" type="ColorRect" parent="Colours2" unique_id=366927527]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)

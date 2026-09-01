@@ -1,6 +1,6 @@
 extends the_haze_object
-@onready var shifting_door: shifting_door = $".."
+@onready var shifting: shifting_door = $".."
 
 
 func interact():
-	shifting_door.interact()
+	shifting.interact()

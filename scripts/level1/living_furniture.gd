@@ -13,8 +13,7 @@ var hrac: Node2D = null
 var casovac_strachu: float = 0.0
 var moved = 0
 var je_probuzeny: bool = false
-var fear_level = 0.1
-var moveDirect = Vector2.ZERO
+var fear_level = 0.01
 
 func _ready() -> void:
 	SignalManager.fear_changed.connect(fear_changed)
@@ -30,7 +29,7 @@ func _physics_process(delta: float) -> void:
 		return
 
 	var vzdalenost = global_position.distance_to(hrac.global_position)
-	var smer = global_position.direction_to(hrac.global_position)
+	
 	if not je_probuzeny:
 			if vzdalenost <= vzdalenost_probuzeni:
 				je_probuzeny = true # Nábytek si ho všiml! Začíná se hýbat natrvalo.
@@ -38,10 +37,9 @@ func _physics_process(delta: float) -> void:
 				move_and_slide()
 				return
 	var old_distance = global_position
-	moveDirect = velocity
-	velocity += smer * rychlost_plizeni * fear_level
+	var smer = global_position.direction_to(hrac.global_position)
+	velocity.x = smer.x * rychlost_plizeni * fear_level
 	move_and_slide()
-	velocity = moveDirect
 	moved +=  old_distance.distance_to(global_position)
 
 	if vzdalenost <= vzdalenost_pro_strach && moved > movedMin:

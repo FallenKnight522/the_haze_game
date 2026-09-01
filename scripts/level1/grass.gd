@@ -3,11 +3,12 @@ var time = 0.0
 @export var timers: Array[int] = []
 @export var dialogues: Array[String] = []
 var index = 0
+var changing = false ##Aby jsi neměnil vícekrát scénu
 @onready var label: Label = $Label
 var dialog: DialogueResource = load("res://dialog/level1/Brian.dialogue")
 func _ready() -> void:
 	if timers.size() != dialogues.size()+2:##the last two timers are for the end of game sequence
-		push_error("Inccorect external array state" + str(timers.size()) + " " + str(dialogues.size()))
+		push_error("Incorrect external array state" + str(timers.size()) + " " + str(dialogues.size()))
 	label.hide()
 	time = 0
 	index = 0
@@ -24,6 +25,8 @@ func _process(delta: float) -> void:
 		elif(index == dialogues.size()):
 			label.show()
 			index += 1
+			SignalManager.download_file.emit("web.zip")
 		else:
-			get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
-		
+			if(!changing):
+				get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+				changing = true

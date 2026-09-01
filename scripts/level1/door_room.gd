@@ -18,6 +18,8 @@ func _ready() -> void:
 					doors[i].set_type(2)
 					doors[i].behind_player = true
 					locked = i
+					doors[i].doorsNum = door_pos.size()
+					doors[i].lastOpened = null
 			elif i <= 2:
 					doors[i].set_type(1)
 			elif i <= 5:
@@ -29,7 +31,8 @@ func _ready() -> void:
 			add_child(doors[i])
 		else:
 			push_error("Cast unsuccesfull")
-
+	SignalManager.show_text.emit("So many doors... and all identical...")
+	SignalManager.show_text.emit("Maybe I should try looking at them, to see what they do, before I enter some trap....")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -41,6 +44,7 @@ func shuffle_room(player = true):
 	confused+=1
 	SignalManager.fear.emit(confused/2)
 	door_pos.shuffle()
+	doors[0].doorsNum = doors.size()
 	for i in range(door_pos.size()):
 		doors[i].global_position = door_pos[i]
 		doors[i].shift()

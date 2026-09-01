@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://dqp6kkk6tc3hh" path="res://assets/level1/DansHat.png" id="12_0aeft"]
 [ext_resource type="Shader" uid="uid://ckr44k3mohup2" path="res://shaders/MazeRoom.gdshader" id="13_0aeft"]
 [ext_resource type="Texture2D" uid="uid://cwllihfyfd8vl" path="res://assets/Decorations (32x32).png" id="14_0aeft"]
+[ext_resource type="Script" uid="uid://coicemy32t03f" path="res://scripts/level1/statue.gd" id="15_475pi"]
+[ext_resource type="Texture2D" uid="uid://c2c8jhos5c1ma" path="res://assets/level1/Statue.png" id="15_gb4op"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iv26p"]
 texture = ExtResource("2_gb4op")
@@ -1046,3 +1048,38 @@ position = Vector2(2, -276)
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAD0//r/AQAEAAIAAAD1//r/AQAGAAIAAAD2//r/AQAHAAIAAAD3//r/AQAIAAIAAAD4//r/AQAJAAIAAAD9/wIAAQAFAAQAAGD9////AQAIAAQAAGD9//7/AQAGAAQAAGD9//3/AQAGAAQAAGD9//z/AQAHAAQAAGD9//v/AQAIAAQAAGD9//r/AQAJAAQAAGD9//n/AQAKAAQAAGD9//j/AQALAAQAAGD5//3/AQAKAAIAAAD6//3/AQALAAIAAAD5//v/AQAKAAIAAAD6//v/AQALAAIAAAD9/wMAAQAEAAQAAGD3//z/AQAEAAQAAFD3//3/AQAFAAQAAFD3//7/AQAGAAQAAFD3////AQAHAAQAAFD3/wAAAQAIAAQAAFD3/wEAAQAJAAQAAFD3/wIAAQAKAAQAAFD3/wMAAQALAAQAAFD3/wQAAQAKAAQAAFD3/wUAAQALAAQAAFD9/wEAAQAGAAQAAGD9/wAAAQAHAAQAAGD5/wMAAQAKAAIAAAD6/wMAAQALAAIAAAAIAAMAAQAKAAIAAAAJAAMAAQALAAIAAAAGAP7/AQAKAAIAAAADAP7/AQAKAAIAAAAEAP7/AQALAAIAAAD//wMAAQALAAQAAAAAAAMAAQAKAAQAAAACAAIAAQAFAAQAAGACAAEAAQAGAAQAAGACAAAAAQAHAAQAAGACAP//AQAIAAQAAGACAP7/AQAJAAQAAGACAP3/AQAEAAQAAGACAPz/AQAFAAQAAGACAPv/AQAGAAQAAGACAPr/AQAHAAQAAGACAPn/AQAIAAQAAGACAPj/AQAJAAQAAGACAAMAAQAEAAQAAGD5/wUAAQAKAAIAAAD6/wUAAQALAAIAAAAGAAUAAQAKAAIAAAAHAAUAAQALAAIAAAD+/wMAAQAKAAQAAAABAAMAAQALAAQAAAD5/wEAAQAKAAIAAAD6/wEAAQALAAIAAAD5////AQAKAAIAAAD6////AQALAAIAAAADAPz/AQAKAAIAAAAEAPz/AQALAAIAAAADAPr/AQAKAAIAAAAEAPr/AQALAAIAAAAIAAEAAQAKAAIAAAAJAAEAAQALAAIAAAAHAP7/AQALAAIAAAAJAP//AQALAAIAAAAIAP//AQAKAAIAAAA=")
 tile_set = SubResource("TileSet_gb4op")
+
+[node name="soška" parent="." unique_id=1895845605 node_paths=PackedStringArray("poslist") instance=ExtResource("6_uqybg")]
+z_index = 2
+position = Vector2(-6, -13)
+scale = Vector2(2, 2)
+script = ExtResource("15_475pi")
+poslist = [NodePath("../soska_mista/Marker2D"), NodePath("../soska_mista/Marker2D2"), NodePath("../soska_mista/Marker2D3"), NodePath("../soska_mista/Marker2D4"), NodePath("../soska_mista/Marker1"), NodePath("../soska_mista/Marker2"), NodePath("../soska_mista/Marker3")]
+
+[node name="Sprite2D" type="Sprite2D" parent="soška" unique_id=1463913758]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_gb4op")
+
+[node name="soska_mista" type="Node2D" parent="." unique_id=1107740817]
+position = Vector2(-6, -13)
+scale = Vector2(2, 2)
+
+[node name="Marker2D" type="Marker2D" parent="soska_mista" unique_id=835959379]
+
+[node name="Marker2D2" type="Marker2D" parent="soska_mista" unique_id=1975675841]
+position = Vector2(-20, -67)
+
+[node name="Marker2D3" type="Marker2D" parent="soska_mista" unique_id=780693387]
+position = Vector2(-173.5, 4.5)
+
+[node name="Marker2D4" type="Marker2D" parent="soska_mista" unique_id=1310732557]
+position = Vector2(233, -217.5)
+
+[node name="Marker1" type="Marker2D" parent="soska_mista" unique_id=1121345424]
+position = Vector2(14.5, -302)
+
+[node name="Marker2" type="Marker2D" parent="soska_mista" unique_id=1171290858]
+position = Vector2(-195, -245)
+
+[node name="Marker3" type="Marker2D" parent="soska_mista" unique_id=1367443391]
+position = Vector2(-218.5, -143.5)

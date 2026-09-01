@@ -15,9 +15,9 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 func on_fear(val):
-	SignalManager.fear_changed.emit(fear)
 	var dec = fear/fearLevels
 	fear += val
+	SignalManager.fear_changed.emit(fear)
 	if(fear >= fearMax):
 			fear = fearMax
 			SignalManager.fear_limit.emit()
@@ -26,7 +26,5 @@ func on_fear(val):
 func showpicture():
 	if fear_levels.is_empty():
 		return
-	texture = fear_levels[clampi(fear/fearLevels,0, fearMax/fearLevels)]
-		
+	texture = fear_levels[clampi(fear/fearLevels,0, fear_levels.size()-1)]
 	
-		

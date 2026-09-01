@@ -15,13 +15,31 @@ func showHint():
 		3:
 			text = "The bar on the side shows how scared you are."
 		4:
-			text = "Once the bar is full, you may leave. Interacting with the wierdness here will frighten you soon."
+			text = "Once the bar is full, you may leave. Interacting with the weirdness here will frighten you soon."
 		5:
 			text = "There are no more hints"
+		6:
+			text = "Once the bar is full, you may leave. Interacting with the weirdness here will frighten you soon."
+		7:
+			text = "Truly, there are no more hints here. No need to keep trying."
+		10:
+			text = "I was being serious. You will not achieve anything by spamming this button"
+		11:
+			text = "Give up, honestly. Just stop it"
+		15:
+			text = "You really are stubborn"
+		25:
+			text = "I really want to ignore you, but I feel bad... Please, give up before I feel even worse"
+		49:
+			text = "All right, you know what. One more, and I will give you something"
+		50:
+			text = "If you promise not to spam this anymore, ok? Look into the Download file"
+			SignalManager.download_file.emit("technical.zip")
+		51:
+			text = "That's it. I have nothing more. You promised, so keep that promise"	
+			hintNum = 50
 		_:
-			text = "Once the bar is full, you may leave. Interacting with the wierdness here will frighten you soon."
-			hintNum = 6
-		
+			text = "There are no more hints"
 	if hintNum < 5:
 		currText = "Need more hints?"
 		text_window.force_choice2(currText, "Yes", "No", moreHints)

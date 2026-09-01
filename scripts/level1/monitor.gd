@@ -4,10 +4,10 @@ var first = false
 
 func interact():
 	if !first:
-		SignalManager.show_text.emit("A computer monitor. But it does not seems like I can turn it on.")
+		SignalManager.show_text.emit("A computer monitor. But it does not seem like I can turn it on.")
 		first = true
 	else:
-		SignalManager.show_text.emit("Why is it comming closer?")
+		SignalManager.show_text.emit("Why is it coming closer?")
 		SignalManager.fear.emit(5)
 
 			

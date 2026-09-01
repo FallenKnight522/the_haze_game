@@ -10,8 +10,10 @@ var shown = false
 func _ready() -> void:
 	hrac = get_tree().get_first_node_in_group("player") as Node2D
 	hide()
+	set_physics_process(false)
 func show_dan():
 	if(!shown):
+		set_physics_process(true)
 		show()
 		shown = true
 		global_position = Vector2(63,-29)
@@ -31,9 +33,8 @@ func _physics_process(delta: float) -> void:
 		else:
 			animated_sprite_2d.flip_h = false
 		velocity.x = rychlost_plizeni  * global_position.direction_to(hrac.global_position).x
-		move_and_slide()
 		animated_sprite_2d.play("run")
 	else:
 		velocity.x = 0
 		animated_sprite_2d.play("idle")
-		move_and_slide()
+	move_and_slide()

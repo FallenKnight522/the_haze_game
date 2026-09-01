@@ -10,22 +10,23 @@ metadata/_custom_type_script = "uid://dbs4435dsf3ry"
 
 
 ~ start
+Brian: Ehm... Good day? Sir...
+Jan: Good day, young lad, how can I help you? We don't get many visitors in this house...
+(Should I be truthful... what if this is his house...)
 
-Brian: Ehm... Good day? Sir..
-Jan: Good day, young lad, how can I help you? We don't get many visitors in this house..
-(Should I be truthfull... what if thi is his house...)
 - (Tell the truth)
-	Brian: I am searching for my friends. Margaret, Alice, Dan... we wanted to explore this house.. 
+	Brian: I am searching for my friends. Margaret, Alice, Dan... We wanted to explore this house...
 	Brian: We thought it was abandoned...
 	Jan: It is. I am just temporarily staying. It needs more furniture.
-	Jan: I think I heard someone is in the mirror room
-	Jan: And if you're here for long, the Hallway is most likely
-	Jan: Althought I would avoid it if I were you. It is not easy to leave
+	Jan: I think I heard someone is in the mirror room.
+	Jan: And if you're here for long, the Hallway is most likely.
+	Jan: Although I would avoid it if I were you. It is not easy to leave.
+
 - (Lie)
-	Brian: I accidently wondered in here. Can you tell me how to leave?
-	Jonáš: Try the nearest door. If you are lucky, it will leads where you need
-	Brian: And if I am not.
-	Jonáš: They will lead where the House pleases
+	Brian: I accidentally wandered in here. Can you tell me how to leave?
+	Jonáš: Try the nearest door. If you are lucky, it will lead where you need.
+	Brian: And if I am not?
+	Jonáš: They will lead where the House pleases.
 	do SignalManager.fear.emit(5)
 
 => END
@@ -33,33 +34,35 @@ Jan: Good day, young lad, how can I help you? We don't get many visitors in this
 ~ start2
 
 Brian: Can I ask, who are you and why are you here?
-Ivan: Sure, even thought I am not sure how usefull it will be. I am Ivan, traveling carpender
-Ivan: I travel, make furniture, give it away
-Ivan: I would say I am one of the more skilled ones
-Ivan: I came to this house recently. I wanted to rest a bit
-Ivan: I saw it lack furniture
-Ivan: I am not used to make furniture per request
-Ivan: But what would't I do for a colleague
-- This house is your colleague
-	John: In a certain sence, yes
-	Brian: How? Why would you think that? 
-	John: I can tell
-	Brian: I do not understand.. it makes no sense
-	John: If you are looking for things that "make sense" in this house
-	John: I fear you will not like what you find
+Ivan: Sure, even though I am not sure how useful it will be. I am Ivan, a traveling carpenter.
+Ivan: I travel, make furniture, give it away.
+Ivan: I would say I am one of the more skilled ones.
+Ivan: I came to this house recently. I wanted to rest a bit.
+Ivan: I saw it lacks furniture.
+Ivan: I am not used to making furniture per request.
+Ivan: But what wouldn't I do for a colleague?
+
+- This house is your colleague?
+	John: In a certain sense, yes.
+	Brian: How? Why would you think that?
+	John: I can tell.
+	Brian: I do not understand... it makes no sense.
+	John: If you are looking for things that "make sense" in this house,
+	John: I fear you will not like what you find.
 	do SignalManager.fear.emit(5)
+
 - And where are you going to after you leave this house?
-	Jonathan: To Prague. It is a beautifull city. Full of narrow streets
+	Jonathan: To Prague. It is a beautiful city. Full of narrow streets.
 	Brian:  And what there? You know someone there?
-	Jonathan: No. I have work to do?
-	Brian: Carpenting?
-	Jonathan: Yes, making furniture?
-	Jonathan: If you want, and if you leave from here, take a walk throught the city
-	Jonathan: And if you see a table or chair on the sidewalk, that seems like there is more to it
-	Jonathan: You may take it. Take it as gift from your old pal, Jonathan
+	Jonathan: No. I have work to do.
+	Brian: Carpentry?
+	Jonathan: Yes, making furniture.
+	Jonathan: If you want, and if you leave from here, take a walk through the city.
+	Jonathan: And if you see a table or chair on the sidewalk that seems like there is more to it,
+	Jonathan: You may take it. Take it as a gift from your old pal, Jonathan.
 	Brian: Who is Jonathan?
-	Jonathan: Me of course. I just introduced myself..
-	Brian: But..
+	Jonathan: Me, of course. I just introduced myself...
+	Brian: But...
 	Brian: (Didn't he introduce himself... I should go... I have a bad feeling about this.)
 	do SignalManager.fear.emit(5)
 

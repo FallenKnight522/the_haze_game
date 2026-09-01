@@ -10,60 +10,59 @@ metadata/_custom_type_script = "uid://dbs4435dsf3ry"
 
 
 ~ start
-
-Brian: Just a normal... Wait, Alice? Alice! ALICE!!! Can you hear me??
-Alice: Of course not silly, you are inside a mirror?
-Alice: How can a mirror talk..
-Brian: Alice, listen.. we have to find the other... we have to leave this place...
-Alice: I can't go through the mirror silly. You would have to come to me
+Brian: Just a normal... Wait, Alice? Alice! ALICE!!! Can you hear me?
+Alice: Of course not, silly. You are inside a mirror.
+Alice: How can a mirror talk?
+Brian: Alice, listen... we have to find the others... we have to leave this place...
+Alice: I can't go through the mirror, silly. You would have to come to me.
 Brian: What? This is not a mirror... It's just glass. No?
-Alice: Come on silly, take my hand, come home from the mirror's land
-Alice: Do not worry, the glass won't cut, as long as you keep you eyes shut
-Alice: Come from this wall of sand, come into the Wonderland
-Alice: There's cards and hearts and chess and tea
-Alice: All awaiting you and me
-(Alice is not acting like herself. Has something happened to her. I need to find a way to her, quick)
-(What should I do)
+Alice: Come on, silly, take my hand, come home from the mirror's land.
+Alice: Do not worry, the glass won't cut, as long as you keep your eyes shut.
+Alice: Come from this wall of sand, come into Wonderland.
+Alice: There are cards and hearts and chess and tea.
+Alice: All awaiting you and me.
+(Alice is not acting like herself. Has something happened to her? I need to find a way to her, quick.)
+(What should I do?)
 - Continue talking
-	Brian: Alice, stop reciting poetry. This is serious. There is something wrong with this house
-	Brian: We need to find the others. Have you seen them
-	Alice: Four lost souls the house did save
-	Alice: Led by Brian, who faked he's "brave"
-	Alice: Alice, who found the rabits den
-	Alice: Ever forwards walking Dan
-	Alice: Margaret who spin and spins
-	Alice: Like in poker, the House always wins
+	Brian: Alice, stop reciting poetry. This is serious. There is something wrong with this house.
+	Brian: We need to find the others. Have you seen them?
+	Alice: Four lost souls the house did save.
+	Alice: Led by Brian, who faked he's "brave."
+	Alice: Alice, who found the rabbit's den.
+	Alice: Ever-forward-walking Dan.
+	Alice: Margaret who spins and spins.
+	Alice: Like in poker, the house always wins.
 	Brian: Have you seen them? Are they in danger?
-	Alice: Danger? Danger! The house's gone bad
-	Alice: But you are safe once you go mad
-	(she is not making any sence. Did this place do something to her?)
+	Alice: Danger? Danger! The house has gone bad.
+	Alice: But you are safe once you go mad.
+	(She is not making any sense. Did this place do something to her?)
 	- Continue talking
-		Brian: Alice, focus. This place has done something to you, to us all
-		Brian: We need to leave as soon as possible. Is there any way I can reach you, or help you escape
-		Alice: Don't bring your friends when you are scared
-		Alice: To share your fate just cause they cared
-		Alice: Don't beg to safe those who are lost
-		Alice: Four lives now your mistakes have cost
-		Alice: Every lost and mad is each
-		Alice: Split by mirror, not to reach
-		Alice: Mimik my movement or I yours
-		Alice: Either way I have no doors
-		Alice: So try or leave it's all the same
-		Alice: You can never outrun the blame
-		(What is she saying. Is she blaming me for all this?)
-		(I did lead them here.. but I never wanted this to happend...)
+		Brian: Alice, focus. This place has done something to you, to us all.
+		Brian: We need to leave as soon as possible. Is there any way I can reach you, or help you escape?
+		Alice: Don't bring your friends when you are scared.
+		Alice: To share your fate just 'cause they cared.
+		Alice: Don't beg to save those who are lost.
+		Alice: Three lives now your mistakes have cost.
+		Alice: Everyone lost and mad is each.
+		Alice: Split by mirror, out of reach.
+		Alice: Mimic my movement, or I yours.
+		Alice: Either way, I have no doors.
+		Alice: So try or leave, it's all the same.
+		Alice: You can never outrun the blame.
+		(What is she saying? Is she blaming me for all this?)
+		(I did lead them here... but I never wanted this to happen...)
 		- Continue talking
-			Brian: I am sorry... I didn't want this to happen
-			Brian: I want to attone. I want to safe you. Even if I have to be scared for days...
-			Brian: Just tell me how?
-			Alice: Cannot raise what's already dead
-			Alice: Nor can you teach reason to those mad
-			Alice: Run and fear and feed this place
-			Alice: Forever haunted by our face
-			Alice: You wan't to save us? No, nevermore
-			Alice: All your friends dead, but Elenore
-			Brian: [ Heave breathing ] (I need to leave. I cannot save her)
-			Brian: (I ... I need to get out)
+			Brian: I am sorry... I didn't want this to happen.
+			Brian: I want to atone. I want to save you. I don't care what it takes...
+			Brian: Just tell me how.
+			Alice: Cannot raise what's already dead.
+			Alice: Nor can you teach reason to those mad.
+			Alice: Run and fear and feed this place.
+			Alice: Forever haunted by our face.
+			Alice: You want to save us? No, nevermore.
+			Alice: All your friends dead, but Elenore.
+			Brian: [Heavy breathing] (I need to leave. I cannot save her by talking through a glass window.)
+			Brian: (I... I need to get out. I need to find a way to save myself... to save her... to save them all...)
 		- Leave
 		do SignalManager.fear.emit(10)
 	- Look around for way to reach Alice
@@ -72,4 +71,3 @@ Alice: All awaiting you and me
 do SignalManager.fear.emit(5)
 
 => END
-

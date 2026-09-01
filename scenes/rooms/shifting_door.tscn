@@ -48,6 +48,23 @@ animations = [{
 "texture": ExtResource("5_cq16q")
 }, {
 "duration": 1.0,
+"texture": ExtResource("4_v3x0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cq16q")
+}],
+"loop": 0,
+"name": &"open_shift",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_v3x0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cq16q")
+}, {
+"duration": 1.0,
 "texture": ExtResource("6_v3x0i")
 }, {
 "duration": 1.0,
@@ -68,10 +85,8 @@ script = ExtResource("2_5yrsw")
 position = Vector2(0, -1.5258789e-05)
 scale = Vector2(3.75, 3.75)
 sprite_frames = SubResource("SpriteFrames_a6fmr")
-animation = &"shift"
+animation = &"open_shift"
 autoplay = "default"
-frame = 4
-frame_progress = 1.0
 
 [node name="the_haze_object" parent="." unique_id=1244079872 instance=ExtResource("1_nimp2")]
 position = Vector2(0, -1.5258789e-05)

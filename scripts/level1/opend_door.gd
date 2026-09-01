@@ -5,7 +5,7 @@ class_name opened_door
 
 func interact():
 	animated_sprite_2d.play("open")
-	SignalManager.show_choice2.emit("This door is unlocked. Enter?","Yes", "No",leave_room, stay)
+	SignalManager.show_choice2.emit("This door is unlocked. Enter?", "Yes", "No", leave_room, stay)
 func leave_room():
 	var rand = randi_range(0,100)
 	if rand < 15:
