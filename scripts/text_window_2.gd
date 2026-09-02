@@ -161,10 +161,10 @@ func force_choice2(context: String, choice1:String, choice2: String, action1: Ca
 	action_queue.push_front(action1)
 	change_state(state.READY)
 
-func queue_dialog(dialogue_resource: DialogueResource, line_id: String = "start"):
+func queue_dialog(dialogue_resource: DialogueResource, line_id: String = "start", node: Node = self):
 	#Made with Spider.LLM
 	# 1. Vytáhneme datový objekt z Dialogue Manageru
-	var line: DialogueLine = await DialogueManager.get_next_dialogue_line(dialogue_resource, line_id,[self])
+	var line: DialogueLine = await DialogueManager.get_next_dialogue_line(dialogue_resource, line_id,[node])
 	
 	# Pokud je řádek null, konverzace skončila
 	if line == null:
@@ -180,10 +180,10 @@ func queue_dialog(dialogue_resource: DialogueResource, line_id: String = "start"
 		var volba2_text: String = line.responses[1].text if line.responses.size() > 1 else ""
 
 		# Vytvoříme anonymní funkce (Callable) pro předání akci
-		var akce1 := func(): queue_dialog(dialogue_resource,line.responses[0].next_id)
+		var akce1 := func(): queue_dialog(dialogue_resource,line.responses[0].next_id, node)
 		var akce2 := func(): 
 			if line.responses.size() > 1:
-				queue_dialog(dialogue_resource,line.responses[1].next_id)
+				queue_dialog(dialogue_resource,line.responses[1].next_id, node)
 
 		# Zavoláme tvoji funkci na UI
 		queue_choice2(kontext, volba1_text, volba2_text, akce1, akce2)
@@ -192,4 +192,4 @@ func queue_dialog(dialogue_resource: DialogueResource, line_id: String = "start"
 		# Běžný text
 		var plny_text := (line.character + ": " if line.character else "") + line.text
 		queue_text(plny_text)
-		queue_dialog(dialogue_resource,line.next_id)
+		queue_dialog(dialogue_resource,line.next_id, node)

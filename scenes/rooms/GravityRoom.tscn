@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://y3im235016wl"]
 
 [ext_resource type="Texture2D" uid="uid://bvgjm7kcfmfeb" path="res://assets/level1/Terrain (32x32).png" id="2_owim4"]
-[ext_resource type="Texture2D" uid="uid://bwl7fnu2ajt8" path="res://assets/furniture/earthwallleft.png" id="3_tiwd6"]
+[ext_resource type="Texture2D" uid="uid://bwl7fnu2ajt8" path="res://assets/level1/furniture/earthwallleft.png" id="3_tiwd6"]
 [ext_resource type="PackedScene" uid="uid://difuyeamrtv0i" path="res://scenes/object.tscn" id="6_67gwk"]
 [ext_resource type="Script" uid="uid://coi5dx2qt0aj" path="res://scripts/level1/closed_door.gd" id="7_ifmp5"]
 [ext_resource type="Texture2D" uid="uid://cs2jir55slc3u" path="res://assets/level1/door/Basic_Door_Pixel.png" id="8_det54"]

@@ -1,6 +1,6 @@
 extends Control
 var time = Time.get_date_string_from_system()
-var time_when = [ "2026-08-16",  "2026-10-01", "2026-11-01", "2026-12-01"]
+var time_when = [ "2026-08-16",  "2026-01-01", "2026-11-01", "2026-12-01"]
 var text_full_on = [ false , false , false , false ]
 var text_full = [ "Paranoia",  "Acknowlegment", "Isolation", "Nudging"]
 var text_title = [  "I. House that was not there",  "II. to Know", "III. Through the Fog", "IV. ???"]
@@ -44,7 +44,7 @@ func _on_level_1_pressed() -> void:
 
 
 func _on_level_2_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/level2.tscn")
 
 
 func _on_level_3_pressed() -> void:

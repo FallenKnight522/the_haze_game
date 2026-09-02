@@ -8,6 +8,16 @@
 [ext_resource type="PackedScene" uid="uid://gayeverlt07m" path="res://scenes/strachomira.tscn" id="5_14jow"]
 [ext_resource type="PackedScene" uid="uid://bc87n5tigm86k" path="res://scenes/brian.tscn" id="6_mvsps"]
 [ext_resource type="Shader" uid="uid://c0bfsatwb0rfq" path="res://shaders/level1.gdshader" id="7_ejswk"]
+[ext_resource type="Texture2D" uid="uid://cxerjd2yxrug1" path="res://assets/level1/Strachomira/ItLies1.png" id="7_mvsps"]
+[ext_resource type="Texture2D" uid="uid://b6bnlmki0chfv" path="res://assets/level1/Strachomira/ItLies2.png" id="8_jvkml"]
+[ext_resource type="Texture2D" uid="uid://gnlm1p31xlet" path="res://assets/level1/Strachomira/ItLies3.png" id="9_3w4mx"]
+[ext_resource type="Texture2D" uid="uid://dtprg2jegk8nr" path="res://assets/level1/Strachomira/ItLies4.png" id="10_u068y"]
+[ext_resource type="Texture2D" uid="uid://thd5mvgsrvrt" path="res://assets/level1/Strachomira/ItLies5.png" id="11_1ooyw"]
+[ext_resource type="Texture2D" uid="uid://gjcq4aygq63x" path="res://assets/level1/Strachomira/ItLies6.png" id="12_ai3nx"]
+[ext_resource type="Texture2D" uid="uid://cbnrinx1k2pkk" path="res://assets/level1/Strachomira/ItLies7.png" id="13_phfsf"]
+[ext_resource type="Texture2D" uid="uid://du3nqfvrgt5u3" path="res://assets/level1/Strachomira/ItLies8.png" id="14_3oqy1"]
+[ext_resource type="Texture2D" uid="uid://ohvtjt8k6dmp" path="res://assets/level1/Strachomira/ItLies9.png" id="15_mq0oc"]
+[ext_resource type="Texture2D" uid="uid://bc65w50tdqpcn" path="res://assets/level1/Strachomira/ItLies10.png" id="16_msy1c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rxev4"]
 shader = ExtResource("7_ejswk")
@@ -34,6 +44,7 @@ layer = 10
 
 [node name="Fear" parent="Graphics" unique_id=533401923 instance=ExtResource("5_14jow")]
 unique_name_in_owner = true
+fear_levels = Array[Texture2D]([ExtResource("7_mvsps"), ExtResource("8_jvkml"), ExtResource("9_3w4mx"), ExtResource("10_u068y"), ExtResource("11_1ooyw"), ExtResource("12_ai3nx"), ExtResource("13_phfsf"), ExtResource("14_3oqy1"), ExtResource("15_mq0oc"), ExtResource("16_msy1c")])
 
 [node name="General" type="Node2D" parent="." unique_id=924651252]
 

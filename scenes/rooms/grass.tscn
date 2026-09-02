@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://cfd3mxepyprit" path="res://scripts/level1/grass.gd" id="1_3t04t"]
 [ext_resource type="Script" uid="uid://c05fyux2j80vr" path="res://scripts/level1/grassroomcolider.gd" id="1_phowx"]
 [ext_resource type="Texture2D" uid="uid://bvgjm7kcfmfeb" path="res://assets/level1/Terrain (32x32).png" id="2_k0v4e"]
-[ext_resource type="Texture2D" uid="uid://bwl7fnu2ajt8" path="res://assets/furniture/earthwallleft.png" id="4_phowx"]
-[ext_resource type="Texture2D" uid="uid://c8m6h2bwqx8gj" path="res://assets/furniture/background.png" id="5_phowx"]
+[ext_resource type="Texture2D" uid="uid://bwl7fnu2ajt8" path="res://assets/level1/furniture/earthwallleft.png" id="4_phowx"]
+[ext_resource type="Texture2D" uid="uid://c8m6h2bwqx8gj" path="res://assets/level1/furniture/background.png" id="5_phowx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxev4"]
 size = Vector2(183, 287)

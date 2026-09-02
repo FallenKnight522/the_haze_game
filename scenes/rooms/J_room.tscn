@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://bv15rpxjq6oeb"]
 
 [ext_resource type="Texture2D" uid="uid://bvgjm7kcfmfeb" path="res://assets/level1/Terrain (32x32).png" id="2_svy2k"]
-[ext_resource type="Texture2D" uid="uid://bwl7fnu2ajt8" path="res://assets/furniture/earthwallleft.png" id="3_ug8lr"]
+[ext_resource type="Texture2D" uid="uid://bwl7fnu2ajt8" path="res://assets/level1/furniture/earthwallleft.png" id="3_ug8lr"]
 [ext_resource type="Script" uid="uid://bhbhqtd8oips0" path="res://scripts/level1/shifting_table.gd" id="8_crmn0"]
 [ext_resource type="PackedScene" uid="uid://difuyeamrtv0i" path="res://scenes/object.tscn" id="8_sc48b"]
 [ext_resource type="Script" uid="uid://be37kx8ljrcrx" path="res://scripts/level1/j.gd" id="8_xbqiy"]
@@ -24,7 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://cynf73lid5qwb" path="res://assets/level1/J/J8.png" id="22_pjfg1"]
 [ext_resource type="Texture2D" uid="uid://31ober4ss3rm" path="res://assets/level1/J/J9.png" id="23_35bj0"]
 [ext_resource type="Texture2D" uid="uid://d3klj7o12k30b" path="res://assets/level1/J/J10.png" id="24_lerp3"]
-[ext_resource type="Texture2D" uid="uid://boc166mltscda" path="res://assets/furniture/earthwallright.png" id="25_1x6sw"]
+[ext_resource type="Texture2D" uid="uid://boc166mltscda" path="res://assets/level1/furniture/earthwallright.png" id="25_1x6sw"]
 [ext_resource type="Texture2D" uid="uid://dhjscxhqa87gb" path="res://assets/atlas.png" id="26_srfch"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iv26p"]

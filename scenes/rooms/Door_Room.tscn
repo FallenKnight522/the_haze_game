@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bvgjm7kcfmfeb" path="res://assets/level1/Terrain (32x32).png" id="1_4glmg"]
 [ext_resource type="Script" uid="uid://dwp86fq08wte2" path="res://scripts/level1/door_room.gd" id="1_oj50s"]
-[ext_resource type="Texture2D" uid="uid://bwl7fnu2ajt8" path="res://assets/furniture/earthwallleft.png" id="2_e3g8n"]
-[ext_resource type="Texture2D" uid="uid://boc166mltscda" path="res://assets/furniture/earthwallright.png" id="25_hie54"]
+[ext_resource type="Texture2D" uid="uid://bwl7fnu2ajt8" path="res://assets/level1/furniture/earthwallleft.png" id="2_e3g8n"]
+[ext_resource type="Texture2D" uid="uid://boc166mltscda" path="res://assets/level1/furniture/earthwallright.png" id="25_hie54"]
 [ext_resource type="Texture2D" uid="uid://dhjscxhqa87gb" path="res://assets/atlas.png" id="26_3lpdf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iv26p"]

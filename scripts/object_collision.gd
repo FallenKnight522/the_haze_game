@@ -3,11 +3,9 @@ class_name the_haze_object
 @onready var label: Label = $Label
 var can_interact = false
 var interraction_allowed = true
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hide_hint() # Replace with function body.
-
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") && interraction_allowed:
 		can_interact = true
@@ -29,5 +27,5 @@ func _unhandled_input(event: InputEvent):
 		interact()
 		
 func interact():
-	push_warning("Interract not overriten")
+	pass
 	

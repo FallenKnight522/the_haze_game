@@ -1,4 +1,5 @@
-extends TextureRect
+extends CanvasLayer
+@onready var texture_rect: TextureRect = $MarginContainer/TextureRect
 
 @export var fear_levels: Array[Texture2D] = []
 var fear = 0
@@ -9,7 +10,7 @@ func _ready() -> void:
 	SignalManager.fear.connect(on_fear)
 	fear = 0
 	if(!fear_levels.is_empty()):
-		texture = fear_levels[0]
+		texture_rect.texture = fear_levels[0]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -26,5 +27,5 @@ func on_fear(val):
 func showpicture():
 	if fear_levels.is_empty():
 		return
-	texture = fear_levels[clampi(fear/fearLevels,0, fear_levels.size()-1)]
+	texture_rect.texture = fear_levels[clampi(fear/fearLevels,0, fear_levels.size()-1)]
 	

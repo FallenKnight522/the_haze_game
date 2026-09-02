@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bvgjm7kcfmfeb" path="res://assets/level1/Terrain (32x32).png" id="1_5drrp"]
 [ext_resource type="Script" uid="uid://d2udwpc5lgwdw" path="res://scripts/level1/nausea_room.gd" id="1_b2an6"]
-[ext_resource type="Texture2D" uid="uid://bwl7fnu2ajt8" path="res://assets/furniture/earthwallleft.png" id="2_yrt46"]
+[ext_resource type="Texture2D" uid="uid://bwl7fnu2ajt8" path="res://assets/level1/furniture/earthwallleft.png" id="2_yrt46"]
 [ext_resource type="PackedScene" uid="uid://difuyeamrtv0i" path="res://scenes/object.tscn" id="3_b2an6"]
-[ext_resource type="Texture2D" uid="uid://boc166mltscda" path="res://assets/furniture/earthwallright.png" id="3_yrt46"]
+[ext_resource type="Texture2D" uid="uid://boc166mltscda" path="res://assets/level1/furniture/earthwallright.png" id="3_yrt46"]
 [ext_resource type="Texture2D" uid="uid://dhjscxhqa87gb" path="res://assets/atlas.png" id="4_b2an6"]
 [ext_resource type="Script" uid="uid://coi5dx2qt0aj" path="res://scripts/level1/closed_door.gd" id="4_ce7t5"]
 [ext_resource type="Texture2D" uid="uid://cs2jir55slc3u" path="res://assets/level1/door/Basic_Door_Pixel.png" id="5_b7mgt"]

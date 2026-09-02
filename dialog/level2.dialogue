@@ -1,0 +1,117 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3 uid="uid://be4ky2lwprtuq"]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_oqhbq"]
+
+[resource]
+script = ExtResource("1_oqhbq")
+using_states = PackedStringArray()
+character_names = PackedStringArray()
+metadata/_custom_type_script = "uid://dbs4435dsf3ry"
+
+
+~ eye0
+if fear.fear >90:
+	=> eye1
+else:
+	IPR1-HY-NOB: Hello Brian
+	IPR1-HY-NOB: You require answers. I know all. I shall bestow them upon you. But first, there is work to be done
+	IPR1-HY-NOB: Digest the statements. And once you are ready, I shall answer what you wish.
+=> END
+
+~ eye1
+if fear.fear < 90 && fear.fear > 50
+	IPR1-HY-NOB: You did not read enought
+	Brian: What?? How many more.
+	IPR1-HY-NOB: Pacience. I will answer everything soon
+elif fear.fear > 90:
+	IPR1-HY-NOB: You are ready. Ask what you wish!
+	Brian: I wish to know, why did the house target me, Margaret, Alice and Dan. What did we to deserve such fate?
+	IPR1-HY-NOB: You were scared
+	Brian: What?
+	IPR1-HY-NOB: The house feeds on fear of disorientation. You were scared to go in. But drawn to you're fate.
+	IPR1-HY-NOB: If you weren't scare, It would have not bothered.
+	Brian: And why then did it let ME leave while EVERYONE else died??
+	IPR1-HY-NOB: To feed on you
+	IPR1-HY-NOB: Look at yourself. You still fear it, you still feed it.
+	IPR1-HY-NOB: All the others would have slowly moved on
+	IPR1-HY-NOB: But instead, you are drawn deeper, by the guilt
+	IPR1-HY-NOB: It may claime you eventually. But it will savour your paranoia for long time, before that happens
+	Brian: [Heavy breathing]
+	Brian: Ok... ok... fine... Then, how I do save them. How to save them from that house!
+	IPR1-HY-NOB: You can't.
+	IPR1-HY-NOB: There is no way to save someone in the house
+	IPR1-HY-NOB: You cannot save them
+	Brian: What... no..
+	IPR1-HY-NOB: There is not even enought of them left to save
+	IPR1-HY-NOB: Take Alice. Do you know what she is in right now.
+	Brian: No, please, I don't want to know.
+	IPR1-HY-NOB: Oh.. but you do... I can sence your curiosity.. and fear
+	IPR1-HY-NOB: She no longer feels the stare of mirror's gaze
+	IPR1-HY-NOB: No, instead she is the mirror
+	IPR1-HY-NOB: Twisted and bend like a funhouse show, endlessly shattered and contorted.
+	IPR1-HY-NOB: And she is mad. Mad but scared. And in so much pain
+	IPR1-HY-NOB: She cannot remember how she got here. But she remembers you
+	IPR1-HY-NOB: The twisted figure that pretended to be her friend
+	IPR1-HY-NOB: That brought her to her doom
+	IPR1-HY-NOB: That lied that it will rescue her
+	Brian: [Sobing] I beg you, no more
+	IPR1-HY-NOB: Or, how about Margaret.
+	IPR1-HY-NOB: She still sits on those stairs
+	IPR1-HY-NOB: She was one to go quickly
+	IPR1-HY-NOB: Despite the twisting, she still feels the hight she is in
+	IPR1-HY-NOB: And she refuses to look down.
+	IPR1-HY-NOB: Even thogh, it might be up
+	IPR1-HY-NOB: She goes down and down the stair
+	IPR1-HY-NOB: Sometimes, she feels like she is standing in place, and the stares walk her
+	IPR1-HY-NOB: And sometimes, she remembers a shadow. A heinous reminder of why she is here. You.
+	Brian: [In tears] Please. I did not ask for this
+	IPR1-HY-NOB: Oh, but you did
+	IPR1-HY-NOB: You cannot lie to me Brian
+	IPR1-HY-NOB: I know. And you know, I won't lie to you
+	IPR1-HY-NOB: Not like you, to poor Dan
+	IPR1-HY-NOB: "We go together"
+	IPR1-HY-NOB: He is still there
+	IPR1-HY-NOB: Still searching for you
+	IPR1-HY-NOB: Still partially sane
+	IPR1-HY-NOB: Sometimes, he thinks you went ahead and he fell behind
+	IPR1-HY-NOB: Sometimes, he thinks you found a door, but it lock behind you
+	IPR1-HY-NOB: And sometimes, he thinks the hallway ate you
+	IPR1-HY-NOB: But he remembers the promise
+	IPR1-HY-NOB: And so he keeps searching, calling, for one who he will never see
+	Brian: [On the verge of breakdow] Fine, you monster
+	Brian: If I cannot save them, how do I avenge them
+	IPR1-HY-NOB: Oh.. you can't.
+	IPR1-HY-NOB: The house will exist as long as it is feared.
+	IPR1-HY-NOB: And it has plenty of victims thanks to you
+	IPR1-HY-NOB: It can strech their misoury for centuries.
+	IPR1-HY-NOB: And even if, as long as you live, it can always feast on you
+	IPR1-HY-NOB: And those unfortunate enought to open a door ment for you
+	IPR1-HY-NOB: You cannot avange them
+	IPR1-HY-NOB: And you will help perpetuate the thing, that killed them
+	Brian: [Broken] Fine. Fine
+	Brian: If thats how it is, how do I save myself
+	IPR1-HY-NOB: You can't...
+	IPR1-HY-NOB: You are marked by the house
+	IPR1-HY-NOB: It's only a matter of time, before it swallows you to
+	IPR1-HY-NOB: But don't get your hopes up
+	IPR1-HY-NOB: The guilt will not leave you
+	IPR1-HY-NOB: Only grow worst
+	IPR1-HY-NOB: You will never find peace
+	Brian: [Broken] Why?? Why can't you offer any hope or help
+	Brian: What did I do to you to torment me so
+	IPR1-HY-NOB: I am only doing what you wanted
+	IPR1-HY-NOB: you wanted to know the truth
+	IPR1-HY-NOB: I tell only truth
+	Brian: I.. no... there must be.. something...
+	IPR1-HY-NOB: You know I am truthfull. And you know there is no hope
+	IPR1-HY-NOB: Goodbye Brian
+	IPR1-HY-NOB: Feel free to come agin, if any more questions arise
+	do end_conversation()
+else:
+	IPR1-HY-NOB: You did not read enought
+=> END
+
+~ eye2
+IPR1-HY-NOB: Anything else you would like to ask
+Brian: No, not anymore
+=> END
