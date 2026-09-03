@@ -170,6 +170,7 @@ func queue_dialog(dialogue_resource: DialogueResource, line_id: String = "start"
 	if line == null:
 		return
 
+	var ended_text = ""
 	# 2. Rozhodneme, zda jde o volbu nebo běžný text
 	if line.responses.size() > 0:
 		# Sestavíme text kontextu (např. "Pavouk: Co uděláš?")
@@ -192,4 +193,8 @@ func queue_dialog(dialogue_resource: DialogueResource, line_id: String = "start"
 		# Běžný text
 		var plny_text := (line.character + ": " if line.character else "") + line.text
 		queue_text(plny_text)
+		while ended_text != plny_text:
+			ended_text = await window_finished
+		
 		queue_dialog(dialogue_resource,line.next_id, node)
+		

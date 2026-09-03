@@ -18,6 +18,8 @@ func _process(_delta: float) -> void:
 func on_fear(val):
 	var dec = fear/fearLevels
 	fear += val
+	if fear < 0:
+		fear = 0
 	SignalManager.fear_changed.emit(fear)
 	if(fear >= fearMax):
 			fear = fearMax

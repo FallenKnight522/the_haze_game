@@ -13,5 +13,3 @@ func interact():
 	poslist.shuffle()
 	global_position = poslist[0].global_position
 	interraction+=1 
-	print(str(poslist[0]))
-	print(str(global_position))

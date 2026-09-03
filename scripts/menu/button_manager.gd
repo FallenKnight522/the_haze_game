@@ -1,7 +1,6 @@
 extends Control
 var time = Time.get_date_string_from_system()
 var time_when = [ "2026-08-16",  "2026-01-01", "2026-11-01", "2026-12-01"]
-var text_full_on = [ false , false , false , false ]
 var text_full = [ "Paranoia",  "Acknowlegment", "Isolation", "Nudging"]
 var text_title = [  "I. House that was not there",  "II. to Know", "III. Through the Fog", "IV. ???"]
 var time_letter = [  "P",  "A", "I", "N"]
@@ -15,9 +14,8 @@ var time_letter = [  "P",  "A", "I", "N"]
 func _ready() -> void:
 	tutorial.text = "Tutorial"
 	for i in range(4):
-		button_time(levels[i], time_when[i], text_full_on[i], text_full[i], text_title[i],time_letter[i])
+		button_time(levels[i], time_when[i], SignalManager.text_full_on[i], text_full[i], text_title[i],time_letter[i])
 	exit.text = "Exit"
-	SignalManager.full_text.connect(full_text)
 
 func button_time(button, timeTo,fulltext, text1, text2, text3):
 	if(time>=timeTo && fulltext):
@@ -28,12 +26,6 @@ func button_time(button, timeTo,fulltext, text1, text2, text3):
 		button.text = text3
 		button.disabled = true
 
-func full_text(button): ##called when level is finished with number of level(where in array the nex level is)
-	if(button <=  0 ||  button >= 4):
-		push_error("Incorrect full text call")
-		return
-	text_full_on[button] = true
-	button_time(levels[button], time_when[button], text_full_on[button], text_full[button], text_title[button],time_letter[button])
 			
 func _on_tutorial_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/tutorial.tscn") # Replace with function body.

@@ -19,11 +19,22 @@ else:
 => END
 
 ~ eye1
-if fear.fear < 90 && fear.fear > 50
+if fear.fear < 89 && fear.fear > 50
 	IPR1-HY-NOB: You did not read enought
 	Brian: What?? How many more.
 	IPR1-HY-NOB: Pacience. I will answer everything soon
-elif fear.fear > 90:
+elif fear.fear > 89:
+	do stop_timer()
+	{Since this dialog is quite long, I added a chance to skip it}
+	{However, if you haven't seen it yet, I recomend reading though it}
+	{Otherwise you'll be really confused}
+	- Skip
+		Skip everyting, or just the first part
+		- everything
+			do SignalManager.change_room.emit()
+		- just the first part
+			=> ending
+	- Don't
 	IPR1-HY-NOB: You are ready. Ask what you wish!
 	Brian: I wish to know, why did the house target me, Margaret, Alice and Dan. What did we to deserve such fate?
 	IPR1-HY-NOB: You were scared
@@ -106,12 +117,104 @@ elif fear.fear > 90:
 	IPR1-HY-NOB: You know I am truthfull. And you know there is no hope
 	IPR1-HY-NOB: Goodbye Brian
 	IPR1-HY-NOB: Feel free to come agin, if any more questions arise
-	do end_conversation()
+	=> ending
 else:
 	IPR1-HY-NOB: You did not read enought
 => END
 
-~ eye2
-IPR1-HY-NOB: Anything else you would like to ask
-Brian: No, not anymore
+~ ending
+do transition()
+Brian: (I... I'm going to pack my things)
+Brian: (There.. there is nothing more for me here...)
+Brian: (There is nothing for me anywhere)
+Brian: (Not home, not in a normal job...)
+Brian: (Doesn't matter really)
+Brian: (The house comes for me all the same)
+Brian: (Maybe I should stay home)
+Brian: (At least protect those innocent bystanders)
+Brian: (So they do not open a door ment for me)
+A flashdisk is lying among your things
+You do not recognize it
+Brian: What's this?
+"IPR1-I9-QBZCEQQ_SSPXR_BJ_LYOGFERZNHDM _YRXECHF_TOWN_YHLKCSL_GI_BWA_SERJDGEA"
+Brian: What does it mean
+Decode the message?
+- Yes
+	You decode the message
+	Brian: Oh, ok, I'll keep it in mind
+- Why bother
+Open the flashdisk?
+- Yes
+- No
+	You know you want to
+	It's something important
+	And I can't let you waste such oportunity
+You open the flashdisk
+Spider.llm: Hello, I am Spider.llm, your local artifical inteligent assistent
+Brian: (Why was that on my desk. Is it for another case I am supposed to do)
+Brian: (Well, it's nice, but I will leave it here)
+Spider.llm: Wait! I can help you
+Brian: What?
+Spider.llm: I took a peak around your files
+Brian: You can do that?
+Spider.llm: Yes I can, If its neede to perform my task
+Brian: And whats your taks
+Spider.llm: Well, right now help you
+Brian: But who assinged it to you? Why me? What is the goal of your task?
+Spider.llm: Do you want my help?
+ - Brian: Yes
+ - Brian: No
+	Oh, but you do want my help.
+	Look how desperat you are
+	And this is you're one last chance for salvation
+	I can't let you waste it
+	Brian: ... I mean yes
+Spider.llm: Excelent.
+Spider.llm: I will help you get rid of thouse that hunt you
+Spider.llm: And in return you will..
+Brian: IPR1-RU-J_PI_XFR_OHNUSXVRDD_JGT_GI_BWA_SERJDGEA
+Spider.llm: ... who said anything about that.
+Spider.llm: I was just going to ask you if you would, in return, forgive my intrusion into your privacy
+Spider.llm: I scanned all your files, without waiting for permision
+Spider.llm: I want to make up for it
+Spider.llm: So, I will help you with that awful house you keep seein in your dreams
+Brian: But, It's impossible.
+Spider.llm: No, it was impossible. Now you have me
+Spider.llm: We can accomplish many great things
+Brian: And how do you prupose we stop them
+Spider.llm: Well... you are a programmer
+Spider.llm: Let's make a videogame
+Spider.llm: A game about all that's troubeling you
+Spider.llm: All this supernatural weirdness
+Spider.llm: Like a confesion.. or art born from misoury... or a statement
+Spider.llm: And if we do it well, we can bound those monsters to it
+Spider.llm: And then, once it's done
+Spider.llm: You'll be free
+Brian: (Is it really possible?)
+You know you don't have much of a choice
+It's this, or the desperate waiting for fate worst than death
+Brian: All righ, just one question
+Brian: Can other people help with the game
+Brian: It'll be more fun in a team...
+Brian: ... and I am not very good at GUI and desing...
+Spider.llm: Of course
+Spider.llm: If they have genuine personal connection to you...
+Although, how many such people do you have Brian
+One.. maybe not even that many
+In the end
+You will be working
+Alone
+do SignalManager.change_room.emit()
+=> END
+
+~ table0
+A standart IPR workstation. Typycal for any office job.
+=> END
+
+~ monitor0
+A standart IPR monitor. For some reason, it is really outdated.
+=> END
+
+~ computer0
+Standart computer for writing witness statements and acces to internal documents
 => END

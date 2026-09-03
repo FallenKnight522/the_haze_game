@@ -1,5 +1,6 @@
 extends Node
 
+var text_full_on = [ false , false , false , false ]
 
 signal fear(val: int)
 signal fear_limit()
@@ -10,4 +11,3 @@ signal change_room(id_mistnosti: String, cesta_k_scene: String)
 signal show_dialog(dialog: DialogueResource, text: String)
 signal move_player(pos: Vector2)
 signal download_file(file: String)
-signal full_text(button: int)

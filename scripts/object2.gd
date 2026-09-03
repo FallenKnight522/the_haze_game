@@ -6,13 +6,17 @@ var interraction_allowed = true
 @export var Manager: Object_manager
 @export var text: String
 @export var texture: Texture2D
-@export var texture_size: Vector2
+@export var texture_size: Vector2 = Vector2(1,1)
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @export var interraction_max: int
 var interaction = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hide_hint() # Replace with function body.
+	if(texture != null):
+		sprite_2d.texture = texture
+	sprite_2d.scale = texture_size
+func _process(delta: float) -> void:
 	if(texture != null):
 		sprite_2d.texture = texture
 	sprite_2d.scale = texture_size

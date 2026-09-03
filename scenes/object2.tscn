@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://cqudush7mljlq"]
 
-[ext_resource type="Script" uid="uid://nvx1q3nifss5" path="res://scripts/object_collision.gd" id="1_3yxso"]
-[ext_resource type="Texture2D" uid="uid://htkaxrc6yh8p" path="res://assets/level1/Empty.png" id="2_5ih5c"]
+[ext_resource type="Script" uid="uid://uayliybkbtud" path="res://scripts/object2.gd" id="1_5ih5c"]
+[ext_resource type="Texture2D" uid="uid://htkaxrc6yh8p" path="res://assets/level2/Empty.png" id="2_5ih5c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rxev4"]
 
 [node name="the_haze_object" type="Area2D" unique_id=1244079872]
 collision_mask = 2
-script = ExtResource("1_3yxso")
+script = ExtResource("1_5ih5c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1576747888]
 shape = SubResource("CircleShape2D_rxev4")
