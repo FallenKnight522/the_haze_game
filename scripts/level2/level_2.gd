@@ -13,6 +13,7 @@ func _ready() -> void:
 	text_window.text_finished.connect(player.start_movement)
 	text_window.text_started.connect(player.stop_movement)
 	text_window.window_finished.connect(hint_.windowLeft)
+	SignalManager.show_input.connect(text_window.queue_input)
 	SignalManager.show_text.connect(text_window.queue_text)
 	SignalManager.show_choice2.connect(text_window.queue_choice2)
 	SignalManager.change_room.connect(outro)
@@ -36,7 +37,6 @@ func stay():
 
 
 func new_day(day):
-	await fadeout()
 	label.visible_ratio =0.0
 	door_manager.reset_doors()
 	var tw = create_tween()
@@ -91,7 +91,3 @@ func loose():
 	await get_tree().create_timer(3).timeout
 	label.text = ""
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
-
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.

@@ -1,5 +1,5 @@
 extends CanvasLayer
-
+@onready var line_edit: LineEdit = $TextboxContainer/PanelContainer/MarginContainer/LineEdit
 @onready var textbox_container: MarginContainer = $TextboxContainer
 var tw: Tween
 @onready var rich_text_label: RichTextLabel = $TextboxContainer/PanelContainer/RichTextLabel
@@ -12,24 +12,27 @@ enum state{
 	READY,
 	READING,
 	FINISHED,
-	CHOOSING2
+	CHOOSING2,
+	CHOOSING,
+	INPUT
 }
 var current_state = state.READY
 var text_queue = []
 var choice_queue = []
 var action_queue = []
-var choice_first = true
+var choice = 0
 var force_enabled = true
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	current_state = state.READY
+	line_edit.hide()
 func clear():
 	text_queue.clear()
 	choice_queue.clear()
 	action_queue.clear()
-	choice_first = true
+	choice = 0
 	force_enabled = true
 	current_state = state.READY
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -54,24 +57,38 @@ func _process(_delta: float) -> void:
 				change_state(state.READY)
 				window_finished.emit(text_queue.pop_front())
 				choice_queue.pop_front()
-				choice_queue.pop_front()
-				if(choice_first):
-					var act = action_queue.pop_front()
-					action_queue.pop_front()
-					if act.is_valid():
-						act.call()
-				else:
-					action_queue.pop_front()
-					var act = action_queue.pop_front()
-					if act.is_valid():
-						act.call()
+				if(choice < 0 || choice > 1):
+					push_error("Invalid choice")
+					return
+				var act = action_queue.pop_front()
+				if act[choice].is_valid():
+						act[choice].call()
 			elif(Input.is_action_just_pressed("move left")):
-				choice_first = true	
-				rich_text_label.text = text_queue[0]+ "\n* "+ choice_queue[0]+ "			  " + choice_queue[1]
+				choice = 0	
+				rich_text_label.text = text_queue[0]+ "\n* "+ choice_queue.front()[0]+ "			  " + choice_queue.front()[1]
 			elif(Input.is_action_just_pressed("move right")):
-				choice_first = false	
-				rich_text_label.text = text_queue[0]+ "\n  "+ choice_queue[0]+ "			" + "* "+choice_queue[1]
-
+				choice = 1	
+				rich_text_label.text = text_queue[0]+ "\n  "+ choice_queue.front()[0]+ "			" + "* "+choice_queue.front()[1]
+		state.CHOOSING:
+			if(Input.is_action_just_pressed("escape")):
+				change_state(state.READY)
+				window_finished.emit(text_queue.pop_front())
+				choice_queue.pop_front()
+				var act = action_queue.pop_front()
+				if act[choice].is_valid():
+						act[choice].call()
+			elif(Input.is_action_just_pressed("move left")):
+				if choice - 1 < 0:
+					choice = choice_queue.front().size()
+				choice = choice - 1	
+				rich_text_label.text = text_queue[0]+ "\n<- 		"+ choice_queue.front()[choice]+ "		->"
+			elif(Input.is_action_just_pressed("move right")):
+				if choice + 1 >= choice_queue.front().size():
+					choice = -1	
+				choice = choice + 1	
+				rich_text_label.text = text_queue[0]+ "\n<- 		"+ choice_queue.front()[choice]+ "		->"
+		state.INPUT:
+			pass
 func hide_textbox():
 	text_finished.emit()
 	rich_text_label.text = ""
@@ -86,16 +103,36 @@ func queue_text(next_text):
 func queue_choice2(context: String, choice1:String, choice2: String, action1: Callable= Callable(), action2: Callable = Callable()):
 	text_queue.push_back("/Choice 2/") #Special text signaling there is choice between 2 argument waitnig
 	text_queue.push_back(context)
-	choice_queue.push_back(choice1)
-	choice_queue.push_back(choice2)
-	action_queue.push_back(action1)
-	action_queue.push_back(action2)
-	
+	var choices = []
+	choices.push_back(choice1)
+	choices.push_back(choice2)
+	choice_queue.push_back(choices)
+	var actions = []
+	actions.push_back(action1)
+	actions.push_back(action2)
+	action_queue.push_back(actions)
+
+func queue_choice(context: String, choices: Array[String], actions: Array[Callable]= []):
+	text_queue.push_back("/Choice X/") #Special text signaling there is choice between 2 argument waitnig
+	text_queue.push_back(context)
+	if choices.size() < actions.size():
+		push_error("More actions than choices")
+	while choices.size() > actions.size():
+		actions.push_back(Callable())
+	choice_queue.push_back(choices)
+	action_queue.push_back(actions)	
+func queue_input(context: String):
+	text_queue.push_back("/Input/") #Special text signaling there is choice between 2 argument waitnig
+	text_queue.push_back(context)
 
 func handle_text():
 	var text = text_queue.pop_front()
 	if(text == "/Choice 2/"):
 		display_choice2()
+	elif(text == "/Choice X/"):
+		display_choice()
+	elif(text == "/Input/"):
+		read_input()
 	else:
 		display_text(text)
 func display_text(text):
@@ -109,14 +146,37 @@ func display_text(text):
 	var doba = rich_text_label.get_parsed_text().length() * speed
 	tw.tween_property(rich_text_label, "visible_ratio", 1.0, doba)
 	tw.finished.connect(_on_text_finished)
+func display_choice():
+	if(choice_queue.is_empty() || text_queue.is_empty()):
+		printerr("Chybí argumenty")
+	rich_text_label.text = text_queue[0]+ "\n<- 		"+ choice_queue.front()[0]+ "		->"
+	change_state(state.CHOOSING)
+	choice = 0
+	show_textbox()
 func display_choice2():
 	if(choice_queue.is_empty() || text_queue.is_empty()):
 		printerr("Chybí argumenty")
-	rich_text_label.text = text_queue[0]+ "\n* "+ choice_queue[0]+ "			  " + choice_queue[1]
+	rich_text_label.text = text_queue[0]+ "\n* "+ choice_queue.front()[0]+ "			  " + choice_queue.front()[1]
 	change_state(state.CHOOSING2)
-	choice_first = true
+	choice = 0
 	show_textbox()
+func read_input():
+	if(text_queue.is_empty()):
+		printerr("Chybí argumenty")
+	rich_text_label.text = text_queue[0]
+	line_edit.show()
+	change_state(state.INPUT)
+	line_edit.grab_focus()
+	line_edit.clear()
 
+func _on_line_edit_text_submitted(new_text: String) -> void:
+	line_edit.hide()
+	line_edit.clear()
+	line_edit.release_focus()
+	if(text_queue.is_empty()):
+		printerr("Chybí argumenty")
+	SignalManager.input_recieved.emit(text_queue.pop_front(), new_text)
+	change_state(state.READY)
 func _on_text_finished():
 	change_state(state.FINISHED)
 func change_state(_state):
@@ -135,6 +195,13 @@ func force_text(text: String):
 			text_queue.push_front(rich_text_label.text)
 		state.CHOOSING2:
 			text_queue.push_front("/Choice 2/")
+		state.CHOOSING:
+			text_queue.push_front("/Choice X/")
+		state.INPUT:
+			text_queue.push_front("/Input/")
+			line_edit.clear()
+			line_edit.release_focus()
+			line_edit.hide()
 	#Order is switched since I push to front now
 	text_queue.push_front(text) 
 	change_state(state.READY)
@@ -152,13 +219,24 @@ func force_choice2(context: String, choice1:String, choice2: String, action1: Ca
 			text_queue.push_front(rich_text_label.text)
 		state.CHOOSING2:
 			text_queue.push_front("/Choice 2/")
+		state.CHOOSING:
+			text_queue.push_front("/Choice X/")
+		state.INPUT:
+			text_queue.push_front("/Input/")
+			line_edit.clear()
+			line_edit.release_focus()
+			line_edit.hide()
 	#Order is switched since I push to front now
 	text_queue.push_front(context) 
 	text_queue.push_front("/Choice 2/") #Special text signaling there is choice between 2 argument waitnig
-	choice_queue.push_front(choice2)
-	choice_queue.push_front(choice1)
-	action_queue.push_front(action2)
-	action_queue.push_front(action1)
+	var choices = []
+	choices.push_back(choice1)
+	choices.push_back(choice2)
+	choice_queue.push_front(choices)
+	var actions = []
+	actions.push_back(action1)
+	actions.push_back(action2)
+	action_queue.push_front(actions)
 	change_state(state.READY)
 
 func queue_dialog(dialogue_resource: DialogueResource, line_id: String = "start", node: Node = self):
@@ -172,7 +250,7 @@ func queue_dialog(dialogue_resource: DialogueResource, line_id: String = "start"
 
 	var ended_text = ""
 	# 2. Rozhodneme, zda jde o volbu nebo běžný text
-	if line.responses.size() > 0:
+	if line.responses.size() > 0 && line.responses.size() <= 2:
 		# Sestavíme text kontextu (např. "Pavouk: Co uděláš?")
 		var kontext := (line.character + ": " if line.character else "") + line.text
 		
@@ -188,7 +266,16 @@ func queue_dialog(dialogue_resource: DialogueResource, line_id: String = "start"
 
 		# Zavoláme tvoji funkci na UI
 		queue_choice2(kontext, volba1_text, volba2_text, akce1, akce2)
-		
+	elif line.responses.size() > 0 :
+		# Sestavíme text kontextu (např. "Pavouk: Co uděláš?")
+		var kontext := (line.character + ": " if line.character else "") + line.text
+		var text: Array[String] = []
+		var choices: Array[Callable] = []
+		# Vytáhneme texty pro 2 volby
+		for i in range(line.responses.size()):
+			text.push_back(line.responses[i].text)
+			choices.push_back(func(): queue_dialog(dialogue_resource,line.responses[i].next_id, node))
+		queue_choice(kontext, text, choices)	
 	else:
 		# Běžný text
 		var plny_text := (line.character + ": " if line.character else "") + line.text

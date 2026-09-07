@@ -1,11 +1,13 @@
 extends Node2D
 @export var doors: Array[Area2D] = []
-signal hour_changed
+@export var locked_doors: Array[Area2D] = []
 var spiral_door = null
 var spiral_progress = 0
 var time = 0.0
 @onready var hrníček: the_haze_object = $hrníček
 @onready var soška: the_haze_object = $soška
+@onready var interaction_manager: Object_manager = $"../InteractionManager"
+
 
 func _ready() -> void:
 	reset_doors()
@@ -20,6 +22,9 @@ func _process(delta: float) -> void:
 func reset_doors():
 	for door in doors:
 		door.reset()
+	if interaction_manager.day != 4:
+		for door in locked_doors:
+			door.closed = true
 	if doors.size() == 0:
 		push_error("Empty doors list")
 		return

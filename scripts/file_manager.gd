@@ -1,5 +1,6 @@
 extends Node2D
 @onready var text_window: CanvasLayer = %Text_window
+ 
 
 ##Made by Spider.LLM
 func extrah_zip(jmeno_souboru) -> void:

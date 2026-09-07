@@ -13,6 +13,12 @@ border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rxev4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i7nl8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b5i6v"]
+
 [node name="Text_window" type="CanvasLayer" unique_id=1098004527]
 script = ExtResource("1_feu8r")
 
@@ -39,5 +45,22 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_rxev4")
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 29
+theme_override_font_sizes/bold_font_size = 29
+theme_override_font_sizes/bold_italics_font_size = 29
+theme_override_font_sizes/italics_font_size = 29
 bbcode_enabled = true
 autowrap_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TextboxContainer/PanelContainer" unique_id=1884306866]
+layout_mode = 2
+theme_override_constants/margin_top = 40
+
+[node name="LineEdit" type="LineEdit" parent="TextboxContainer/PanelContainer/MarginContainer" unique_id=743120493]
+layout_mode = 2
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rxev4")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_i7nl8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_b5i6v")
+flat = true
+
+[connection signal="text_submitted" from="TextboxContainer/PanelContainer/MarginContainer/LineEdit" to="." method="_on_line_edit_text_submitted"]

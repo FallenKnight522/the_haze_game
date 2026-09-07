@@ -16,7 +16,11 @@ func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		can_interact = false
 		hide_hint()
-		
+func turn_off():
+	interraction_allowed = false
+	can_interact = false
+	hide_hint()
+
 func show_hint():
 	label.show()
 func hide_hint():

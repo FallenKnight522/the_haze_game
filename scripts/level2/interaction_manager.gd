@@ -2,12 +2,15 @@ extends Object_manager
 
 @onready var level_2: Node2D = $".."
 @onready var fear: CanvasLayer = %Fear
-var day = 0
 const workdesk_position = Vector2(1592,-1046)
+var flags: Dictionary[String, int]
 
-func interaction(_name: String, _interaction: int, _caller: Node):
+
+func interaction(_name: String, _interaction: int, _caller: the_haze_object2 = null):
 	if dialog != null:
 			match _name:
+				"default":
+					pass
 				"test":
 					SignalManager.fear.emit(10)
 				"clock":
@@ -18,9 +21,9 @@ func interaction(_name: String, _interaction: int, _caller: Node):
 			push_error("Dialog not loaded")
 func stop_timer():
 	den_aktivni = false
-func transition():
+func transition(pos: Vector2 = workdesk_position):
 	await level_2.fadeout()
-	SignalManager.move_player.emit(workdesk_position)
+	SignalManager.move_player.emit(pos)
 	await level_2.fadein()
 
 
@@ -57,14 +60,30 @@ func get_time() -> String:
 
 func end_day():
 	den_aktivni = false
-
 	# Resetujeme časovač pro další den
 	day+=1
 	if day >= 5:
 		await level_2.loose()
 	else:
+		await  level_2.fadeout()
+		new_day.emit(day)
 		await level_2.new_day(day)
 	latemsg = true
 	ubehly_cas = 0.0
 	den_aktivni = true
 		
+func request_input(context, password):
+	SignalManager.show_input.emit(context)
+	print("Work")
+	var context_recieved = ""
+	var response = ""
+	while context != context_recieved:
+		var x = await SignalManager.input_recieved
+		context_recieved = x[0]
+		response = x[1]
+	if response == password:
+		flags[password] = 0
+	else:
+		flags[password] = 1
+func _ready() -> void:
+	new_day.emit(day)
