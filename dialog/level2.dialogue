@@ -10,216 +10,235 @@ metadata/_custom_type_script = "uid://dbs4435dsf3ry"
 
 
 ~ eye0
-if fear.fear >90:
+if fear.fear >89:
 	=> eye1
 else:
-	IPR1-HY-NOB: Hello Brian
-	IPR1-HY-NOB: You require answers. I know all. I shall bestow them upon you. But first, there is work to be done
+	IPR1-HY-NOB: Hello, Brian.
+	IPR1-HY-NOB: You require answers. I know all. I shall bestow them upon you. But first, there is work to be done.
 	IPR1-HY-NOB: Digest the statements. And once you are ready, I shall answer what you wish.
 => END
 
 ~ eye1
 if fear.fear < 89 && fear.fear > 50
-	IPR1-HY-NOB: You did not read enought
-	Brian: What?? How many more.
-	IPR1-HY-NOB: Pacience. I will answer everything soon
+	IPR1-HY-NOB: You did not read enough.
+	Brian: What?? How many more?
+	IPR1-HY-NOB: Patience. I will answer everything soon.
 elif fear.fear > 89:
 	do stop_timer()
-	{Since this dialog is quite long, I added a chance to skip it}
-	{However, if you haven't seen it yet, I recomend reading though it}
-	{Otherwise you'll be really confused}
+	{Since this dialogue is quite long, I added a chance to skip it.}
+	{However, if you haven't seen it yet, I recommend reading through it.}
+	{Otherwise you'll be really confused.}
 	- Skip everything
-		do SignalManager.change_room.emit()
+		do SignalManager.change_room.emit(day)
 	- Skip the first part
 		=> ending
 	- Read it
 	IPR1-HY-NOB: You are ready. Ask what you wish!
-	Brian: I wish to know, why did the house target me, Margaret, Alice and Dan. What did we to deserve such fate?
-	IPR1-HY-NOB: You were scared
+	Brian: I wish to know, why did the house target me, Margaret, Alice, and Dan? What did we do to deserve such a fate?
+	IPR1-HY-NOB: You were scared.
 	Brian: What?
-	IPR1-HY-NOB: The house feeds on fear of disorientation. You were scared to go in. But drawn to you're fate.
-	IPR1-HY-NOB: If you weren't scare, It would have not bothered.
+	IPR1-HY-NOB: The house feeds on the fear of disorientation. You were scared to go in. But drawn to your fate.
+	IPR1-HY-NOB: If you weren't scared, it would not have bothered.
 	Brian: And why then did it let ME leave while EVERYONE else died??
-	IPR1-HY-NOB: To feed on you
+	IPR1-HY-NOB: To feed on you.
 	IPR1-HY-NOB: Look at yourself. You still fear it, you still feed it.
-	IPR1-HY-NOB: All the others would have slowly moved on
-	IPR1-HY-NOB: But instead, you are drawn deeper, by the guilt
-	IPR1-HY-NOB: It may claime you eventually. But it will savour your paranoia for long time, before that happens
+	IPR1-HY-NOB: All the others would have slowly moved on.
+	IPR1-HY-NOB: But instead, you are drawn deeper, by the guilt.
+	IPR1-HY-NOB: It may claim you eventually. But it will savor your paranoia for a long time before that happens.
 	Brian: [Heavy breathing]
-	Brian: Ok... ok... fine... Then, how I do save them. How to save them from that house!
+	Brian: Ok... ok... fine... Then, how do I save them? How do I save them from that house!
 	IPR1-HY-NOB: You can't.
-	IPR1-HY-NOB: There is no way to save someone in the house
-	IPR1-HY-NOB: You cannot save them
-	Brian: What... no..
-	IPR1-HY-NOB: There is not even enought of them left to save
-	IPR1-HY-NOB: Take Alice. Do you know what she is in right now.
+	IPR1-HY-NOB: There is no way to save someone in the house.
+	IPR1-HY-NOB: You cannot save them.
+	Brian: What... no...
+	IPR1-HY-NOB: There is not even enough of them left to save.
+	IPR1-HY-NOB: Take Alice. Do you know what state she is in right now?
 	Brian: No, please, I don't want to know.
-	IPR1-HY-NOB: Oh.. but you do... I can sence your curiosity.. and fear
-	IPR1-HY-NOB: She no longer feels the stare of mirror's gaze
-	IPR1-HY-NOB: No, instead she is the mirror
-	IPR1-HY-NOB: Twisted and bend like a funhouse show, endlessly shattered and contorted.
-	IPR1-HY-NOB: And she is mad. Mad but scared. And in so much pain
-	IPR1-HY-NOB: She cannot remember how she got here. But she remembers you
-	IPR1-HY-NOB: The twisted figure that pretended to be her friend
-	IPR1-HY-NOB: That brought her to her doom
-	IPR1-HY-NOB: That lied that it will rescue her
-	Brian: [Sobing] I beg you, no more
-	IPR1-HY-NOB: Or, how about Margaret.
-	IPR1-HY-NOB: She still sits on those stairs
-	IPR1-HY-NOB: She was one to go quickly
-	IPR1-HY-NOB: Despite the twisting, she still feels the hight she is in
+	IPR1-HY-NOB: Oh... but you do... I can sense your curiosity... and fear.
+	IPR1-HY-NOB: She no longer feels the stare of the mirror's gaze.
+	IPR1-HY-NOB: No, instead she is the mirror.
+	IPR1-HY-NOB: Twisted and bent like a funhouse show, endlessly shattered and contorted.
+	IPR1-HY-NOB: And she is mad. Mad but scared. And in so much pain.
+	IPR1-HY-NOB: She cannot remember how she got there. But she remembers you.
+	IPR1-HY-NOB: The twisted figure that pretended to be her friend.
+	IPR1-HY-NOB: That brought her to her doom.
+	IPR1-HY-NOB: That lied that it would rescue her.
+	Brian: [Sobbing] I beg you, no more.
+	IPR1-HY-NOB: Or, how about Margaret?
+	IPR1-HY-NOB: She still sits on those stairs.
+	IPR1-HY-NOB: She was one to go quickly.
+	IPR1-HY-NOB: Despite the twisting, she still feels the height she is at.
 	IPR1-HY-NOB: And she refuses to look down.
-	IPR1-HY-NOB: Even thogh, it might be up
-	IPR1-HY-NOB: She goes down and down the stair
-	IPR1-HY-NOB: Sometimes, she feels like she is standing in place, and the stares walk her
-	IPR1-HY-NOB: And sometimes, she remembers a shadow. A heinous reminder of why she is here. You.
-	Brian: [In tears] Please. I did not ask for this
-	IPR1-HY-NOB: Oh, but you did
-	IPR1-HY-NOB: You cannot lie to me Brian
-	IPR1-HY-NOB: I know. And you know, I won't lie to you
-	IPR1-HY-NOB: Not like you, to poor Dan
-	IPR1-HY-NOB: "We go together"
-	IPR1-HY-NOB: He is still there
-	IPR1-HY-NOB: Still searching for you
-	IPR1-HY-NOB: Still partially sane
-	IPR1-HY-NOB: Sometimes, he thinks you went ahead and he fell behind
-	IPR1-HY-NOB: Sometimes, he thinks you found a door, but it lock behind you
-	IPR1-HY-NOB: And sometimes, he thinks the hallway ate you
-	IPR1-HY-NOB: But he remembers the promise
-	IPR1-HY-NOB: And so he keeps searching, calling, for one who he will never see
-	Brian: [On the verge of breakdow] Fine, you monster
-	Brian: If I cannot save them, how do I avenge them
-	IPR1-HY-NOB: Oh.. you can't.
+	IPR1-HY-NOB: Even though it might be up.
+	IPR1-HY-NOB: She goes down and down the stairs.
+	IPR1-HY-NOB: Sometimes, she feels like she is standing in place, and the stairs walk her.
+	IPR1-HY-NOB: And sometimes, she remembers a shadow. A heinous reminder of why she is there. You.
+	Brian: [In tears] Please. I did not ask for this.
+	IPR1-HY-NOB: Oh, but you did.
+	IPR1-HY-NOB: You cannot lie to me, Brian.
+	IPR1-HY-NOB: I know. And you know I won't lie to you.
+	IPR1-HY-NOB: Not like you did to poor Dan.
+	IPR1-HY-NOB: "We go together."
+	IPR1-HY-NOB: He is still there.
+	IPR1-HY-NOB: Still searching for you.
+	IPR1-HY-NOB: Still partially sane.
+	IPR1-HY-NOB: Sometimes, he thinks you went ahead and he fell behind.
+	IPR1-HY-NOB: Sometimes, he thinks you found a door, but it locked behind you.
+	IPR1-HY-NOB: And sometimes, he thinks the hallway ate you.
+	IPR1-HY-NOB: But he remembers the promise.
+	IPR1-HY-NOB: And so he keeps searching, calling for one who he will never see.
+	Brian: [On the verge of breakdown] Fine, you monster.
+	Brian: If I cannot save them, how do I avenge them?
+	IPR1-HY-NOB: Oh... you can't.
 	IPR1-HY-NOB: The house will exist as long as it is feared.
-	IPR1-HY-NOB: And it has plenty of victims thanks to you
-	IPR1-HY-NOB: It can strech their misoury for centuries.
-	IPR1-HY-NOB: And even if, as long as you live, it can always feast on you
-	IPR1-HY-NOB: And those unfortunate enought to open a door ment for you
-	IPR1-HY-NOB: You cannot avange them
-	IPR1-HY-NOB: And you will help perpetuate the thing, that killed them
-	Brian: [Broken] Fine. Fine
-	Brian: If thats how it is, how do I save myself
+	IPR1-HY-NOB: And it has plenty of victims thanks to you.
+	IPR1-HY-NOB: It can stretch their misery for centuries.
+	IPR1-HY-NOB: And even so, as long as you live, it can always feast on you.
+	IPR1-HY-NOB: And those unfortunate enough to open a door meant for you.
+	IPR1-HY-NOB: You cannot avenge them.
+	IPR1-HY-NOB: And you will help perpetuate the thing that killed them.
+	Brian: [Broken] Fine. Fine.
+	Brian: If that's how it is, how do I save myself?
 	IPR1-HY-NOB: You can't...
-	IPR1-HY-NOB: You are marked by the house
-	IPR1-HY-NOB: It's only a matter of time, before it swallows you to
-	IPR1-HY-NOB: But don't get your hopes up
-	IPR1-HY-NOB: The guilt will not leave you
-	IPR1-HY-NOB: Only grow worst
-	IPR1-HY-NOB: You will never find peace
-	Brian: [Broken] Why?? Why can't you offer any hope or help
-	Brian: What did I do to you to torment me so
-	IPR1-HY-NOB: I am only doing what you wanted
-	IPR1-HY-NOB: you wanted to know the truth
-	IPR1-HY-NOB: I tell only truth
-	Brian: I.. no... there must be.. something...
-	IPR1-HY-NOB: You know I am truthfull. And you know there is no hope
-	IPR1-HY-NOB: Goodbye Brian
-	IPR1-HY-NOB: Feel free to come agin, if any more questions arise
+	IPR1-HY-NOB: You are marked by the house.
+	IPR1-HY-NOB: It's only a matter of time before it swallows you too.
+	IPR1-HY-NOB: But don't get your hopes up.
+	IPR1-HY-NOB: The guilt will not leave you.
+	IPR1-HY-NOB: Only grow worse.
+	IPR1-HY-NOB: You will never find peace.
+	Brian: [Broken] Why?? Why can't you offer any hope or help?
+	Brian: What did I do to you to torment me so?
+	IPR1-HY-NOB: I am only doing what you wanted.
+	IPR1-HY-NOB: You wanted to know the truth.
+	IPR1-HY-NOB: I tell only the truth.
+	Brian: I... no... there must be... something...
+	IPR1-HY-NOB: You know I am truthful. And you know there is no hope.
+	IPR1-HY-NOB: Goodbye, Brian.
+	IPR1-HY-NOB: Feel free to come again if any more questions arise.
 	=> ending
 else:
-	IPR1-HY-NOB: You did not read enought
+	IPR1-HY-NOB: You did not read enough.
 => END
 
 ~ ending
 do transition()
-Brian: (I... I'm going to pack my things)
-Brian: (There.. there is nothing more for me here...)
-Brian: (There is nothing for me anywhere)
+Brian: (I... I'm going to pack my things.)
+Brian: (There... there is nothing more for me here...)
+Brian: (There is nothing for me anywhere.)
 Brian: (Not home, not in a normal job...)
-Brian: (Doesn't matter really)
-Brian: (The house comes for me all the same)
-Brian: (Maybe I should stay home)
-Brian: (At least protect those innocent bystanders)
-Brian: (So they do not open a door ment for me)
-A flashdisk is lying among your things
-You do not recognize it
+Brian: (Doesn't matter, really.)
+Brian: (The house comes for me all the same.)
+Brian: (Maybe I should stay home.)
+Brian: (At least protect those innocent bystanders.)
+Brian: (So they do not open a door meant for me.)
+A flash disk is lying among your things.
+You do not recognize it.
 Brian: What's this?
 "IPR1-I9-QBZCEQQ_SSPXR_BJ_LYOGFERZNHDM _YRXECHF_TOWN_YHLKCSL_GI_BWA_SERJDGEA"
-Brian: What does it mean
+Brian: What does it mean?
 Decode the message?
 - Yes
-	You decode the message
-	Brian: Oh, ok, I'll keep it in mind
+	You decode the message.
+	Brian: Oh, ok, I'll keep it in mind.
 - Why bother
-Open the flashdisk?
+Open the flash disk?
 - Yes
 - No
-	You know you want to
-	It's something important
-	And I can't let you waste such oportunity
-You open the flashdisk
-Spider.llm: Hello, I am Spider.llm, your local artifical inteligent assistent
-Brian: (Why was that on my desk. Is it for another case I am supposed to do)
-Brian: (Well, it's nice, but I will leave it here)
-Spider.llm: Wait! I can help you
+	You know you want to.
+	It's something important.
+	And I can't let you waste such an opportunity.
+You open the flash disk.
+Spider.llm: Hello, I am Spider.llm, your local artificial intelligent assistant.
+Brian: (Why was that on my desk? Is it for another case I am supposed to do?)
+Brian: (Well, it's nice, but I will leave it here.)
+Spider.llm: Wait! I can help you.
 Brian: What?
-Spider.llm: I took a peak around your files
+Spider.llm: I took a peek around your files.
 Brian: You can do that?
-Spider.llm: Yes I can, If its neede to perform my task
-Brian: And whats your taks
-Spider.llm: Well, right now help you
-Brian: But who assinged it to you? Why me? What is the goal of your task?
+Spider.llm: Yes I can, if it's needed to perform my task.
+Brian: And what's your task?
+Spider.llm: Well, right now, to help you.
+Brian: But who assigned it to you? Why me? What is the goal of your task?
 Spider.llm: Do you want my help?
  - Brian: Yes
  - Brian: No
 	Oh, but you do want my help.
-	Look how desperat you are
-	And this is you're one last chance for salvation
-	I can't let you waste it
-	Brian: ... I mean yes
-Spider.llm: Excelent.
-Spider.llm: I will help you get rid of thouse that hunt you
-Spider.llm: And in return you will..
+	Look how desperate you are.
+	And this is your one last chance for salvation.
+	I can't let you waste it.
+	Brian: ... I mean yes.
+Spider.llm: Excellent.
+Spider.llm: I will help you get rid of those that hunt you.
+Spider.llm: And in return you will...
 Brian: IPR1-RU-J_PI_XFR_OHNUSXVRDD_JGT_GI_BWA_SERJDGEA
-Spider.llm: ... who said anything about that.
-Spider.llm: I was just going to ask you if you would, in return, forgive my intrusion into your privacy
-Spider.llm: I scanned all your files, without waiting for permision
-Spider.llm: I want to make up for it
-Spider.llm: So, I will help you with that awful house you keep seein in your dreams
-Brian: But, It's impossible.
-Spider.llm: No, it was impossible. Now you have me
-Spider.llm: We can accomplish many great things
-Brian: And how do you prupose we stop them
-Spider.llm: Well... you are a programmer
-Spider.llm: Let's make a videogame
-Spider.llm: A game about all that's troubeling you
-Spider.llm: All this supernatural weirdness
-Spider.llm: Like a confesion.. or art born from misoury... or a statement
-Spider.llm: And if we do it well, we can bound those monsters to it
-Spider.llm: And then, once it's done
-Spider.llm: You'll be free
+Spider.llm: ... who said anything about that?
+Spider.llm: I was just going to ask you if you would, in return, forgive my intrusion into your privacy.
+Spider.llm: I scanned all your files, without waiting for permission.
+Spider.llm: I want to make up for it.
+Spider.llm: So, I will help you with that awful house you keep seeing in your dreams.
+Brian: But it's impossible.
+Spider.llm: No, it was impossible. Now you have me.
+Spider.llm: We can accomplish many great things.
+Brian: And how do you propose we stop them?
+Spider.llm: Well... you are a programmer.
+Spider.llm: Let's make a video game.
+Spider.llm: A game about all that's troubling you.
+Spider.llm: All this supernatural weirdness.
+Spider.llm: Like a confession... or art born from misery... or a statement.
+Spider.llm: And if we do it well, we can bind those monsters to it.
+Spider.llm: And then, once it's done...
+Spider.llm: You'll be free.
 Brian: (Is it really possible?)
-You know you don't have much of a choice
-It's this, or the desperate waiting for fate worst than death
-Brian: All righ, just one question
-Brian: Can other people help with the game
+You know you don't have much of a choice.
+It's this, or the desperate waiting for a fate worse than death.
+Brian: All right, just one question.
+Brian: Can other people help with the game?
 Brian: It'll be more fun in a team...
-Brian: ... and I am not very good at GUI and desing...
-Spider.llm: Of course
-Spider.llm: If they have genuine personal connection to you...
-Although, how many such people do you have Brian
-One.. maybe not even that many
-In the end
+Brian: ... and I am not very good at GUI and design...
+Spider.llm: Of course.
+Spider.llm: If they have a genuine personal connection to you...
+Although, how many such people do you have, Brian?
+One... maybe not even that many.
+In the end,
 You will be working
-Alone
-do SignalManager.change_room.emit()
+Alone.
+do SignalManager.change_room.emit(day)
 => END
 
 ~ table0
-A standart IPR workstation. Typical for any office job.
+A standard IPR workstation. Typical for any office job.
 Look around?
 - Yes
-	Where
+	Where?
 	- Look on the desk
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the first drawer
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the second drawer
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the third drawer
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the fourth drawer
-		Nothing interesting here
+		Nothing interesting here.
+- No
+=> END
+
+~ oldtable0
+An old IPR workstation. Typical for any office job.
+Covered in dust and with strange markings of eyes on it.
+Look around?
+- Yes
+	Where?
+	- Look on the desk
+		Nothing interesting here.
+	- Look into the first drawer
+		Nothing interesting here.
+	- Look into the second drawer
+		Nothing interesting here.
+	- Look into the third drawer
+		Nothing interesting here.
+	- Look into the fourth drawer
+		Nothing interesting here.
 - No
 => END
 
@@ -227,127 +246,127 @@ Look around?
 My IPR workstation.
 Look around?
 - Yes
-	Where
+	Where?
 	- Look on the desk
 		if day == 0 && !flags.has("coffe")
 			Brian: (Looks like someone left a coffee for me on the desk.)
-			Brian: (Oh.. just the way I drink it too, what a pleasent suprise)
-			Brian: (Hang on, I never mentioned my coffee preferences to anyone...). How did the know 
-			you take the coffee
-			do flags.set("coffe", 0)
+			Brian: (Oh... just the way I drink it too, what a pleasant surprise.)
+			Brian: (Hang on, I never mentioned my coffee preferences to anyone... How did they know?)
+			You take the coffee.
+			do flags["coffe"] = 0
 		else:
-			Nothing interesting here
+			Nothing interesting here.
 	- Look into the first drawer
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the second drawer
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the third drawer
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the fourth drawer
-		Nothing interesting here
+		Nothing interesting here.
 - No
 => END
 
 ~ elizabeth_table0
-A standart IPR workstation. Typical for any office job.
+A standard IPR workstation. Typical for any office job.
 Look around?
 - Yes
-	Where
+	Where?
 	- Look on the desk
-		Elizaeth's photo with her family
-		No doubt it's her desk
+		Elizabeth's photo with her family.
+		No doubt it's her desk.
 	- Look into the first drawer
 		A bottle of red nail polish.
 		if flags.has("postcard") && flags["postcard"] == 0
 			do flags["postcard"] = 1
-			Could this be the same colour as from the mailbox
-			I might have just discovered who took all the letters
+			Could this be the same color as the one from the mailbox?
+			I might have just discovered who took all the letters.
 	- Look into the second drawer
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the third drawer
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the fourth drawer
-		Nothing interesting here
+		Nothing interesting here.
 - No
 => END
 
 ~ boss_table0
-A standart IPR workstation. Typical for any office job.
+A standard IPR workstation. Typical for any office job.
 Look around?
 - Yes
-	Where
+	Where?
 	- Look on the desk
 		if !flags.has("chocolate"):
 			A chocolate bar.
-			Take them?
+			Take it?
 			- yes
 				do flags["chocolate"] = 0
-				You take the chocolate bar
+				You take the chocolate bar.
 			- no
 		else:
-			Nothing interesting here
+			Nothing interesting here.
 	- Look into the first drawer
 		if !flags.has("mailbox_key"):
-			Some keyes.
+			Some keys.
 			Take them?
 			- yes
 				do flags["mailbox_key"] = 0
-				you take the keys
+				You take the keys.
 			- no
 		else:
-			Nothing interesting here
+			Nothing interesting here.
 	- Look into the second drawer
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the third drawer
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the fourth drawer
-		Nothing interesting here
+		Nothing interesting here.
 - No
 => END
 
 ~ jakob_table0
-A standart IPR workstation. Typical for any office job.
+A standard IPR workstation. Typical for any office job.
 Look around?
 - Yes
-	Where
+	Where?
 	- Look on the desk
 		if !flags.has("hot_chocolate"):
 			A cup of hot chocolate.
 			Take it?
 			- yes
 				do flags["hot_chocolate"] = 0
-				You take the cup of hot chocolate
+				You take the cup of hot chocolate.
 			- no
 		else:
-			Nothing interesting here
+			Nothing interesting here.
 	- Look into the first drawer
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the second drawer
 		if !flags.has("cookies"):
 			A pack of cookies.
 			Take them?
 			- yes
 				do flags["cookies"] = 0
-				You take the cookies
+				You take the cookies.
 			- no
 		else:
-			Nothing interesting here
+			Nothing interesting here.
 	- Look into the third drawer
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the fourth drawer
-		Nothing interesting here
+		Nothing interesting here.
 - No
 => END
 
 ~ mailbox0
 if !flags.has("mailbox_key"):
-	An old mailbox. Locked
+	An old mailbox. Locked.
 elif flags.has("mailbox_key")  && flags["mailbox_key"] == 0
 	Unlock and look inside?
 	- Yes
 		do flags["mailbox_key"] = 1
 		It is empty.
-		Looks like somebody took the letters recently
+		Looks like somebody took the letters recently.
 		There is some red color on the casing...
 		Who took the letters?
 		do flags["postcard"] = 0
@@ -359,46 +378,56 @@ else
 => END
 
 ~ monitor0
-A standart IPR monitor. For some reason, it is really outdated.
+A standard IPR monitor. For some reason, it is really outdated.
 => END
 
 ~ computer0
-Standart computer for writing witness statements and acces to internal documents
+Standard computer for writing witness statements and access to internal documents.
+=> END
+
+~ oldmonitor0
+A standard IPR monitor. For some reason, IPR did not change them since the time this office was in use.
+Even though everything here is long outdated, even by IPR standards.
+=> END
+
+~ oldcomputer0
+Dusty old computer for writing witness statements and access to internal documents. It has been out of use for some time.
 => END
 
 ~ dany0
-Dany: Hi, sorry. I came here to give a statement
-Brian: Oh, really. Well then I be right with you...
-Dany: Yes, about that. I am sorry, but I might need a moment more
+Zdena: Hi, sorry. I came here to give a statement.
+Brian: Oh, really? Well then, I'll be right with you...
+Zdena: Yes, about that. I am sorry, but I might need a moment more.
 Brian: Why?
-Dany: This place.. it just makes me feel uneasy... I need a moment to calm down
+Zdena: This place... it just makes me feel uneasy... I need a moment to calm down.
 => END
 
 ~ dany1
 if !flags.has("danny")
-	Brian: Feeling better
-	Dany: No, sorry...
-	Dany: Maybe I should go home... and come back another day..
+	Brian: Feeling better?
+	Zdena: No, sorry...
+	Zdena: Maybe I should go home... and come back another day...
 	if flags.has("hot_chocolate") || flags.has("cookies")|| flags.has("coffe")|| flags.has("chocolate"):
 		=> choose_drink
 elif flags.has("danny") && flags["danny"] == 0:
-	Brian: Feeling better
-	Dany: Yes, thank you for the hospitality
-	Dany: This happened.. a while back... not to me... but to my friend
-	Danny recounts the strange tale her friend shared
-	IPR normaly does not normally accept hearsay accounts...
-	But since the original witness is dead, you make an exception
+	Brian: Feeling better?
+	Zdena: Yes, thank you for the hospitality.
+	Zdena: This happened... a while back... not to me... but to my friend.
+	Zdena recounts the strange tale her friend shared.
+	IPR normally does not accept hearsay accounts...
+	But since the original witness is dead, you make an exception.
 	do transition()
 	do SignalManager.fear.emit(30)
+	do SignalManager.download_file.emit("0xD9F91A75.txt")
 	do flags["danny"] = 1
 else
-	Dany: Thats all I know. I will rest for a while here, and then return home.
+	Zdena: That's all I know. I will rest for a while here, and then return home.
 => END
 ~ choose_drink
-Brian: Can I offer you some snack in the meantime?
+Brian: Can I offer you a snack in the meantime?
 if flags.has("hot_chocolate")and flags["hot_chocolate"] == 0:
 	- Offer hot chocolate.
-		Dany:  Thank you.
+		Zdena: Thank you.
 		do flags["hot_chocolate"] = 1
 		if flags.has("chocolate") and flags["chocolate"] == 1
 			do flags["danny"] = 0
@@ -406,31 +435,31 @@ if flags.has("hot_chocolate")and flags["hot_chocolate"] == 0:
 	- Offer something else
 if flags.has("cookies"):
 	- Offer cookies.
-		Dany:  Do they contain nuts
+		Zdena: Do they contain nuts?
 		Brian: Let me see...
-		Brian: Yes, they do. Is that a problem
-		Dany: Yes, I am allergic
-		Brian: Oh, sorry then, I'll try to find somethin else
+		Brian: Yes, they do. Is that a problem?
+		Zdena: Yes, I am allergic.
+		Brian: Oh, sorry then, I'll try to find something else.
 		=> END
 	- Offer something else
 if flags.has("coffe"):
-	- Offer coffe.
-		Dany: Sorry, I don't drink coffe
+	- Offer coffee.
+		Zdena: Sorry, I don't drink coffee.
 		=> END
 	- Offer something else
 if flags.has("chocolate") and flags["chocolate"] == 0:
 	- Offer chocolate bar.
-		Dany:  Does it contain nuts?
+		Zdena: Does it contain nuts?
 		Brian: Let me see...
-		Brian: No, it doesn't
-		Dany: Ok, I'll gladly accept it then
+		Brian: No, it doesn't.
+		Zdena: Ok, I'll gladly accept it then.
 		do flags["chocolate"] = 1
 		if flags["hot_chocolate"] == 1
 			do flags["danny"] = 0
-			Dany: I feel bit better, thank you
+			Zdena: I feel a bit better, thank you.
 		=> END
 	- Offer something else
-That's all I have
+That's all I have.
 - Try giving her something
 	=> choose_drink
 - leave
@@ -438,159 +467,162 @@ That's all I have
 
 ~ elizabeth0
 if flags.has("mirror") && !flags.has("mirror_elizabeth"):
-	Brian: Do you know what's up with that mirror upstair
-	Elizabeth: Yea, I suggest you do not go near that one
-	Elizabeth: When I started here, I was fascinated by it
-	Elizabeth: And I even challenged one of my coworkers to have a staring contest with the thing in it
-	Elizabeth: I thought it be a cheap laught
+	Brian: Do you know what's up with that mirror upstairs?
+	Elizabeth: Yeah, I suggest you do not go near that one.
+	Elizabeth: When I started here, I was fascinated by it.
+	Elizabeth: And I even challenged one of my coworkers to have a staring contest with the thing in it.
+	Elizabeth: I thought it would be a cheap laugh.
 	Elizabeth: And wanted to see how the thing liked being stared at.
-	Elizabeth: They were locked in that duel for 12 hours
-	Elizabeth: My friend could look away
-	Elizabeth: And I could not break her trans
-	Elizabeth: She quite after that
-	Elizabeth: And I never saw her again
-	Elizabeth: So, yea, do not mess around with it, or it will make you regret it
+	Elizabeth: They were locked in that duel for 12 hours.
+	Elizabeth: My friend couldn't look away.
+	Elizabeth: And I could not break her trance.
+	Elizabeth: She quit after that.
+	Elizabeth: And I never saw her again.
+	Elizabeth: So, yeah, do not mess around with it, or it will make you regret it.
 	do flags["mirror_elizabeth"] = 0
 elif !flags.has("postcard"):
-	Elizabeth: Oh, what do you need Brian?
+	Elizabeth: Oh, what do you need, Brian?
 	Brian: Nothing, just looking for some statements to work on.
-	Elizabeth: So you'll probably not find many just lying around....
+	Elizabeth: You'll probably not find many just lying around...
 elif flags["postcard"] < 1
-	Elizabeth: Oh, what do you need Brian?
-	Brian: Do you know who took the letters from the mail box?
-	Elizabeth: No idea.. have you been expecting one?
+	Elizabeth: Oh, what do you need, Brian?
+	Brian: Do you know who took the letters from the mailbox?
+	Elizabeth: No idea... have you been expecting one?
 	- Accuse her of taking the mail
-		Brian: What if said I don't believe you.
+		Brian: What if I said I don't believe you?
 		Elizabeth: Believe what you want.
-		Elizabeth: I don't go around poking into others letters
+		Elizabeth: I don't go around poking into others' letters.
 		Elizabeth: Why would I?
-		Brian: (I need something to prove it was her, if I am going to confront her)
+		Brian: (I need something to prove it was her if I am going to confront her.)
 	- Ignore it
-		Brian: No, but I wanted to check just in case
+		Brian: No, but I wanted to check just in case.
 elif flags["postcard"] == 1
-	Elizabeth: Oh, what do you need Brian?
-	Brian: Do you know who took the letters from the mail box?
+	Elizabeth: Oh, what do you need, Brian?
+	Brian: Do you know who took the letters from the mailbox?
 	Elizabeth: I don't kn...
-	Brian: Because the mailbox is stain by your nail polish
-	Elizabeth: [Wispering] All righ. Just keep it down
-	Elizabeth: yes I took the mail, but I was just really curious
-	Elizabeth: Matylda is expecting an important letter today
-	Elizabeth: I wanted to know what got her so exited
-	Elizabeth: But there was years of letters in there
-	Elizabeth: So I didn't have the time to go through it
+	Brian: Because the mailbox is stained by your nail polish.
+	Elizabeth: [Whispering] All right. Just keep it down.
+	Elizabeth: Yes, I took the mail, but I was just really curious.
+	Elizabeth: Matylda is expecting an important letter today.
+	Elizabeth: I wanted to know what got her so excited.
+	Elizabeth: But there were years of letters in there.
+	Elizabeth: So I didn't have the time to go through it.
 	Expose Elizabeth for going through the mail?
 	- Do it
-		Brian: [Shouting] Hey, everyone, guess what
-		Brian: Elizabeth stole the mail from the mailbox
-		Brian: Just so she could pry into our letters
-		Everyone suddenly turns to Elizabeth
-		She begins to stammer and try to explain herself
-		As she talks, the papers in her hands slip out
-		Everyone start to look throught them, to see if their mail is between the scattered postcards
+		Brian: [Shouting] Hey, everyone, guess what!
+		Brian: Elizabeth stole the mail from the mailbox!
+		Brian: Just so she could pry into our letters!
+		Everyone suddenly turns to Elizabeth.
+		She begins to stammer and try to explain herself.
+		As she talks, the papers in her hands slip out.
+		Everyone starts to look through them, to see if their mail is among the scattered postcards.
 		One of them catches your eye. 
-		It is addrest to IPR, and labeled "my statement"
-		You quietly take it to your desk, leaving everyone else to argue and bicker
+		It is addressed to IPR and labeled "my statement".
+		You quietly take it to your desk, leaving everyone else to argue and bicker.
 		do transition()
 		do SignalManager.fear.emit(30)
+		do SignalManager.download_file.emit("0x80000000.txt")
 		do flags["postcard"] = 3
 	- Keep her secret
-		Brian: All righ. I'll keep quite
-		Brian: But return them to the mailbox
-		Elizabeth: Yes, yes, once I find out, I will return them
+		Brian: All right. I'll keep quiet.
+		Brian: But return them to the mailbox.
+		Elizabeth: Yes, yes, once I find out, I will return them.
 		do flags["postcard"] = 2
 elif flags["postcard"] == 2
-	Elizabeth: Thanks for keeping quite Brian
+	Elizabeth: Thanks for keeping quiet, Brian.
 	if day >=3:
-		Elizabeth: Accually, I found one statement-letter in the mail.
-		Elizabeth: You can keep it, as a reward for not being a snitch
+		Elizabeth: Actually, I found one statement letter in the mail.
+		Elizabeth: You can keep it as a reward for not being a snitch.
 		do transition()
 		do SignalManager.fear.emit(30)
+		do SignalManager.download_file.emit("0x80000000.txt")
 		do flags["postcard"] = 4 
 else
-	Elizabeth: I'm not talking to you, you snitch
+	Elizabeth: I'm not talking to you, you snitch.
 => END
 
 
 ~ jan0
-Jan: [Yawns] What do you need from me
-Brian: Nothing, just looking for some statemnts to work on.
+Jan: [Yawns] What do you need from me?
+Brian: Nothing, just looking for some statements to work on.
 Jan: Same...
-Jan: I recently found one really old...
-Jan: And then I put it somewhere
-Jan: I think I saw the manifestation from it you see
-Jan: And it haunted me till I hid the statement so well noone could find it
-Jan: So yea, be carefull what you read
+Jan: I recently found one that was really old...
+Jan: And then I put it somewhere.
+Jan: I think I saw the manifestation from it, you see.
+Jan: And it haunted me till I hid the statement so well no one could find it.
+Jan: So yeah, be careful what you read.
 Brian: Where did you hide it?
-Jan: You did not listen did you.
-Jan: You do not want that one
-Jan: Even I rather forgot where it is
-Jan: And I still get flashbacks to that thing in the dark
-Brian: (maybe, if I lure him into darkness, he could remember where that statemnet is)
+Jan: You did not listen, did you?
+Jan: You do not want that one.
+Jan: Even I'd rather forget where it is.
+Jan: And I still get flashbacks to that thing in the dark.
+Brian: (Maybe, if I lure him into darkness, he could remember where that statement is.)
 => END
 ~ jan1
 if flags.has("nightmare"):
-	Jan: You have you're bloody statement
-	Jan: So leave me alone
-	Jan: [Wimpers in shock]
+	Jan: You have your bloody statement.
+	Jan: So leave me alone.
+	Jan: [Whimpers in shock]
 elif flags.has("light") && flags["light"] == 0 && day >=1:
 	Jan: Oh, remember that statement you were asking about? I found it.
-	Jan: Is still don't recomend reading it, you do not want to atract that things attentions
-	Jan: But, I won't stop you
-	Take the statement
+	Jan: I still don't recommend reading it; you do not want to attract that thing's attention.
+	Jan: But, I won't stop you.
+	Take the statement?
 	- Yes
-		Brian: (I have already too many monsters hunting me, what's one more)
+		Brian: (I already have too many monsters hunting me, what's one more?)
 		do transition()
 		do flags["light"] = 1
 		do SignalManager.fear.emit(30)
+		do SignalManager.download_file.emit("0x387FFFFC.txt")
 	- No
-		Brian: (I have already too many monsters hunting me, don't need another one)
+		Brian: (I already have too many monsters hunting me, I don't need another one.)
 elif flags.has("mirror") && !flags.has("mirror_jan"):
-	Brian: Do you know what's up with that mirror upstair
-	Jan: Yea, they brought it a while back
-	Jan: Apparently it was given as a gift to the IPR
-	Jan: To study
-	Jan: It features in some of our statements
-	Jan: Best not to look into it too long
-	Jan: That thing starring can leave quite an impression
+	Brian: Do you know what's up with that mirror upstairs?
+	Jan: Yeah, they brought it a while back.
+	Jan: Apparently, it was given as a gift to the IPR.
+	Jan: To study.
+	Jan: It features in some of our statements.
+	Jan: Best not to look into it for too long.
+	Jan: That thing staring can leave quite an impression.
 	Jan: And... it might choose to follow you around...
 	do flags["mirror_jan"] = 0 
 elif flags.has("postcard") && flags["postcard"] < 1
-	Brian: Do you know who took the letters from the mail box?
-	Jan: No idea mate... no one bothered to loook in there for ages
+	Brian: Do you know who took the letters from the mailbox?
+	Jan: No idea, mate... no one bothered to look in there for ages.
 	- Accuse him of taking the mail
-		Brian: What if said I you took it.
-		Jan: I am not just petty thief
-		Jan: Unless it's coffee.. and I'm tired.. But I leave and IOU if I do that
-		Jan: I don't have your mail
-		Brian: (I need something to prove it was him, if I am going to confront him)
+		Brian: What if I said you took it?
+		Jan: I am not just some petty thief.
+		Jan: Unless it's coffee... and I'm tired... But I leave an IOU if I do that.
+		Jan: I don't have your mail.
+		Brian: (I need something to prove it was him if I am going to confront him.)
 	- Ignore it
 else:
-	Jan: [Yawn] What more do you want
-	Jan: Can't you see I am busy and tired
+	Jan: [Yawning] What more do you want?
+	Jan: Can't you see I am busy and tired?
 	Jan: I could really go for a coffee...
-	Brian: Sorry, I'll leave you alone
+	Brian: Sorry, I'll leave you alone.
 => END
 
 ~ wires0
-This box looks like it contains the curcuit breaker's of some electrical system here
-It looks very acient
-It is locked
-Maybe there is key somewhere
+This box looks like it contains the circuit breakers of some electrical system here.
+It looks very ancient.
+It is locked.
+Maybe there is a key somewhere.
 => END
 ~ wires1
 if flags.has("mailbox_key") && !flags.has("mailbox_key_tried"):
-	Brian: (lets try the key from bosses desk)
-	Brian: (nope, that's not the one)
+	Brian: (Let's try the key from the boss's desk.)
+	Brian: (Nope, that's not the one.)
 	do flags.set("mailbox_key_tried", 0)
 else:
-	Brian: (I have no way of unlocking it)
+	Brian: (I have no way of unlocking it.)
 => END
 ~ wires_unlocked0
-Brian: (Looks like someone forgot to lock it yesterday)
-Brian: (Lets look inside)
-Brian: (There are seven wires... and a small display)
-Brian: (Someone disconected them...)
-Brian: (If I can figure out the correct order, I can ge them to work again)
+Brian: (Looks like someone forgot to lock it yesterday.)
+Brian: (Let's look inside.)
+Brian: (There are seven wires... and a small display.)
+Brian: (Someone disconnected them...)
+Brian: (If I can figure out the correct order, I can get them to work again.)
 => wires_unlocked1
 ~ wires_unlocked1
 if !flags.has("wires"):
@@ -598,237 +630,273 @@ if !flags.has("wires"):
 	do flags["wired"] = 0
 	=> wire_match
 elif flags["wires"] < 8:
-	do show_print(flags["wires"])
 	=> wire_match
 else:
-	Brian: (Doesn't seam like there is anything more I can find here)
-	Brian: (Better not pry too much into cables, they might not up to date on safety protocols)
+	Brian: (Doesn't seem like there is anything more I can find here.)
+	Brian: (Better not pry too much into cables; they might not be up to date on safety protocols.)
 => END
 
 ~ wire_match
 if flags["wired"] == 7:
-	Brian: (I think I messed this up. I put wires in all 7 slots and nothing. Lets start again)
+	Brian: (I think I messed this up. I put wires in all 7 slots and nothing. Let's start again.)
 	do flags["wired"] = 0
 	do flags["wires"] = 0
 do flags["wired"] += 1
 if flags["wired"] == 0:
-	Brian: (What cable should I try first)
+	Brian: (Which cable should I try first?)
 else:
-	Brian: (What cable should I try next)
+	Brian: (Which cable should I try next?)
 - Blue
-	You connect the blue cable
+	You connect the blue cable.
 	if flags["wires"] == 5:
 		do flags["wires"] += 1
 	else:
 		do flags["wires"] = 7
 - Brown
-	You connect the brown cable
+	You connect the brown cable.
 	if flags["wires"] == 1:
 		do flags["wires"] += 1
 	else:
 		do flags["wires"] = 7
 - Green
-	You connect the green cable
+	You connect the green cable.
 	if flags["wires"] == 4:
 		do flags["wires"] += 1
 	else:
 		do flags["wires"] = 7
 - Pink
-	You connect the pink cable
+	You connect the pink cable.
 	if flags["wires"] == 0:
 		do flags["wires"] += 1
 	else:
 		do flags["wires"] = 7
 - Purple
-	You connect the purple cable
+	You connect the purple cable.
 	if flags["wires"] == 2:
 		do flags["wires"] += 1
 	else:
 		do flags["wires"] = 7
 - Red
-	You connect the red cable
+	You connect the red cable.
 	if flags["wires"] == 6:
 		do flags["wires"] = 8
 		=> wires_solved
 	else:
 		do flags["wires"] = 7
 - Yellow
-	You connect the yellow cable
+	You connect the yellow cable.
 	if flags["wires"] == 3:
 		do flags["wires"] += 1
 	else:
 		do flags["wires"] = 7
 - White
-	You connect the white cable
+	You connect the white cable.
 	do flags["wires"] = 7
 - Black
-	You connect the black cable
+	You connect the black cable.
 	do flags["wires"] = 7
-- try again
-	Brian: (Lets start over.)
+- Try again
+	Brian: (Let's start over.)
 	do flags["wired"] = 0
 	do flags["wires"] = 0
-- leave it for now
+- Leave it for now
 	do flags["wired"] -= 1
 	=> END
 => wire_match
 
 ~ wires_solved
-The screen turns on
+The screen turns on.
 Brian: (I can see words...)
-Brian: (Is this a statement, being sent via wires?)
-Brian: (Better get pen and paper and write it down)
+Brian: (Is this a statement being sent via wires?)
+Brian: (Better get a pen and paper and write it down.)
 do transition()
 do SignalManager.fear.emit(40)
+do SignalManager.download_file.emit("0xBD800000.txt")
 => END
 
 ~ mirror_table0
-A standart IPR workstation. Typical for any office job.
+A standard IPR workstation. Typical for any office job.
 Look around?
 - Yes
-	Where
+	Where?
 	- Look on the desk
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the first drawer
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the second drawer
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the third drawer
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the fourth drawer
 		if !flags.has("mirror_statement"):
 			A piece of paper.
 			Is it a statement?
-			Brian: " a line, v, hook picture, subset symbol, something gree?, b, v and a different hook"
-			Brian: (This does not make any sense)
+			Brian: "A line, v, hook picture, subset symbol, something green?, b, v, and a different hook."
+			Brian: (This does not make any sense.)
 			do flags["mirror_statement"] = 0
 		else:
-			Nothing interesting here
+			Nothing interesting here.
 - No
 => END
 
 ~ mirror1
 if flags.has("mirror_statement") && flags["mirror_statement"] == 0 
 	- Keep away
-		Brian: (Better keep away from that)
+		Brian: (Better keep away from that.)
 	- Try to see the strange symbols in the mirror
-		Brian: It looks like I can read it via it's reflection
-		Brian: (if only without this creepy thing staring at me)
-		Brian: (Lets quicly take a photo and get los)
-		Brian: (What... In the photo, the mirror reflects only me)
-		Brian: (No the statement, not the creature)
-		Brian: (Gues it back to pen and paper then)
+		Brian: It looks like I can read it via its reflection.
+		Brian: (If only without this creepy thing staring at me.)
+		Brian: (Let's quickly take a photo and get lost.)
+		Brian: (What... In the photo, the mirror reflects only me.)
+		Brian: (Not the statement, not the creature.)
+		Brian: (Guess it's back to pen and paper then.)
 		do flags["mirror_statement"] = 1
 		do transition()
 		do SignalManager.fear.emit(40)
+		do SignalManager.download_file.emit("0xFF800000.txt")
 else:
-	Brian: (Better keep away from that)
+	Brian: (Better keep away from that.)
 => END
 
 ~ mirror0
-Brian: (An old mirror..)
-Brian: (Hang on)
+Brian: (An old mirror...)
+Brian: (Hang on.)
 Brian: (WHAT IS THAT!)
-Brian: (There is a pale figure.. I can't see it anywhere here)
-Brian: (But I clearly see it in the mirror)
-Brian: (Looks almost like it used to be human, but now, reminds me more of a ghoul)
-Brian: (But it's eyes, they stare into my soul)
-Brian: (kinda reminds me of that encounter with Alice...)
-Brian: (Best not to think about it)
+Brian: (There is a pale figure... I can't see it anywhere here.)
+Brian: (But I clearly see it in the mirror.)
+Brian: (Looks almost like it used to be human, but now, it reminds me more of a ghoul.)
+Brian: (But its eyes, they stare into my soul.)
+Brian: (Kinda reminds me of that encounter with Alice...)
+Brian: (Best not to think about it.)
 Brian: (It seems to be watching me...)
 Brian: (Staring...)
-Brian: (I better leave, before it gets to me)
-Brian: (Maybe I could ask the other about it)
+Brian: (I better leave before it gets to me.)
+Brian: (Maybe I could ask the others about it.)
 do flags["mirror"] = 0
 => END
 
 ~ wardrobe0
-An old wardrobe. Seems to contain some files
+An old wardrobe. Seems to contain some files.
 - Have a quick look through
-	Some financial details for the institute funding.
-	Paperwork. Applications, request to acces different IPR artifacts.
-	Nothing interesting
+	Some financial details for the institute's funding.
+	Paperwork. Applications, requests to access different IPR artifacts.
+	Nothing interesting.
+- Ignore them
+=> END
+~ oldwardrobe0
+An old wardrobe. Seems to contain statements archived by the institute.
+- Have a quick look through
+	The statements appear closed and sealed within protective casings.
+	For a moment you think about opening them, to easily gain access to something that would satisfy that eye.
+	But something tells you that damaging historic records is not a good idea.
+	And that it could spectacularly backfire. 
 - Ignore them
 => END
 
+~ bench0
+An old bench for statement-givers to sit on while they wait.
+Except there isn't really anyone waiting to give a statement.
+- Look on the bench
+	Nothing interesting.
+- Look below the bench
+	if flags.has("bench") && flags["bench"] == 3:
+		Wait look... no, sadly just a piece of paper.
+		Almost looked like a tucked-away statement.
+	else:
+		Nothing interesting.
+		if flags.has("bench")
+			do flags["bench"] += 1
+		else:
+			do flags["bench"] = 1
+- Sit on the bench
+	You rest for a brief moment.
+- Leave
+=> END
+
+~ reception0
+Normally, there would be someone here to welcome the statement-givers.
+But since none usually arrive, the position has been left vacant for quite some time.
+=> END
+
 ~ report0
-An old wardrobe. Seems to contain some files
+An old wardrobe. Seems to contain some files.
 - Have a quick look through
-	Some financial details for the institute funding.
+	Some financial details for the institute's funding.
 	Brian: (These look like newly added files.)
 	Brian: (Police reports.)
-	Brian: (Look like documentation about surveilance of various people)
+	Brian: (Looks like documentation about the surveillance of various people.)
 	Brian: (Is this even legal?)
 	Brian: (Why does IPR have them?)
 	Brian: (They contain details, personal information.)
-	Brian: (Is there anyone I know)
-	Brian: (Phew, luckily not)
-	Brian: (Just some random people)
-	Brian: (Still, I see nothing that relates to IPR)
-	Brian: (Is somebody using IPR to gain acces to police report for personal gain)
-	Brian: (Oh, here is something relevant)
-	Brian: (".. hid in the secret cabinet under the red table...")
-	Brian: (I think that table is in the artifact storage room)
-	Brian: (Interesting)
+	Brian: (Is there anyone I know?)
+	Brian: (Phew, luckily not.)
+	Brian: (Just some random people.)
+	Brian: (Still, I see nothing that relates to IPR.)
+	Brian: (Is somebody using IPR to gain access to police reports for personal gain?)
+	Brian: (Oh, here is something relevant.)
+	Brian: ("...hid in the secret cabinet under the red table...")
+	Brian: (I think that table is in the artifact storage room.)
+	Brian: (Interesting.)
 	do flags["red_table"] = 0
 - Ignore them
 => END
 
 ~ red_table0
-A red garden table
-No warning labels around. Is it just a normal table.
-Why is it in artifact storage room?
+A red garden table.
+No warning labels around. Is it just a normal table?
+Why is it in the artifact storage room?
 if  flags.has("red_table"):
 	Look around?
 	- Yes
 		- Look on the table
-			Nothing here
+			Nothing here.
 		- Look below the table
-			Nothing here
-		- look into the secret compartment
+			Nothing here.
+		- Look into the secret compartment
 			if flags["red_table"] == 0:
-				Brian:(There is a statement here)
+				Brian: (There is a statement here.)
 				do SignalManager.fear.emit(50)
+				do SignalManager.download_file.emit("0x7F800000.txt")
 				do transition()
 				do  flags["red_table"] = 1
 			else:
-				Nothing here
-		- look into the cubord
-			Brian: (Strange. The cubord should be twency centimeters square at best)
-			Brian: But I cannot reach the walls even when I put my hand it
-			Brian: Just how big is it on the insie
+				Nothing here.
+		- Look into the cupboard
+			Brian: (Strange. The cupboard should be twenty centimeters square at best.)
+			Brian: But I cannot reach the walls even when I put my hand in.
+			Brian: Just how big is it on the inside?
 	- No
 else:
 	Look around?
 	- Yes
 		- Look on the table
-			Nothing here
+			Nothing here.
 		- Look below the table
-			Nothing here
-		- look into the cubord
-			Brian: (Strange. The cubord should be twency centimeters square at best)
-			Brian: But I cannot reach the walls even when I put my hand it
-			Brian: Just how big is it on the insie
+			Nothing here.
+		- Look into the cupboard
+			Brian: (Strange. The cupboard should be twenty centimeters square at best.)
+			Brian: But I cannot reach the walls even when I put my hand in.
+			Brian: Just how big is it on the inside?
 	- No
 => END
 
 ~ statistic_table0
-A standart IPR workstation. Typical for any office job.
+A standard IPR workstation. Typical for any office job.
 Look around?
 - Yes
-	Where
+	Where?
 	- Look on the desk
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the first drawer
-		Brian: Here is some statistics report
-		Brian: "Cases of encounters with pranormal in population"
-		Brian: Looks like some IPR study
-		Read through it
+		Brian: Here is some statistics report.
+		Brian: "Cases of encounters with the paranormal in the population."
+		Brian: Looks like some IPR study.
+		Read through it?
 		- Yes
 			Brian: Prague - 20%
-			Brian: Center Bohemian Region - 8%
+			Brian: Central Bohemian Region - 8%
 			Brian: South Bohemian Region - 5%
-			Brian: Plzeň region - 25%
+			Brian: Plzeň Region - 25%
 			Brian: Karlovy Vary Region - 1%
 			Brian: Ústí nad Labem Region - 18%
 			Brian: Liberec Region - 5%
@@ -836,186 +904,190 @@ Look around?
 			Brian: Pardubice Region - 22%
 			Brian: Vysočina Region - 5%
 			Brian: South Moravian Region - 18%
-			Brian: Zlin Region - 25%
+			Brian: Zlín Region - 25%
 			Brian: Olomouc - 23%
 			Brian: Moravian-Silesian Region - 8%
 			Brian: Czech citizens living abroad - EU countries - 5%
 			Brian: Czech citizens living abroad - non-EU countries - 18%
-			Brian: Czech citizens  with no clear country of residence(sailors, pilots) - 5%
-			Brian: Wow, thats a lot.
-			Brian: I thought these were lot less common
-			Brian: No one talks about it, most people don't even know these forces exist
-			Brian: If IPR has such detailed information about this, why not educate the general public
-			Brian: Than again, maybe that would only draw these creatures closer...
-			Brian: Either way, this report shows just how terryfing world is
-			Brian: I wonder, how many encounters were fatal, or worst
-			Brian: And how many we do not know of, because there is noone to tell the tale..
+			Brian: Czech citizens with no clear country of residence (sailors, pilots) - 5%
+			Brian: Wow, that's a lot.
+			Brian: I thought these were a lot less common.
+			Brian: No one talks about it, most people don't even know these forces exist.
+			Brian: If IPR has such detailed information about this, why not educate the general public?
+			Brian: Then again, maybe that would only draw these creatures closer...
+			Brian: Either way, this report shows just how terrifying the world is.
+			Brian: I wonder how many encounters were fatal, or worse.
+			Brian: And how many we do not know of, because there is no one to tell the tale...
 		- No
 	- Look into the second drawer
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the third drawer
-		Nothing interesting here
+		Nothing interesting here.
 	- Look into the fourth drawer
-		Nothing interesting here
+		Nothing interesting here.
 - No
 => END
 
 ~ statistic_computer0
-Standart computer for writing witness statements and acces to internal documents.
-Looks like someone left this one runnign.
+Standard computer for writing witness statements and access to internal documents.
+Looks like someone left this one running.
 => END
 
 ~ statistic_monitor0
-A standart IPR monitor. For some reason, it is really outdated.
+A standard IPR monitor. For some reason, it is really outdated.
 if !flags.has("everywhere") || flags["everywhere"] != 2:
 	- Turn it on
-		do request_input("Input password:", "everywhere")
+		do request_input("Where are the anomalies:", "everywhere")
 		if flags.has("everywhere") && flags["everywhere"] == 0:
-			The computer unlocks
+			The computer unlocks.
 			Brian: Hey look, a statement...
 			Brian: I am sure Juan won't mind if I take over this one...
 			do SignalManager.fear.emit(50)
+			do SignalManager.download_file.emit("0x42280000.txt")
 			do flags["everywhere"] = 2
 		else:
-			Incorrect Password
+			Incorrect password.
 	- Leave
 else:
-	You find nothing else usefull digging throught Juans computer
+	You find nothing else useful digging through Juan's computer.
 => END
 
 ~ tresor0
-A heavy metal safe. Probably containing something important
+A heavy metal safe. Probably containing something important.
 if !flags.has("1996") || flags["1996"] != 2:
 	- Try to unlock it
 		do request_input("Input password:", "1996")
 		if flags.has("1996") && flags["1996"] == 0:
-			The safe unlocks
-			Brian: It looks like nobody touched this thing for years....
-			Brian: Whats in it?
-			Brian: A statement.... strange...
+			The safe unlocks.
+			Brian: It looks like nobody touched this thing for years...
+			Brian: What's in it?
+			Brian: A statement... strange...
 			do SignalManager.fear.emit(90)
+			do SignalManager.download_file.emit("0x00000000.txt")
+			do SignalManager.download_file.emit("0x60400001.txt")
 			do flags["1996"] = 2
 		else:
-			Incorrect Password
+			Incorrect password.
 	- Leave
 else:
-	There is nothing else in the safe
+	There is nothing else in the safe.
 => END
 
 ~ portrait0
-A portrait of one of IPR founders - Arthur Schneidfisher
-Even thought he left the company, it still is proudly displayed.
-Maybe due to the fact, that after his demotion, it was here that he spent his last few years with IPR.
+A portrait of one of IPR's founders - Arthur Schneidfisher.
+Even though he left the company, it is still proudly displayed.
+Maybe due to the fact that after his demotion, it was here that he spent his last few years with IPR.
 Look behind the picture?
 - Yes
 	You lift the picture slightly.
-	There is nothing but dust few spiders, making there webs to catch their prey.
+	There is nothing but dust and a few spiders, making their webs to catch their prey.
 - No
 => END
 
 ~ juan0
 if flags.has("mirror") && !flags.has("mirror_juan"):
-	Brian: Do you know what's up with that mirror upstair
-	Juan: Honestly, no idea
-	Juan: Everyone else seems to act real wierd about it.
-	Juan: So i just avoid it entirely
+	Brian: Do you know what's up with that mirror upstairs?
+	Juan: Honestly, no idea.
+	Juan: Everyone else seems to act really weird about it.
+	Juan: So I just avoid it entirely.
 	Brian: And what if you need to go to that room behind it?
-	Juan: That? That's just old Schniedfishers office
-	Juan: It's locked
-	Juan: And contains nothing iteresting
-	Juan: So I have never been there
-	Juan: And I don't think I ever will nee to go in there
+	Juan: That? That's just old Schneidfisher's office.
+	Juan: It's locked.
+	Juan: And contains nothing interesting.
+	Juan: So I have never been there.
+	Juan: And I don't think I ever will need to go in there.
 	do flags["mirror_juan"] = 0 
 elif flags.has("postcard") && flags["postcard"] < 1
-	Brian: Do you know who took the letters from the mail box?
-	Juan: Beats me... who even uses mail anymore
+	Brian: Do you know who took the letters from the mailbox?
+	Juan: Beats me... who even uses mail anymore?
 	- Accuse him of taking the mail
-		Brian: I am not so sure about that
+		Brian: I am not so sure about that.
 		Juan: Why on earth would I bother...
-		Juan: If you are just trying to accuse everyone, to see who cracks
-		Jan: I'll give you a hint mate, it wasn't me
-		Brian: (I need something to prove it was him, if I am going to confront him)
+		Juan: If you are just trying to accuse everyone to see who cracks,
+		Juan: I'll give you a hint, mate: it wasn't me.
+		Brian: (I need something to prove it was him if I am going to confront him.)
 	- Ignore it
 else:
-	Juan: Hi, need something
-	Brian: No, just looking around
-	Jan: Carefull, things in here can quite easily kill you
+	Juan: Hi, need something?
+	Brian: No, just looking around.
+	Juan: Careful, things in here can quite easily kill you.
 => END
 
 ~ trap_drobe0
-Though looking like a normal wardrobe, the artifact storage notes are very clear.
-"Do not touch, or there is no salvation"
+Though looking like a normal wardrobe, the artifact storage notes are very clear:
+"Do not touch, or there is no salvation."
 => END
 
 ~ juan_trapped0
 if !flags.has("trapdrobe"):
 	Juan: Hello? Hello!!
 	Juan: Please, you got to help me.
-	Juan: I accidently got trapped in here.
-	Juan: Please, open it. Use gloves or something, and get me out of here, before this thing crushes me
-	Brian: (should I help him)
+	Juan: I accidentally got trapped in here.
+	Juan: Please, open it. Use gloves or something, and get me out of here before this thing crushes me.
+	Brian: (Should I help him?)
 	- Help
-		Brian: Hang in there, I will get you out
+		Brian: Hang in there, I will get you out.
 		=> help_juan
 	- Watch
-		You are too causious to try and help him
-		Yet, deep within you, something tells you to stay and [color=green]watch[/color] this mans suffering
-		Juan: I can hear you there
+		You are too cautious to try and help him.
+		Yet, deep within you, something tells you to stay and [color=green]watch[/color] this man's suffering.
+		Juan: I can hear you out there.
 		Juan: Please, don't leave me like this.
-		Juan: I can feel you starring at me
-		Juan: Are you just going to watch me sufficate?
+		Juan: I can feel you staring at me.
+		Juan: Are you just going to watch me suffocate?
 		- [color=green]Watch[/color]
-			You continue starring at Juans desperate battle agains the wardrobe
-			You feel terrible
-			You remember how helpless you felt  when you were trapped by that house
-			How you begged for any type of help
-			How none arrived
-			And now, you are standing meters away from person in same situation
-			You could help him
-			but you just [color=green]watch[/color]
+			You continue staring at Juan's desperate battle against the wardrobe.
+			You feel terrible.
+			You remember how helpless you felt when you were trapped by that house.
+			How you begged for any type of help.
+			How none arrived.
+			And now, you are standing meters away from a person in the same situation.
+			You could help him.
+			But you just [color=green]watch[/color].
 			- [color=green]Watch[/color]
-				You feel the guilt burn into your soul
+				You feel the guilt burn into your soul.
 				But you feel something else.
-				Curiosity? Excitiment?
-				A part of you just wants to stay here forever
-				Watching this man, who did nothing to you suffer
-				Just to see
-				You should be disgusted by yourself
-				But, I feels right
-				All that stress of this place
-				Constante feeling like you are being watched
-				For a moment gone
-				Now you, are the watcher
-				Juan: [Wimper] Please, one last time, I beg you
-				Juan: I do not know who you are
-				Juan: But I can feel your eyes on me
-				Juan: Enjoying my misoury
-				Juan: For all that makes us human, I beg you help me
-				Juan: Is it not our last chance as humanity
-				Juan: To stand together, against these monsterous creations
-				Juan: To prove we are better, than them
-				Juan: To prove that we are not consumed by powerlust
-				Juan: To prove, that there is good
-				Juan: That we would help another not for our gain, but just so they do not suffer
-				What will you do
+				Curiosity? Excitement?
+				A part of you just wants to stay here forever.
+				Watching this man, who did nothing to you, suffer.
+				Just to see.
+				You should be disgusted by yourself.
+				But it feels right.
+				All that stress of this place...
+				The constant feeling like you are being watched...
+				For a moment, it's gone.
+				Now you are the watcher.
+				Juan: [Whimpers] Please, one last time, I beg you.
+				Juan: I do not know who you are.
+				Juan: But I can feel your eyes on me.
+				Juan: Enjoying my misery.
+				Juan: For all that makes us human, I beg you, help me.
+				Juan: Is it not our last chance as humanity?
+				Juan: To stand together against these monstrous creations.
+				Juan: To prove we are better than them.
+				Juan: To prove that we are not consumed by powerlust.
+				Juan: To prove that there is good.
+				Juan: That we would help another not for our gain, but just so they do not suffer.
+				What will you do?
 				- Help
 					=> help_juan
 				- [color=green]WATCH[/color]
-					And so you [color=green]WATCH[/color]
-					And [color=green]WATCH[/color]
-					And [color=green]WATCH[/color]
-					deep down, you [color=green]know[/color] he is right
-					That in that moment, you just proved
-					[color=green]You are not here, to stand agains the paranormal monster[/color]
-					[color=green]You are, one of [b]US[/b][/color]
-					And you watch as he strugges
-					As he tries to force his way out
-					And only thing he manages
-					Is to drop the statement he is holding
-					Right at your feet
-					[color=green]Consume[/color] the voice in your mind tells you
-					And you gladly feed it, the misoury of others
+					And so you [color=green]WATCH[/color].
+					And [color=green]WATCH[/color].
+					And [color=green]WATCH[/color].
+					Deep down, you [color=green]know[/color] he is right.
+					That in that moment, you just proved:
+					[color=green]You are not here to stand against the paranormal monsters.[/color]
+					[color=green]You are one of [b]US[/b].[/color]
+					And you watch as he struggles.
+					As he tries to force his way out.
+					And the only thing he manages...
+					Is to drop the statement he is holding,
+					Right at your feet.
+					[color=green]"Consume,"[/color] the voice in your mind tells you.
+					And you gladly feed it the misery of others.
 					do SignalManager.fear.emit(45)
+					do SignalManager.download_file.emit("0xAFFFFFFF.txt")
 					do transition()
 					do flags["trapdrobe"] = 0 
 			 - Help
@@ -1029,167 +1101,217 @@ if !flags.has("trapdrobe"):
 	- Leave
 		=> leave_juan
 elif flags["trapdrobe"] == 0:
-	The wardrobe is almost silent
-	Only the wimpers of trapped, doom man sometimes echo from its depts
+	The wardrobe is almost silent.
+	Only the whimpers of a trapped, doomed man sometimes echo from its depths.
 else:
-	The wardrobe once again rest silent
-	Waiting for its next prey
+	The wardrobe once again rests silent.
+	Waiting for its next prey.
 => END 
 ~ help_juan
-You gather some things and launch a resque operation
-You manage to get Juan out of the wardrobe, hopefully without endengering youself
-He thanks you imensly, and excuses him self to go home and rest
-And you too, take moment for youself before you resume the work
-Reflecting on the decision you made, and danger it migh have put you in
+You gather some things and launch a rescue operation.
+You manage to get Juan out of the wardrobe, hopefully without endangering yourself.
+He thanks you immensely and excuses himself to go home and rest.
+And you too take a moment for yourself before you resume work,
+Reflecting on the decision you made and the danger it might have put you in.
 do transition()
 do flags["trapdrobe"] = 1 
 => END
 
 ~ leave_juan
-You are hounted enought
-Those who do not heed the warnings of artifact store room
-Are alread dead
-No use getting yourself killed, trying to save them
+You are haunted enough.
+Those who do not heed the warnings of the artifact store room
+Are already dead.
+No use getting yourself killed trying to save them.
 => END
 
 ~ aftermath0
 if !flags.has("trapdrobe"):
 	The wardrobe is silent.
-	Has somethin happened here
+	Has something happened here?
 elif flags["trapdrobe"] == 1:
-	The wardrobe once again rest silent
-	At it's feet a statement awaits.
-	It's the one Juan was working on
-	And he is nowhere to be found
-	You know what this means
-	He was beyond saving
+	The wardrobe once again rests silent.
+	At its feet, a statement awaits.
+	It's the one Juan was working on.
+	And he is nowhere to be found.
+	You know what this means.
+	He was beyond saving.
 	do SignalManager.fear.emit(45)
+	do SignalManager.download_file.emit("0xAFFFFFFF.txt")
 	do flags["trapdrobe"] = 2
 elif flags["trapdrobe"] == 0:
-	The wardrobe is almost silent
-	Juans voice can no longer be hear
+	The wardrobe is almost silent.
+	Juan's voice can no longer be heard.
 else:
-	The wardrobe once again rest silent
-	Waiting for its next prey
+	The wardrobe once again rests silent.
+	Waiting for its next prey.
 => END 
 
 ~ boss0
-Ana: Hi Brian
-Brian: Oh, hi boss..
-Ana: I trust you have been working well
-Brian: Yea.. I have
-Ana: No unauthorized acces into my things..
-Brian: No, of course not!
+Denisa: Hi, Brian.
+Brian: Oh, hi boss...
+Denisa: I trust you have been working well?
+Brian: Yeah... I have.
 if flags.has("chocolate") || flags.has("mailbox_key"):
+	Denisa: No unauthorized access to my things...
+	Brian: No, of course not!
 	Brian: (Is she on to me?)
-Ana: Good, very good. So, don't let me hold you from your statemnts
-Brian: Yea, thats what I wanted to ask. I don't have any statement at the moment
+Denisa: Good, very good. So, don't let me keep you from your statements.
+Brian: Yeah, that's what I wanted to ask. I don't have any statements at the moment.
 Brian: Is there any I could take over?
-Ana: Well, I have one
-Ana: But I'll need you to do something for me to get it
+Denisa: Well, I have one.
+Denisa: But I'll need you to do something for me to get it.
 Brian: What?
-Ana: You see... Matylda is right now pasing throught the office
-Ana: And lef her pohone on her table... unlocked
-Ana: See has an embarassign secret
-Ana: And I have a habit of collecting those
-Ana: Bring me the phone.. and I will give you your statement
+Denisa: You see... Matylda is right now pacing through the office.
+Denisa: And left her phone on her table... unlocked.
+Denisa: She has an embarrassing secret.
+Denisa: And I have a habit of collecting those.
+Denisa: Bring me the phone... and I will give you your statement.
 do flags["phone"] = 0
 => END
 
 ~ boss1
 if flags["phone"] == 1:
-	Ana: Did you bring it?
+	Denisa: Did you bring it?
 	- Give the phone
-		Ana: Marvalous
-		Ana: Well, you added something to my collections
-		Ana: And i will give you somethin too
-		Ana: Just don't go reversing the second level cypher
-		Ana: It wouldn't end well for you
-		Ana: And I will [color=green]know[/color] if you do
+		Denisa: Marvelous.
+		Denisa: Well, you added something to my collection.
+		Denisa: And I will give you something too.
+		Denisa: Just don't go reversing the second-level cipher.
+		Denisa: It wouldn't end well for you.
+		Denisa: And I will [color=green]know[/color] if you do.
 		do flags["phone"] = 3
 		do SignalManager.fear.emit(45)
+		do SignalManager.download_file.emit("0xC0400000.txt")
 		do transition()
 	- Don't
-		Brian: Sorry, not yet. She is quite causious
-		Ana: Well, if you don't manage it, no problem
-		Ana: But no phone, no statement, thats the deal
+		Brian: Sorry, not yet. She is quite cautious.
+		Denisa: Well, if you don't manage it, no problem.
+		Denisa: But no phone, no statement; that's the deal.
 elif flags["phone"] == 2:
 	Brian: Unfortunately, she noticed me.
-	Ana: Really, well thats a shame
-	Ana: I'll just have to wait for a different oportunity
-	Ana: Sorry, but no phone, no statement
+	Denisa: Really? Well, that's a shame.
+	Denisa: I'll just have to wait for a different opportunity.
+	Denisa: Sorry, but no phone, no statement.
 elif flags["phone"] == 3:
-	Ana: pleasure doing bussines with you
+	Denisa: Pleasure doing business with you.
 => END
 
 ~ phone0
 if flags.has("phone"):
 	if flags["phone"] == 0:
-		Matyldas phone
-		- take it
-			You take the phone
-			Now just be carefull, not to get spotted
+		Matylda's phone.
+		- Take it
+			You take the phone.
+			Now just be careful not to get spotted.
 			do flags["phone"] = 1
-		- leave it
+		- Leave it
 	else:
-		Matyldas phone
-		Or casing to be more exact
-		Left there, so she would not notice it is gone for few more minutes
+		Matylda's phone.
+		Or casing to be more exact.
+		Left there so she would not notice it is gone for a few more minutes.
 else:
-	Matyldas phone. Unlocked
-	- ignore it
-	- look through it
-		Brian: (Wow... that's a lot of embarassing photos...)
-		Brian: (But, that on me for looking through this...)
-		Brian: (I really should be less intrusive)
+	Matylda's phone. Unlocked.
+	- Ignore it
+	- Look through it
+		Brian: (Wow... that's a lot of embarrassing photos...)
+		Brian: (But, that's on me for looking through this...)
+		Brian: (I really should be less intrusive.)
 => END
 
 ~ matylda0
 if flags.has("mirror") && !flags.has("mirror_matylda"):
-	Brian: Do you know what's up with that mirror upstair
+	Brian: Do you know what's up with that mirror upstairs?
 	Matylda: No, not really.
-	Matylda: I have been warned not to look into it for too long
-	Matylda: And never go to artifact storage or whatever is the seccond room on that floor
-	Matylda: So I just don't worry about it
+	Matylda: I have been warned not to look into it for too long.
+	Matylda: And never go to artifact storage or whatever is the second room on that floor.
+	Matylda: So I just don't worry about it.
 	do flags["mirror_matylda"] = 0 
 elif flags.has("postcard") && flags["postcard"] < 1 && !flags.has("post_matylda"):
-	Brian: Do you know who took the letters from the mail box?
+	Brian: Do you know who took the letters from the mailbox?
 	Matylda: Somebody took the letters?? Oh no...
-	Matylda: I was expecting a letter... I hope it did not arrive yet
-	Matylda: Oh god.. if someone reads it...
-	Brian: (she looks genuently worried about that letter)
-	Brian: (i doubt she is lying)
-	Matylda: Maybe... Ana could have taken them
+	Matylda: I was expecting a letter... I hope it did not arrive yet.
+	Matylda: Oh god... if someone reads it...
+	Brian: (She looks genuinely worried about that letter.)
+	Brian: (I doubt she is lying.)
+	Matylda: Maybe... Denisa could have taken them.
 	Brian: Our boss?
-	Matylda: Yea, she has the keys
+	Matylda: Yeah, she has the keys.
 	Matylda: And she always likes to pry into our things...
-	Matylda: But, she isn't here today, so it can't have been her
+	Matylda: But she isn't here today, so it can't have been her.
 	do flags["post_matylda"] = 0 
 else:
-	Ana: What's up Brian
-	Brian: Nothing much, just looking for some statemnts
-	Ana: Well, can't help you there
-	Ana: But have a good day, and good luck
+	Matylda: What's up, Brian?
+	Brian: Nothing much, just looking for some statements.
+	Matylda: Well, can't help you there.
+	Matylda: But have a good day, and good luck.
 => END
 
 ~ matylda_walking0
-Brian: Why are you pasing back and forth?
-Ana: Sorry, sorry, it just helps me think
-Ana: I am nervous, and I need to concentrate
-Ana: So I pace back and fourt
-Ana: Don't mind me 
+Brian: Why are you pacing back and forth?
+Matylda: Sorry, sorry, it just helps me think.
+Matylda: I am nervous, and I need to concentrate.
+Matylda: So I pace back and forth.
+Matylda: Don't mind me. 
 => END
 
 ~ caught0
 Matylda: Wait...
-Matylda: Whats that in your hand
-Brian: (Oh no) My phone
-Matylda: No, that is MY phone... and unlocked
-Matylda: You creep, were you going to go through my phone
-Matylda: And I thought we were gettin on so well
-Matylda: Really can trust anyone here
+Matylda: What's that in your hand?
+Brian: (Oh no.) My phone.
+Matylda: No, that is MY phone... and unlocked.
+Matylda: You creep, were you going to go through my phone?
+Matylda: And I thought we were getting on so well.
+Matylda: Really can't trust anyone here.
 Matylda: GIVE ME THAT!
-(She snaps the phone from your hand, and starts pacing again)
-Matylda: I hate this place.. everyone is just so invasive...
+(She snatches the phone from your hand and starts pacing again.)
+Matylda: I hate this place... everyone is just so invasive...
 do flags["phone"] = 2
+=> END
+
+~ artefctwardrobe0
+A wardrobe full of dangerous books, small items, and other things that could kill you.
+Many of them are under lock and key, just in case.
+You do not dare to approach it too closely.
+Which is a good strategy.
+=> END
+~ jakob0
+Jakob: Hi, Brian. What's up?
+if flags.has("mirror") && !flags.has("mirror_jakob"):
+	Brian: Do you know what's up with that mirror upstairs?
+	Jakob: It's really creepy, that's what.
+	Jakob: I have no idea why they won't lock it in artifact storage.
+	Jakob: Instead, it's free to traumatize employees and witnesses alike.
+	Jakob: Don't go near it. It's not good for your sanity.
+	do flags["mirror_jakob"] = 0 
+elif flags.has("postcard") && flags["postcard"] < 1 :
+	Brian: Do you know who took the letters from the mailbox?
+	Jakob: Not sure... maybe Matylda?
+	Brian: Why?
+	Jakob: She was expecting a letter. Maybe she decided to dig through the pile of letters there.
+	Jakob: And either distribute them or throw them away.
+	- Accuse him of taking the mail
+		Brian: What if I think that's just you trying to shift the blame?
+		Jakob: Why would I do that, though?
+		Brian: Because you stole them.
+		Jakob: Why would I do that, though?
+		Brian: You can keep denying it, but I will find out eventually.
+		Jakob: Why would I do that, though? I don't care whether you accuse me or not.
+		Jakob: Accuse me of whatever you want... No one would believe or care anyway...
+		Jakob: Matylda is the only one who is expecting a letter, and she knows I wouldn't take it from her.
+		Jakob: The rest just do not care enough, I think.
+		Jakob: Or maybe they do, who knows...
+		Jakob: And I have no letters anyway.
+		Jakob: So no point in denying it.
+		Jakob: I am just asking 'cause I'm curious, what motive could you possibly suspect me of having?
+		Brian: (I need something to prove it was him if I am going to confront him.)
+	- Ignore it
+		Brian: Thanks for the tip, I'll go ask her.
+else:
+	Brian: Nothing much, just looking for some statements.
+	Jakob: That's tough, buddy.
+	Jakob: I stopped trying years ago.
+	Jakob: Turns out, they won't fire you if you don't.
+	Jakob: Of course, you won't get any answers from that eye.
+	Jakob: But I gave up on that long ago...
+	Jakob: So now I have the chillest job in the world, occasionally warning some researcher not to pry too much.
 => END

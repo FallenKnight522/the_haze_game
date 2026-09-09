@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://dkyxo0jj587tu"]
+
+[ext_resource type="Script" uid="uid://o5e5208fhpth" path="res://scripts/level2/eye.gd" id="1_npxln"]
+[ext_resource type="Texture2D" uid="uid://dupfb4p6f1js8" path="res://assets/level2/eyes/Eye1.png" id="1_yf4me"]
+[ext_resource type="Texture2D" uid="uid://d1xnpm4if48b1" path="res://assets/level2/eyes/Eye2.png" id="2_npxln"]
+[ext_resource type="Texture2D" uid="uid://c6w3e0wfv6wy6" path="res://assets/level2/eyes/Eye3.png" id="3_waywy"]
+[ext_resource type="Texture2D" uid="uid://c28begn1ugntv" path="res://assets/level2/eyes/Eye4.png" id="4_n4w2j"]
+[ext_resource type="Texture2D" uid="uid://ckjy76mfae7n3" path="res://assets/level2/eyes/Eye5.png" id="5_ngcto"]
+[ext_resource type="Texture2D" uid="uid://dpob864l35237" path="res://assets/level2/eyes/Eye6.png" id="6_ck3r8"]
+[ext_resource type="Texture2D" uid="uid://bb28ee8pbext3" path="res://assets/level2/eyes/Eye7.png" id="7_wgk0n"]
+[ext_resource type="Texture2D" uid="uid://bim5ty1dqmfht" path="res://assets/level2/eyes/Eye8.png" id="8_mtyis"]
+[ext_resource type="Texture2D" uid="uid://b2xktsnnqysme" path="res://assets/level2/eyes/Eye0.png" id="9_p8xwh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7x7he"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yf4me")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_npxln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_waywy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n4w2j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ngcto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ck3r8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wgk0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mtyis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_p8xwh")
+}],
+"loop": 0,
+"name": &"close",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_p8xwh")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_p8xwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mtyis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wgk0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ck3r8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ngcto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n4w2j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_waywy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_yf4me")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_npxln")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 15.0
+}]
+
+[node name="Control" type="Control" unique_id=1927779078]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("1_npxln")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=419075656]
+position = Vector2(16, 16)
+sprite_frames = SubResource("SpriteFrames_7x7he")
+animation = &"idle"
+
+[node name="Timer" type="Timer" parent="." unique_id=1009530972]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

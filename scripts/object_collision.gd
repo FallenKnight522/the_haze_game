@@ -27,7 +27,7 @@ func hide_hint():
 	label.hide()
 func _unhandled_input(event: InputEvent):
 	# Pokud je hráč v dosahu a zmáčkne klávesu pro akci (např. Enter nebo E)
-	if can_interact and event.is_action_pressed("interract"):
+	if can_interact and event.is_action_pressed("interract") and !SignalManager.text_showing:
 		interact()
 		
 func interact():

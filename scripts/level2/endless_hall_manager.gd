@@ -36,7 +36,7 @@ func starting_dialog():
 	text_window.queue_text("The house claimed me back")
 	text_window.queue_text("God have mercy on my soul") 
 	await get_tree().create_timer(5).timeout
-	label.text = "You lost \nTry agian"
+	label.text = "You lost \nTry again"
 	await get_tree().create_timer(10).timeout
 	await fadeout()
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

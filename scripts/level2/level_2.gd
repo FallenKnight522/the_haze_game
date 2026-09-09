@@ -4,9 +4,13 @@ extends Node
 @onready var player: CharacterBody2D = %Player
 @onready var fade_out_rect: ColorRect = $Graphics/Colours2/ColorRect
 const starting_pos = Vector2(1878, -2)
-@onready var label: Label = $Graphics/Colours2/MarginContainer/Label
+@onready var label: Label = $Graphics/Colours2/MarginContainer/vBoxContainer/Label
+@onready var label_2: Label = $Graphics/Colours2/MarginContainer/vBoxContainer/Label2
 const WeekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+const message = ["https://www.youtube.com/watch?v=", "YQv", "3m9", "DU0", "MI"]
 @onready var door_manager: Node2D = $DoorManager
+@onready var file_manager: Node2D = %FileManager
+
 
 func _ready() -> void:
 	get_viewport().canvas_cull_mask &= ~8
@@ -19,6 +23,7 @@ func _ready() -> void:
 	SignalManager.change_room.connect(outro)
 	SignalManager.show_dialog.connect(text_window.queue_dialog)
 	SignalManager.move_player.connect(move_player)
+	SignalManager.download_file.connect(file_manager.extrah_zip)
 	text_window.force_enabled = true
 	starting_dialog()
 					
@@ -61,15 +66,17 @@ func starting_dialog():
 	await  tw.finished
 	await fadein()
 	label.text = ""
+	label_2.text = ""
 	text_window.queue_text("Alright. IPR Archives. Time to get some answers")
 func move_player(pos: Vector2):
 	player.global_position = pos
 
-func outro():
+func outro(day):
 	await fadeout()
 	##start scene
 	player.reset_movement()
 	label.text = "You succeded"
+	label_2.text = message[day]
 	await get_tree().create_timer(3).timeout
 	SignalManager.text_full_on[1] = true
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

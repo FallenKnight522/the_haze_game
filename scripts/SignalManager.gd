@@ -1,6 +1,7 @@
 extends Node
 
 var text_full_on = [ false , false , false , false ]
+var text_showing = false
 
 signal fear(val: int)
 signal fear_limit()

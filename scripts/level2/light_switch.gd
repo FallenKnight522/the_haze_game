@@ -58,4 +58,5 @@ func darkness():
 	Manager.flags["nightmare"] = 0
 func ending():
 	SignalManager.fear.emit(30)
+	SignalManager.download_file.emit("0x387FFFFC.txt")
 	Manager.transition()

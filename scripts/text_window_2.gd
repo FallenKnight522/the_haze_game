@@ -40,8 +40,10 @@ func _process(_delta: float) -> void:
 	match current_state:
 		state.READY:
 			if(!text_queue.is_empty()):
+				SignalManager.text_showing = true
 				handle_text()
 			else:
+				SignalManager.text_showing = false
 				hide_textbox()
 		state.READING:
 			if(Input.is_action_just_pressed("escape")):

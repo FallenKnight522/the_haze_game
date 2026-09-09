@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://db8g6ajxwdfhx"]
 
 [ext_resource type="Script" uid="uid://cnf7nt32nvcqu" path="res://scripts/level2/level_2.gd" id="1_o3sye"]
-[ext_resource type="Script" uid="uid://dwmapnk5lyavm" path="res://scripts/file_manager.gd" id="2_sxojl"]
 [ext_resource type="PackedScene" uid="uid://cb4g28m3jt14j" path="res://scenes/hint.tscn" id="3_bo4dx"]
 [ext_resource type="Script" uid="uid://da7wvy81ejmyg" path="res://scripts/level2/hint.gd" id="4_g8vcy"]
 [ext_resource type="PackedScene" uid="uid://de7w1pl4j0ge5" path="res://scenes/text_window2.tscn" id="5_8g4ke"]
@@ -9,9 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bc87n5tigm86k" path="res://scenes/brian.tscn" id="7_ve5ok"]
 [ext_resource type="Texture2D" uid="uid://bjto771a100hq" path="res://assets/level2/Strachomira2/Beholding.png" id="8_24ks5"]
 [ext_resource type="Texture2D" uid="uid://dlesysnkj1ngl" path="res://assets/level2/Strachomira2/Beholding2.png" id="9_s4es8"]
-[ext_resource type="Texture2D" uid="uid://bwcepkeh785f4" path="res://assets/hint.png" id="9_ypacf"]
 [ext_resource type="Texture2D" uid="uid://buaunl6vst4gu" path="res://assets/level2/Strachomira2/Beholding3.png" id="10_63e4f"]
-[ext_resource type="Texture2D" uid="uid://dih8x2odijllb" path="res://assets/level2/hint_3ye.png" id="10_76n1c"]
 [ext_resource type="Texture2D" uid="uid://bkwun7qs0wlyw" path="res://assets/level2/Strachomira2/Beholding4.png" id="11_y6lc1"]
 [ext_resource type="Texture2D" uid="uid://bae0gotqlje08" path="res://assets/level2/Strachomira2/Beholding5.png" id="12_ekhvm"]
 [ext_resource type="Texture2D" uid="uid://dd22hsjn61hh" path="res://assets/level2/Strachomira2/Beholding6.png" id="13_nflru"]
@@ -22,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bjsax6bvqaf55" path="res://assets/level2/Terrain2.png" id="18_s4es8"]
 [ext_resource type="Texture2D" uid="uid://bwl7fnu2ajt8" path="res://assets/level1/furniture/earthwallleft.png" id="19_63e4f"]
 [ext_resource type="PackedScene" uid="uid://dkyxo0jj587tu" path="res://scenes/eye.tscn" id="20_46vug"]
+[ext_resource type="Script" uid="uid://bkh7kxvrtwvjf" path="res://scripts/level2/eyy_control.gd" id="20_sxojl"]
 [ext_resource type="Texture2D" uid="uid://boc166mltscda" path="res://assets/level1/furniture/earthwallright.png" id="20_y6lc1"]
 [ext_resource type="Texture2D" uid="uid://dhjscxhqa87gb" path="res://assets/atlas.png" id="21_ekhvm"]
 [ext_resource type="Shader" uid="uid://brmaesini0717" path="res://shaders/Mirror_room.gdshader" id="22_gnouy"]
@@ -42,7 +40,6 @@
 [ext_resource type="PackedScene" uid="uid://difuyeamrtv0i" path="res://scenes/object.tscn" id="30_icuov"]
 [ext_resource type="Script" uid="uid://n52odce6gjmv" path="res://scripts/level2/clock.gd" id="30_xnv6s"]
 [ext_resource type="Script" uid="uid://bhlxnmgk8814y" path="res://scripts/level2/exit_door.gd" id="31_6lk74"]
-[ext_resource type="Script" uid="uid://dmqc40scibgwm" path="res://scripts/level2/bigeye.gd" id="31_46vug"]
 [ext_resource type="Script" uid="uid://ci0kdld6iubic" path="res://scripts/level2/ipr_door.gd" id="31_xnv6s"]
 [ext_resource type="Texture2D" uid="uid://pe0nfuoorhbm" path="res://assets/level2/lighswitch.png" id="31_yuxxq"]
 [ext_resource type="Texture2D" uid="uid://dver8apuqrm8p" path="res://assets/level1/door/Basic_Door_Opening_Pixel.png" id="32_6lk74"]
@@ -740,6 +737,20 @@ animations = [{
 "name": &"run",
 "speed": 10.0
 }]
+
+[sub_resource type="GDScript" id="GDScript_j3xf6"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rxev4"]
 animations = [{
@@ -1481,11 +1492,6 @@ size = Vector2(5.9583387, 17)
 [node name="Level2" type="Node2D" unique_id=908602446]
 script = ExtResource("1_o3sye")
 
-[node name="FileManager" type="Node2D" parent="." unique_id=440147803]
-unique_name_in_owner = true
-position = Vector2(-1130, -1082)
-script = ExtResource("2_sxojl")
-
 [node name="Stairs" type="TileMapLayer" parent="." unique_id=140265938]
 z_index = -3
 use_parent_material = true
@@ -1506,9 +1512,9 @@ tile_set = SubResource("TileSet_rxev4")
 
 [node name="hint" parent="Graphics" unique_id=1367496244 instance=ExtResource("3_bo4dx")]
 unique_name_in_owner = true
-layer = 20
+layer = 10
 script = ExtResource("4_g8vcy")
-selected = Array[Texture2D]([ExtResource("9_ypacf"), ExtResource("10_76n1c")])
+selected = Array[Texture2D]([])
 
 [node name="Text_window" parent="Graphics" unique_id=1098004527 instance=ExtResource("5_8g4ke")]
 unique_name_in_owner = true
@@ -1536,21 +1542,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_top = 200
 
-[node name="vBoxContainer" type="VBoxContainer" parent="Graphics/Colours2/MarginContainer" unique_id=1821797381]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Graphics/Colours2/MarginContainer/vBoxContainer" unique_id=1001734734]
+[node name="Label" type="Label" parent="Graphics/Colours2/MarginContainer" unique_id=1001734734]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="Label2" type="Label" parent="Graphics/Colours2/MarginContainer/vBoxContainer" unique_id=1085650812]
-layout_mode = 2
-theme_override_font_sizes/font_size = 16
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -1567,7 +1562,8 @@ offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-metadata/_edit_use_anchors_ = true
+script = ExtResource("20_sxojl")
+current_fear_level = 0.5
 
 [node name="Control" parent="Graphics/EyeS/Control" unique_id=1927779078 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1576,7 +1572,6 @@ offset_top = 19.0
 offset_right = 498.0
 offset_bottom = 59.0
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control6" parent="Graphics/EyeS/Control" unique_id=2103353456 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1586,7 +1581,6 @@ offset_right = 478.0
 offset_bottom = 24.000015
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control7" parent="Graphics/EyeS/Control" unique_id=407276966 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1596,7 +1590,6 @@ offset_right = 525.0
 offset_bottom = 31.000002
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control8" parent="Graphics/EyeS/Control" unique_id=287263769 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1605,7 +1598,6 @@ offset_top = 22.999985
 offset_right = 222.54684
 offset_bottom = 62.999985
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control9" parent="Graphics/EyeS/Control" unique_id=1877696314 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1615,7 +1607,6 @@ offset_right = 202.54684
 offset_bottom = 28.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control10" parent="Graphics/EyeS/Control" unique_id=818952348 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1625,7 +1616,6 @@ offset_right = 249.54684
 offset_bottom = 34.99999
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control11" parent="Graphics/EyeS/Control" unique_id=1923031064 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1634,7 +1624,6 @@ offset_top = 17.999985
 offset_right = 311.54684
 offset_bottom = 57.999985
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control12" parent="Graphics/EyeS/Control" unique_id=1329437651 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1644,7 +1633,6 @@ offset_right = 291.54684
 offset_bottom = 23.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control13" parent="Graphics/EyeS/Control" unique_id=1029762041 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1654,7 +1642,6 @@ offset_right = 338.54684
 offset_bottom = 29.999987
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control14" parent="Graphics/EyeS/Control" unique_id=1787321976 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1663,7 +1650,6 @@ offset_top = 14.999985
 offset_right = 423.54684
 offset_bottom = 54.999985
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control15" parent="Graphics/EyeS/Control" unique_id=1689012191 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1673,7 +1659,6 @@ offset_right = 403.54684
 offset_bottom = 20.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control16" parent="Graphics/EyeS/Control" unique_id=119616819 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1683,7 +1668,6 @@ offset_right = 450.54684
 offset_bottom = 26.999987
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control17" parent="Graphics/EyeS/Control" unique_id=1061417764 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1692,7 +1676,6 @@ offset_top = 13.0
 offset_right = 877.0
 offset_bottom = 53.0
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control18" parent="Graphics/EyeS/Control" unique_id=320146577 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1702,7 +1685,6 @@ offset_right = 857.0
 offset_bottom = 18.000015
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control19" parent="Graphics/EyeS/Control" unique_id=375141092 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1712,7 +1694,6 @@ offset_right = 904.0
 offset_bottom = 25.0
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control20" parent="Graphics/EyeS/Control" unique_id=821455835 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1721,7 +1702,6 @@ offset_top = 16.999985
 offset_right = 601.5469
 offset_bottom = 56.999985
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control21" parent="Graphics/EyeS/Control" unique_id=1184856830 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1731,7 +1711,6 @@ offset_right = 581.5469
 offset_bottom = 22.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control22" parent="Graphics/EyeS/Control" unique_id=1673812544 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1741,7 +1720,6 @@ offset_right = 628.5469
 offset_bottom = 28.999987
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control23" parent="Graphics/EyeS/Control" unique_id=1114655640 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1750,7 +1728,6 @@ offset_top = 11.999985
 offset_right = 690.5469
 offset_bottom = 51.999985
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control24" parent="Graphics/EyeS/Control" unique_id=736366276 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1760,7 +1737,6 @@ offset_right = 670.5469
 offset_bottom = 17.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control25" parent="Graphics/EyeS/Control" unique_id=650875736 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1770,7 +1746,6 @@ offset_right = 717.5469
 offset_bottom = 23.999985
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control26" parent="Graphics/EyeS/Control" unique_id=680750572 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1779,7 +1754,6 @@ offset_top = 8.999985
 offset_right = 802.5469
 offset_bottom = 48.999985
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control27" parent="Graphics/EyeS/Control" unique_id=423179205 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1789,7 +1763,6 @@ offset_right = 782.5469
 offset_bottom = 14.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control28" parent="Graphics/EyeS/Control" unique_id=22534246 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1799,7 +1772,6 @@ offset_right = 829.5469
 offset_bottom = 20.999985
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control29" parent="Graphics/EyeS/Control" unique_id=2036074921 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1808,7 +1780,6 @@ offset_top = 41.0
 offset_right = 458.0
 offset_bottom = 81.0
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control30" parent="Graphics/EyeS/Control" unique_id=1254473185 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1818,7 +1789,6 @@ offset_right = 438.0
 offset_bottom = 46.000015
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control31" parent="Graphics/EyeS/Control" unique_id=1989944781 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1828,7 +1798,6 @@ offset_right = 485.0
 offset_bottom = 53.000004
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control32" parent="Graphics/EyeS/Control" unique_id=648796496 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1837,7 +1806,6 @@ offset_top = 44.999985
 offset_right = 182.54684
 offset_bottom = 84.999985
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control33" parent="Graphics/EyeS/Control" unique_id=24785517 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1847,7 +1815,6 @@ offset_right = 162.54684
 offset_bottom = 50.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control34" parent="Graphics/EyeS/Control" unique_id=1531190137 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1857,7 +1824,6 @@ offset_right = 209.54684
 offset_bottom = 56.99999
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control35" parent="Graphics/EyeS/Control" unique_id=1834307346 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1866,7 +1832,6 @@ offset_top = 39.999985
 offset_right = 271.54684
 offset_bottom = 79.999985
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control36" parent="Graphics/EyeS/Control" unique_id=1830981614 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1876,7 +1841,6 @@ offset_right = 251.54684
 offset_bottom = 45.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control37" parent="Graphics/EyeS/Control" unique_id=906079206 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1886,7 +1850,6 @@ offset_right = 298.54684
 offset_bottom = 51.99999
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control38" parent="Graphics/EyeS/Control" unique_id=1324388579 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1895,7 +1858,6 @@ offset_top = 36.999985
 offset_right = 383.54684
 offset_bottom = 76.999985
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control39" parent="Graphics/EyeS/Control" unique_id=913186299 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1905,7 +1867,6 @@ offset_right = 363.54684
 offset_bottom = 42.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control40" parent="Graphics/EyeS/Control" unique_id=671471018 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1915,7 +1876,6 @@ offset_right = 410.54684
 offset_bottom = 48.99999
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control57" parent="Graphics/EyeS/Control" unique_id=329261597 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1925,7 +1885,6 @@ offset_right = 923.5469
 offset_bottom = 35.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control58" parent="Graphics/EyeS/Control" unique_id=668069162 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1935,7 +1894,6 @@ offset_right = 970.5469
 offset_bottom = 41.99999
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control59" parent="Graphics/EyeS/Control" unique_id=1532843860 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1944,7 +1902,6 @@ offset_top = 26.999985
 offset_right = 1055.5469
 offset_bottom = 66.999985
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control60" parent="Graphics/EyeS/Control" unique_id=766456904 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1954,7 +1911,6 @@ offset_right = 1035.5469
 offset_bottom = 32.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control61" parent="Graphics/EyeS/Control" unique_id=169453839 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1964,7 +1920,6 @@ offset_right = 1082.5469
 offset_bottom = 38.99999
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control62" parent="Graphics/EyeS/Control" unique_id=524229776 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1974,7 +1929,6 @@ offset_right = 43.546875
 offset_bottom = 39.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control63" parent="Graphics/EyeS/Control" unique_id=1844883312 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1984,7 +1938,6 @@ offset_right = 90.546875
 offset_bottom = 45.99999
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control64" parent="Graphics/EyeS/Control" unique_id=968505883 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -1993,7 +1946,6 @@ offset_top = 30.999985
 offset_right = 175.54688
 offset_bottom = 70.999985
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control65" parent="Graphics/EyeS/Control" unique_id=456124085 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2003,7 +1955,6 @@ offset_right = 155.54688
 offset_bottom = 36.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control67" parent="Graphics/EyeS/Control" unique_id=1299882474 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2013,7 +1964,6 @@ offset_right = 58.999992
 offset_bottom = 122.758896
 rotation = -1.4870925
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control68" parent="Graphics/EyeS/Control" unique_id=2093891127 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2022,7 +1972,6 @@ offset_top = 98.55768
 offset_right = 79.00001
 offset_bottom = 138.55771
 rotation = -2.3189685
-metadata/_edit_use_anchors_ = true
 
 [node name="Control69" parent="Graphics/EyeS/Control" unique_id=221535081 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2032,7 +1981,6 @@ offset_right = 30.000015
 offset_bottom = 114.55771
 rotation = -1.0526923
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control70" parent="Graphics/EyeS/Control" unique_id=506890132 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2042,7 +1990,6 @@ offset_right = 111.0
 offset_bottom = 91.79123
 rotation = -0.79429746
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control71" parent="Graphics/EyeS/Control" unique_id=1617003516 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2051,7 +1998,6 @@ offset_top = 67.59001
 offset_right = 131.0
 offset_bottom = 107.59004
 rotation = -1.6261735
-metadata/_edit_use_anchors_ = true
 
 [node name="Control72" parent="Graphics/EyeS/Control" unique_id=316316514 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2061,7 +2007,6 @@ offset_right = 82.00001
 offset_bottom = 83.59004
 rotation = -0.35989726
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control73" parent="Graphics/EyeS/Control" unique_id=1981062404 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2071,7 +2016,6 @@ offset_right = 51.999985
 offset_bottom = 180.08708
 rotation = -1.7989675
 scale = Vector2(1.8524022, 2.090157)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control74" parent="Graphics/EyeS/Control" unique_id=2019268404 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2081,7 +2025,6 @@ offset_right = 71.99999
 offset_bottom = 195.8859
 rotation = -2.6308434
 scale = Vector2(1.1060195, 1.2975067)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control76" parent="Graphics/EyeS/Control" unique_id=250664432 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2091,7 +2034,6 @@ offset_right = 41.0
 offset_bottom = 165.00006
 rotation = 0.02689889
 scale = Vector2(1.584871, 1.7303609)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control77" parent="Graphics/EyeS/Control" unique_id=507965205 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2101,7 +2043,6 @@ offset_right = 47.999992
 offset_bottom = 195.00005
 rotation = -0.25615263
 scale = Vector2(1.772604, 1.6595392)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control78" parent="Graphics/EyeS/Control" unique_id=1353384681 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2111,7 +2052,6 @@ offset_right = 36.999992
 offset_bottom = 172.00005
 rotation = 0.49307612
 scale = Vector2(1.753467, 1.5507705)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control79" parent="Graphics/EyeS/Control" unique_id=812457822 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2121,7 +2061,6 @@ offset_right = 40.36157
 offset_bottom = 207.00003
 rotation = 0.02689889
 scale = Vector2(1.584871, 1.7303609)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control80" parent="Graphics/EyeS/Control" unique_id=784651382 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2131,7 +2070,6 @@ offset_right = 47.36156
 offset_bottom = 237.00002
 rotation = -0.25615263
 scale = Vector2(1.772604, 1.6595392)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control81" parent="Graphics/EyeS/Control" unique_id=1646113946 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2141,7 +2079,6 @@ offset_right = 36.36156
 offset_bottom = 214.00002
 rotation = 0.49307612
 scale = Vector2(1.753467, 1.5507705)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control82" parent="Graphics/EyeS/Control" unique_id=1786279049 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2151,7 +2088,6 @@ offset_right = 92.361565
 offset_bottom = 95.000046
 rotation = 0.02689889
 scale = Vector2(1.584871, 1.7303609)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control83" parent="Graphics/EyeS/Control" unique_id=886721914 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2161,7 +2097,6 @@ offset_right = 99.36156
 offset_bottom = 125.000015
 rotation = -0.25615263
 scale = Vector2(1.772604, 1.6595392)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control84" parent="Graphics/EyeS/Control" unique_id=577129951 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2171,7 +2106,6 @@ offset_right = 88.36156
 offset_bottom = 102.00002
 rotation = 0.49307612
 scale = Vector2(1.753467, 1.5507705)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control85" parent="Graphics/EyeS/Control" unique_id=1067173301 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2181,7 +2115,6 @@ offset_right = 44.361572
 offset_bottom = 250.00002
 rotation = 0.02689889
 scale = Vector2(1.584871, 1.7303609)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control86" parent="Graphics/EyeS/Control" unique_id=1199367202 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2191,7 +2124,6 @@ offset_right = 51.361565
 offset_bottom = 280.0
 rotation = -0.25615263
 scale = Vector2(1.772604, 1.6595392)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control87" parent="Graphics/EyeS/Control" unique_id=1463864281 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2201,7 +2133,6 @@ offset_right = 40.361565
 offset_bottom = 257.0
 rotation = 0.49307612
 scale = Vector2(1.753467, 1.5507705)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control88" parent="Graphics/EyeS/Control" unique_id=277703801 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2211,7 +2142,6 @@ offset_right = 49.36158
 offset_bottom = 293.00003
 rotation = 0.02689889
 scale = Vector2(1.584871, 1.7303609)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control89" parent="Graphics/EyeS/Control" unique_id=226896281 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2221,7 +2151,6 @@ offset_right = 56.361572
 offset_bottom = 323.0
 rotation = -0.25615263
 scale = Vector2(1.772604, 1.6595392)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control90" parent="Graphics/EyeS/Control" unique_id=64142835 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2231,7 +2160,6 @@ offset_right = 45.36157
 offset_bottom = 300.0
 rotation = 0.49307612
 scale = Vector2(1.753467, 1.5507705)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control91" parent="Graphics/EyeS/Control" unique_id=2076202710 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2241,7 +2169,6 @@ offset_right = 51.36158
 offset_bottom = 338.00003
 rotation = 0.02689889
 scale = Vector2(1.584871, 1.7303609)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control92" parent="Graphics/EyeS/Control" unique_id=555245326 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2251,7 +2178,6 @@ offset_right = 58.361572
 offset_bottom = 368.0
 rotation = -0.25615263
 scale = Vector2(1.772604, 1.6595392)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control93" parent="Graphics/EyeS/Control" unique_id=266077670 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2261,7 +2187,6 @@ offset_right = 47.36157
 offset_bottom = 345.0
 rotation = 0.49307612
 scale = Vector2(1.753467, 1.5507705)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control94" parent="Graphics/EyeS/Control" unique_id=2146959818 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2271,7 +2196,6 @@ offset_right = 48.36158
 offset_bottom = 386.00003
 rotation = 0.02689889
 scale = Vector2(1.584871, 1.7303609)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control95" parent="Graphics/EyeS/Control" unique_id=905477655 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2281,7 +2205,6 @@ offset_right = 55.361572
 offset_bottom = 416.0
 rotation = -0.25615263
 scale = Vector2(1.772604, 1.6595392)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control96" parent="Graphics/EyeS/Control" unique_id=1629167704 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2291,7 +2214,6 @@ offset_right = 44.361572
 offset_bottom = 393.0
 rotation = 0.49307612
 scale = Vector2(1.753467, 1.5507705)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control97" parent="Graphics/EyeS/Control" unique_id=1410106941 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2301,7 +2223,6 @@ offset_right = 45.36158
 offset_bottom = 432.00003
 rotation = 0.02689889
 scale = Vector2(1.584871, 1.7303609)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control98" parent="Graphics/EyeS/Control" unique_id=2016393057 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2311,7 +2232,6 @@ offset_right = 52.361572
 offset_bottom = 462.0
 rotation = -0.25615263
 scale = Vector2(1.772604, 1.6595392)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control99" parent="Graphics/EyeS/Control" unique_id=1145057294 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2321,7 +2241,6 @@ offset_right = 41.361572
 offset_bottom = 439.0
 rotation = 0.49307612
 scale = Vector2(1.753467, 1.5507705)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control100" parent="Graphics/EyeS/Control" unique_id=1695151026 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2331,7 +2250,6 @@ offset_right = 47.36158
 offset_bottom = 480.00003
 rotation = 0.02689889
 scale = Vector2(1.584871, 1.7303609)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control101" parent="Graphics/EyeS/Control" unique_id=716797587 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2341,7 +2259,6 @@ offset_right = 54.361572
 offset_bottom = 510.0
 rotation = -0.25615263
 scale = Vector2(1.772604, 1.6595392)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control102" parent="Graphics/EyeS/Control" unique_id=1698100351 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2351,7 +2268,6 @@ offset_right = 43.361572
 offset_bottom = 487.0
 rotation = 0.49307612
 scale = Vector2(1.753467, 1.5507705)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control75" parent="Graphics/EyeS/Control" unique_id=1321981642 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2361,7 +2277,6 @@ offset_right = 23.000008
 offset_bottom = 171.8859
 rotation = -1.3645673
 scale = Vector2(1.8524022, 2.090157)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control66" parent="Graphics/EyeS/Control" unique_id=1695372776 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2371,7 +2286,6 @@ offset_right = 202.54688
 offset_bottom = 42.99999
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control41" parent="Graphics/EyeS/Control" unique_id=1450927466 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2380,7 +2294,6 @@ offset_top = 35.0
 offset_right = 837.0
 offset_bottom = 75.0
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control42" parent="Graphics/EyeS/Control" unique_id=1280412091 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2389,7 +2302,6 @@ offset_top = 1.5258789e-05
 offset_right = 817.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control53" parent="Graphics/EyeS/Control" unique_id=194640370 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2399,7 +2311,6 @@ offset_right = 673.5469
 offset_bottom = 25.999985
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control54" parent="Graphics/EyeS/Control" unique_id=1789057667 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2409,7 +2320,6 @@ offset_right = 720.5469
 offset_bottom = 32.99997
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control55" parent="Graphics/EyeS/Control" unique_id=1601692747 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2418,7 +2328,6 @@ offset_top = 18.999985
 offset_right = 1147.0
 offset_bottom = 58.999985
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control56" parent="Graphics/EyeS/Control" unique_id=306969720 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2428,7 +2337,6 @@ offset_right = 1127.0
 offset_bottom = 24.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control43" parent="Graphics/EyeS/Control" unique_id=22183197 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2438,7 +2346,6 @@ offset_right = 864.0
 offset_bottom = 47.000004
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control44" parent="Graphics/EyeS/Control" unique_id=2007592492 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2447,7 +2354,6 @@ offset_top = 38.999985
 offset_right = 561.5469
 offset_bottom = 78.999985
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control45" parent="Graphics/EyeS/Control" unique_id=1739954451 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2457,7 +2363,6 @@ offset_right = 541.5469
 offset_bottom = 44.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control46" parent="Graphics/EyeS/Control" unique_id=41276802 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2467,7 +2372,6 @@ offset_right = 588.5469
 offset_bottom = 50.99999
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control47" parent="Graphics/EyeS/Control" unique_id=1458340619 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2476,7 +2380,6 @@ offset_top = 33.999985
 offset_right = 650.5469
 offset_bottom = 73.999985
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control48" parent="Graphics/EyeS/Control" unique_id=1088902870 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2486,7 +2389,6 @@ offset_right = 630.5469
 offset_bottom = 39.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control49" parent="Graphics/EyeS/Control" unique_id=2042050706 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2496,7 +2398,6 @@ offset_right = 677.5469
 offset_bottom = 45.999985
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control124" parent="Graphics/EyeS/Control" unique_id=1322503930 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2506,7 +2407,6 @@ offset_right = 1048.0
 offset_bottom = 62.999992
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control125" parent="Graphics/EyeS/Control" unique_id=2092417860 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2515,7 +2415,6 @@ offset_top = 45.999985
 offset_right = 1110.0
 offset_bottom = 85.999985
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control126" parent="Graphics/EyeS/Control" unique_id=2101458537 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2525,7 +2424,6 @@ offset_right = 1090.0
 offset_bottom = 51.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control127" parent="Graphics/EyeS/Control" unique_id=2065149508 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2535,7 +2433,6 @@ offset_right = 1137.0
 offset_bottom = 57.99999
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control128" parent="Graphics/EyeS/Control" unique_id=1017109853 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2544,7 +2441,6 @@ offset_top = 80.999985
 offset_right = 1111.5469
 offset_bottom = 120.999985
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control129" parent="Graphics/EyeS/Control" unique_id=267773334 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2554,7 +2450,6 @@ offset_right = 1091.5469
 offset_bottom = 86.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control130" parent="Graphics/EyeS/Control" unique_id=163441470 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2564,7 +2459,6 @@ offset_right = 1138.5469
 offset_bottom = 92.99999
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control131" parent="Graphics/EyeS/Control" unique_id=307935257 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2573,7 +2467,6 @@ offset_top = 108.999985
 offset_right = 1101.5469
 offset_bottom = 148.99998
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control132" parent="Graphics/EyeS/Control" unique_id=324436015 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2583,7 +2476,6 @@ offset_right = 1081.5469
 offset_bottom = 114.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control133" parent="Graphics/EyeS/Control" unique_id=28236311 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2593,7 +2485,6 @@ offset_right = 1128.5469
 offset_bottom = 121.0
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control50" parent="Graphics/EyeS/Control" unique_id=1399127533 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2602,7 +2493,6 @@ offset_top = 30.999985
 offset_right = 762.5469
 offset_bottom = 70.999985
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control51" parent="Graphics/EyeS/Control" unique_id=1320424249 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2612,7 +2502,6 @@ offset_right = 742.5469
 offset_bottom = 36.0
 rotation = 0.42463383
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control52" parent="Graphics/EyeS/Control" unique_id=1078157275 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2622,7 +2511,6 @@ offset_right = 789.5469
 offset_bottom = 42.999985
 rotation = -0.009766376
 scale = Vector2(1.6748366, 1.6109027)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control105" parent="Graphics/EyeS/Control" unique_id=826970810 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2632,7 +2520,6 @@ offset_right = 15.0
 offset_bottom = 394.0
 rotation = -0.6849042
 scale = Vector2(1.811195, 1.7118944)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control106" parent="Graphics/EyeS/Control" unique_id=647541298 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2642,7 +2529,6 @@ offset_right = 9.0
 offset_bottom = 443.0
 rotation = -0.6849042
 scale = Vector2(1.811195, 1.7118944)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control107" parent="Graphics/EyeS/Control" unique_id=110171198 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2652,7 +2538,6 @@ offset_right = 17.000015
 offset_bottom = 551.0
 rotation = -0.6849042
 scale = Vector2(1.811195, 1.7118944)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control108" parent="Graphics/EyeS/Control" unique_id=231755480 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2662,7 +2547,6 @@ offset_right = 15.999985
 offset_bottom = 495.00003
 rotation = -0.6849042
 scale = Vector2(1.811195, 1.7118944)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control2" parent="Graphics/EyeS/Control" unique_id=501477261 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2671,7 +2555,6 @@ offset_top = 266.0
 offset_right = 29.0
 offset_bottom = 306.0
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control103" parent="Graphics/EyeS/Control" unique_id=860423773 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2680,7 +2563,6 @@ offset_top = 368.0
 offset_right = 81.99999
 offset_bottom = 408.0
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control3" parent="Graphics/EyeS/Control" unique_id=18979001 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2689,7 +2571,6 @@ offset_top = 313.0
 offset_right = 30.0
 offset_bottom = 353.0
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control4" parent="Graphics/EyeS/Control" unique_id=426873681 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2698,7 +2579,6 @@ offset_top = 16.0
 offset_right = 32.0
 offset_bottom = 56.0
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control109" parent="Graphics/EyeS/Control" unique_id=654974967 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2708,7 +2588,6 @@ offset_right = 15.0
 offset_bottom = 394.0
 rotation = -0.6849042
 scale = Vector2(1.811195, 1.7118944)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control110" parent="Graphics/EyeS/Control" unique_id=1113934512 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2718,7 +2597,6 @@ offset_right = 9.0
 offset_bottom = 443.0
 rotation = -0.6849042
 scale = Vector2(1.811195, 1.7118944)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control111" parent="Graphics/EyeS/Control" unique_id=1551405874 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2728,7 +2606,6 @@ offset_right = 17.000015
 offset_bottom = 551.0
 rotation = -0.6849042
 scale = Vector2(1.811195, 1.7118944)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control112" parent="Graphics/EyeS/Control" unique_id=1986310716 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2738,7 +2615,6 @@ offset_right = 15.999985
 offset_bottom = 495.00003
 rotation = -0.6849042
 scale = Vector2(1.811195, 1.7118944)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control113" parent="Graphics/EyeS/Control" unique_id=827826521 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2747,7 +2623,6 @@ offset_top = 266.0
 offset_right = 29.0
 offset_bottom = 306.0
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control114" parent="Graphics/EyeS/Control" unique_id=1149571908 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2756,7 +2631,6 @@ offset_top = 368.0
 offset_right = 81.99999
 offset_bottom = 408.0
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control115" parent="Graphics/EyeS/Control" unique_id=1104349496 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2765,7 +2639,6 @@ offset_top = 313.0
 offset_right = 30.0
 offset_bottom = 353.0
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control116" parent="Graphics/EyeS/Control" unique_id=554395790 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2774,7 +2647,6 @@ offset_top = 16.0
 offset_right = 32.0
 offset_bottom = 56.0
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control117" parent="Graphics/EyeS/Control" unique_id=843541732 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2784,7 +2656,6 @@ offset_right = 1134.0
 offset_bottom = 222.00003
 rotation = -0.6849042
 scale = Vector2(1.811195, 1.7118944)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control118" parent="Graphics/EyeS/Control" unique_id=172872263 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2794,7 +2665,6 @@ offset_right = 1130.0
 offset_bottom = 244.0
 rotation = -0.14626276
 scale = Vector2(1.6912676, 1.728576)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control119" parent="Graphics/EyeS/Control" unique_id=703380910 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2804,7 +2674,6 @@ offset_right = 1108.0
 offset_bottom = 156.0
 rotation = 0.17231745
 scale = Vector2(2.2592216, 2.287923)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control120" parent="Graphics/EyeS/Control" unique_id=1418380329 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2814,7 +2683,6 @@ offset_right = 1180.0
 offset_bottom = 153.00003
 rotation = 0.9639781
 scale = Vector2(1.1274937, 1.0720633)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control121" parent="Graphics/EyeS/Control" unique_id=5929967 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2824,7 +2692,6 @@ offset_right = 1176.0
 offset_bottom = 133.99997
 rotation = 0.5952031
 scale = Vector2(1.0827074, 1.3050177)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control134" parent="Graphics/EyeS/Control" unique_id=345651070 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2834,7 +2701,6 @@ offset_right = 1124.692
 offset_bottom = 325.00003
 rotation = -0.14626276
 scale = Vector2(1.6912676, 1.728576)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control135" parent="Graphics/EyeS/Control" unique_id=471637513 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2844,7 +2710,6 @@ offset_right = 1102.692
 offset_bottom = 237.00003
 rotation = 0.17231745
 scale = Vector2(2.2592216, 2.287923)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control136" parent="Graphics/EyeS/Control" unique_id=815030578 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2854,7 +2719,6 @@ offset_right = 1174.692
 offset_bottom = 234.00006
 rotation = 0.9639781
 scale = Vector2(1.1274937, 1.0720633)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control137" parent="Graphics/EyeS/Control" unique_id=1853463578 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2864,7 +2728,6 @@ offset_right = 1170.692
 offset_bottom = 215.0
 rotation = 0.5952031
 scale = Vector2(1.0827074, 1.3050177)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control138" parent="Graphics/EyeS/Control" unique_id=1953186800 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2874,7 +2737,6 @@ offset_right = 1124.692
 offset_bottom = 372.00003
 rotation = -0.14626276
 scale = Vector2(1.6912676, 1.728576)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control139" parent="Graphics/EyeS/Control" unique_id=1725704302 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2884,7 +2746,6 @@ offset_right = 1102.692
 offset_bottom = 284.00003
 rotation = 0.17231745
 scale = Vector2(2.2592216, 2.287923)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control140" parent="Graphics/EyeS/Control" unique_id=263643481 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2894,7 +2755,6 @@ offset_right = 1174.692
 offset_bottom = 281.00006
 rotation = 0.9639781
 scale = Vector2(1.1274937, 1.0720633)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control141" parent="Graphics/EyeS/Control" unique_id=959711844 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2904,7 +2764,6 @@ offset_right = 1170.692
 offset_bottom = 262.0
 rotation = 0.5952031
 scale = Vector2(1.0827074, 1.3050177)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control142" parent="Graphics/EyeS/Control" unique_id=2037980722 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2914,7 +2773,6 @@ offset_right = 1128.692
 offset_bottom = 481.00003
 rotation = -0.14626276
 scale = Vector2(1.6912676, 1.728576)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control143" parent="Graphics/EyeS/Control" unique_id=490681229 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2924,7 +2782,6 @@ offset_right = 1106.692
 offset_bottom = 393.00003
 rotation = 0.17231745
 scale = Vector2(2.2592216, 2.287923)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control144" parent="Graphics/EyeS/Control" unique_id=25411871 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2934,7 +2791,6 @@ offset_right = 1178.692
 offset_bottom = 390.00006
 rotation = 0.9639781
 scale = Vector2(1.1274937, 1.0720633)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control145" parent="Graphics/EyeS/Control" unique_id=1306709728 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2944,7 +2800,6 @@ offset_right = 1174.692
 offset_bottom = 371.0
 rotation = 0.5952031
 scale = Vector2(1.0827074, 1.3050177)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control146" parent="Graphics/EyeS/Control" unique_id=1251754105 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2954,7 +2809,6 @@ offset_right = 1120.692
 offset_bottom = 435.00003
 rotation = -0.14626276
 scale = Vector2(1.6912676, 1.728576)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control147" parent="Graphics/EyeS/Control" unique_id=2126767221 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2964,7 +2818,6 @@ offset_right = 1098.692
 offset_bottom = 347.00003
 rotation = 0.17231745
 scale = Vector2(2.2592216, 2.287923)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control148" parent="Graphics/EyeS/Control" unique_id=742407465 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2974,7 +2827,6 @@ offset_right = 1170.692
 offset_bottom = 344.00006
 rotation = 0.9639781
 scale = Vector2(1.1274937, 1.0720633)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control149" parent="Graphics/EyeS/Control" unique_id=818987835 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2984,7 +2836,6 @@ offset_right = 1166.692
 offset_bottom = 325.0
 rotation = 0.5952031
 scale = Vector2(1.0827074, 1.3050177)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control122" parent="Graphics/EyeS/Control" unique_id=50945315 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -2994,7 +2845,6 @@ offset_right = 1147.0001
 offset_bottom = 144.99997
 rotation = 0.8152624
 scale = Vector2(1.253772, 1)
-metadata/_edit_use_anchors_ = true
 
 [node name="Control123" parent="Graphics/EyeS/Control" unique_id=42217663 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -3003,7 +2853,6 @@ offset_top = 196.99997
 offset_right = 1104.0
 offset_bottom = 236.99997
 rotation = -0.6111936
-metadata/_edit_use_anchors_ = true
 
 [node name="Control104" parent="Graphics/EyeS/Control" unique_id=342662087 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -3012,7 +2861,6 @@ offset_top = 45.0
 offset_right = 79.0
 offset_bottom = 85.0
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
 
 [node name="Control5" parent="Graphics/EyeS/Control" unique_id=1049890091 instance=ExtResource("20_46vug")]
 layout_mode = 0
@@ -3021,7 +2869,9 @@ offset_top = 16.0
 offset_right = 32.0
 offset_bottom = 56.0
 rotation = -0.8416423
-metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="Graphics/EyeS/Control" unique_id=195915159]
+wait_time = 2.0
 
 [node name="General" type="Node2D" parent="." unique_id=924651252]
 
@@ -3103,7 +2953,7 @@ interraction_max = 1
 position = Vector2(0.15, -1.0999995)
 scale = Vector2(0.54, 0.54)
 texture = ExtResource("25_qo7hg")
-script = ExtResource("31_46vug")
+script = SubResource("GDScript_j3xf6")
 
 [node name="tresor" parent="InteractionManager" unique_id=250161410 node_paths=PackedStringArray("Manager") instance=ExtResource("23_y6lc1")]
 position = Vector2(-1565, -1498)
@@ -3262,7 +3112,10 @@ hide_final_interaction = true
 position = Vector2(927, -1090)
 scale = Vector2(4, 4)
 Manager = NodePath("../..")
-text_default = "elizabeth_table"
+text_default = "table"
+text_special = Dictionary[int, String]({
+0: "elizabeth_table"
+})
 texture = SubResource("AtlasTexture_ekhvm")
 texture_size = Vector2(0.1, 0.1)
 
@@ -3729,7 +3582,7 @@ Manager = NodePath("../..")
 text_default = "jakob"
 texture = SubResource("AtlasTexture_b5i6v")
 
-[node name="denisa" parent="InteractionManager/people" unique_id=1151578733 node_paths=PackedStringArray("Manager") instance=ExtResource("23_y6lc1")]
+[node name="ana" parent="InteractionManager/people" unique_id=1151578733 node_paths=PackedStringArray("Manager") instance=ExtResource("23_y6lc1")]
 position = Vector2(1348, -498)
 scale = Vector2(4, 4)
 priority = 1
@@ -4129,6 +3982,7 @@ rotation = 3.0892327
 scale = Vector2(0.54, 0.54)
 texture = ExtResource("40_58bux")
 
+[connection signal="timeout" from="Graphics/EyeS/Control/Timer" to="Graphics/EyeS/Control" method="_on_timer_timeout"]
 [connection signal="body_entered" from="InteractionManager/people/Matylda/Area2D" to="InteractionManager/people/Matylda/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="DoorManager/ipr_door/Area2D" to="DoorManager/ipr_door" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="DoorManager/ipr_door/Area2D" to="DoorManager/ipr_door" method="_on_area_2d_body_exited"]

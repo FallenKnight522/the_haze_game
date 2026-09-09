@@ -19,10 +19,6 @@ func _ready() -> void:
 		sprite_2d.texture = texture
 	sprite_2d.scale = texture_size
 	Manager.new_day.connect(reset_day)
-func _process(delta: float) -> void:
-	if(texture != null):
-		sprite_2d.texture = texture
-	sprite_2d.scale = texture_size
 func reset_day(day):
 	interraction_allowed = true
 	show()

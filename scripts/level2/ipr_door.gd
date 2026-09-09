@@ -3,7 +3,6 @@ extends the_haze_object
 @onready var collider: CollisionShape2D = $Collider/CollisionShape2D
 var opened = false
 var spiraldoor = false
-var player_inside = false
 var closed = false
 @onready var cap_pos: Marker2D = $Cap_pos
 @onready var statue_pos: Marker2D = $Statue_pos
@@ -11,8 +10,6 @@ var closed = false
 
 # Called when the node enters the scene tree for the first time.
 func interact():
-	if player_inside:
-		return
 	if closed && !opened:
 		SignalManager.show_text.emit("This door appears to be locked")
 		return
@@ -46,5 +43,4 @@ func reset():
 	if opened:
 		interact()
 	spiraldoor = false
-	player_inside = false
 	closed = false
