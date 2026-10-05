@@ -76,10 +76,10 @@ animations = [{
 "texture": ExtResource("3_waywy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("1_yf4me")
+"texture": ExtResource("2_npxln")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_npxln")
+"texture": ExtResource("1_yf4me")
 }],
 "loop": 0,
 "name": &"open",
@@ -98,7 +98,7 @@ script = ExtResource("1_npxln")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=419075656]
 position = Vector2(16, 16)
 sprite_frames = SubResource("SpriteFrames_7x7he")
-animation = &"idle"
+animation = &"close"
 
 [node name="Timer" type="Timer" parent="." unique_id=1009530972]
 

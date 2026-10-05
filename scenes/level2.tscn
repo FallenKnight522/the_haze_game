@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dlesysnkj1ngl" path="res://assets/level2/Strachomira2/Beholding2.png" id="9_s4es8"]
 [ext_resource type="Texture2D" uid="uid://bwcepkeh785f4" path="res://assets/hint.png" id="9_ypacf"]
 [ext_resource type="Texture2D" uid="uid://buaunl6vst4gu" path="res://assets/level2/Strachomira2/Beholding3.png" id="10_63e4f"]
-[ext_resource type="Texture2D" uid="uid://dih8x2odijllb" path="res://assets/level2/hint_3ye.png" id="10_76n1c"]
+[ext_resource type="Texture2D" uid="uid://clvdtmdh8h6ni" path="res://assets/level2/hint_4alone.png" id="10_ypacf"]
 [ext_resource type="Texture2D" uid="uid://bkwun7qs0wlyw" path="res://assets/level2/Strachomira2/Beholding4.png" id="11_y6lc1"]
 [ext_resource type="Texture2D" uid="uid://bae0gotqlje08" path="res://assets/level2/Strachomira2/Beholding5.png" id="12_ekhvm"]
 [ext_resource type="Texture2D" uid="uid://dd22hsjn61hh" path="res://assets/level2/Strachomira2/Beholding6.png" id="13_nflru"]
@@ -1508,7 +1508,7 @@ tile_set = SubResource("TileSet_rxev4")
 unique_name_in_owner = true
 layer = 20
 script = ExtResource("4_g8vcy")
-selected = Array[Texture2D]([ExtResource("9_ypacf"), ExtResource("10_76n1c")])
+selected = Array[Texture2D]([ExtResource("9_ypacf"), ExtResource("10_ypacf")])
 
 [node name="Text_window" parent="Graphics" unique_id=1098004527 instance=ExtResource("5_8g4ke")]
 unique_name_in_owner = true

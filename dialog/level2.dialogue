@@ -25,14 +25,6 @@ if fear.fear < 89 && fear.fear > 50
 	IPR1-HY-NOB: Patience. I will answer everything soon.
 elif fear.fear > 89:
 	do stop_timer()
-	{Since this dialogue is quite long, I added a chance to skip it.}
-	{However, if you haven't seen it yet, I recommend reading through it.}
-	{Otherwise you'll be really confused.}
-	- Skip everything
-		do SignalManager.change_room.emit(day)
-	- Skip the first part
-		=> ending
-	- Read it
 	IPR1-HY-NOB: You are ready. Ask what you wish!
 	Brian: I wish to know, why did the house target me, Margaret, Alice, and Dan? What did we do to deserve such a fate?
 	IPR1-HY-NOB: You were scared.
@@ -73,7 +65,7 @@ elif fear.fear > 89:
 	IPR1-HY-NOB: She goes down and down the stairs.
 	IPR1-HY-NOB: Sometimes, she feels like she is standing in place, and the stairs walk her.
 	IPR1-HY-NOB: And sometimes, she remembers a shadow. A heinous reminder of why she is there. You.
-	Brian: [In tears] Please. I did not ask for this.
+	Brian: [Almost in tears] Please. I did not ask for this.
 	IPR1-HY-NOB: Oh, but you did.
 	IPR1-HY-NOB: You cannot lie to me, Brian.
 	IPR1-HY-NOB: I know. And you know I won't lie to you.

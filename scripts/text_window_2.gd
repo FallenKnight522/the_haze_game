@@ -46,12 +46,12 @@ func _process(_delta: float) -> void:
 				SignalManager.text_showing = false
 				hide_textbox()
 		state.READING:
-			if(Input.is_action_just_pressed("escape")):
+			if Input.is_action_just_pressed("escape")or Input.is_action_pressed("skip"):
 				rich_text_label.visible_ratio = 1.0
 				tw.kill()
 				change_state(state.FINISHED)
 		state.FINISHED:
-			if(Input.is_action_just_pressed("escape")):
+			if Input.is_action_just_pressed("escape")or Input.is_action_pressed("skip"):
 				window_finished.emit(rich_text_label.text)
 				change_state(state.READY)
 		state.CHOOSING2:

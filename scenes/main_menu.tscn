@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dgucqu3eyc0qx"]
 
 [ext_resource type="Script" uid="uid://bhygcm2mcbk3n" path="res://scripts/menu/button_manager.gd" id="1_l6cm7"]
+[ext_resource type="PackedScene" uid="uid://de7w1pl4j0ge5" path="res://scenes/text_window2.tscn" id="2_ekxnf"]
 
 [node name="Main menu" type="Control" unique_id=357728123]
 layout_mode = 3
@@ -55,9 +56,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Exit" type="Button" parent="ButtonManager/VBoxContainer/Exit" unique_id=696240303]
-layout_mode = 0
-size_flags_vertical = 3
+[node name="Text_window" parent="ButtonManager" unique_id=1098004527 instance=ExtResource("2_ekxnf")]
 
 [connection signal="pressed" from="ButtonManager/VBoxContainer/Tutorial" to="ButtonManager" method="_on_tutorial_pressed"]
 [connection signal="pressed" from="ButtonManager/VBoxContainer/Level 1" to="ButtonManager" method="_on_level_1_pressed"]

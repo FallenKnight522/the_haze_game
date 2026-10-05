@@ -12,6 +12,8 @@ var gravity_modifier = Vector2.DOWN
 func _ready() -> void:
 	add_to_group("player")
 func _physics_process(delta: float) -> void:
+	if SignalManager.animatic_showing:
+		return
 	var local_velocity = velocity.rotated(-rotation) ## local velocity so it funcitons regardless of gravity
 	# Add the gravity.
 	if not is_on_floor():
@@ -73,3 +75,7 @@ func reset_movement():
 	direct = 1
 	id_last_modifier = 0
 	change_gravity(Vector2.DOWN)
+func turn_right():
+		animated_sprite.flip_h = false
+func turn_left():
+		animated_sprite.flip_h = true

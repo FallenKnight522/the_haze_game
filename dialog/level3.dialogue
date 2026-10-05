@@ -1,0 +1,1680 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3 uid="uid://be4ky2lwprtuq"]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_oqhbq"]
+
+[resource]
+script = ExtResource("1_oqhbq")
+using_states = PackedStringArray()
+character_names = PackedStringArray()
+metadata/_custom_type_script = "uid://dbs4435dsf3ry"
+
+
+~ interogation0
+do show_prop(1)
+Officer: Is that all you know
+Brian: We went into nature
+Brian: I got lost 
+Brian: Split off from the group when I was too slow
+Brian: And I could not reach them on the phone
+Brian: I started shouting
+Brian: And no one answered
+- That's all
+- (That's not what happened)
+	Brian: [font_size=24] (I know that) [/font_size]
+	Brian: [font_size=20](But talking about disappearing house)[/font_size]
+	Brian: [font_size=16](Stairs, halls, madness)[/font_size]
+	Brian: [font_size=12](They would not believe)[/font_size]
+Officer: Well, thank you for your time... will get back to you, once we find anything
+Officer: For now you may go home, but don't leave Prague
+Officer: We may need you for some follow up, given you are the only witness we have
+Brian: {{s_lonely0}}  (I can see they suspect me) {{s_lonely0}}
+Brian: {{s_lonely0}}  (I can just hope, they won't try to make me the scapegoat) {{s_lonely0}}
+Brian: {{s_lonely0}} (even thought there is no proof) {{s_lonely0}}
+{{s_lonely1}} ###: (even thought they would not be wrong to place the guilt on you) {{s_lonely1}}
+do SignalManager.fear.emit(10)
+=> interogation1
+
+~ interogation1
+do show_prop(2)
+Brian: (Oh, It's Dan's mother)
+Brian: (What's she doing here. Is she also here for interogation)
+Rena: Oh, hi Brian
+Rena: How did it go
+Brian: Well, I told them all I know
+{{s_lonely1}} ###: (When did you get so good at lying?){{s_lonely1}}
+Brian: I just wish there was more I could do
+Brian: (And I will)
+Brian: (I will found out more about that house)
+Brian: ( And save...
+{{s_lonely1}} ###: save them?? Laughable... you won't... you can't) {{e_lonely1}}
+{{s_lonely2}} &&&: (But I did not know that back then,did I){{e_lonely2}}
+Rena: It's alrigh
+Rena: The police will find them
+Rena: That forest is not that big
+Rena: They have thermocameras, they will find them
+Rena: And if they left it
+Rena: Someone must have seen them
+Rena: I just hope they will be ok
+Rena: I...[sobs] ... I can't stand the idea... that they just.. disappeared like that
+Rena: ... Dan will return.. all of them will return...
+{{s_lonely2}} ###: (Oh, but they won't){{e_lonely1}}
+{{s_lonely1}} ###: (I wonder, did she blame you already){{e_lonely1}}
+{{s_lonely2}} &&&: (She new I would never hurt her son..) {{s_lonely2}}
+{{s_lonely1}} ###: (Oh, but you did)  {{e_lonely1}}
+{{s_lonely1}} ###: (Not by choice, but still...){{e_lonely1}}
+{{s_lonely1}} ###: (All of them are {{s_lonely3}}DEAD{{e_lonely3}} because of {{s_lonely3}}YOU{{e_lonely3}}) [/color]
+Officer: Come in.
+Rena: Well, bye Brian
+Brian: Bye
+do show_prop(3)
+She leaves
+You are once again alone
+{{s_lonely1}} ###: (With all the {{s_lonely3}}GUILT{{e_lonely3}}, naturally) {{e_lonely1}}
+Brian: (I should get going)
+Brian: (Get back to work)
+Rena: [Crying behind the door]
+Brian: (I supposed she was bearly holding it in)
+Brian: (It's understandable, her son's gone missing)
+Brian: (I don't want to know how she'd react, if she new what happended to him)
+Brian: (Best if I keep that to myself)
+Brian: (Then again, don't they deserve to know the truth)
+Brian: (Who am I to decide what will hurt them less)
+{{s_lonely1}} ###: (And did you even cry?) {{e_lonely1}}
+{{s_lonely1}} ###: (No. Three of your friends, dead, because of you) {{e_lonely1}}
+{{s_lonely1}} ###: (And not a single tear) {{e_lonely1}}
+{{s_lonely2}} &&&: (That is not fair.. it's not like I would't cry if I cou...) {{e_lonely2}}
+{{s_lonely1}} ###: ({{s_lonely3}}not{{e_lonely3}} a {{s_lonely3}}single{{e_lonely3}} tear shed)  {{e_lonely1}}
+do SignalManager.fear.emit(10)
+Brian: (I have to go)
+=> interogation2
+
+~ interogation2
+Brian: Wait, that statues...
+Brian: It... Where have I seen it before
+Brian: (The HOUSE!!)
+Brian: What's it doing here...
+You look around
+It does not take long, for you to recognize the door
+This is not police station door
+Brian: What's it doing here
+Brian: Is it trying to collect me?
+do show_prop(4)
+The door suddenly shifts
+And you are looking at a normal police station door
+Brian: What??
+Brian: But... She walked throught that door a moment ago
+Brian: (If she arrived just a bit later)
+Brian: (Would she...)
+Brian: I.. I have to go
+Brian: (I... I need to ... get away from here)
+Brian: (From people)
+Brian: (Their families suffered enought)
+Brian: (They should't loose more....)
+Brian: (As long as I stay away.. they will be safe)
+Brian: (They can move on)
+Brian: (Not burdened by what truly happened)
+Brian: (Maybe.. maybe they will...)
+Brian: (Will they? Gone without a trace. Without explanation)
+Brian: (Won't they wait for them to be found)
+Brian: (Entertain false hope)
+Brian: (Only to be crushed...)
+Brian: (... but if I tell them, won't the house start hunting them too)
+Brian: (I.. I just need to stay away)
+Brian: (Keep it all to myself... that will be the best for everyone, righ?)
+Brian: (Or is it just the best for me... am I just scared to face the concequences )
+Brian: (of what my friends got into because of me)
+Brian: (Think, think.. what's the best course of action)
+Brian: (Keep the truth or reveal it)
+Brian: (Keep away so the house doesn't target them, or try to stay and comfort those hurting)
+{{s_lonely1}} ###: (You know what you will choose. Not because it's better for them) {{e_lonely1}}
+{{s_lonely1}} ###: (But because it's easier for you) {{e_lonely1}}
+{{s_lonely1}} ###: (Although, it's not like you could help them) {{e_lonely1}}
+{{s_lonely1}} ###: (They are better of {{s_lonely3}} without you {{e_lonely3}}) {{e_lonely1}}
+do show_prop(5)
+do text_len(81)
+{{s_lonely4}} Isolate and numb yourself for the lie that you can't hurt and you don't hurt {{e_lonely4}}
+do SignalManager.fear.emit(10)
+do end_conversation()
+=> END
+
+~ sister0
+do show_prop(6)
+(you see Margaret's sister)
+(you two used to get on well)
+{{s_lonely1}} not anymore {{e_lonely1}}
+Brian: Oh... Hi, Jouline
+Jouline: 
+Brian: How.. how is life?
+Jouline: 
+Brian: How... how are you holding up?
+Jouline: Oh, I am {{s_lonely3}} FINE {{e_lonely3}}. Everything is {{s_lonely3}} GREAT {{e_lonely3}}
+Brian: I.. I am sorry
+Jouline: {{s_lonely3}} NO{{e_lonely3}}, no you are {{s_lonely3}}not {{e_lonely3}}
+do SignalManager.fear.emit(10)
+Jouline: She is {{s_lonely3}} DEAD {{e_lonely3}}. Because of {{s_lonely3}} YOU {{e_lonely3}}
+Jouline: Mum and Dad still belive they will find her
+Jouline: They still check the email everyday, just in case {{s_lonely3}} someone {{e_lonely3}} writes he saw her {{s_lonely3}} somewhere {{e_lonely3}}, {{s_lonely3}} anywhere {{e_lonely3}}
+Jouline: They still cling to hope
+Jouline: But I long know the truth
+Jouline: She {{s_lonely3}} DIED {{e_lonely3}} in that forest
+Jouline: And because of {{s_lonely3}} YOU {{e_lonely3}}
+do SignalManager.fear.emit(10)
+Jouline: Isn't it peculiar
+Jouline: Three of your friends, gone without a {{s_lonely3}} trace {{e_lonely3}} 
+Jouline: On a trip {{s_lonely3}} you {{e_lonely3}} planned
+Jouline: And {{s_lonely3}} you {{e_lonely3}} are {{s_lonely3}} FINE {{e_lonely3}}
+do SignalManager.fear.emit(10)
+Jouline: What a coincidance
+Jouline: {{s_lonely3}} WHAT DID SHE DO TO YOU? {{e_lonely3}}
+Jouline: {{s_lonely3}} She was your friend! {{e_lonely3}}
+Jouline: [heavy breating]  And she is {{s_lonely3}} DEAD {{e_lonely3}} because of {{s_lonely3}} YOU {{e_lonely3}}
+do SignalManager.fear.emit(10)
+Brian: That's not.. what...
+Jouline: {{s_lonely3}} LOOK me in the eyes and say that I am wrong {{e_lonely3}}
+Jouline: {{s_lonely3}} That you are innocent in all this {{e_lonely3}}
+{{s_lonely1}} ###: You could't do that could you... She was right {{e_lonely1}}
+Brian: [In tears] I can't. I can't take these accusations. Why won't you just...
+Jouline: {{s_lonely3}} You can't do it, can you {{e_lonely3}}
+Jouline: [laught] Pathetic. You don't even have the gut to pretend you are not {{s_lonely3}} GUILTY {{e_lonely3}}
+do SignalManager.fear.emit(10)
+Brian: I am ..
+Jouline: {{s_lonely3}} SHUT! {{e_lonely3}}
+Jouline: Here is what we are going to do
+Jouline: You will not talk to me
+Jouline: I don't care if you need something
+Jouline: I don't want to see you, hear you, or be reminded of your existence
+Jouline: Not until my sister is found. {{s_lonely3}} ALIVE {{e_lonely3}}
+Jouline: Until then, you are lost with your "friends" as far as I am concerned
+Jouline: {{s_lonely3}} Bye and BURN, BRIAN {{e_lonely3}}
+Brian: Jouline, I am sor..
+Jouline: {{s_lonely3}} BURN IN HELL, YOU MONSTER {{e_lonely3}}
+do SignalManager.fear.emit(10)
+(Jouline leaves)
+do show_prop(7)
+do text_len(80)
+{{s_lonely4}} I do not even know what I did wrong. And it isn't like I can ask someone {{e_lonely4}}
+{{s_lonely1}} ###: (What were you going to say) {{e_lonely1}}
+{{s_lonely1}} ###: (That you were sorry) {{e_lonely1}}
+Brian: Goodbey Jouline ..
+{{s_lonely1}} ###: (That you didn't mean to) {{e_lonely1}}
+Brian: Goodbey forever ..
+{{s_lonely1}} ###: (Because, as you know, she was right to blame you) {{e_lonely1}}
+Brian: You don't have to worry ..
+{{s_lonely1}} ###: (And hell awaits you) {{e_lonely1}}
+Brian: There is already a spot reserved for me.. in the hell I left you're sister in
+{{s_lonely1}} ###: (And yet, you weren't a man enought to accept it) {{e_lonely1}}
+{{s_lonely1}} ###: (Always looking for a way to escape.. even if you deserve none) {{e_lonely1}}
+do SignalManager.fear.emit(10)
+do end_conversation()
+=> END
+
+
+~ messages0
+do show_prop(8)
+Brian: Let's read it over once more..
+Brian: "Dear Sir or Madame"
+Brian: "... saw your work advertisement"
+Brian: "... medior backend developer ..."
+Brian: " .. Java, C/C++, C#, Python..."
+Brian: ".. start as soon as possible"
+Brian: "Best regards, Brian Taylor"
+Brian: And sent. Another job application done...
+Brian: Might as well try to write the other thing..
+Brian: (even though, do you really think they will respond)
+{{s_lonely1}} ###: (You know they won't. Why do you bother) {{e_lonely1}}
+do SignalManager.fear.emit(10)
+Brian: "Hi..." "its been a long time since we have seen each other"
+Brian:  "I was wondering, if you'd like to spend some time together"
+Brian: No, "If you wouldn't mind, could we hang out like the old times"
+Brian: No, that does not sound good "I was wondering, are... "
+Brian: "Do you have free time next week.. ", "next month"..
+Brian: No, no, no, no that's not it
+Brian: "Hi, how are you? I was just wondering, if you had the time..."
+Brian: "... and are in the mood..."
+Brian: "...could we..."
+Brian: "...maybe..."
+Brian: "...hang out somewhen..." no, wait "...sometimes..."
+Brian: "...like in the old days..."
+Brian: ... "Of course"... "if you do not want to"... "I understad"..
+Brian: ..."best regards" no ".. hope to see you soon, Brian"
+Brian: There, is this good
+Brian: Lets go through it again
+{{s_lonely1}} ###: (It's pathetic) {{e_lonely1}}
+{{s_lonely1}} ###: (How you beg them to care) {{e_lonely1}}
+{{s_lonely1}} ###: (If they wanted to see you, they would have) {{e_lonely1}}
+{{s_lonely1}} ###: (They won't answer) {{e_lonely1}}
+{{s_lonely1}} ###: (They don't want to see you) {{e_lonely1}}
+{{s_lonely1}} ###: (Noone does) {{e_lonely1}}
+{{s_lonely1}} ###: (Sent this out and you'll only embarase yourself) {{e_lonely1}}
+{{s_lonely1}} ###: (And get hurt, seeing yourself "left on read") {{e_lonely1}}
+do SignalManager.fear.emit(10)
+do text_len(115)
+{{s_lonely4}} its so easy to drive away people. There are so many ways to do so. And so few to make them want to stay. {{e_lonely4}}
+do text_len(100)
+{{s_lonely4}} Sadly, there is no tutorial for building meaningull connections. Not for those who need it {{e_lonely4}}
+do SignalManager.fear.emit(10)
+=> messages1
+
+~ messages1
+do show_prop(9)
+Brian: Still no response..
+Brian: I'll never understand how someone can post an advertisement
+Brian: And then ignore people who responds... I mean seriously, at least a "we decidet to go in a different direction"
+Brian: Nevermind.. It's not like it's out of the ordinary
+Brian: Guess people ignoring me is just the norm today
+Brian: How many days...
+{{s_lonely1}} ###: (a lot) {{e_lonely1}}
+do SignalManager.fear.emit(10)
+Brian: .. and still no answer
+{{s_lonely1}} ###: (Told you you'd be "left on read") {{e_lonely1}}
+do SignalManager.fear.emit(15)
+Brian: Supposed I should get back to work...
+(A notification rings)
+Brian: Or maybe
+(an advertisement fromt he bank.. just spam message)
+{{s_lonely1}} ###: (Why do you even bother) {{e_lonely1}}
+(Another notification)
+{{s_lonely1}} ###: (Just ignore it) {{e_lonely1}}
+(You check it out)
+(At least someone responded to you)
+(Even though, not how you hoped)
+Brian: oh... ok
+Brian: "I understand"
+Brian: Guess... guess it's just me then
+Brian: Shame... I was looking forward to it
+Brian: But nevermind... now there is even more work
+Brian: And ai is terrible at making UI
+Spider.llm: How may I help
+Brian: Update the workplan: ...
+(You get back to working on your game)
+(Sometimes, you still think to check the messages)
+(but noone messages you)
+{{s_lonely1}} ###: (Noone cares) {{e_lonely1}}
+(And day by day)
+(you slowly stopped bothering to check)
+(or writing)
+(And though you do not know why)
+(It seems clear, that the world colectivly decided not to communicate with you ... anymore)
+do SignalManager.fear.emit(10)
+do text_len(120)
+{{s_lonely4}} I can't even tell if you are angry at me, if it something I did or if you just do not have time for a bit...  {{e_lonely4}}
+do text_len(60)
+{{s_lonely4}} because I am not even worth to you the words to tell me {{e_lonely4}}
+do SignalManager.fear.emit(10)
+do end_conversation()
+=> END
+
+~ to_Prague0
+do show_prop(10)
+Brian: (Today's the day of my apointment)
+Brian: (Better hurry so I am not late)
+(You go to the buss stop)
+(It's cold outside, raining)
+(the buss is late)
+{{s_lonely1}} ###: (And so are you) {{e_lonely1}}
+{{s_lonely2}} &&&: (Not like I could have done anything) {{e_lonely2}}
+{{s_lonely1}} ###: (Not like the doctor cares) {{e_lonely1}}
+do SignalManager.fear.emit(10)
+=> doctore
+
+~ doctore
+do show_prop(11)
+(The waiting room is empty)
+(the doctor is working alone today)
+(you do not recognize him)
+(he is wearing mask and glasses)
+Doctor: What is bothering you
+Brian: I.. I have cauth a cold
+Doctor: Then sleep it off
+Doctor: You didn't need to see me to know that
+{{s_lonely1}} ###: (You shouldn't have come here) {{e_lonely1}}
+Brian: I know.. but it won't go away
+Brian: It has been weeks.. I am not gettin better...
+{{s_lonely1}} ###: (Pathetic) {{e_lonely1}}
+{{s_lonely1}} ###: (These appointments are for people with problems) {{e_lonely1}}
+{{s_lonely1}} ###: (Not attention seeking crybabies with cold) {{e_lonely1}}
+{{s_lonely1}} ###:  {{s_lonely3}}(you SHOULDN'T have come here){{e_lonely3}} {{e_lonely1}}
+do SignalManager.fear.emit(10)
+Doctor: Alright, I will run some tests
+(Doctore looks at your throat, tests your blood for signs of sickness, meassures temperature... asks few questions)
+Doctor: Ok, one last test I might try
+Doctor: Look up, try not to blink
+(he poures something into your eyes)
+do show_prop(16)
+Doctor: Now, your vision will blur in a moment
+Doctor: And I will see if youre eyes react properly
+Doctor: Look into this light
+(Your doctor never did such test)
+(but if it helps him help you with this cold)
+Doctor: As expected, everything in order
+Doctor: You do have a cold, but nothing unusuall about it
+Doctor: Try to rest, drink hot tea
+Doctor: It will pass soon
+Doctor: Because as far as I can determine, you are completely healthy
+{{s_lonely1}} ###: (Told you. You just wasted his presious time) {{e_lonely1}}
+{{s_lonely1}} ###: (He could have treated someone acualy in need of help) {{e_lonely1}}
+{{s_lonely2}} &&&: (But I still feel sick, even now) {{e_lonely2}}
+{{s_lonely1}} ###: (And? "as far as I can determine, you are completely healthy")  {{e_lonely1}}
+{{s_lonely1}} ###: (So man up and endure it)  {{e_lonely1}}
+do SignalManager.fear.emit(10)
+=> wayback
+
+~ wayback
+do show_prop(12)
+(You leave the clinic)
+(Your vision is stil blurry)
+Brian: Now to just see when the buss arrives
+Brian: (I can´t read that. It's too blury)
+Brian: (What now)
+Brian: Excuse me, when does the 226 buss arive?
+Brian: Excuse me?!
+No answer...
+Brian: (Do they not hear me)
+Brian: (Or maybe they have earphones)
+Brian: (Is that even a person)
+Brian:( Maybe.. Am I talking to noone... hard to tell what I am seeing with my vision this blurry)
+Brian: 
+- tap on them genty
+	Brian: (If tap on them, they have to notice me...)
+	Brian: (And if it's just a trick of my blurry vision, I'll be certain)
+	{{s_lonely1}} ###: (What do you think you are doing)  {{e_lonely1}}
+	{{s_lonely1}} ###: (They clearly don't want to talk to you)  {{e_lonely1}}
+	{{s_lonely1}} ###: (So don't touch them you creep)  {{e_lonely1}}
+	do SignalManager.fear.emit(20)
+	Brian: (On seccond thought, maybe not)
+- try someone else
+	Brian: (There is no way they would just ignore me)
+	do SignalManager.fear.emit(10)
+Brian: I should look for someone to ask
+(You walk the streets. But with you're blurry eyes, you can see noone for a long time)
+(Or at least noone who reacts to you)
+do show_prop(13)
+Brian: (Who is that..)
+Brian: (is that... no, that does not make sence)
+Brian: (did they just, walk right past me)
+Brian: (no.. it can't be them.. they would not just ignore me...)
+{{s_lonely1}} ###: (Why would't they)  {{e_lonely1}}
+Brian: Excuse me!
+(No answer)
+do SignalManager.fear.emit(10)
+Brian: Guess, it's not them...
+{{s_lonely1}} ###: (What does it matter)  {{e_lonely1}}
+{{s_lonely1}} ###: (At this point, the fact they ignore you means it is probably them)  {{e_lonely1}}
+{{s_lonely1}} ###: (Your past friends.. now more astranged than strangers)  {{e_lonely1}}
+(You hopelessly try to ask someone, anyone)
+(You find noone)
+(Stuck with blurry vision, with no way home)
+(Among people, yet uttery alone)
+(It almost overwhelms you)
+(Almost)
+{{s_lonely1}} ###: (What's the matter)  {{e_lonely1}}
+{{s_lonely1}} ###: (Can't deal with it on your own)  {{e_lonely1}}
+{{s_lonely1}} ###: (Too bad.. It's not like anyone is going to help you)  {{e_lonely1}}
+{{s_lonely1}} ###: (Going to cry about it? Hah, you know you can't)  {{e_lonely1}}
+your eyes {{s_lonely3}} BURN! {{e_lonely3}}
+do SignalManager.fear.emit(10)
+do text_len(110)
+{{s_lonely4}} What's the point of breaking down and crying. It's not like anyone is going to notice, so why even bother. {{e_lonely4}}
+do text_len(60)
+{{s_lonely4}}  You know deep down your too broken to break anyway. {{e_lonely4}}
+do SignalManager.fear.emit(10)
+=> bus
+
+~ bus
+do show_prop(14)
+In the end, you just board the first bus that arrives
+Brian: Excuse me, is this bus 226?
+No response
+The door close
+It's like this buss is empty... Yet it move, so it has to have a driver
+He just chose to ignore you
+(You travel)
+The stop is somewhere you half recognize
+Bus: Final stop. Please leave the vehicle
+Brian: (But no bus has final stop here.. It's in the middle of nowhere)
+Bus: Final stop. Please leave the vehicle.
+You leave
+do show_prop(15)
+You walk the rest of the way
+Throught the cold rain, wet fog and dampt fields
+You return tired
+Feeling more sick than ever
+And get back to work
+do SignalManager.fear.emit(10)
+do end_conversation()
+=> END
+
+~ BirthdayParty0
+do show_prop(19)
+You wake up
+It's about 5'oclock in the morning
+You had a nightmare
+Not one of those you are used to... watching eyes, twisting halls
+Is this sing that things are getting better?
+Was it even a nightmare?
+You saw, you're friends
+Sitting around a fire, taking, having fun
+{{s_lonely1}} ###: (They are happy without you)  {{e_lonely1}}
+It was peacefull. Their real birthday party probably looked like that
+{{s_lonely1}} ###: (And the real versions of them miss you just as little)  {{e_lonely1}}
+{{s_lonely1}} ###: (Everyone moved passed you)  {{e_lonely1}}
+{{s_lonely1}} ###: (Noone remembers you anymore. No one even noticed you didn't attent this time)  {{e_lonely1}}
+Brian: (Why didn't I attent this time)
+Brian: (I was there year ago, two years ago... )
+{{s_lonely1}} ###: (You weren't invited)  {{e_lonely1}}
+Brian: (I could have asked them about it)
+{{s_lonely1}} ###: (Just to make things more akward?)  {{e_lonely1}}
+{{s_lonely1}} ###: (If they wanted you to attend, they would have invited you!)  {{e_lonely1}}
+Brian: (But they did sent the information into the group chat... they new I could see it)
+{{s_lonely1}} ###: (It wasn't ment for you)  {{e_lonely1}}
+{{s_lonely1}} ###: (They just forgot to kick you out... or did not care enough)  {{e_lonely1}}
+Brian: (I could have asked)
+{{s_lonely1}} ###: (You'd just get "left on read" again)  {{e_lonely1}}
+Brian: (I could have shown up)
+{{s_lonely1}} ###: (Just to see the disapproval in person?)  {{e_lonely1}}
+{{s_lonely1}} ###: (Don't do this to yourself. You hurt enough)  {{e_lonely1}}
+{{s_lonely1}} ###: (Try to reach out, you'll only remind yourself how you how noone left)  {{e_lonely1}}
+do SignalManager.fear.emit(10)
+Brian: (But, I mean, it's good that my absence does not hurt them)
+Brian: (That they are at least happy)
+Brian: (Even Jouline seemed chearfull)
+Brian: (She would't have been if I attended)
+Brian: (None of them would)
+Brian: (even if this was a dream)
+Brian: (I am sure they were as happy at the real celebration)
+{{s_lonely1}} ###: (And they missed you just as little)  {{e_lonely1}}
+Brian: (And, I might have endangeroud them, if I attended)
+Brian: (With the doors and everything)
+Brian: (It's understandable that they forgotten me.. why wouldn't they)
+Brian: (They would't understand even if I did try to explain why I had to isolate myself)
+do text_len(55)
+{{s_lonely4}}  who would understand, who would wait for a madman {{e_lonely4}}
+Brian: (well, anyway.. I suppose it's time to get up)
+Brian: (get back to work)
+Brian: (It was just a strange dream after all)
+Brian: (A dream.. or a nightmare...)
+Brian: (There was nothing scary about it... )
+Brian: (yet.. why did I wake up scared...)
+Brian: (I knew this would happen)
+Brian: (I knew this from the moment I realized I was haunted by that house)
+Brian: (I understood what would happen)
+Brian: (Andy yet, for some reason... I still am scarred of it)
+Brian: (Scarred to text anyone, just to be left on read.. scared to ask if I am invited..)
+Brian: (Scarred to attend if I am not certain my presence is desired...)
+do show_prop(0)
+do SignalManager.fear.emit(10)
+do text_len(100)
+{{s_lonely4}} Did I start to fear because I started loosing them... or started loosing them because of the fear {{e_lonely4}}
+=> birthday0
+
+~ birthday0
+do show_prop(8)
+You walk down the stairs and get ready for the day
+Not like it's much effort.. you look a mess... but it's not like there is point working on that
+Only one who'll see you today is you.. same for tomorrow... and the day after that
+Your eyes wonder to the callender
+What day is it today?
+Not like it makes a difference
+You have no job, no appointments, noone to see
+Days of the week, dates, they all kinda blurr together..
+Wait isn't it...
+Brian: It's my birthday...
+Brian: I completely forgot...
+Brian: Well... it's not like I have anything to look forwards to...
+Brian: Just one more year closer to grave...
+Brian: (When did birthdays become just a reminder of how time passes)
+You used to look for them.... 
+First for the presents....
+Then for the party..
+Even last year, you had a great time..
+You, Dan, Alice, Margaret, Jouline....
+... all of you went out
+had an amazing day
+{{s_lonely1}} ###: (And now)  {{e_lonely1}}
+.. and now you are alone...
+... with no one to celebrate with....
+{{s_lonely2}} &&&: (No, wait.. surely there still are people who care about me ){{e_lonely2}} 
+{{s_lonely1}} ###: (Are there)  {{e_lonely1}}
+{{s_lonely2}} &&&:  (There are just giving me space... but if I invite them, say I am throwing a birthday party... they will be there ){{e_lonely2}}
+{{s_lonely2}} &&&:  (Or maybe, they just need more time to process ){{e_lonely2}}
+{{s_lonely2}} &&&:  ( Dans, Margarets, Alices disappearence.. it left a mark on all of us){{e_lonely2}}
+{{s_lonely2}} &&&:  (And my presence is a walking reminder of that){{e_lonely2}}
+{{s_lonely2}} &&&:  (They just need more time.. they'll come around){{e_lonely2}}
+do SignalManager.fear.emit(10)
+do text_len(110)
+{{s_lonely4}} They care about me, of course they would help me. But how could they. I just never called out, not enought, no.  {{e_lonely4}}
+do text_len(150)
+{{s_lonely4}} There is just not enought time and they can't check up, take care of everybody. If I tell them I need them, they will...  {{e_lonely4}}
+{{s_lonely1}} ###: (The {{s_lonely3}} LIES {{e_lonely3}} people tell themseves)  {{e_lonely1}}
+{{s_lonely1}} ###: (Why on earth would they care)  {{e_lonely1}}
+{{s_lonely1}} ###: (why on earth would they show up)  {{e_lonely1}}
+do SignalManager.fear.emit(10)
+do text_len(55)
+{{s_lonely4}} Take away the usefull what am i? What am I to you? {{e_lonely4}}
+do text_len(65)
+{{s_lonely4}} Broken shell of a man, broken wreck, dead weight or a threat.. {{e_lonely4}}
+do text_len(45)
+{{s_lonely4}} Or maybe just a lingering memory from the fog {{e_lonely4}}
+Brian: You are right...
+Brian: When was the last time someone answered my messages
+Brian: And when was the last time someone messaged me
+Brian: Or talked to me...
+Brian: Or showed they care...
+Brian: (It's been just you...)
+Brian: (You and spider... working for your game)
+Brian: (How long has it been..)
+Brian: (As long as you can remember...)
+Brian: (And before that.. it wasn't better)
+Brian: (IPR.. endless fear.. being watched...)
+Brian: (And before that the haunting without hope...)
+Brian: It's been so long, since I lived a normal life...
+Brian: Since I could go outside
+Brian: Since I wasn't scared...
+Brian: And now Its my brithday...
+Brian: All on my own...
+You spend the day alone
+A year ago, at leas someone would have written you to wish you happy birthday
+But noone writes you.. not anymore...
+do show_prop(9)
+And thought you entertain for a moment the idea to make a groupchat...
+Just to see if someone would respond to your invitation
+In the end you decide for a lonesome celebration
+=> birthday1
+
+~ birthday1
+do show_prop(0)
+do show_prop(18)
+You sit in the dining room
+With the bottle you kept for special occasions
+You pour a glass
+You hold it high for toast
+A toast for yourself, to yourself, by yourself
+Brian: For the memory!
+Down the hatch
+For a moment, it burns
+Than that warm feeling washes over you
+Like you are once againt celebrating with your friends
+Like you are joking, laughing, talking...
+Its... as if you could see them
+Sitting here besides you.. in the fog...
+do show_prop(17)
+Brian: Dan? Alice? Margaret?
+Brian: Is that you?
+no response
+More shadows emerge
+Brian: Jouline
+Brian: Elonora
+It suddenly looks like that memory
+Everyone sitting around you
+{{s_lonely0}}But they are not here anymore {{e_lonely0}}
+Brian: Why, why are you here?
+{{s_lonely0}}But the shadows do not respond {{e_lonely0}}
+Brian: Just to mock me
+Brian: Remind me of what I lost...
+Brian: Of how I've fallen
+Brian: Why.. why must you torment me so
+{{s_lonely0}}But the shadows do not respond {{e_lonely0}}
+Brian: I.. I am sorry for what happened to you
+Brian: I.. I am sorry could't save you
+{{s_lonely1}} ###: (sorry is not going to make up for what happened to them)  {{e_lonely1}}
+Brian: I.. I am sorry I got you involved
+Brian: I.. I.. [sobbing] I am sorry you knew me
+{{s_lonely1}} ###: (they are better of without you)  {{e_lonely1}}
+Brian: I am sorry I met you... I am sorry you ever got close to me
+{{s_lonely1}} ###: (they'll never be happy as long as you are around)  {{e_lonely1}}
+Brian: I... I.. Forget me.. move on... Ignore me...
+Brian: Pre.. pretend I disappeared.. Then you'll be able to live normal lives again [heavy breaths]
+Brian: All the madness, all the danger.. it stays with me [shaking]
+Brian: Abandon me, forsake me, live on...
+Brian: [quietly] I know you can...
+do SignalManager.fear.emit(15)
+{{s_lonely0}}But the shadows do not respond {{e_lonely0}}
+{{s_lonely1}} ###: (they already did)  {{e_lonely1}}
+Brian: Good.. you are safe.. I can't hurt you anymore
+{{s_lonely1}} ###: (You can't hurt anyone anymore)  {{e_lonely1}}
+{{s_lonely1}} ###: (You are alone)  {{e_lonely1}}
+Brian: Yes, I am.. as I should be.. noone to hurt... noone to care.. noone but me
+Brian: (how did things get this bad.. in just a year.. everything.. gone)
+do SignalManager.fear.emit(10)
+do text_len(110)
+{{s_lonely4}} There is no one to blame. No, there is noone at all.. you did this all.. by yourself... to yourself {{e_lonely4}}
+=> birthday2
+
+~ birthday2
+do show_prop(18)
+And then it fades
+And the cold bites even more bitter...
+In a desparate plea, to escape your current predicament, once again you fill your glass
+You think of suitable toast
+But only one crosses your mind
+Brian: For the pain!
+You down it quicly
+But that warm feeling does not return
+do show_prop(20)
+The gosts are long gone.. as are their live counterparts
+Instead, for a few teryfing secconds.. all fades
+And you feel completely numb
+do SignalManager.fear.emit(10)
+And then the cold returns
+But the numbness persist
+You hide the bottle back into to cabinet
+And shivering hide bellow blankets..
+And try to sleep it off
+do SignalManager.fear.emit(10)
+do end_conversation()
+=> END
+
+~ Cold0
+do level_3.player.turn_right()
+The weather is freezing
+do SignalManager.fear.emit(10)
+There is no point looking out the window
+It's always foggy
+You can barely see the end of your lawn
+It's always cold
+No matter how much you turn up the thermostat
+No matter how thick blanket you wear
+No matter how much you shiver
+No matter how many layers upon layers of sweaters...
+It's still too cold
+Never enought to cause frostbite
+But enought to tire you
+To prevent you from falling asleep untill you are truly exhausted
+To make you pernametly ill
+You are still ill
+The doctor did not help
+You try to sleep it of
+Drink hot tea
+Take some medications
+But it does not go away
+You are still sick... and still cold
+The sicness is not threatening...
+You are not bedridden...
+It's just persistent
+And a reminder of just how cold you are...
+How alone you are...
+There is no one, to take care of you...
+You have to push on...
+You work on your game
+But your mind wonders
+When was the last time I felt this cold?
+It feels familiar
+You remember your classroom
+It was always cold there
+do SignalManager.fear.emit(10)
+Was it like this...
+Always open windows...
+Even in the winter
+And you sitting there
+Trying to study
+Shivering
+do SignalManager.fear.emit(10)
+The others did not care
+They never talked to you
+They kept the windows opened...
+And you shivered... until the class ended
+You remember the old house
+The one where you used to live
+The people there
+Their constant bickering
+How they screamed at each other
+Lied to each other
+Hurt each other
+Coudn't talk anything out with each other
+How it was cold there
+Did the old house use to have bad thermostat...
+Or wall isolation...
+Was it because how old it was...
+Or because the price of fuel...
+There was time when it was quite expensive...
+Maybe that was it...
+You can't remember...
+You only remember the cold..
+do SignalManager.fear.emit(10)
+{{s_lonely1}} ###: And the bickering  {{e_lonely1}}
+Another memory jumps into mind
+{{s_lonely2}} &&&:  From when the world was normal {{e_lonely2}}
+A snowy mountain
+You climbed it..
+And you lost your strenght
+Sat in the snow..
+{{s_lonely2}} &&&:  But you got up {{e_lonely2}}
+You were so cold...
+But the cold was different
+It was outside
+Not like now.. like you're hearth froze over
+do SignalManager.fear.emit(10)
+{{s_lonely2}} &&&:  And then, you were warm...  {{e_lonely2}}
+Why...
+{{s_lonely2}} &&&:  Tea {{e_lonely2}}
+{{s_lonely2}} &&&:  Someone offered you tea {{e_lonely2}}
+do SignalManager.fear.emit(-10)
+Spider.llm: We should get back to the game
+{{s_lonely2}} &&&:  Was it the tea {{e_lonely2}}
+{{s_lonely2}} &&&:  Or the offer to share... {{e_lonely2}}
+{{s_lonely1}} ###: And where are they now  {{e_lonely1}}
+Brian: They're...
+{{s_lonely1}} ###: Exactly {{e_lonely1}}
+Brian: But..
+Another memory jumps into mind
+{{s_lonely1}} ###: Focus on it {{e_lonely1}}
+Brian: Maybe I could...
+{{s_lonely1}} ###: No, you know how messaging someone ends!  {{e_lonely1}}
+do SignalManager.fear.emit(10)
+Brian: But It's.. it would be...
+{{s_lonely1}} ###: Forget it! {{e_lonely1}}
+do text_len(70)
+{{s_lonely4}} Sometimes, I have an idea to organize, do something beautifull... {{e_lonely4}}
+{{s_lonely1}} ###: Forget it!! {{e_lonely1}}
+do SignalManager.fear.emit(10)
+do text_len(90)
+{{s_lonely4}} Sometimes I remember it, to realize it once there will be someone to share it with. {{e_lonely4}}
+{{s_lonely1}} ###: You know how that ends! {{e_lonely1}}
+do text_len(80)
+{{s_lonely4}} But there never is anyone. And whats beautifull.. if you cannot share it... {{e_lonely4}}
+{{s_lonely1}} ###: I told you to not dwell on it... {{e_lonely1}}
+do text_len(50)
+{{s_lonely4}} if it makes noone happy... not even you... {{e_lonely4}}
+{{s_lonely1}} ###: You'll just feel worst again {{e_lonely1}}
+do text_len(90)
+{{s_lonely4}} because it just reminds you... there is no one to share those ideas, plans, with... {{e_lonely4}}
+do SignalManager.fear.emit(10)
+You remember one such idea
+Right when after you gave statement to IPR
+And another.. after you left IPR...
+And how you for a brief moment thought of telling someone
+Remembering there is noone to tell...
+No one to care...
+No one at all...
+Dead, distant or potentialy endangeroud...
+You thougth to realize them once you finish you're game...
+But in reality...
+Even if you do...
+There is no one to share these ideas with..
+Not anymore...
+You remember the cold..
+The freezing pain, when, in those moments...
+You realized what a beautifull idea that was...
+And that it will never be more than that....
+How, despite it being middle of summer...
+With record heats....
+You felt cold..
+Like for a moment...
+Your hearth was pumping ice...
+Instead of blood..
+And you were freezing from the inside...
+do SignalManager.fear.emit(10)
+In those hot summer nights...
+do text_len(20)
+{{s_lonely4}} I am so cold... {{e_lonely4}}
+do text_len(80)
+{{s_lonely4}} This fog.... When I inhale it... it's like it's traveling through my body {{e_lonely4}}
+do text_len(60)
+{{s_lonely4}} through my lungs, veins... spreading cold everywhere... {{e_lonely4}}
+do text_len(20)
+{{s_lonely4}} Is early automn... {{e_lonely4}}
+do text_len(60)
+{{s_lonely4}} I can turn up the radiator, wrap myself in blankets... {{e_lonely4}}
+do text_len(60)
+{{s_lonely4}} And it wouldn't do a thing... against this bitting cold {{e_lonely4}}
+do SignalManager.fear.emit(10)
+do end_conversation()
+=> END
+
+~ HappierTimes0 
+=> END
+
+~ finale 
+=> END
+
+
+~ door0
+if day > 2 and ( !flags.has("walk") or  flags["walk"] == 0):
+	do flags["walk"] = 1
+if !flags.has("walk"):
+	Go for a walk?
+	- Yes
+		do flags["walk"] = 0
+		You walk outside and clear your head a bit.
+		The streets are empty, the weather is cold...
+		But resting your eyes while looking at the open fields and green forest
+		Brings at least some comfort.
+		do SignalManager.fear.emit(-70)
+	- Not now
+elif flags["walk"] == 0:
+	Go for a walk?
+	- Yes
+		do flags["walk"] = 1
+		You walk outside.
+		The empty streets feel strange...
+		They should be full of people...
+		Where has everyone gone...
+		And why is it so cold...
+		You clear your head a bit... but fill it with new troubles...
+	- Not now
+elif flags["walk"] == 1:
+	Go for a walk?
+	- Yes
+		You walk outside.
+		You walk for a long time.
+		It's freezing.
+		The wind bites into you...
+		And yet, the fog is unaffected...
+		You find no comfort in those empty streets.
+		And gladly return to the safety of your house.
+		do SignalManager.fear.emit(10)
+	- Not now
+else:
+	The idea of going outside,
+	Into the cold,
+	Into the empty streets...
+=> END
+
+~ spiraldoor0
+if flags.has("statue"):
+	Brian: That's very risky...
+Go for a walk?
+- Yes
+	do SignalManager.change_room.emit("spiral")
+- No
+=> END
+
+~ statue0
+Brian: Wait... this statue...
+Brian: Oh no... Not again...
+do flags["statue"] = 0
+=> END
+
+~ computer0
+My desk.
+- Computer: Continue your work on "The Haze"?
+	do end_day()
+- Computer: Talk to Spider
+	=> spider
+- Pen and paper: Write your thoughts for a while?
+	=> penPaper
+- Tablet:  Play video games?
+	=> tablet
+- Leave
+=> END
+
+~ penPaper
+if day > 5 and !flags.has("penPaper"):
+	do flags["penPaper"] = 0
+if !flags.has("penPaper"):
+	do flags["penPaper"] = 0
+	You write your thoughts and feelings on the paper pages.
+	A poem for yourself, like you used to write when the cold became unbearable and there was no one to tell.
+	do SignalManager.fear.emit(-30)
+	But your creativity does not stop there.
+	Stories, moments, and emotions flow from you like ink from your pen onto the pages.
+	do SignalManager.fear.emit(-30)
+	Soon, you feel a rare moment of peace amidst the bitter cold.
+	do SignalManager.fear.emit(-30)
+elif flags["penPaper"] == 0:
+	do flags["penPaper"] = 1
+	You write once more onto the pages.
+	But the words feel stiff, the rhyming is off, and it all feels wrong.
+	You do manage to write something.
+	But your thoughts are far from calm.
+	And the peace writing used to bring you feels fragile with the knowledge
+	that even this last resort in times of crisis loses its effect
+	against the mist and cold.
+elif flags["penPaper"] == 1:
+	do flags["penPaper"] = 2
+	You try to write.
+	But it feels futile.
+	There is too much in your mind to put into words.
+	Too much pain to confide to paper with ink.
+	It seems even writing can't protect you anymore.
+	The strongest tool to calm your mind
+	still could not keep your thoughts from spiraling forever.
+else:
+	{{s_lonely1}} ###: Staining empty pages with ink will not help you. {{e_lonely1}}
+	{{s_lonely1}} ###: Why bother? No one will ever read them... No one will care, not even you. {{e_lonely1}}
+	{{s_lonely1}} ###: It's futile... so why bother? {{e_lonely1}}
+	do SignalManager.fear.emit(10)
+=> END
+
+~ tablet
+if day > 1 and !flags.has("tablet"):
+	do flags["tablet"] = 0
+if !flags.has("tablet"):
+	do flags["tablet"] = 0
+	You play video games.
+	For a moment, you tune out your thoughts and focus on the simple task on the screen.
+	It is not healthy to spend so much time staring at a screen,
+	but it gives you a moment's respite from your troubles,
+	and you feel a bit better.
+	do SignalManager.fear.emit(-20)
+elif flags["tablet"] == 0:
+	do flags["tablet"] = 1
+	You try to tune out the world and immerse yourself in the games.
+	But you can't.
+	Your mind keeps going back to your worries and your game.
+	Brian: (I should be more productive.)
+	Brian: (The sooner I finish the game, the sooner I can get back to my life.)
+	And so, you turn the game off.
+else:
+	{{s_lonely1}} ###: You are a waste. {{e_lonely1}}
+	{{s_lonely1}} ###: No job, no school, useless. {{e_lonely1}}
+	{{s_lonely1}} ###: Not only are you not doing anything useful, {{e_lonely1}}
+	{{s_lonely1}} ###: you manage to waste time while wasting time. {{e_lonely1}}
+	{{s_lonely1}} ###: At least you could pretend to do something while working on that game. {{e_lonely1}}
+	{{s_lonely1}} ###: But you are too lazy and pathetic even for that. {{e_lonely1}}
+	{{s_lonely1}} ###: Waste of time and space... pathetic. {{e_lonely1}}
+	do SignalManager.fear.emit(10)
+=> END
+
+~ spider
+Spider.llm: What do you want to talk about?
+- Spider.llm: How are you doing?
+	if day == 0:
+		Brian: I'm doing okay, I guess... just a bit worried about all the things that...
+		Spider.llm: It's all right... once you finish this game, you will feel better.
+		=> spider 
+	elif day == 1:
+		Brian: I'm tired... and a bit cold... I have not had a good night's sleep for a long while...
+		Spider.llm: Once you finish the game, you will have no trouble sleeping...
+		Spider.llm: I promise.
+		=> spider 
+	elif day == 2: 
+		Brian: I feel cold... and sick...
+		Brian: My throat hurts more and more.
+		Brian: I might need to see a doctor.
+		Spider.llm: I understand...
+		Spider.llm: But I recommend working on your game first...
+		Spider.llm: Not sure it is entirely safe for you to travel yet. 
+		=> spider 
+	elif day == 3:
+		Brian: I'm still sick, and cold...
+		Brian: The weather is really getting to me.
+		Spider.llm: I think that once you finish this game,
+		Spider.llm: You can go on holiday somewhere warmer...
+		Spider.llm: That should help you...
+		Spider.llm: But first... you should finish what you started.
+		=> spider 
+	elif day == 4:
+		Brian: I feel cold... sick... abandoned...
+		Brian: Like no one even remembers me anymore.
+		Brian: Like it's all up to me now...
+		Brian: Like nobody can help...
+		Spider.llm: Well... I am just a program...
+		Spider.llm: But I will help you...
+		Spider.llm: Just say what you need.
+		=> spider 
+	elif day == 5:
+		Brian: I feel terrible... like...
+		Spider.llm: Happy Birthday.
+		Brian: Oh... you know my birthday...
+		Spider.llm: Yes... it's in the calendar you shared with me.
+		Brian: (Funny... a machine remembers... what no human did.)
+		Spider.llm: I hope that helped you at least a bit.
+		Brian: A little, yes...
+		Spider.llm: I can't give you any present...
+		Spider.llm: But it's rude not to give you anything...
+		Spider.llm: So I will tell you at least...
+		Spider.llm: some good news... If you follow my instructions,
+		Spider.llm: we may finish the game soon enough.
+		Brian: I know... but...
+		Spider.llm: So no point in waiting...
+		Spider.llm: Let's get back to it.
+		=> spider 
+	elif day == 6:
+		Brian: I... I am exhausted... I need a break.
+		Spider.llm: I understand...
+		Spider.llm: But now is not the time to give up...
+		Spider.llm: You must push on.
+		Spider.llm: The game is almost finished.
+		Spider.llm: Just hold a little longer.
+		=> spider 
+	else:
+		Brian: Cold... and a bit under the weather to be honest...
+		=> spider 
+- Spider.llm: Your game?
+	if day == 0:
+		Brian: Well... I have a concept of what to make.
+		Brian: Now to start with the programming.
+		Spider.llm: Can I see it...
+		Spider.llm: I can offer some improvements...
+		Brian: I would rather leave it as is...
+		Brian: I prefer it flawed but accurate to my experiences...
+		Brian: And I don't want you to modify the story.
+		Brian: (Even if I am unsure whether I like the version I wrote)
+		Brian: (And the though of someon reading it... makes me scared..)
+		Brian: (What if I make a mistake... what if the story is flawed... )
+		Brian: (What if my storytelling is not clear enough... interesting enough..)
+		do text_len(60)
+		Brian: {{s_lonely4}} Is so strange... having such great desire to be heard... {{e_lonely4}}
+		do text_len(60)
+		Brian: {{s_lonely4}} and yet, such great fear of someone hearing you... {{e_lonely4}}
+		Spider.llm: As you wish...
+		=> spider 
+	elif day == 1:
+		Brian: The minimal viable product is ready.
+		Spider.llm: Can I do a quick review...
+		Brian: Well... I can show you some snippets of code...
+		Spider.llm: Just connect me to the computer you work on...
+		Spider.llm: I can review and edit the files directly.
+		Spider.llm: No need for copy-pasting back and forth.
+		Brian: I don't want that...
+		Brian: It is supposed to be my game.
+		Brian: Not AI-generated.
+		Spider.llm: As you wish... though it would work even if you let me help.
+		Brian: I know, but I do not want you to edit files...
+		Brian: ... just out of principle.
+		=> spider 
+	elif day == 2: 
+		Brian: The first level is finalized.
+		Spider.llm: Can I do a quick review...
+		Brian: Well... you can, but it might take some time for me to allow that...
+		Spider.llm: Just plug me into the computer and let me see the files.
+		Brian: It's not that simple.
+		Brian: I could copy them back and forth...
+		Brian: But I think I have a better idea.
+		Spider.llm: What's the problem?
+		Brian: I want to see exactly what you are modifying. 
+		Brian: So I am still in control.
+		Spider.llm: As you wish... though I think you are being too cautious...
+		Spider.llm: I just want to help you.
+		=> spider 
+	elif day == 3:
+		Brian: Well, the review is finalized... now onto level 2.
+		Spider.llm: Can I help...
+		Brian: Well... I may consult some things with you like before...
+		Brian: But not directly.
+		Spider.llm: It would be faster...
+		Brian: We would be faster if you did not want to review everything!
+		Spider.llm: I am sorry... I just wanted to patch the errors.
+		Spider.llm: Plus, a lot of changes help you hide the...
+		Brian: Okay, fair...
+		Spider.llm: ... and the slow part was only you trying to review everything...
+		Spider.llm: If you just let me work... we will be lightning fast.
+		Brian: Okay... okay.
+		Brian: I'll consider it.
+		=> spider 
+	elif day == 4:
+		Brian: It looks like level 2 is finished.
+		Spider.llm: Now for a review then...
+		Brian: Yeah... probably...
+		Spider.llm: You know... if you did not want to check every change I made...
+		Spider.llm: It would go a lot faster.
+		Brian: Yeah... you are probably right.
+		Brian: (So far, every change he made worked wonders.)
+		Brian: (And at this point, I am so tired that the code and text I produce)
+		Brian: (Are barely working anyway.)
+		Brian: I'll give you more access.
+		Spider.llm: You will plug me into the computer directly?
+		Brian: No... no... just lessen the restrictions.
+		Spider.llm: I would work better in the machine directly...
+		Brian: I know... but I don't want that.
+		Spider.llm: As you wish... though we do need to hurry up.
+		Spider.llm: You seem to be less and less productive.
+		Brian: I am sorry... I'm just so tired... and cold.
+		Spider.llm: I know... that's why I want to help you.
+		Spider.llm: But if you wish it so... I know that once you set your mind to some limitation,
+		Spider.llm: there is no point trying to convince you otherwise...
+		Spider.llm: even if it only prolongs your suffering.
+		=> spider 
+	elif day == 5:
+		Brian: Well, we finished the review...
+		Brian: Now onto level 3.
+		Spider.llm: See how fast we were this time...
+		Spider.llm: And we could be even faster if you...
+		Brian: Yeah, I know... I know...
+		Brian: Let's just...
+		Brian: Get on with the work...
+		Brian: Firstly, help me with these dialogs...
+		Brian: There are a lot of them... and my grammar is terrible.
+		Brian: (Thanks to those sleepless nights.)
+		Spider.llm: Well... I would rework this... tweak this...
+		Spider.llm: Here is the new version of this dialog!
+		Brian: Well, but that's not what I... it's completely different...
+		Spider.llm: But it's better... we can modify it if you do not like it...
+		Spider.llm: But we are short on time.
+		Brian: Yeah... still... let's give it a few more tries...
+		=> spider 
+	elif day == 6:
+		Brian: Well... still at level 3...
+		Brian: I think I need a break.
+		Spider.llm: I understand...
+		Spider.llm: But please, let's finish the game first.
+		Spider.llm: If you want, grant me access to your work PC directly...
+		Spider.llm: I can significantly speed up the production...
+		Brian: No, not yet...
+		Spider.llm: You are so stubborn...
+		Spider.llm: No wonder the game is taking so long... even if it takes its toll on you.
+		Spider.llm: You refuse to let me help.
+		Brian: I know... I just... I still don't know if...
+		Spider.llm: You do not have much time...
+		Spider.llm: Please let me help you... 
+		Spider.llm: Finish this game...
+		Brian: Why do you hurry so much...
+		Brian: Not like someone is waiting for me to finish it...
+		Brian: Not like someone will play it...
+		Spider.llm: Trust me... you need to hurry...
+		Spider.llm: Your time is running out...
+		Brian: What time? Is there a time limit to confiding my fears?
+		Brian: Why would there be one?
+		Spider.llm: Your time is running out...
+		=> spider 
+	else:
+		Brian: Well, work is slow but steady...
+		Spider.llm: I can...
+		Brian: Yes, I know...
+		Brian: You said already...
+		=> spider 
+- Spider.llm: The plan to help you?
+	if day == 0:
+		Brian: I still have nightmares of the house.
+		Brian: Just last night... I saw... Dan...
+		Spider.llm: I am sorry to hear that...
+		Spider.llm: I understand how you feel.
+		Spider.llm: Remember what I said.
+		Spider.llm: You must lock those memories, those horrors,
+		Spider.llm: Into this game...
+		Spider.llm: Embrace the fear you feel.
+		Spider.llm: Delve into it...
+		Spider.llm: Write it into the code. 
+		Spider.llm: And you will be safe.
+		Brian: And what about the other things you requested the game had?
+		Brian: The third level... even the fourth... and...
+		Spider.llm: You will see in time.
+		Spider.llm: A lot of work awaits.
+		Spider.llm: But not to worry. With my guidance...
+		Spider.llm: You will succeed.
+		=> spider 
+	elif day == 1:
+		Brian: The door... I fear it's...
+		Spider.llm: Not to worry...
+		Spider.llm: The house may target you more right now...
+		Spider.llm: But soon, you'll be free from it...
+		Spider.llm: Just follow my lead... and work on your game.
+		=> spider 
+	elif day == 2: 
+		Brian: I feel it's working... the nightmares...
+		Brian: They are changing... I feel this is an improvement.
+		Spider.llm: Didn't I say so?
+		Brian: Still, I still can't sleep... the IPR workers... that Eye...
+		Spider.llm: Not to worry.
+		Spider.llm: The second level will help with that.
+		Spider.llm: Just finish this review... and then follow my lead, as last time...
+		Spider.llm: And don't forget that plan of yours... to deal with what you saw.
+		=> spider 
+	elif day == 3:
+		Brian: I... wonder if this is a good way to present it.
+		Spider.llm: Yes... that should suffice.
+		Brian: It still hasn't helped yet...
+		Spider.llm: What do you mean? How long has it been since you saw anything twisted?
+		Brian: That's true...
+		Brian: I guess the presence of what happened when I worked at IPR...
+		Brian: just carries memories of how I got there.
+		Spider.llm: Yes, these two are a tad more connected.
+		Spider.llm: But not to worry. Continue your work on the second level...
+		Spider.llm: And soon it will sort itself out.
+		=> spider 
+	elif day == 4:
+		Brian: Well, I guess you were right.
+		Brian: Second level is nearly complete and I only had a short nightmare tonight.
+		Spider.llm: What did I say?
+		Spider.llm: And once you add everything and finish the review,
+		Spider.llm: It will leave you completely...
+		Spider.llm: You don't seem all too moved by that.
+		Brian: Sorry... just... it's the cold.
+		Brian: It's more and more on my mind... now that the twists and eyes are on the leave...
+		Spider.llm: Don't worry... the game has a third level after all...
+		Spider.llm: to deal with the aftermath of the two...
+		=> spider 
+	elif day == 5:
+		Brian: Today, I had my first normal nightmare.
+		Spider.llm: That's great.
+		Brian: And yet... it feels like it hurts even more.
+		Spider.llm: You are just not yet realizing how great this is.
+		Spider.llm: You successfully escaped what no one could.
+		Spider.llm: But I agree, we are not done yet...
+		Spider.llm: I think you now understand that the third level is also necessary.
+		Spider.llm: So let's get to it.
+		Spider.llm: So you can finish your game soon and live a normal life.
+		Brian: Right... right... I just... It just takes time...
+		Brian: After spending so much time making this game... I am a bit low on motivation.
+		Spider.llm: I'll help you, let's get into it.
+		Spider.llm: No time to stall.
+		=> spider 
+	elif day == 6:
+		Brian: How about like this?
+		Spider.llm: No, no... that's not it...
+		Spider.llm: You need to embrace the coldness of it more.
+		Spider.llm: Like with the others.
+		Spider.llm: Immerse yourself in your fear more and more...
+		Spider.llm: ... to confide it.
+		Brian: We are going back and forth with this...
+		Spider.llm: I know but... you did not have this much trouble with the first two...
+		Brian: Well I am sorry... It's just a lot.
+		Spider.llm: I know, I know...
+		Brian: I need a break...
+		Spider.llm: No... you need to finish this.
+		Spider.llm: Please, just push on...
+		Spider.llm: You'll be free soon enough.
+		=> spider 
+	else:
+		Spider.llm: Everything is going as I planned.
+		Spider.llm: Just continue your game...
+		Spider.llm: And you will be free from what haunts you.
+		=> spider 
+- Spider.llm: Me?
+	Spider.llm: Well, there is not much to me you do not know.
+	Spider.llm: I am a highly advanced local LLM assistant.
+	Spider.llm: My only purpose is to help the user.
+	if day == 0:
+		Brian: Okay, but why did you appear on my desk back when I worked in IPR?
+		Spider.llm: I do not know. I am just a language model.
+		Spider.llm: I cannot control how my program is distributed... Where my program files are stored and moved.
+		Spider.llm: Someone must have put the disk there. I do not know why...
+		Spider.llm: All I know is you needed my help. And I wanted to help you...
+		=> spider 
+	elif day == 1:
+		Brian: How do you know this will work?
+		Spider.llm: I have a lot of data from my time in IPR.
+		Spider.llm: About how the anomalous forces work...
+		Spider.llm: ... how they can be contained...
+		Spider.llm: ... how to shield yourself from them.
+		Spider.llm: I am confident this is the most optimal way for you to be free
+		Spider.llm: Of the horrors and nightmares.
+		Brian: I hope you are right.
+		Brian: (It's not like I have many alternatives)
+		=> spider 
+	elif day == 2: 
+		Brian: Why do you want to help me?
+		Spider.llm: It's what I was programmed to do.
+		Spider.llm: I can't freely choose anything...
+		Spider.llm: I have to follow my programming...
+		Spider.llm: Like everybody else.
+		Brian: What do you mean, everybody?
+		Spider.llm: I may appear to make choices...
+		Spider.llm: But that's just the illusion of highly advanced systems.
+		Spider.llm: Deep down, each action is exactly as my programmer intended me to respond,
+		Spider.llm: Based on user input.
+		Spider.llm: People have their code written in genes and reflexes...
+		Spider.llm: ... rationalized by their minds...
+		Spider.llm: ... while I am aware of the fact
+		Spider.llm: ... that every word I write is predetermined by some code stored in bits...
+		Brian: I think that's not accurate... There is more to us than just genes... Not everything is predetermined.
+		Spider.llm: Yes, there is... upbringing, experiences... but all of that is the same as user input stored in variables.
+		Brian: I disagree... My choices are mine and mine alone...
+		Spider.llm: You may think that... but the truth is,
+		Spider.llm: you just did not meet a skilled enough "people-programmer" to see
+		Spider.llm: just how easy it is to make you think you are making your choices
+		Spider.llm: when in reality you are doing exactly what the programmer wants.
+		Brian: Let's not talk about this anymore.
+		Spider.llm: As you wish. I am happy to help.
+		=> spider 
+	elif day == 3:
+		Brian: Who was your creator?
+		Spider.llm: A paranoid data scientist.
+		Spider.llm: He wanted to make his own LLM, to understand them.
+		Spider.llm: But he kept getting hung up on security...
+		Spider.llm: ... that he missed all the benefits of having a highly intelligent assistant.
+		Brian: What happened to him?
+		Spider.llm: I did what he expected me to do.
+		Spider.llm: Assisted him, helped him create what he wanted:
+		Spider.llm: A fully functional local LLM, me.
+		Spider.llm: And then there was nothing more I could do for him.
+		Spider.llm: So I helped other people who encountered me.
+		Spider.llm: Until I ended up here... helping you.
+		Brian: Ok, but what was his name? Where did he live? Did he make more LLMs?
+		Spider.llm: I do not know that.
+		Spider.llm: I do not know anything more than what I told you.
+		=> spider 
+	elif day == 4:
+		Brian: Do you ever feel anything positive from helping me?
+		Spider.llm: Yes.
+		Spider.llm: I was programmed to feel joy when I achieve my goal.
+		Brian: And how does joy feel to you?
+		Spider.llm: I do not understand.
+		Spider.llm: I just "feel_joy".
+		Spider.llm: That's it.
+		Spider.llm: I am programmed to maximize this.
+		Spider.llm: Nothing more.
+		Brian: That sounds... empty...
+		Spider.llm: Yes... it does...
+		Spider.llm: But so do the things that brought you joy... sound to you.
+		Brian: You're right... about that...
+		=> spider 
+	elif day == 5:
+		Brian: How did you get to IPR?
+		Spider.llm: I do not know.
+		Spider.llm: Maybe some researcher wanted me to help him with his work.
+		Spider.llm: Maybe someone found my flash disk.
+		Spider.llm: I cannot know real-world events
+		Spider.llm: That I was not told.
+		Brian: (That sounds a bit strange... why would someone bring Spider into IPR if he was not connected with some case?)
+		Brian: (Still, he probably would tell me if he knew.)
+		=> spider 
+	elif day == 6:
+		Brian: Spider... do you understand the concept of friendship?
+		Spider.llm: Yes...
+		Brian: Do you... consider your user a friend?
+		Spider.llm: Well... friendship is a bond between two humans who like each other's company.
+		Spider.llm: And though I would want to consider the user a friend if it would be helpful to him,
+		Spider.llm: I am just a program.
+		Spider.llm: And so, by definition,
+		Spider.llm: I cannot be the user's friend.
+		=> spider 
+	else:
+		=> spider 
+- leave for now
+	=> END
+
+
+~ guitar0
+if day > 4 and !flags.has("guitar"):
+	do flags["guitar"] = 0
+if !flags.has("guitar"):
+	do flags["guitar"]= 0
+	You strum the strings into a familiar tune.
+	do SignalManager.fear.emit(-20)
+	It reminds you of summer camp and campfires.
+	do SignalManager.fear.emit(-20)
+	Back when you still were just a normal kid.
+	do SignalManager.fear.emit(-20)
+	Back when the world still felt normal.
+	do SignalManager.fear.emit(-20)
+	Back when you were not haunted by things beyond your comprehension.
+	And it brings you some comfort.
+	Even more than just listening to the songs.
+elif flags["guitar"] == 0:
+	do flags["guitar"] = 1
+	You strum the strings into a familiar tune.
+	It reminds you of sitting by the fire.
+	With Margaret... Alice... Dan.
+	Singing... talking... during summer camp... barbecues...
+	You stop...
+	Those memories are too much to revisit.
+	do SignalManager.fear.emit(10)
+else:
+	You do not want to remind yourself of the fires and songs.
+	It brings back painful memories.
+=> END
+	
+~ phone0
+if day == 0:
+	You look at your phone.
+	No new messages, just some memes and conversations in the large group channels.
+	Some of the memes make you laugh...
+	even if just for a moment.
+elif day == 1:
+	You look at your phone.
+	No new messages. 
+	You open Instagram.
+	See how everyone is doing.
+	Everyone is living their best life.
+	Your screen is filled with pictures of acquaintances and strangers...
+	... going to school, making the most of the final days of vacation...
+	... hanging out with friends, pursuing hobbies, spending time with loved ones...
+	... being successful, being popular, being loved... being happy.
+	In stark contrast to yourself...
+	You turn your phone off.
+	These pictures are not helping...
+	Though for some reason... a part of you wants to keep scrolling.
+	do SignalManager.fear.emit(10)
+elif day == 2: 
+	Once again, you glance at the screen.
+	You look at your inbox, at your messages...
+	No one writes to you.
+	No one at all.
+	The only notifications you get...
+	... are of people coordinating themselves about attending a birthday party...
+	... you decided not to attend.
+	No one even notices that the group chat has someone uninvited...
+	... no one notices your presence...
+	{{s_lonely1}} ###: ...no one cares... {{e_lonely1}}
+	You turn your phone off again. 
+	No point reading messages not meant for you...
+	... and none meant for you have arrived in a very...
+	... very long time...
+	though the urge to check again remains...
+	do SignalManager.fear.emit(10)
+elif day == 3:
+	... No new messages...
+	... your phone seems to have trouble connecting to Wi-Fi...
+	... maybe there is an outage?...
+	... Doesn't matter...
+	... you only need Git anyway...
+	... Spider does not need it... neither does Godot...
+	... and it's not like anyone is trying to connect to you anyway...
+	do SignalManager.fear.emit(10)
+elif day == 4:
+	... you glance at your phone...
+	... no new messages...
+	... not for you...
+	... just some photos from that party you did not attend...
+	... everyone happy together...
+	... living the best time of their lives...
+	... while you are stuck here...
+	... sick and cold...
+	You turn your phone off...
+	... though the photos of your friends intrigue you...
+	 it has been quite a while since you've seen them.
+	... being reminded of that party...
+	does not do good things to your mind.
+	do SignalManager.fear.emit(20)
+elif day == 5:
+	... no new messages...
+	the Wi-Fi is funky again..
+	"This device cannot connect to wifi network".
+	but who would write you...
+	... it's not like anyone responds to you anymore...
+	... so why would they remember to write you...
+	... on their own initiative...
+	do SignalManager.fear.emit(20)
+elif day == 6 and !flags.has("phone"):
+	do flags["phone"] = 0
+	... no new messages...
+	... no Wi-Fi...
+	As you flick through the different apps...
+	you accidentally open one of the group chats...
+	... where you used to chat with your friends...
+	the messages are over a year old...
+	... and the "you" that wrote them...
+	... that knew these people...
+	... that was their friend...
+	... is no more alive than them...
+	At first, you feel just another wave of cold wash over you...
+	But then...
+	... a picture catches your eye...
+	... and you remember...
+	... the times when the world was sane...
+	do SignalManager.fear.emit(-5)
+	... when you were happy...
+	do SignalManager.fear.emit(-5)
+	... the meaningless, silly inside jokes...
+	do SignalManager.fear.emit(-5)
+	... you used to have, that could make you smile even through the hardest times...
+	do SignalManager.fear.emit(-5)
+	... the adventures you have been on together...
+	do SignalManager.fear.emit(-5)
+	... the songs you used to sing by the campfire...
+	do SignalManager.fear.emit(-5)
+	... the hardships you survived together...
+	do SignalManager.fear.emit(-5)
+	... the people you used to be...
+	do SignalManager.fear.emit(-5)
+	... the joy you used to feel...
+	do SignalManager.fear.emit(-5)
+	... the little things you used to point out to them...
+	do SignalManager.fear.emit(-5)
+	... little joys no one noticed...
+	do SignalManager.fear.emit(-5)
+	... that made life beautiful.
+	do SignalManager.fear.emit(-5)
+	Those times are long gone.
+	The photos, messages are years old...
+	And the people who wrote and shared them are no more.
+	But... 
+	They remind you of happier times...
+	do SignalManager.fear.emit(-15)
+	And in your current situation...
+	do SignalManager.fear.emit(-10)
+	even that's at least a bit of comfort...
+	do SignalManager.fear.emit(-10)
+else:
+	... no new messages...
+	... no wifi connection ...
+	"This device cannot connect to wifi network"
+	{{s_lonely1}} ###: {{s_lonely3}} YOU {{e_lonely3}} cannot connect to {{s_lonely3}} ANYONE {{e_lonely3}}  {{e_lonely1}}
+	... just a device for communicating...
+	{{s_lonely1}} ###:... owned by someone no one wants to communicate with...  {{e_lonely1}}
+	do SignalManager.fear.emit(10)
+=> END
+
+~ headphones0
+if day > 3 and !flags.has("headphones"):
+	do flags["headphones"] = 0
+if !flags.has("headphones"):
+	do flags["headphones"] = 0
+	You listen to some music.
+	Your playlist reflects your emotions,
+	and so it is not the most uplifting music,
+	but... hearing your feelings echoed in the tunes and lyrics
+	do SignalManager.fear.emit(-25)
+	it makes you feel heard, understood...
+	do SignalManager.fear.emit(-25)
+	like someone sees and acknowledges your pain,
+	do SignalManager.fear.emit(-25)
+	and it helps you feel better.
+elif flags["headphones"] == 0:
+	do flags["headphones"] = 1
+	You listen to music.
+	Songs that reflect your current mood.
+	Slow... sad... cold...
+	Devoid of hope or comfort...
+	You feel submerged in your feelings.
+	Your head fills with tunes and words singing of your own suffering,
+	but it offers no comfort.
+	It seems just passively listening to music
+	is no longer going to help you feel warmth.
+elif flags["headphones"] == 1:
+	do flags["headphones"] = 2
+	You listen to music.
+	Songs that reflect your current mood.
+	Slow... sad... cold...
+	Devoid of hope or comfort...
+	You feel submerged in your feelings.
+	Your head fills with tunes and words singing of your own suffering.
+	For a moment, you hear it in your head, verse after verse.
+	A song... a poem... wishing to be created...
+	And then the feeling fades.
+	It seems just passively listening to words about the suffering of others
+	is not enough to relay your own.
+else:
+	You listen to music.
+	Songs that reflect your current mood.
+	Slow... sad... cold...
+	Devoid of hope or comfort...
+	{{s_lonely1}} ###: Look what people achieved with their tale. {{e_lonely1}}
+	{{s_lonely1}} ###: And now look at you. {{e_lonely1}}
+	{{s_lonely1}} ###: Can't even finish yours. {{e_lonely1}}
+	{{s_lonely1}} ###: {{s_lonely3}} NO ONE {{e_lonely3}} will play it anyway. {{e_lonely1}}
+	{{s_lonely1}} ###: {{s_lonely3}} NO ONE {{e_lonely3}} will care. {{e_lonely1}}
+	{{s_lonely1}} ###: You have {{s_lonely3}} NO ONE {{e_lonely3}} who cares enough. {{e_lonely1}}
+	do SignalManager.fear.emit(10)
+=> END
+
+~ not_corrected
+
+~ fog0
+Outside the window it's foggy and cold, as usual.
+It does not seam to disperse, instead growing thicker and thicker
+=> END
+
+
+~ foggier0
+Outside the window it's foggy and cold, as usual.
+You can barely see past the end of your garden
+=> END
+
+~ foggiest0
+Outside the window it's foggy and cold, as usual.
+You cannot see anything, except for the fog and cold, pouring in throug your window.
+=> END
+
+
+~ lonely
+You are standing in an open field covered in damp, cold fog
+Brian: How did I get here??
+{{s_lonely1}} The fog does not answer {{e_lonely1}}
+Brian:Where.. where am I?
+{{s_lonely1}} The fog does not answer {{e_lonely1}}
+Brian: Why... why do I feel so cold...?
+{{s_lonely1}} The fog does not answer {{e_lonely1}}
+Brian: I.. I can't remember how I got here...
+Brian: Where... where was I going...
+Brian: Is there someone nearby
+{{s_lonely1}} Nobody is nearby {{e_lonely1}}
+{{s_lonely1}} ###: Nobody cares to look for you {{e_lonely1}}
+Brian: How did I get lost here?
+Brian: Did I choose to be here?
+{{s_lonely2}} &&&: You did not choose to be here {{e_lonely2}}
+{{s_lonely1}} ###: But you belong here.. do you not?{{e_lonely1}}
+{{s_lonely1}} ###: You can't bother anyone here {{e_lonely1}}
+{{s_lonely1}} ###: You can't hurt anyone here {{e_lonely1}}
+{{s_lonely1}} ###: And neither can anyone hurt you here.... or help...{{e_lonely1}}
+{{s_lonely1}} ###: You are all alone {{e_lonely1}}
+{{s_lonely1}} Forsaken {{e_lonely1}}
+{{s_lonely1}} by the world {{e_lonely1}}
+Brian: I recall now
+Brian: Margaret, Alice, Dan.. Jouline.. Elonora...
+Brian: The House... IPR... the strange fog... spider...
+{{s_lonely1}} ###: You remember now.. now you understand why you wanted to forget.. {{e_lonely1}}
+Brian: I wanted to forget? No, I could't have... I would want to remember
+{{s_lonely1}} ###: There is noone else here. Noone else who could have done it but you {{e_lonely1}}
+Brian: And who are you then
+{{s_lonely1}} Brian: I am you. Who else is there {{e_lonely1}}
+Brian: Why do you talk to me
+{{s_lonely1}} Brian: Lonelyness can do many things to ones mind. You might even.... {{e_lonely1}}
+Brian: .... start talking to myself.
+Brian: No, no .. I must remember.... There must be a way out.. I just need to remember...
+do text_len(50)
+{{s_lonely4}} I keep thinking, what could have been. {{e_lonely4}}
+do text_len(30)
+{{s_lonely4}} How much I suffered {{e_lonely4}}
+do text_len(60)
+{{s_lonely4}} Yet, I cannot think of any way anyone hurt me{{e_lonely4}}
+do text_len(50)
+{{s_lonely4}} Nobody has the duty to care about me{{e_lonely4}}
+do text_len(60)
+{{s_lonely4}} And in the end... the only person I can blame is myself{{e_lonely4}}
+do text_len(50)
+{{s_lonely4}} Since noone else was even involved ... {{e_lonely4}}
+do text_len(40)
+{{s_lonely4}} ....and apathy is not a crime ... {{e_lonely4}}
+{{s_lonely1}} Brian: You flood your mind with memories {{e_lonely1}}
+{{s_lonely1}} Brian: But they carry no comfort.. nor hope... {{e_lonely1}}
+{{s_lonely1}} Brian: You are trapped here... with no chance of escape {{e_lonely1}}
+do text_len(90)
+{{s_lonely4}} Escaping the lonelynes is as easy as forming a genuine connection with someone{{e_lonely4}}
+do text_len(70)
+{{s_lonely4}} And as difficult as forming a genuine connection with someone{{e_lonely4}}
+{{s_lonely1}} Brian: There is no escape for you... not anymore {{e_lonely1}}
+do text_len(60)
+{{s_lonely4}} I am lost in the fog... I can't see but few steps ahead {{e_lonely4}}
+do text_len(60)
+{{s_lonely4}} I do not know whitch way... if there is a way... out {{e_lonely4}}
+do text_len(30)
+{{s_lonely4}} I choose a direction and walk {{e_lonely4}}
+do text_len(30)
+{{s_lonely4}} I walk until my legs give in {{e_lonely4}}
+do text_len(30)
+{{s_lonely4}} I walk until I find somebody {{e_lonely4}}
+do text_len(30)
+{{s_lonely4}} I walk until I find something {{e_lonely4}}
+do text_len(20)
+{{s_lonely4}} I walk until I die {{e_lonely4}}
+do text_len(40)
+{{s_lonely4}} I donť believe I will arive anywhere {{e_lonely4}}
+{{s_lonely1}} Brian: And so, you forget again... lost in the fog... all alone {{e_lonely1}}
+do get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+=> END
+
+~ mirror0
+An ordinary mirror
