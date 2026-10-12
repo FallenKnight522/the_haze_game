@@ -215,7 +215,7 @@ theme_override_font_sizes/font_size = 36
 text = "    Press right arrow or D to go right
     Press left arrow or A to go left
     Press Space, upwards arrow or W
-    Press left mouse button, down arrow or S to interract
+    Press left down arrow or S to interract
     Press Esc or Q to end interraction
 "
 

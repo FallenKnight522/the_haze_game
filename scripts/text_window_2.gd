@@ -42,7 +42,7 @@ func _process(_delta: float) -> void:
 			if(!text_queue.is_empty()):
 				SignalManager.text_showing = true
 				handle_text()
-			else:
+			elif textbox_container.visible:
 				SignalManager.text_showing = false
 				hide_textbox()
 		state.READING:

@@ -22,7 +22,6 @@ func _ready() -> void:
 	colors(80)
 	text_window.force_enabled = true
 	starting_dialog()
-	label.hide()
 					
 	
 func _process(_delta: float) -> void:
@@ -41,11 +40,14 @@ func stay():
 	
 func starting_dialog():
 	await get_tree().create_timer(5).timeout
-	label.show()
+	label.blick = true;
 	if dialog != null:
 		SignalManager.show_dialog.emit(dialog,"finale", self)
 	else:
 			push_error("Dialog not loaded")
+	await get_tree().create_timer(20).timeout
+	label.message = true
+	SignalManager.text_full_on[2] = true
 	await get_tree().create_timer(150).timeout
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 

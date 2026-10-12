@@ -350,6 +350,7 @@ shader_parameter/fog_speed = 0.2
 shader_parameter/edge_creep = 0.5
 
 [node name="Lonely" type="Node2D" unique_id=39712664]
+scale = Vector2(0.9981894, 0.9922448)
 script = ExtResource("1_uupi3")
 DialogName = "level3.dialogue"
 
@@ -459,15 +460,15 @@ texture = SubResource("AtlasTexture_3e6vm")
 
 [node name="Sprite2D4" type="Sprite2D" parent="fog_cloud" unique_id=1881139208]
 z_index = 1
-position = Vector2(-87, 19)
-scale = Vector2(4.2799997, 4)
+position = Vector2(19.976425, 56.87452)
+scale = Vector2(6.1233397, 4)
 texture = SubResource("AtlasTexture_dyat2")
 
 [node name="Sprite2D3" type="Sprite2D" parent="fog_cloud" unique_id=254535299]
 z_index = 1
-position = Vector2(-90, -340)
+position = Vector2(24.985493, -349.2753)
 rotation = -3.1415925
-scale = Vector2(4.0400004, 4)
+scale = Vector2(5.843268, 4)
 texture = SubResource("AtlasTexture_dyat2")
 
 [node name="General" type="Node2D" parent="." unique_id=1885113404]

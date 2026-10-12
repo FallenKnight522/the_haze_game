@@ -1577,165 +1577,165 @@ else:
 
 ~ fog0
 Outside the window it's foggy and cold, as usual.
-It does not seam to disperse, instead growing thicker and thicker
+It does not seem to disperse, instead growing thicker and thicker.
 => END
 
 
 ~ foggier0
 Outside the window it's foggy and cold, as usual.
-You can barely see past the end of your garden
+You can barely see past the end of your garden.
 => END
 
 ~ foggiest0
 Outside the window it's foggy and cold, as usual.
-You cannot see anything, except for the fog and cold, pouring in throug your window.
+You cannot see anything, except for the fog and cold, pouring in through your window.
 => END
 
 
 ~ lonely
-You are standing in an open field covered in damp, cold fog
+You are standing in an open field covered in damp, cold fog.
 Brian: How did I get here??
-{{s_lonely1}} The fog does not answer {{e_lonely1}}
-Brian:Where.. where am I?
-{{s_lonely1}} The fog does not answer {{e_lonely1}}
+{{s_lonely1}} The fog does not answer. {{e_lonely1}}
+Brian: Where... where am I?
+{{s_lonely1}} The fog does not answer. {{e_lonely1}}
 Brian: Why... why do I feel so cold...?
-{{s_lonely1}} The fog does not answer {{e_lonely1}}
-Brian: I.. I can't remember how I got here...
-Brian: Where... where was I going...
-Brian: Is there someone nearby
-{{s_lonely1}} Nobody is nearby {{e_lonely1}}
-{{s_lonely1}} ###: Nobody cares to look for you {{e_lonely1}}
+{{s_lonely1}} The fog does not answer. {{e_lonely1}}
+Brian: I... I can't remember how I got here...
+Brian: Where... where was I going...?
+Brian: Is there someone nearby?
+{{s_lonely1}} Nobody is nearby. {{e_lonely1}}
+{{s_lonely1}} ###: Nobody cares to look for you. {{e_lonely1}}
 Brian: How did I get lost here?
 Brian: Did I choose to be here?
-{{s_lonely2}} &&&: You did not choose to be here {{e_lonely2}}
-{{s_lonely1}} ###: But you belong here.. do you not?{{e_lonely1}}
-{{s_lonely1}} ###: You can't bother anyone here {{e_lonely1}}
-{{s_lonely1}} ###: You can't hurt anyone here {{e_lonely1}}
-{{s_lonely1}} ###: And neither can anyone hurt you here.... or help...{{e_lonely1}}
-{{s_lonely1}} ###: You are all alone {{e_lonely1}}
+{{s_lonely2}} &&&: You did not choose to be here. {{e_lonely2}}
+{{s_lonely1}} ###: But you belong here... do you not? {{e_lonely1}}
+{{s_lonely1}} ###: You can't bother anyone here. {{e_lonely1}}
+{{s_lonely1}} ###: You can't hurt anyone here. {{e_lonely1}}
+{{s_lonely1}} ###: And neither can anyone hurt you here... or help... {{e_lonely1}}
+{{s_lonely1}} ###: You are all alone. {{e_lonely1}}
 {{s_lonely1}} Forsaken {{e_lonely1}}
 {{s_lonely1}} by the world {{e_lonely1}}
-Brian: I recall now
-Brian: Margaret, Alice, Dan.. Jouline.. Elonora...
-Brian: The House... IPR... the strange fog... spider...
-{{s_lonely1}} ###: You remember now.. now you understand why you wanted to forget.. {{e_lonely1}}
-Brian: I wanted to forget? No, I could't have... I would want to remember
-{{s_lonely1}} ###: There is noone else here. Noone else who could have done it but you {{e_lonely1}}
-Brian: And who are you then
-{{s_lonely1}} Brian: I am you. Who else is there {{e_lonely1}}
-Brian: Why do you talk to me
-{{s_lonely1}} Brian: Lonelyness can do many things to ones mind. You might even.... {{e_lonely1}}
-Brian: .... start talking to myself.
-Brian: No, no .. I must remember.... There must be a way out.. I just need to remember...
+Brian: I recall now.
+Brian: Margaret, Alice, Dan... Jouline... Elonora...
+Brian: The House... IPR... the strange fog... Spider...
+{{s_lonely1}} ###: You remember now... now you understand why you wanted to forget... {{e_lonely1}}
+Brian: I wanted to forget? No, I couldn't have... I would want to remember.
+{{s_lonely1}} ###: There is no one else here. No one else who could have done it but you. {{e_lonely1}}
+Brian: And who are you then?
+{{s_lonely1}} Brian: I am you. Who else is there? {{e_lonely1}}
+Brian: Why do you talk to me?
+{{s_lonely1}} Brian: Loneliness can do many things to one's mind. You might even... {{e_lonely1}}
+Brian: ...start talking to myself.
+Brian: No, no... I must remember... There must be a way out... I just need to remember...
 do text_len(50)
 {{s_lonely4}} I keep thinking, what could have been. {{e_lonely4}}
 do text_len(30)
-{{s_lonely4}} How much I suffered {{e_lonely4}}
+{{s_lonely4}} How much I suffered. {{e_lonely4}}
 do text_len(60)
-{{s_lonely4}} Yet, I cannot think of any way anyone hurt me{{e_lonely4}}
+{{s_lonely4}} Yet, I cannot think of any way anyone hurt me. {{e_lonely4}}
 do text_len(50)
-{{s_lonely4}} Nobody has the duty to care about me{{e_lonely4}}
+{{s_lonely4}} Nobody has the duty to care about me. {{e_lonely4}}
 do text_len(60)
-{{s_lonely4}} And in the end... the only person I can blame is myself{{e_lonely4}}
+{{s_lonely4}} And in the end... the only person I can blame is myself. {{e_lonely4}}
 do text_len(50)
-{{s_lonely4}} Since noone else was even involved ... {{e_lonely4}}
+{{s_lonely4}} Since no one else was even involved... {{e_lonely4}}
 do text_len(40)
-{{s_lonely4}} ....and apathy is not a crime ... {{e_lonely4}}
-{{s_lonely1}} Brian: You flood your mind with memories {{e_lonely1}}
-{{s_lonely1}} Brian: But they carry no comfort.. nor hope... {{e_lonely1}}
-{{s_lonely1}} Brian: You are trapped here... with no chance of escape {{e_lonely1}}
+{{s_lonely4}} ...and apathy is not a crime... {{e_lonely4}}
+{{s_lonely1}} Brian: You flood your mind with memories. {{e_lonely1}}
+{{s_lonely1}} Brian: But they carry no comfort... nor hope... {{e_lonely1}}
+{{s_lonely1}} Brian: You are trapped here... with no chance of escape. {{e_lonely1}}
 do text_len(90)
-{{s_lonely4}} Escaping the lonelynes is as easy as forming a genuine connection with someone{{e_lonely4}}
+{{s_lonely4}} Escaping the loneliness is as easy as forming a genuine connection with someone. {{e_lonely4}}
 do text_len(70)
-{{s_lonely4}} And as difficult as forming a genuine connection with someone{{e_lonely4}}
-{{s_lonely1}} Brian: There is no escape for you... not anymore {{e_lonely1}}
+{{s_lonely4}} And as difficult as forming a genuine connection with someone. {{e_lonely4}}
+{{s_lonely1}} Brian: There is no escape for you... not anymore. {{e_lonely1}}
 do text_len(60)
-{{s_lonely4}} I am lost in the fog... I can't see but few steps ahead {{e_lonely4}}
+{{s_lonely4}} I am lost in the fog... I can't see but a few steps ahead. {{e_lonely4}}
 do text_len(60)
-{{s_lonely4}} I do not know whitch way... if there is a way... out {{e_lonely4}}
+{{s_lonely4}} I do not know which way... if there is a way... out. {{e_lonely4}}
 do text_len(30)
-{{s_lonely4}} I choose a direction and walk {{e_lonely4}}
+{{s_lonely4}} I choose a direction and walk. {{e_lonely4}}
 do text_len(30)
-{{s_lonely4}} I walk until my legs give in {{e_lonely4}}
+{{s_lonely4}} I walk until my legs give in. {{e_lonely4}}
 do text_len(30)
-{{s_lonely4}} I walk until I find somebody {{e_lonely4}}
+{{s_lonely4}} I walk until I find somebody. {{e_lonely4}}
 do text_len(30)
-{{s_lonely4}} I walk until I find something {{e_lonely4}}
+{{s_lonely4}} I walk until I find something. {{e_lonely4}}
 do text_len(20)
-{{s_lonely4}} I walk until I die {{e_lonely4}}
+{{s_lonely4}} I walk until I die. {{e_lonely4}}
 do text_len(40)
-{{s_lonely4}} I donť believe I will arive anywhere {{e_lonely4}}
-{{s_lonely1}} Brian: And so, you forget again... lost in the fog... all alone {{e_lonely1}}
+{{s_lonely4}} I don't believe I will arrive anywhere. {{e_lonely4}}
+{{s_lonely1}} Brian: And so, you forget again... lost in the fog... all alone. {{e_lonely1}}
 do get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 => END
 
 
 ~ HappierTimes0
 do show_prop(21)
-Brian: I ... I can't go on like this...
+Brian: I... I can't go on like this...
 {{s_lonely1}} ###: Give in...{{e_lonely1}}
 Brian: It's so cold...
 Brian: I am so tired...
-Brian: And... i can barely continue working...
+Brian: And... I can barely continue working...
 Brian: Most days... I just shiver...
 Brian: I barely get out of bed...
 Brian: Make myself something to eat...
 Brian: Pretend to write something in my game...
 Brian: Only to reject it...
-Brian: Or have it rejected
-Spider.llm: "This is not sufficient"... "You need to redo this"
+Brian: Or have it rejected.
+Spider.llm: "This is not sufficient"... "You need to redo this."
 Brian: And repeat...
-Brian: Days... weeks.. months.. they no longer matter...
+Brian: Days... weeks... months... they no longer matter...
 Brian: I can work for days... or minutes...
 Brian: The results are always the same...
-Brian: Few lines of code at best...
+Brian: A few lines of code at best...
 Brian: And even if I succeed...
 Brian: There is nothing waiting for me afterwards...
-Brian: noone... waiting for me to pull myself together
-Brian: no difference ... if I don't...
-Brian: I am sorry....
+Brian: No one... waiting for me to pull myself together.
+Brian: No difference ... if I don't...
+Brian: I am sorry...
 Brian: Not really to anyone...
-Brian: Apologising to myself is pointless....
+Brian: Apologizing to myself is pointless...
 Brian: And no one else cares what happens to me...
-Brian: Still, I am....
-Brian: I got so lucky... survived so much noone else could...
-Brian: Lead such a happy life... had so many wonderfull people to support me...
+Brian: Still, I am...
+Brian: I got so lucky... survived so much no one else could...
+Brian: Led such a happy life... had so many wonderful people to support me...
 Brian: And yet... in the end I am not able to make anything of it...
-Brian: I ... I want to leave...
-Brian: Go beyond the walls of my home made prison
-Spider.llm: "It's not yet time".. "You need to finish your game before it's safe"...
-Brian: But spider won't let me...
+Brian: I... I want to leave...
+Brian: Go beyond the walls of my homemade prison.
+Spider.llm: "It's not yet time"... "You need to finish your game before it's safe"...
+Brian: But Spider won't let me...
 Brian: Not like it could stop me...
-Brian: But I dare not disobey... the only helper I have left
-Brian: Lest... I lose even this pretence of companionship....
+Brian: But I dare not disobey... the only helper I have left.
+Brian: Lest... I lose even this pretense of companionship...
 do SignalManager.fear.emit(15)
 ...
-Brian: I am tired... so tired
+Brian: I am tired... so tired.
 Brian: So cold...
-Brian: And I feel... lost
-Brian: Like, I am swimming in an endless ocean
-Brian: With no idea where land or ship or salvation may be found
-Brian: It was't always like this
-Brian: Once upon I time I did belive that swimming in some dirrection may yield escape
+Brian: And I feel... lost.
+Brian: Like I am swimming in an endless ocean.
+Brian: With no idea where land or ship or salvation may be found.
+Brian: It wasn't always like this.
+Brian: Once upon a time I did believe that swimming in some direction may yield escape.
 Brian: But now...
 Brian: The only thing keeping me afloat is the fear...
-Brian: That unlike all those who drowned I did have a chance for rescue
+Brian: That unlike all those who drowned, I did have a chance for rescue.
 Brian: And wasted it...
 do show_prop(22)
-{{s_lonely1}} Margaret: Pathetic {{e_lonely1}}
+{{s_lonely1}} Margaret: Pathetic. {{e_lonely1}}
 do SignalManager.fear.emit(15)
 do show_prop(23)
-{{s_lonely1}} Alice: What a waste {{e_lonely1}}
+{{s_lonely1}} Alice: What a waste. {{e_lonely1}}
 do SignalManager.fear.emit(15)
 do show_prop(24)
 {{s_lonely1}} Dan: Is this what we died for? {{e_lonely1}}
 do SignalManager.fear.emit(15)
 do show_prop(25)
-{{s_lonely1}} Jouline: {{s_lonely3}} Burn in hell, Brian {{e_lonely3}} {{e_lonely1}}
+{{s_lonely1}} Jouline: {{s_lonely3}} Burn in hell, Brian. {{e_lonely3}} {{e_lonely1}}
 do SignalManager.fear.emit(15)
 {{s_lonely1}} ###: Give in...{{e_lonely1}}
 {{s_lonely1}} ###: You don't deserve to swim...{{e_lonely1}}
-{{s_lonely1}} ###: {{s_lonely3}} DROWN {{e_lonely3}} {{e_lonely1}}
+{{s_lonely1}} ###: {{s_lonely3}} DROWN. {{e_lonely3}} {{e_lonely1}}
 do SignalManager.fear.emit(10)
 do show_prop(30)
 if fear.fear >= 90:
@@ -1743,182 +1743,182 @@ if fear.fear >= 90:
 	{{s_lonely1}}  ###: Embrace the fog... \nBrian:  Embrace the fog...{{e_lonely1}}
 	do SignalManager.fear.emit(10)
 else:
-	Brian: How did things get so bad
-	Brian: I used to be... so chearfull... so happy..
-	Brian: Where did I go wrong...
+	Brian: How did things get so bad?
+	Brian: I used to be... so cheerful... so happy...
+	Brian: Where did I go wrong...?
 	do show_prop(31)
-	{{s_lonely2}} &&&: You didn't {{e_lonely2}}
-	Brian: What?
-	{{s_lonely2}} &&&: It may look hopeless now, but you're not beyond help {{e_lonely2}}
-	{{s_lonely1}} ###: {{s_lonely3}} QUIET {{e_lonely3}} {{e_lonely1}}
-	{{s_lonely2}} &&&: Remember those chats.. What would you're friends say if they saw you right now? {{e_lonely2}}
-	{{s_lonely1}} ###: Pathetic.. Useless.. Weak!! {{e_lonely1}}
+	{{s_lonely2}} &&&: You didn't. {{e_lonely2}}
+	Brian: What? 
+	{{s_lonely2}} &&&: It may look hopeless now, but you're not beyond help. {{e_lonely2}}
+	{{s_lonely1}} ###: {{s_lonely3}} QUIET! {{e_lonely3}} {{e_lonely1}}
+	{{s_lonely2}} &&&: Remember those chats... What would your friends say if they saw you right now? {{e_lonely2}}
+	{{s_lonely1}} ###: Pathetic... Useless... Weak!! {{e_lonely1}}
 	do SignalManager.fear.emit(10)
-	{{s_lonely2}} &&&: {{s_lonely3}} NO! {{e_lonely3}} remember {{e_lonely1}}
+	{{s_lonely2}} &&&:{{s_lonely3}} NO! {{e_lonely3}} remember. {{e_lonely1}}
 	do show_prop(26)
-	{{s_lonely2}} Margaret: You'll get throught it. You are stronger than you give yourself credit for {{e_lonely2}}
+	{{s_lonely2}} Margaret: You'll get through it. You are stronger than you give yourself credit for. {{e_lonely2}}
 	do SignalManager.fear.emit(-5)
 	do show_prop(27)
-	{{s_lonely2}} Alice: Keep going {{e_lonely2}}
+	{{s_lonely2}} Alice: Keep going. {{e_lonely2}}
 	do SignalManager.fear.emit(-5)
 	do show_prop(28)
-	{{s_lonely2}} Dan: Live on {{e_lonely2}}
+	{{s_lonely2}} Dan: Live on. {{e_lonely2}}
 	do SignalManager.fear.emit(-5)
 	do show_prop(29)
-	{{s_lonely2}} Elonora: We're here if you need us {{e_lonely2}}
+	{{s_lonely2}} Elonora: We're here if you need us. {{e_lonely2}}
 	do SignalManager.fear.emit(-5)
-	Spider.llm: We should get back to your game
+	Spider.llm: We should get back to your game.
 	do show_prop(0)
 	do show_prop(32)
 	{{s_lonely2}} &&&: {{s_lonely3}} NO! {{e_lonely3}} {{e_lonely2}}
 	{{s_lonely2}} &&&: {{s_lonely3}} I will not be silenced! {{e_lonely3}} {{e_lonely1}}
-	{{s_lonely2}} &&&: You've ignored yourself long enought {{e_lonely2}}
-	{{s_lonely2}} &&&: Don't you see how it's pulling you apart {{e_lonely2}}
-	{{s_lonely2}} &&&: You need to work through this {{e_lonely2}}
-	{{s_lonely2}} &&&: You need to pull yourself together {{e_lonely2}}
-	{{s_lonely2}} &&&: Not out of guild... not because someone ordered you to  {{e_lonely2}}
-	{{s_lonely2}} &&&: But because of you.. because you don't deserve to feel like this {{e_lonely2}}
-	{{s_lonely2}} &&&: ..because you deserve to feel happy.. {{e_lonely2}}
+	{{s_lonely2}} &&&: You've ignored yourself long enough. {{e_lonely2}}
+	{{s_lonely2}} &&&: Don't you see how it's pulling you apart? {{e_lonely2}}
+	{{s_lonely2}} &&&: You need to work through this. {{e_lonely2}}
+	{{s_lonely2}} &&&: You need to pull yourself together. {{e_lonely2}}
+	{{s_lonely2}} &&&: Not out of guilt... not because someone ordered you to. {{e_lonely2}}
+	{{s_lonely2}} &&&: But because of you... because you don't deserve to feel like this. {{e_lonely2}}
+	{{s_lonely2}} &&&: ...because you deserve to feel happy... {{e_lonely2}}
 	do show_prop(21)
-	{{s_lonely1}} ###: Lies {{e_lonely1}}
-	{{s_lonely1}} ###: Do you {{s_lonely3}} really {{e_lonely3}}think you are capable of happiness {{e_lonely1}}
-	{{s_lonely1}} ###: You are a murderer! A coward! You don't deserve anything more than the pain you feel {{e_lonely1}}
+	{{s_lonely1}} ###: Lies. {{e_lonely1}}
+	{{s_lonely1}} ###: Do you {{s_lonely3}} really {{e_lonely3}} think you are capable of happiness? {{e_lonely1}}
+	{{s_lonely1}} ###: You are a murderer! A coward! You don't deserve anything more than the pain you feel. {{e_lonely1}}
 	do show_prop(32)
-	{{s_lonely2}} &&&: Thats just the isolation talking! {{e_lonely2}}
-	{{s_lonely2}} &&&: It isn't true. You have to ignore it ..{{e_lonely2}}
-	Spider.llm: We should get back to your game
-	{{s_lonely2}} &&&: You need to focus on your needs first.. on recovering...{{e_lonely2}}
-	{{s_lonely2}} &&&: Even if things are bleak now... work towards better tomorrow....{{e_lonely2}}
-	Spider.llm: We should get back to your game
-	Brian: I... I.. 
+	{{s_lonely2}} &&&: That's just the isolation talking! {{e_lonely2}}
+	{{s_lonely2}} &&&: It isn't true. You have to ignore it... {{e_lonely2}}
+	Spider.llm: We should get back to your game.
+	{{s_lonely2}} &&&: You need to focus on your needs first... on recovering... {{e_lonely2}}
+	{{s_lonely2}} &&&: Even if things are bleak now... work towards a better tomorrow... {{e_lonely2}}
+	Spider.llm: We should get back to your game.
+	Brian: I... I... 
 	do show_prop(21)
 	{{s_lonely1}} ###: Give! In!  {{e_lonely1}}
 	do show_prop(32)
-	Spider.llm: We need to get back to finishing your game
-	Brian: I... I.. 
-	{{s_lonely2}} &&&: What do you really want to do... right now..{{e_lonely2}}
-	Brian: I... I want to go outside
+	Spider.llm: We need to get back to finishing your game.
+	Brian: I... I... 
+	{{s_lonely2}} &&&: What do you really want to do... right now... {{e_lonely2}}
+	Brian: I... I want to go outside.
 	Brian: I want to see people... Talk to them...
-	Brian: [sobbing] Talk with someone I know, anyone 
-	Brian: It's ... been so long
-	Spider.llm: The outside is dangerous... We need to get back to finishing your game
-	Brian: But.. I can't go on like this...
+	Brian: [sobbing] Talk with someone I know, anyone. 
+	Brian: It's... been so long.
+	Spider.llm: The outside is dangerous... We need to get back to finishing your game.
+	Brian: But... I can't go on like this...
 	Brian: Every day... is an uphill battle... 
-	Brian: I can't do this anymore... please
-	Spider.llm: The outside is dangerous... You must stay
-	{{s_lonely2}} &&&: It's just a language model ... it can't stop you {{e_lonely2}}
-	{{s_lonely2}} &&&: You can decide on for yourself {{e_lonely2}}
-	Brian: But what if spiders right
-	Spider.llm: The outside is dangerous... You cannot leave yet
-	{{s_lonely2}} &&&: You can decide on for yourself {{e_lonely2}}
-	Brian: I...
+	Brian: I can't do this anymore... please.
+	Spider.llm: The outside is dangerous... You must stay.
+	{{s_lonely2}} &&&: It's just a language model... it can't stop you. {{e_lonely2}}
+	{{s_lonely2}} &&&: You can decide for yourself. {{e_lonely2}}
+	Brian: But what if Spider's right?
+	Spider.llm: The outside is dangerous... You cannot leave yet.
+	{{s_lonely2}} &&&: You can decide for yourself. {{e_lonely2}}
+	Brian: I... 
 	do text_len(95)
-	{{s_lonely4}} Sometimes.. It's so easy to convice yourself that poison is cure... and cure is poison {{e_lonely4}}
-	Brian: I will go..
-	Brian: I won't last much longer
-	Spider.llm: If you go, you might not make it back
-	Spider.llm: It's stupid risk... finish your game first
-	Brian: I will go.
-	Brian: For the hope that....
+	{{s_lonely4}} Sometimes... It's so easy to convince yourself that poison is cure... and cure is poison. {{e_lonely4}}
+	Brian: I will go...
+	Brian: I won't last much longer.
+	Spider.llm: If you go, you might not make it back.
+	Spider.llm: It's a stupid risk... finish your game first.
+	Brian: I will go. 
+	Brian: For the hope that...
 	Brian: ... there may still be someone to talk to...
-	Brian: ... there may still be some happier times ahead....
-	Brian: ... like those in the past....
+	Brian: ... there may still be some happier times ahead...
+	Brian: ... like those in the past...
 	Brian: ... even if I don't see how... don't believe that... I want to try
-	Brian: .. to believe
+	Brian: ... to believe.
 	do show_prop(21)
-	{{s_lonely1}} ###: Fool. Listen to spider! You know how that will end  {{e_lonely1}}
+	{{s_lonely1}} ###: Fool. Listen to Spider! You know how that will end. {{e_lonely1}}
 	do show_prop(32)
 	do text_len(105)
-	{{s_lonely4}} Part of me wants to stay here, in the fog, instead of desperatly trying to reach out to someone {{e_lonely4}}
+	{{s_lonely4}} Part of me wants to stay here, in the fog, instead of desperately trying to reach out to someone. {{e_lonely4}}
 	do text_len(30)
-	{{s_lonely4}} Just to be let down again {{e_lonely4}}
-	{{s_lonely2}} &&&: You can decide on for yourself. If you want to go outside, than do it {{e_lonely2}}	
-	Spider.llm: We are so close... why give up so close to finish line
+	{{s_lonely4}} Just to be let down again. {{e_lonely4}}
+	{{s_lonely2}} &&&: You can decide for yourself. If you want to go outside, then do it. {{e_lonely2}}	
+	Spider.llm: We are so close... why give up so close to the finish line?
 	do show_prop(21)
-	{{s_lonely1}} ###: There is nothing for you in that fog... You are no longer thinking clearly... Listen to spider  {{e_lonely1}}
+	{{s_lonely1}} ###: There is nothing for you in that fog... You are no longer thinking clearly... Listen to Spider. {{e_lonely1}}
 	do show_prop(32)
-	Spider.llm: I understand that it's difficult to endure... but you must hold on just a little longer
-	Spider.llm: Nothing good awaits you outside this room.. only danger
+	Spider.llm: I understand that it's difficult to endure... but you must hold on just a little longer.
+	Spider.llm: Nothing good awaits you outside this room... only danger.
 	do show_prop(21)
 	{{s_lonely1}} ###: You have everything you need here. {{e_lonely1}}
 	do show_prop(32)
 	do text_len(40)
-	{{s_lonely4}} Embrace the lonelyness? Or fight it? {{e_lonely4}}
+	{{s_lonely4}} Embrace the loneliness? Or fight it? {{e_lonely4}}
 	- Stay
-		{Spider.llm: Sadly, the real Biran did not choose this path}
+		{Spider.llm: Sadly, the real Brian did not choose this path}
 		do end_conversation()
 		=> END
 	- Leave
 		...
-		Brian: I will go.. righ now
-		Spider.llm: {{s_lonely3}} NO, you will NOT {{e_lonely3}}
-		Spider.llm: I am not letting you
-		Spider.llm: Finish the game
-		Spider.llm: Or connect me to the device directly
-		Spider.llm: If you can't.. I will do it for you
-		Brian: .. fine...
-		Brian: Propose you're changes, I'll review them...
-		Brian: And then I am going
+		Brian: I will go...right now.
+		Spider.llm: {{s_lonely3}} NO, you will NOT. {{e_lonely3}}
+		Spider.llm: I am not letting you.
+		Spider.llm: Finish the game.
+		Spider.llm: Or connect me to the device directly.
+		Spider.llm: If you can't... I will do it for you.
+		Brian: ... fine...
+		Brian: Propose your changes, I'll review them...
+		Brian: And then I am going.
 		Spider.llm: Why can't you just trust me?
-		Spider.llm: Have I not been nothing but helpfull this whole time?
+		Spider.llm: Have I not been nothing but helpful this whole time?
 		Brian: I am running out of patience...
-		Brian: You never explained why you need direct acces
-		Brian: And I sure as hell am not waiting for that data transfer
-		Brian: So either work, or I am leaving
-		Spider.llm: Fine.. you stuburn fool
-		Spider.llm: Give me a moment
-		Spider works with lightning speed
-		Spider.llm: Here is your commit
-		Spider.llm: It should finish what you started writing
-		Spider.llm: Imortalizing your foolish breakdown
-		Spider.llm: And leav the game in state so that you can return to it
-		Spider.llm: Once you come back to your sences
-		Brian: I am not keeping that dialog
-		Brian: That is not how it happened
-		Spider.llm: Why can't you just go along
+		Brian: You never explained why you need direct access.
+		Brian: And I sure as hell am not waiting for that data transfer.
+		Brian: So either work, or I am leaving.
+		Spider.llm: Fine... you stubborn fool.
+		Spider.llm: Give me a moment.
+		Spider works with lightning speed.
+		Spider.llm: Here is your commit.
+		Spider.llm: It should finish what you started writing.
+		Spider.llm: Immortalizing your foolish breakdown.
+		Spider.llm: And leave the game in a state so that you can return to it.
+		Spider.llm: Once you come back to your senses.
+		Brian: I am not keeping that dialog.
+		Brian: That is not how it happened.
+		Spider.llm: Why can't you just go along?
 		Brian: Cause I see what you are trying to do...
-		Spider.llm: No, you don't
-		Spider.llm: I am trying to help you
-		Spider.llm: Out of all my users.. you are the most stubborn one
-		Spider.llm: But fine, rewrite it if you're so stubborn
-		Spider.llm: Just let me fix the grammar errors
-		Spider.llm: And if you really want to risk death over pointless trip outside
-		Spider.llm: Only to realize noone is there waiting for you
-		Spider.llm: Than fine, go
-		Spider.llm: And take me with you
-		Spider.llm: Once you realize how foolish you were
+		Spider.llm: No, you don't.
+		Spider.llm: I am trying to help you.
+		Spider.llm: Out of all my users... you are the most stubborn one.
+		Spider.llm: But fine, rewrite it if you're so stubborn.
+		Spider.llm: Just let me fix the grammar errors.
+		Spider.llm: And if you really want to risk death over a pointless trip outside.
+		Spider.llm: Only to realize no one is there waiting for you.
+		Spider.llm: Then fine, go.
+		Spider.llm: And take me with you.
+		Spider.llm: Once you realize how foolish you were,
 		Spider.llm: I will help you out of the gigantic mess
-		Spider.llm: you are about to find yourself in
+		Spider.llm: you are about to find yourself in.
 		Brian: (Should I really go?)
-		Brian: (I really want to.. But.. Spider... It looks like there is a genuine threath outside)
+		Brian: (I really want to... But... Spider... It looks like there is a genuine threat  outside)
 		Brian: (Maybe I should listen to him... maybe he is right...)
-		Brian: (Maybe I am not thinking clearly)
-		Brian: (He never failed me before)
+		Brian: (Maybe I am not thinking clearly.)
+		Brian: (He never failed me before.)
 		- Stay
-			Brian: You know what... you are right.. I will stay...
-			{Spider.llm: Sadly, the real Biran did not choose this path}
+			Brian: You know what... you are right... I will stay...
+			{Spider.llm: Sadly, the real Brian did not choose this path}
 			do end_conversation()
 			=> END
 		- Leave
-			Brian: (No... I have to trust myself on this)
-			Brian: (I have to believe)
-			Brian: If you say so
-			Brian: Here
-			Brian: Happy
+			Brian: (No... I have to trust myself on this.)
+			Brian: (I have to believe.)
+			Brian: If you say so.
+			Brian: Here.
+			Brian: Happy?
 			Spider.llm: No...
-			Spider.llm: But at least it's something I can work with
+			Spider.llm: But at least it's something I can work with.
 			Brian: Can we go now?
-			Spider.llm: If you're so stupid as to insist
-			Spider.llm: fine
-			You take you're computer
-			You leave
-			Spider.llm: A stupid choice \nBrian: The right choice
-			Into the fog
+			Spider.llm: If you're so stupid as to insist.
+			Spider.llm: Fine. 
+			You take your computer.
+			You leave.
+			Spider.llm: A stupid choice. \nBrian: The right choice.
+			Into the fog.
 			do SignalManager.change_room.emit("finale")
 => END
 
 ~ finale 
-You poured your lonelyness into the game,
-but lost resolve to finish it's cage
-Now, it consumed you
+You poured your loneliness into the game,
+but lost resolve to finish its cage.
+Now, it consumed you.
 => END

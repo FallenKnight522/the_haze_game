@@ -7,10 +7,6 @@ extends Node
 @onready var fade_out_rect: ColorRect = $Colours2/ColorRect
 @onready var shadows: ColorRect = $Manger/Props/shadow
 
-# Zde si budeme ukládat místnosti. 
-var ulozene_mistnosti: Dictionary = {}
-# Odkaz na právě hranou místnost
-var aktualni_mistnost: Node2D = null
 const fear_to_colour= 0.015
 
 func _ready() -> void:
@@ -30,7 +26,8 @@ func _ready() -> void:
 	colors(0)
 	shadows.color.a = 0.75
 	shadows.hide()
-	enter_room("room")
+	player.start_movement()
+	shadows.hide()
 	starting_dialog()
 	
 					
@@ -45,6 +42,7 @@ func colors(fear_num):
 func leave():
 	await get_tree().process_frame
 	text_window.force_enabled = true
+	SignalManager.animatic_showing = false
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 func stay():
 	await get_tree().process_frame
@@ -52,7 +50,7 @@ func stay():
 
 
 #Made by Spider.LLM
-func enter_room(id_mistnosti: String = "lonely", cesta_k_scene: String = ""):
+func enter_room(id_mistnosti: String = "lonely", _cesta_k_scene: String = ""):
 	player.global_position = Vector2(-571, -25)
 	text_window.clear()
 	player.reset_movement()
@@ -80,10 +78,10 @@ func enter_room(id_mistnosti: String = "lonely", cesta_k_scene: String = ""):
 			push_error("Invalid room")
 	
 func starting_dialog():
-	text_window.queue_text("Alright.. It's time to make this game..")
-	text_window.queue_text("Sadly, it looks like it's all up to me")
+	text_window.queue_text("Alright... It's time to make this game...")
+	text_window.queue_text("Sadly, it looks like it's all up to me.")
 	text_window.queue_text("Spider.llm: And me! I'll help you!!")
-	text_window.queue_text("I suppose... Alright, lets get to it")
+	text_window.queue_text("I suppose... Alright, let's get to it.")
 	await outro()
 	player.stop_movement()
 func move_player(pos: Vector2 = Vector2(-571, -25)):
@@ -94,13 +92,13 @@ func loose():
 
 func new_day(_day):
 	await  fadeout()
-	move_player
+	move_player()
 	await  fadein()
 
 func outro():
-	move_player
+	move_player()
 	await fadein()
-	move_player
+	move_player()
 func fadeout():
 	player.stop_movement()
 	var tween_out = create_tween()

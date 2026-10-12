@@ -11,9 +11,12 @@ config_version=5
 [application]
 
 config/name="The Haze"
+config/description="A game in which two guards
+— one who speaks only lies and the other who tells only the truth —
+guard a single treasure for the mastermind behind it all."
 run/main_scene="uid://dgucqu3eyc0qx"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://b03wbt4nlp0ax"
 
 [autoload]
 

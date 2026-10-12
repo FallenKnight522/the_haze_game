@@ -1,7 +1,78 @@
 [gd_scene format=3 uid="uid://dgucqu3eyc0qx"]
 
 [ext_resource type="Script" uid="uid://bhygcm2mcbk3n" path="res://scripts/menu/button_manager.gd" id="1_l6cm7"]
-[ext_resource type="PackedScene" uid="uid://de7w1pl4j0ge5" path="res://scenes/text_window2.tscn" id="2_ekxnf"]
+[ext_resource type="Shader" uid="uid://ovmh6jx7eiqa" path="res://shaders/main_menu_level_1.gdshader" id="2_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://b03wbt4nlp0ax" path="res://assets/icon.png" id="3_bqqt6"]
+[ext_resource type="PackedScene" uid="uid://dkyxo0jj587tu" path="res://scenes/eye.tscn" id="3_oa1go"]
+[ext_resource type="Shader" uid="uid://do6kso0rukie" path="res://shaders/level3.gdshader" id="3_rtw2f"]
+[ext_resource type="Script" uid="uid://dn3qt7b70w4nk" path="res://scripts/menueye.gd" id="4_tbmy8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbmy8"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jk1qb"]
+bg_color = Color(0.6201858, 0.7968384, 0.96693254, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5dd4i"]
+bg_color = Color(0.7696371, 0.9557141, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lgwnu"]
+bg_color = Color(0.9998151, 0.95353067, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_flqon"]
+bg_color = Color(0.8980392, 0.79358727, 0.10980394, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rcqid"]
+bg_color = Color(0.96862745, 0.93067664, 0.45098042, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ajci"]
+bg_color = Color(0.4013523, 0.4013523, 0.4013523, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oa1go"]
+shader = ExtResource("2_rtw2f")
+shader_parameter/fear_intensity = 0.250000011875
+shader_parameter/shift_speed = 0.1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8gd2"]
+bg_color = Color(0.6528015, 0.9406265, 0.78883696, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hstxw"]
+bg_color = Color(0.45459226, 0.98008555, 0.62756765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8egab"]
+bg_color = Color(0.711359, 0.9702208, 0.5393461, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gw5y6"]
+bg_color = Color(0.47698218, 0.47698218, 0.47698218, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_svtp6"]
+bg_color = Color(0.69246954, 0.76669586, 0.9274734, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1dfpl"]
+bg_color = Color(0.25071356, 0.43416592, 0.9767973, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qywvv"]
+bg_color = Color(0.4704057, 0.5042566, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3wgol"]
+bg_color = Color(0.43423486, 0.43415457, 0.43415457, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tbmy8"]
+shader = ExtResource("3_rtw2f")
+shader_parameter/strachomira = 1.0
+shader_parameter/fog_color_thin = Color(0.9291012, 0.96309584, 1, 1)
+shader_parameter/fog_color_dense = Color(0.5663239, 0.67533576, 0.8757588, 1)
+shader_parameter/fog_speed = 0.2
+shader_parameter/edge_creep = 0.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7b55j"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5pajh"]
+bg_color = Color(0.7358609, 0.92031217, 0.98995036, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j7ex8"]
+bg_color = Color(0.52301776, 0.7065179, 1, 1)
 
 [node name="Main menu" type="Control" unique_id=357728123]
 layout_mode = 3
@@ -11,56 +82,455 @@ anchor_bottom = 1.0
 offset_right = -504.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.8000009, 1)
+mouse_filter = 2
 
-[node name="ButtonManager" type="MarginContainer" parent="." unique_id=174802229]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1914729249]
+z_index = -5
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.8000003, 1)
+mouse_filter = 2
+color = Color(0.9998151, 0.9998151, 0.9998151, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=698408406]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8666656, 1)
+mouse_filter = 2
+theme_override_constants/separation = 50
+
+[node name="ButtonManager" type="MarginContainer" parent="HBoxContainer" unique_id=174802229 node_paths=PackedStringArray("visuals")]
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/margin_left = 75
+theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 100
-theme_override_constants/margin_right = 300
+theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 100
 script = ExtResource("1_l6cm7")
+visuals = [NodePath("VBoxContainer/Level 1/ColorRect"), NodePath("VBoxContainer/Level 2/eyes"), NodePath("VBoxContainer/Level 3/ColorRect"), NodePath("VBoxContainer/Level 4/ColorRect")]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ButtonManager" unique_id=1732169727]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/ButtonManager" unique_id=1732169727]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="Tutorial" type="Button" parent="ButtonManager/VBoxContainer" unique_id=1988026956]
+[node name="Tutorial" type="Button" parent="HBoxContainer/ButtonManager/VBoxContainer" unique_id=1988026956]
 layout_mode = 2
 size_flags_vertical = 3
+tooltip_text = "Tutorial for the game"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_tbmy8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jk1qb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5dd4i")
 
-[node name="Level 1" type="Button" parent="ButtonManager/VBoxContainer" unique_id=1534228057]
+[node name="Level 1" type="Button" parent="HBoxContainer/ButtonManager/VBoxContainer" unique_id=1534228057]
+clip_children = 2
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lgwnu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_flqon")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rcqid")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_1ajci")
 
-[node name="Level 2" type="Button" parent="ButtonManager/VBoxContainer" unique_id=835086555]
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 1" unique_id=137447797]
+show_behind_parent = true
+z_index = 1
+material = SubResource("ShaderMaterial_oa1go")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Level 2" type="Button" parent="HBoxContainer/ButtonManager/VBoxContainer" unique_id=835086555]
+clip_children = 2
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a8gd2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hstxw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8egab")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gw5y6")
 
-[node name="Level 3" type="Button" parent="ButtonManager/VBoxContainer" unique_id=1806682977]
+[node name="eyes" type="Control" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2" unique_id=1087368592]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Control" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1927779078 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+script = ExtResource("4_tbmy8")
+
+[node name="Control2" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=34697441 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = -1.5258789e-05
+offset_top = 38.999985
+offset_bottom = 78.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control6" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1351923121 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 23.888855
+offset_top = 45.999985
+offset_right = 63.888855
+offset_bottom = 85.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control7" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1874877207 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 22.222198
+offset_top = 25.999985
+offset_right = 62.2222
+offset_bottom = 65.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control8" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1385971146 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 48.33332
+offset_top = -2.0
+offset_right = 88.33332
+offset_bottom = 38.0
+script = ExtResource("4_tbmy8")
+
+[node name="Control9" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1413735793 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 48.333298
+offset_top = 36.999985
+offset_right = 88.3333
+offset_bottom = 76.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control11" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1129784220 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 72.43598
+offset_top = -9.0
+offset_right = 112.43598
+offset_bottom = 31.0
+script = ExtResource("4_tbmy8")
+
+[node name="Control12" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=198111467 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 71.11107
+offset_top = 43.999985
+offset_right = 111.11107
+offset_bottom = 83.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control14" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1013432392 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 93.888855
+offset_top = -5.0
+offset_right = 133.88885
+offset_bottom = 35.0
+script = ExtResource("4_tbmy8")
+
+[node name="Control15" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1654338363 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 94.87189
+offset_top = 40.999985
+offset_right = 134.8719
+offset_bottom = 80.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control17" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1368965205 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 117.3078
+offset_top = -6.0
+offset_right = 157.30782
+offset_bottom = 34.0
+script = ExtResource("4_tbmy8")
+
+[node name="Control18" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=2133376859 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 118.33328
+offset_top = 40.999985
+offset_right = 158.33328
+offset_bottom = 80.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control20" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=295212330 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 143.88885
+offset_top = -9.0
+offset_right = 183.88885
+offset_bottom = 31.0
+script = ExtResource("4_tbmy8")
+
+[node name="Control21" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=852595946 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 143.88885
+offset_top = 29.999985
+offset_right = 183.88885
+offset_bottom = 69.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control22" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1491680318 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 142.22215
+offset_top = 9.999985
+offset_right = 182.22215
+offset_bottom = 49.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control26" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=200417460 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 167.77774
+offset_right = 207.77774
+script = ExtResource("4_tbmy8")
+
+[node name="Control27" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=2093322043 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 167.7777
+offset_top = 38.999985
+offset_right = 207.7777
+offset_bottom = 78.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control28" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1324228711 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 166.11104
+offset_top = 18.999985
+offset_right = 206.11104
+offset_bottom = 58.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control23" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=33844883 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = -4.487137
+offset_top = -11.0
+offset_right = 35.512863
+offset_bottom = 29.0
+script = ExtResource("4_tbmy8")
+
+[node name="Control24" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1222073885 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 25.641098
+offset_top = 36.999985
+offset_right = 65.6411
+offset_bottom = 76.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control25" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1112691306 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = -2.5640564
+offset_top = 27.999985
+offset_right = 37.435944
+offset_bottom = 67.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control29" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1537584596 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 153.8463
+offset_top = -2.0
+offset_right = 193.8463
+offset_bottom = 38.0
+script = ExtResource("4_tbmy8")
+
+[node name="Control30" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1134968230 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 153.8463
+offset_top = 36.999985
+offset_right = 193.8463
+offset_bottom = 76.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control31" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1159864768 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 22.435959
+offset_top = 4.9999847
+offset_right = 62.43596
+offset_bottom = 44.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control3" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=502034875 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = -1.6666832
+offset_top = 18.999985
+offset_right = 38.333317
+offset_bottom = 58.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control4" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1550502845 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 166.66681
+offset_top = 47.999985
+offset_right = 206.6668
+offset_bottom = 87.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control32" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1941229384 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 170.51299
+offset_top = -11.0
+offset_right = 210.51299
+offset_bottom = 29.0
+script = ExtResource("4_tbmy8")
+
+[node name="Control33" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1123695754 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 169.87195
+offset_top = 29.999985
+offset_right = 209.87196
+offset_bottom = 69.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control34" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1263949040 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = -6.4102173
+offset_top = -1.0
+offset_right = 33.589798
+offset_bottom = 39.0
+script = ExtResource("4_tbmy8")
+
+[node name="Control36" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1803869047 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 8.589779
+offset_top = 9.999985
+offset_right = 48.589794
+offset_bottom = 49.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control37" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1321077640 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 14.14534
+offset_top = -9.0
+offset_right = 54.14534
+offset_bottom = 31.0
+script = ExtResource("4_tbmy8")
+
+[node name="Control38" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1947317148 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 52.56417
+offset_top = -8.0
+offset_right = 92.564186
+offset_bottom = 32.0
+script = ExtResource("4_tbmy8")
+
+[node name="Control39" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1453882766 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 143.88882
+offset_top = 46.999985
+offset_right = 183.88884
+offset_bottom = 86.999985
+script = ExtResource("4_tbmy8")
+
+[node name="Control40" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=790797408 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 26.111084
+offset_top = -10.0
+offset_right = 66.1111
+offset_bottom = 30.0
+script = ExtResource("4_tbmy8")
+
+[node name="Control35" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 2/eyes" unique_id=1516997058 instance=ExtResource("3_oa1go")]
+layout_mode = 0
+offset_left = 474.44434
+offset_top = -11.0
+offset_right = 514.44434
+offset_bottom = 29.0
+script = ExtResource("4_tbmy8")
+
+[node name="Level 3" type="Button" parent="HBoxContainer/ButtonManager/VBoxContainer" unique_id=1806682977]
+clip_children = 2
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_svtp6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1dfpl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qywvv")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3wgol")
 
-[node name="Level 4" type="Button" parent="ButtonManager/VBoxContainer" unique_id=72052634]
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 3" unique_id=1607148857]
+material = SubResource("ShaderMaterial_tbmy8")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Level 4" type="Button" parent="HBoxContainer/ButtonManager/VBoxContainer" unique_id=72052634]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 
-[node name="Exit" type="Button" parent="ButtonManager/VBoxContainer" unique_id=1889162801]
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/ButtonManager/VBoxContainer/Level 4" unique_id=1706668499]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Exit" type="Button" parent="HBoxContainer/ButtonManager/VBoxContainer" unique_id=1889162801]
 layout_mode = 2
 size_flags_vertical = 3
+tooltip_text = "Leave"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_7b55j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5pajh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j7ex8")
 
-[node name="Text_window" parent="ButtonManager" unique_id=1098004527 instance=ExtResource("2_ekxnf")]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=1139823461]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "A game in which two guards
+—one who speaks only lies and the other who tells only the truth—
+guard a single treasure for the mastermind behind it all."
+mouse_filter = 0
+texture = ExtResource("3_bqqt6")
+expand_mode = 1
+stretch_mode = 3
 
-[connection signal="pressed" from="ButtonManager/VBoxContainer/Tutorial" to="ButtonManager" method="_on_tutorial_pressed"]
-[connection signal="pressed" from="ButtonManager/VBoxContainer/Level 1" to="ButtonManager" method="_on_level_1_pressed"]
-[connection signal="pressed" from="ButtonManager/VBoxContainer/Level 2" to="ButtonManager" method="_on_level_2_pressed"]
-[connection signal="pressed" from="ButtonManager/VBoxContainer/Level 3" to="ButtonManager" method="_on_level_3_pressed"]
-[connection signal="pressed" from="ButtonManager/VBoxContainer/Level 4" to="ButtonManager" method="_on_level_4_pressed"]
-[connection signal="pressed" from="ButtonManager/VBoxContainer/Exit" to="ButtonManager" method="_on_exit_pressed"]
+[connection signal="pressed" from="HBoxContainer/ButtonManager/VBoxContainer/Tutorial" to="HBoxContainer/ButtonManager" method="_on_tutorial_pressed"]
+[connection signal="pressed" from="HBoxContainer/ButtonManager/VBoxContainer/Level 1" to="HBoxContainer/ButtonManager" method="_on_level_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/ButtonManager/VBoxContainer/Level 2" to="HBoxContainer/ButtonManager" method="_on_level_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/ButtonManager/VBoxContainer/Level 3" to="HBoxContainer/ButtonManager" method="_on_level_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/ButtonManager/VBoxContainer/Level 4" to="HBoxContainer/ButtonManager" method="_on_level_4_pressed"]
+[connection signal="pressed" from="HBoxContainer/ButtonManager/VBoxContainer/Exit" to="HBoxContainer/ButtonManager" method="_on_exit_pressed"]

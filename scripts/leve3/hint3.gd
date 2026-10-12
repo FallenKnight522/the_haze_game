@@ -7,19 +7,19 @@ func showHint():
 	var text
 	match hintNum:
 		0:
-			text = "Just finish the third level of your game, and all will be okay"
+			text = "Just finish the third level of your game, and all will be okay."
 		1:
-			text = "Try distracting yourself from the lonelyness"
+			text = "Try distracting yourself from the loneliness."
 		2:
-			text = "There are many things in you're room, that can calm you down. Find which to use when"
+			text = "There are many things in your room that can calm you down. Find which to use when."
 		3:
-			text = "The items in the room lower your fear. Working on the game progresses you further, but trigers lonely memories. Ballance the two"
+			text = "The items in the room lower your fear. Working on the game progresses you further, but triggers lonely memories. Balance the two."
 		4:
-			text = "As time goes on, some items stop working. Same with items used to often"
+			text = "As time goes on, some items stop working. Same with items used too often."
 		5:
-			text = "Pick correctly what item to use when, to endure till the end"
+			text = "Pick correctly what item to use when, to endure till the end."
 		_:
-			text = "There are no more hints. Maybe ask one of your friends for... oh thats right... you donť have any left"
+			text = "There are no more hints. Maybe ask one of your friends for... oh that's right... you don't have any left."
 			SignalManager.fear.emit(10)
 	if hintNum < 5:
 		currText = "Need more hints?"

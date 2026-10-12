@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bwl7fnu2ajt8" path="res://assets/level1/furniture/earthwallleft.png" id="5_lmovp"]
 [ext_resource type="Texture2D" uid="uid://c8m6h2bwqx8gj" path="res://assets/level1/furniture/background.png" id="6_yy8t7"]
 [ext_resource type="PackedScene" uid="uid://bc87n5tigm86k" path="res://scenes/brian.tscn" id="7_3flgg"]
+[ext_resource type="Script" uid="uid://bfu2eo1o5j1jr" path="res://scripts/leve3/findme_label.gd" id="7_65gdf"]
 [ext_resource type="Shader" uid="uid://do6kso0rukie" path="res://shaders/level3.gdshader" id="8_nijb2"]
 [ext_resource type="PackedScene" uid="uid://de7w1pl4j0ge5" path="res://scenes/text_window2.tscn" id="9_pw0wc"]
 
@@ -395,14 +396,15 @@ texture = SubResource("AtlasTexture_e1dgd")
 
 [node name="Label" type="Label" parent="." unique_id=1601597122]
 z_index = 3
-offset_left = -746.0
-offset_top = -453.0
-offset_right = 643.0
-offset_bottom = 248.0
+offset_left = -743.0
+offset_top = -457.0
+offset_right = 646.0
+offset_bottom = 244.0
 theme_override_colors/font_color = Color(0.3087434, 0.3087434, 0.3087434, 1)
 theme_override_font_sizes/font_size = 126
-text = "Find Me"
+text = "FIND ME"
 horizontal_alignment = 1
+script = ExtResource("7_65gdf")
 
 [node name="fog_cloud" type="Node2D" parent="." unique_id=1709861710]
 position = Vector2(-33, -202)
@@ -458,15 +460,15 @@ texture = SubResource("AtlasTexture_3e6vm")
 
 [node name="Sprite2D4" type="Sprite2D" parent="fog_cloud" unique_id=1881139208]
 z_index = 1
-position = Vector2(-87, 19)
-scale = Vector2(4.2799997, 4)
+position = Vector2(-31, 78)
+scale = Vector2(5.9187536, 3.2533765)
 texture = SubResource("AtlasTexture_dyat2")
 
 [node name="Sprite2D3" type="Sprite2D" parent="fog_cloud" unique_id=254535299]
 z_index = 1
-position = Vector2(-90, -340)
+position = Vector2(-26, -336)
 rotation = -3.1415925
-scale = Vector2(4.0400004, 4)
+scale = Vector2(5.919998, 4)
 texture = SubResource("AtlasTexture_dyat2")
 
 [node name="General" type="Node2D" parent="." unique_id=1885113404]

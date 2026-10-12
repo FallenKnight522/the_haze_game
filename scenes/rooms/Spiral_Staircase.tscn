@@ -946,7 +946,7 @@ frame_progress = 0.17824411
 position = Vector2(-604, -45)
 
 [node name="Pos2" type="Marker2D" parent="." unique_id=489630772]
-position = Vector2(172, -341)
+position = Vector2(174, -326)
 
 [connection signal="body_entered" from="Down" to="Down" method="_on_body_entered"]
 [connection signal="body_entered" from="Up" to="Up" method="_on_body_entered"]

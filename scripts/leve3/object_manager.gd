@@ -205,7 +205,7 @@ func show_prop(prop: int):
 			SignalManager.move_player.emit(Vector2(-133,-28))
 		_:
 			push_error("Invalid prop")
-			await police_station.animation_finished
+			return;
 	SignalManager.animatic_showing = false
 	
 func reset_props():
