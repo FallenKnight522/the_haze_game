@@ -32,6 +32,7 @@
 [ext_resource type="Shader" uid="uid://cu2esgvaufwhf" path="res://shaders/blur.gdshader" id="27_4pa81"]
 [ext_resource type="Texture2D" uid="uid://id0mb3bxque6" path="res://assets/leve3/people2/RPG_assets - kopie.png" id="28_dyat2"]
 [ext_resource type="PackedScene" uid="uid://cqudush7mljlq" path="res://scenes/object2.tscn" id="28_llmex"]
+[ext_resource type="Script" uid="uid://buli0tjr7i4bc" path="res://scripts/level1/zrcadlo_alice.gd" id="29_augiv"]
 [ext_resource type="Texture2D" uid="uid://dver8apuqrm8p" path="res://assets/level1/door/Basic_Door_Opening_Pixel.png" id="30_1msdc"]
 [ext_resource type="Texture2D" uid="uid://6oulkp15xoxg" path="res://assets/level1/door/Basic_Door_Pixel_Shift.png" id="30_6myj1"]
 [ext_resource type="Texture2D" uid="uid://wocnuw5ypcsw" path="res://assets/leve3/people2/Jouline/idle_0.png" id="30_w5slj"]
@@ -66,14 +67,14 @@
 [ext_resource type="Script" uid="uid://cd0v7bnd3vncd" path="res://scripts/leve3/fog.gd" id="48_3e6vm"]
 [ext_resource type="Texture2D" uid="uid://bc0kh6v40rhlx" path="res://assets/leve3/people2/RPG_assets.png" id="49_4pa81"]
 [ext_resource type="Texture2D" uid="uid://bvou6sfoxwb1t" path="res://assets/leve3/bus01.png" id="49_ncrui"]
-[ext_resource type="Texture2D" uid="uid://bgfym4xk26hvl" path="res://assets/level1/Margaret/idle_0.png" id="52_6x0jh"]
-[ext_resource type="Texture2D" uid="uid://bd4b0gx8g864g" path="res://assets/level1/Margaret/idle_1.png" id="53_qco7l"]
-[ext_resource type="Texture2D" uid="uid://4bkoi1y30hsj" path="res://assets/level1/Margaret/idle_2.png" id="54_7ibw7"]
-[ext_resource type="Texture2D" uid="uid://cofjeqoi5q5us" path="res://assets/level1/Margaret/idle_3.png" id="55_5tmsl"]
+[ext_resource type="Texture2D" uid="uid://bxc1ll5s12jhq" path="res://assets/level1/Margaret/memory/idle_0.png" id="53_augiv"]
+[ext_resource type="Texture2D" uid="uid://blnbsku47k8lf" path="res://assets/level1/Margaret/memory/idle_1.png" id="54_38lxj"]
+[ext_resource type="Texture2D" uid="uid://ds82ede3tpn47" path="res://assets/level1/Margaret/memory/idle_2.png" id="55_drso2"]
 [ext_resource type="Texture2D" uid="uid://cs2jir55slc3u" path="res://assets/level1/door/Basic_Door_Pixel.png" id="55_tcob4"]
-[ext_resource type="Texture2D" uid="uid://mr5kvikmi4b5" path="res://assets/level1/Margaret/idle_4.png" id="56_8i88f"]
-[ext_resource type="Texture2D" uid="uid://ckokfdd5ov0pe" path="res://assets/level1/Margaret/idle_5.png" id="57_45e4w"]
+[ext_resource type="Texture2D" uid="uid://tn8qj6viq5wo" path="res://assets/level1/Margaret/memory/idle_3.png" id="56_rnw6a"]
+[ext_resource type="Texture2D" uid="uid://xf381qbigjxi" path="res://assets/level1/Margaret/memory/idle_4.png" id="57_34mcc"]
 [ext_resource type="Texture2D" uid="uid://doyueq8e3i0uu" path="res://assets/level1/Alice/fall_0.png" id="58_2r1jb"]
+[ext_resource type="Texture2D" uid="uid://cmkcoorj2nhry" path="res://assets/level1/Margaret/memory/idle_5.png" id="58_ajjhh"]
 [ext_resource type="Texture2D" uid="uid://fpnuyy620c31" path="res://assets/level1/Alice/fall_1.png" id="59_xhcmc"]
 [ext_resource type="Texture2D" uid="uid://de74yid67cu4n" path="res://assets/level1/Alice/fall_2.png" id="60_ifdtx"]
 [ext_resource type="Texture2D" uid="uid://cwgugjwbu6nrx" path="res://assets/level1/Alice/fall_3.png" id="61_augiv"]
@@ -6110,7 +6111,7 @@ tracks/9/keys = {
 
 [sub_resource type="Animation" id="Animation_0h2m7"]
 resource_name = "statue_gone"
-length = 0.19999999999999998
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -7741,6 +7742,230 @@ tracks/9/keys = {
 "transitions": PackedFloat32Array(),
 "values": []
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("birthday/Alice:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-271.99997, -103)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("birthday/Dan:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-320, -103)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("birthday/Margaret:flip_h")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("birthday/Alice:flip_h")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("birthday/Dan:flip_h")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("birthday/Jouline:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-280, -112)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("birthday/Margaret/Sprite2D9:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("birthday/Alice/Sprite2D10:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("birthday/Dan/Sprite2D10:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("birthday/Elonora/Sprite2D12:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("birthday/Elonora/Sprite2D11:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_tliwx"]
+resource_name = "alice_appears"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("birthday/Alice:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("birthday/Alice:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-91.000046, -102)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("birthday/Alice:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_5lxcx"]
+resource_name = "alice_comforts"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("birthday/Alice:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("birthday/Alice:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-91.000046, -102)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("birthday/Alice:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("birthday/Alice/Sprite2D10:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_xhcmc"]
 resource_name = "beginig"
@@ -7851,6 +8076,42 @@ tracks/8/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("birthday/Elonora:flip_h")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("birthday/Elonora:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-366.99997, -112)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("birthday/Alice:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-172.00003, -106)]
 }
 
 [sub_resource type="Animation" id="Animation_augiv"]
@@ -7963,6 +8224,190 @@ tracks/8/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_wiwsm"]
+resource_name = "dan_appers"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("birthday/Dan:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("birthday/Dan:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-45.00003, -105)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("birthday/Dan:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_i23gg"]
+resource_name = "dan_comforts"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("birthday/Dan:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("birthday/Dan:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-45.00003, -105)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("birthday/Dan:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("birthday/Dan/Sprite2D10:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_tcob4"]
+resource_name = "elonora_comforts"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("birthday/Elonora:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("birthday/Elonora:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("birthday/Elonora/Sprite2D11:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("birthday/Elonora/Sprite2D12:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("birthday/Jouline:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_bgltu"]
+resource_name = "jouline_appears"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("birthday/Jouline:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("birthday/Jouline:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-280, -112)]
 }
 
 [sub_resource type="Animation" id="Animation_ifdtx"]
@@ -8165,35 +8610,169 @@ tracks/7/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_b0aph"]
+resource_name = "margaret_appears"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("birthday/Margaret:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("birthday/Margaret")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("birthday/Margaret:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("birthday/Margaret:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-223, -96)]
+}
+
+[sub_resource type="Animation" id="Animation_5qbne"]
+resource_name = "margaret_comforts"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("birthday/Margaret:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("birthday/Margaret")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("birthday/Margaret:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("birthday/Margaret:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-223, -96)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("birthday/Margaret/Sprite2D9:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("birthday/Elonora:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-275, -105)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ifdtx"]
 _data = {
 &"RESET": SubResource("Animation_2r1jb"),
+&"alice_appears": SubResource("Animation_tliwx"),
+&"alice_comforts": SubResource("Animation_5lxcx"),
 &"beginig": SubResource("Animation_xhcmc"),
 &"bonfire": SubResource("Animation_augiv"),
+&"dan_appers": SubResource("Animation_wiwsm"),
+&"dan_comforts": SubResource("Animation_i23gg"),
+&"elonora_comforts": SubResource("Animation_tcob4"),
+&"jouline_appears": SubResource("Animation_bgltu"),
 &"lonely_table": SubResource("Animation_ifdtx"),
-&"lonely_table_2": SubResource("Animation_38lxj")
+&"lonely_table_2": SubResource("Animation_38lxj"),
+&"margaret_appears": SubResource("Animation_b0aph"),
+&"margaret_comforts": SubResource("Animation_5qbne")
 }
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1jgqy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("52_6x0jh")
+"texture": ExtResource("53_augiv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("53_qco7l")
+"texture": ExtResource("54_38lxj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("54_7ibw7")
+"texture": ExtResource("55_drso2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("55_5tmsl")
+"texture": ExtResource("56_rnw6a")
 }, {
 "duration": 1.0,
-"texture": ExtResource("56_8i88f")
+"texture": ExtResource("57_34mcc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("57_45e4w")
+"texture": ExtResource("58_ajjhh")
 }],
 "loop": 1,
 "name": &"default",
@@ -8551,7 +9130,7 @@ fear_levels = Array[Texture2D]([ExtResource("8_6uuvf"), ExtResource("9_x008a"), 
 [node name="Player" parent="General" unique_id=1921759424 instance=ExtResource("24_w75rk")]
 unique_name_in_owner = true
 z_index = 4
-position = Vector2(-433, -28)
+position = Vector2(-571, -25)
 
 [node name="Camera2D" type="Camera2D" parent="General" unique_id=1567350085]
 unique_name_in_owner = true
@@ -8606,21 +9185,16 @@ offset_top = -104.0
 offset_right = -133.0
 offset_bottom = -40.0
 flip_h = true
+script = ExtResource("29_augiv")
 metadata/_edit_use_anchors_ = true
 
 [node name="SubViewport" type="SubViewport" parent="Manger/Zrcadlo2" unique_id=168915896]
 transparent_bg = true
-canvas_cull_mask = 4293918723
+canvas_cull_mask = 4293918739
 size = Vector2i(64, 64)
 
 [node name="Camera2D" type="Camera2D" parent="Manger/Zrcadlo2/SubViewport" unique_id=830300899]
 position = Vector2(-457, -520)
-
-[node name="mirror" parent="Manger/Zrcadlo2" unique_id=1244079872 node_paths=PackedStringArray("Manager") instance=ExtResource("28_llmex")]
-position = Vector2(32, 30)
-scale = Vector2(4, 4)
-Manager = NodePath("../..")
-text_default = "mirror"
 
 [node name="Sprite2D" type="Sprite2D" parent="Manger/Zrcadlo2" unique_id=1782709003]
 position = Vector2(31.949997, 21.48)
@@ -8628,9 +9202,9 @@ scale = Vector2(1.575, 2.574)
 texture = ExtResource("115_augiv")
 
 [node name="Props" type="Node2D" parent="Manger" unique_id=759897187]
-visibility_layer = 4
 
 [node name="shadow" type="ColorRect" parent="Manger/Props" unique_id=23721892]
+visibility_layer = 4
 z_index = 3
 custom_minimum_size = Vector2(20, 10)
 anchors_preset = 15
@@ -8703,6 +9277,7 @@ animation = &"walk"
 autoplay = "default"
 
 [node name="phone" type="Sprite2D" parent="Manger/Props" unique_id=317626117]
+visible = false
 z_index = 4
 position = Vector2(-157, -46.999985)
 rotation = 0.61389565
@@ -8763,11 +9338,11 @@ libraries/ = SubResource("AnimationLibrary_ifdtx")
 visible = false
 visibility_layer = 4
 z_index = 4
-position = Vector2(-182, -104)
+position = Vector2(-223, -105)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_1jgqy")
 autoplay = "default"
-frame_progress = 0.69864374
+frame_progress = 0.43643203
 flip_h = true
 
 [node name="Sprite2D9" type="Sprite2D" parent="Manger/Props/birthday/Margaret" unique_id=1539332408]
@@ -8816,7 +9391,7 @@ texture = SubResource("AtlasTexture_drunn")
 visible = false
 visibility_layer = 4
 z_index = 4
-position = Vector2(-224, -112)
+position = Vector2(-280, -112)
 scale = Vector2(0.11, 0.11)
 sprite_frames = SubResource("SpriteFrames_rnw6a")
 autoplay = "default"
@@ -8832,7 +9407,7 @@ texture = SubResource("AtlasTexture_drunn")
 visible = false
 visibility_layer = 4
 z_index = 4
-position = Vector2(-368, -110)
+position = Vector2(-366.99997, -112)
 scale = Vector2(0.11, 0.11)
 sprite_frames = SubResource("SpriteFrames_34mcc")
 autoplay = "default"
@@ -8841,7 +9416,7 @@ flip_h = true
 
 [node name="Sprite2D11" type="Sprite2D" parent="Manger/Props/birthday/Elonora" unique_id=1451259015]
 z_index = 4
-position = Vector2(-254.54538, 363.63635)
+position = Vector2(-254.54538, 345.45453)
 scale = Vector2(5.9836755, 8.414993)
 texture = SubResource("AtlasTexture_augiv")
 
@@ -8875,6 +9450,20 @@ z_index = 4
 position = Vector2(-153, -34.999992)
 scale = Vector2(0.6582043, 0.40564907)
 texture = ExtResource("97_xhcmc")
+
+[node name="cloud" type="Sprite2D" parent="Manger/Props" unique_id=1096738130]
+visibility_layer = 16
+z_index = 4
+position = Vector2(-137.00002, -69.99999)
+scale = Vector2(0.97820175, 1.7256474)
+texture = SubResource("AtlasTexture_augiv")
+
+[node name="cloud2" type="Sprite2D" parent="Manger/Props" unique_id=940386701]
+visibility_layer = 4
+z_index = 4
+position = Vector2(-137.00002, -69.99999)
+scale = Vector2(0.97820175, 1.7256474)
+texture = SubResource("AtlasTexture_augiv")
 
 [node name="computer" parent="Manger" unique_id=1801099186 node_paths=PackedStringArray("Manager") instance=ExtResource("28_llmex")]
 position = Vector2(-55, -105.00001)

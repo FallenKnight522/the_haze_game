@@ -8,6 +8,9 @@ const memories = ["interogation", "sister", "messages", "to_Prague", "BirthdayPa
 @onready var to_prague: AnimationPlayer = $Props/toPrague
 @onready var birthday: AnimationPlayer = $Props/birthday
 @onready var props: Node2D = $Props
+@onready var cloud: Sprite2D = $Props/cloud
+@onready var cloud_2: Sprite2D = $Props/cloud2
+@onready var fear: CanvasLayer = %Fear
 
 
 
@@ -43,7 +46,6 @@ func end_day():
 func _ready() -> void:
 	new_day.emit(day)
 	reset_props()
-	
 func show_prop(prop: int):
 	SignalManager.animatic_showing = true
 	SignalManager.move_player.emit()
@@ -133,7 +135,74 @@ func show_prop(prop: int):
 			level_3.player.turn_right()
 			SignalManager.move_player.emit(Vector2(-433,-28))
 			birthday.play("lonely_table_2")
-			await birthday.animation_finished			
+			await birthday.animation_finished
+		21:
+			SignalManager.change_room.emit("in_moment_memory")	
+			level_3.player.turn_left()
+			cloud.show()
+			SignalManager.move_player.emit(Vector2(-133,-28))
+		22:
+			level_3.player.turn_left()
+			cloud.show()
+			SignalManager.move_player.emit(Vector2(-133,-28))
+			birthday.play("margaret_appears")
+			await birthday.animation_finished
+		23:
+			level_3.player.turn_left()
+			cloud.show()
+			SignalManager.move_player.emit(Vector2(-133,-28))
+			birthday.play("alice_appears")
+			await birthday.animation_finished
+		24:
+			level_3.player.turn_left()
+			cloud.show()
+			SignalManager.move_player.emit(Vector2(-133,-28))
+			birthday.play("dan_appers")
+			await birthday.animation_finished
+		25:
+			level_3.player.turn_left()
+			cloud.show()
+			SignalManager.move_player.emit(Vector2(-133,-28))
+			birthday.play("jouline_appears")
+			await birthday.animation_finished
+		26:
+			level_3.player.turn_left()
+			cloud_2.show()
+			SignalManager.move_player.emit(Vector2(-133,-28))
+			birthday.play("margaret_comforts")
+			await birthday.animation_finished
+		27:
+			level_3.player.turn_left()
+			cloud_2.show()
+			SignalManager.move_player.emit(Vector2(-133,-28))
+			birthday.play("alice_comforts")
+			await birthday.animation_finished
+		28:
+			level_3.player.turn_left()
+			cloud_2.show()
+			SignalManager.move_player.emit(Vector2(-133,-28))
+			birthday.play("dan_comforts")
+			await birthday.animation_finished
+		29:
+			level_3.player.turn_left()
+			cloud_2.show()
+			SignalManager.move_player.emit(Vector2(-133,-28))
+			birthday.play("elonora_comforts")
+			await birthday.animation_finished
+		30:
+			level_3.player.turn_left()
+			cloud_2.show()
+			cloud.show()
+			SignalManager.move_player.emit(Vector2(-133,-28))
+		31:
+			level_3.player.turn_left()
+			cloud_2.show()
+			cloud.hide()
+			SignalManager.move_player.emit(Vector2(-133,-28))
+		32:
+			level_3.player.turn_left()
+			cloud.hide()
+			SignalManager.move_player.emit(Vector2(-133,-28))
 		_:
 			push_error("Invalid prop")
 			await police_station.animation_finished
@@ -143,6 +212,8 @@ func reset_props():
 	police_station.play("RESET")
 	jouline_interraction.play("RESET")
 	phone.hide()
+	cloud.hide()
+	cloud_2.hide()
 	to_prague.play("RESET")
 	birthday.play("RESET")
 	await police_station.animation_finished

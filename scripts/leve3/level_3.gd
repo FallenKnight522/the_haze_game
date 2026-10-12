@@ -14,7 +14,7 @@ var aktualni_mistnost: Node2D = null
 const fear_to_colour= 0.015
 
 func _ready() -> void:
-	get_viewport().canvas_cull_mask &= ~8
+	get_viewport().canvas_cull_mask &= ~16
 	text_window.text_finished.connect(player.start_movement)
 	text_window.text_started.connect(player.stop_movement)
 	text_window.window_finished.connect(hint_.windowLeft)
@@ -30,7 +30,9 @@ func _ready() -> void:
 	colors(0)
 	shadows.color.a = 0.75
 	shadows.hide()
+	enter_room("room")
 	starting_dialog()
+	
 					
 	
 func _process(_delta: float) -> void:
@@ -58,6 +60,9 @@ func enter_room(id_mistnosti: String = "lonely", cesta_k_scene: String = ""):
 		"spiral":
 			await fadeout()
 			get_tree().change_scene_to_file("res://scenes/rooms/Endless_hall.tscn")
+		"finale":
+			await fadeout()
+			get_tree().change_scene_to_file("res://scenes/rooms/Ending.tscn")
 		"lonely":
 			await fadeout()
 			get_tree().change_scene_to_file("res://scenes/rooms/Lonely.tscn")
@@ -68,6 +73,8 @@ func enter_room(id_mistnosti: String = "lonely", cesta_k_scene: String = ""):
 		"room":
 			await  fadein()
 			player.start_movement()
+			shadows.hide()
+		"in_moment_memory":
 			shadows.hide()
 		_:
 			push_error("Invalid room")
@@ -82,6 +89,7 @@ func starting_dialog():
 func move_player(pos: Vector2 = Vector2(-571, -25)):
 	player.global_position = pos
 func loose():
+	text_window.queue_text("{Spider.llm: Brian did not implement this part yet}")
 	pass
 
 func new_day(_day):

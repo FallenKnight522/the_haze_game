@@ -40,6 +40,7 @@ func stay():
 	
 func starting_dialog():
 	await get_tree().create_timer(20).timeout
+	label.show()
 	if dialog != null:
 		SignalManager.show_dialog.emit(dialog,"lonely", self)
 	else:
